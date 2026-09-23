@@ -23,13 +23,13 @@ export function Hero() {
         fade
       />
 
-      <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-[1.05fr_minmax(0,1fr)]">
+      <div className="relative mx-auto grid max-w-6xl items-center gap-10 px-4 sm:px-6 lg:grid-cols-[1fr_minmax(0,1.05fr)]">
         <div className="min-w-0">
           <motion.h1
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease }}
-            className="text-[2.9rem] leading-[1.02] font-bold tracking-[-0.045em] sm:text-7xl sm:tracking-[-3px] lg:text-[5rem]"
+            className="text-[2.9rem] leading-[1.02] font-bold tracking-[-0.045em] sm:text-6xl sm:tracking-[-2.5px] lg:text-[4.4rem]"
           >
             {hero.headlineBefore} <span className="text-shimmer">{hero.headlineHighlight}</span>{" "}
             {hero.headlineAfter}

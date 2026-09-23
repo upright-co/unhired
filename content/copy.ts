@@ -20,17 +20,18 @@ export const hero = {
   headlineAfter: "Be Your Next Hire",
   sub: "Take the assessment and discover if AI can replace the role that you're looking to hire for.",
   primaryCta: "Take Assessment",
-  badge: "Role filled by AI",
-  /** Cards that scroll through the job-board animation behind the badge. */
+  /** Roles that cycle through the hero carousel. Only the title is shown. */
   postings: [
-    { title: "Receptionist", company: "Northwind Heating & Air", location: "Calgary, AB", salary: "$42,000–$48,000 a year", type: "Full-time" },
-    { title: "Dispatcher", company: "Summit Plumbing Co.", location: "Edmonton, AB", salary: "$45,000–$55,000 a year", type: "Full-time" },
-    { title: "Inside Sales Representative", company: "Copperline Electric", location: "Red Deer, AB", salary: "$50,000 + commission", type: "Full-time" },
-    { title: "Office Administrator", company: "Maple Ridge Renovations", location: "Calgary, AB", salary: "$44,000–$52,000 a year", type: "Full-time" },
-    { title: "Customer Service Representative", company: "Bow Valley Property Mgmt", location: "Remote", salary: "$21–$25 an hour", type: "Full-time" },
-    { title: "Transaction Coordinator", company: "Rivergate Realty Group", location: "Calgary, AB", salary: "$48,000–$58,000 a year", type: "Full-time" },
-    { title: "Scheduling Coordinator", company: "Aspen Dental Clinic", location: "Lethbridge, AB", salary: "$23–$27 an hour", type: "Full-time" },
-    { title: "Review & Reputation Manager", company: "Trailhead Roofing", location: "Airdrie, AB", salary: "$46,000 a year", type: "Full-time" },
+    { title: "Data Analyst" },
+    { title: "Receptionist" },
+    { title: "Bookkeeper" },
+    { title: "Executive Assistant" },
+    { title: "Customer Support Rep" },
+    { title: "Marketing Coordinator" },
+    { title: "Dispatcher" },
+    { title: "Operations Coordinator" },
+    { title: "Inside Sales Rep" },
+    { title: "Office Administrator" },
   ],
 };
 
