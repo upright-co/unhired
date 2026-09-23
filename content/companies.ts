@@ -1,9 +1,12 @@
 /**
  * "Some of the companies we have built for."
  *
- * All PLACEHOLDER data. Drop banner images into /public/companies/ and point
- * `banner` at them, e.g. "/companies/northwind.jpg".
- * Banners look best at 16:9 and at least 1200px wide.
+ * All PLACEHOLDER data for now. Any entry whose `name` still contains a
+ * [bracketed] placeholder is skipped, and the whole section stays hidden until
+ * at least one real company is listed — so nothing unfinished ships publicly.
+ *
+ * Drop banner images into /public/companies/ and point `banner` at them,
+ * e.g. "/companies/northwind.jpg". Banners look best at 16:9, 1200px+ wide.
  */
 
 export type Company = {

@@ -242,7 +242,7 @@ export const howItWorks = {
 export const companiesSection = {
   eyebrow: "Our work",
   title: "Some of the companies we have built for.",
-  sub: "[PLACEHOLDER — swap in real companies, banner images and results before launch]",
+  sub: "Real businesses, real roles, now run by an AI employee.",
 };
 
 export const faqSection = {

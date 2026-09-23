@@ -3,7 +3,10 @@ import { companiesSection } from "@/content/copy";
 import { Reveal, SectionHeading } from "@/components/ui/Section";
 
 export function Companies() {
-  if (!companies.length) return null;
+  // Entries still carrying [bracketed] placeholders are hidden, so the section
+  // simply doesn't render until real companies are added to content/companies.ts.
+  const live = companies.filter((c) => !c.name.includes("["));
+  if (!live.length) return null;
 
   return (
     <section id="companies" aria-labelledby="companies-title" className="relative px-4 py-20 sm:px-6 sm:py-28">
@@ -16,7 +19,7 @@ export function Companies() {
         />
 
         <ul className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {companies.map((c, i) => (
+          {live.map((c, i) => (
             <Reveal
               as="li"
               key={`${c.name}-${i}`}
