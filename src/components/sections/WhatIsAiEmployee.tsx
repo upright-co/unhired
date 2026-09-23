@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { whatIsAiEmployee as copy } from "@/content/copy";
 import { Icon } from "@/components/ui/Icon";
 import { StatusDot } from "@/components/ui/Decor";
-import { Eyebrow, Reveal } from "@/components/ui/Section";
+import { Reveal } from "@/components/ui/Section";
 
 /**
  * Diagram: the AI hire at the centre, with the things that make it an employee
@@ -67,10 +67,9 @@ export function WhatIsAiEmployee() {
     <section id="what-is" aria-labelledby="what-is-title" className="relative px-4 py-20 sm:px-6 sm:py-28">
       <div className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-2">
         <Reveal>
-          <Eyebrow>{copy.eyebrow}</Eyebrow>
           <h2
             id="what-is-title"
-            className="mt-4 text-[2rem] leading-[1.08] font-semibold tracking-[-0.035em] sm:text-5xl sm:tracking-[-2px]"
+            className="text-[2rem] leading-[1.08] font-semibold tracking-[-0.035em] sm:text-5xl sm:tracking-[-2px]"
           >
             {copy.title}
           </h2>

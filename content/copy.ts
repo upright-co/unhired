@@ -36,12 +36,9 @@ export const hero = {
 };
 
 export const whatIsAiEmployee = {
-  eyebrow: "The difference",
   title: "What's an AI employee?",
   body: [
-    "An AI agent is a tool. You open ChatGPT or Claude, ask it something, and it answers. It has no idea what your business does, who your customers are, or what happens if it drops the ball. Every conversation starts from nothing.",
     "An AI employee is trained to hold a specific position. It has a role, a set of responsibilities, the tools to do the work, and knowledge of how your business actually runs. It knows who it is, where it fits on your team, and what it's accountable for.",
-    "That's the whole difference. You're not buying software you have to operate. You're filling a seat.",
   ],
   /** Labels on the diagram. */
   diagram: {
