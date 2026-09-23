@@ -1,0 +1,34 @@
+{
+  "name": "unhired",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.127.0",
+    "@supabase/supabase-js": "^2.117.0",
+    "framer-motion": "^13.4.0",
+    "lucide-react": "^1.47.0",
+    "mammoth": "^1.12.3",
+    "next": "^15.5.25",
+    "pdf-parse": "^2.4.5",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "resend": "^6.28.1",
+    "server-only": "^0.0.1",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.3.3",
+    "@types/node": "^26.6.2",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "postcss": "^8.5.28",
+    "tailwindcss": "^4.3.3",
+    "typescript": "^5.9.3"
+  }
+}
