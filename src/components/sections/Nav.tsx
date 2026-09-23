@@ -31,7 +31,7 @@ export function Nav() {
       <nav
         aria-label="Main"
         className={`mx-auto flex max-w-6xl items-center justify-between rounded-full py-2 pr-2 pl-5 transition-all duration-300 ${
-          scrolled || open ? "glass-strong" : "border border-transparent"
+          scrolled || open ? "glass-strong" : "glass-on-mobile border border-transparent"
         }`}
       >
         <a href="#top" className="flex items-center rounded-md" aria-label="Unhired home">

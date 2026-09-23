@@ -118,10 +118,15 @@ export function JobBoard() {
   const roles = hero.postings;
   const [index, setIndex] = useState(0);
   const [cardW, setCardW] = useState(300);
+  const [bleeds, setBleeds] = useState(true);
   const gap = 22;
 
   useEffect(() => {
-    const measure = () => setCardW(window.innerWidth < 640 ? 240 : window.innerWidth < 1024 ? 280 : 320);
+    const measure = () => {
+      setCardW(window.innerWidth < 640 ? 240 : window.innerWidth < 1024 ? 280 : 320);
+      // Only the large layout lets the track run past its column.
+      setBleeds(window.innerWidth >= 1024);
+    };
     measure();
     window.addEventListener("resize", measure);
     return () => window.removeEventListener("resize", measure);
@@ -135,13 +140,15 @@ export function JobBoard() {
     return () => clearInterval(t);
   }, [reduce]);
 
+  // Desktop fades late because the track bleeds past the column; mobile fades symmetrically.
+  const mask = bleeds
+    ? "linear-gradient(to right, transparent, #000 15%, #000 62%, transparent 94%)"
+    : "linear-gradient(to right, transparent, #000 20%, #000 80%, transparent)";
+
   return (
     <div
       className="relative h-[292px] w-full min-w-0 sm:h-[312px] lg:w-[calc(100%+16rem)]"
-      style={{
-        maskImage: "linear-gradient(to right, transparent, #000 15%, #000 62%, transparent 94%)",
-        WebkitMaskImage: "linear-gradient(to right, transparent, #000 15%, #000 62%, transparent 94%)",
-      }}
+      style={{ maskImage: mask, WebkitMaskImage: mask }}
       aria-label="Job postings being filled by AI"
     >
       <div className="absolute top-1/2 left-1/2 size-0">

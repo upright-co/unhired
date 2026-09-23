@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { ArrowRight, Check, Mail } from "lucide-react";
 import { howItWorks } from "@/content/copy";
+import { formatAiHirePrice } from "@/config";
 import { StatusDot } from "@/components/ui/Decor";
 import { Reveal, SectionHeading } from "@/components/ui/Section";
 import { trackEvent } from "@/lib/analytics";
@@ -79,7 +80,7 @@ function StepArt({ index }: { index: number }) {
         {[
           { l: "Hours", v: "24/7" },
           { l: "Sick days", v: "0" },
-          { l: "Ramp-up", v: "Days" },
+          { l: "Starts at", v: formatAiHirePrice() },
         ].map((s) => (
           <div key={s.l} className="rounded-lg bg-mist px-2 py-1.5 text-center">
             <p className="label-mono text-[0.55rem] text-muted">{s.l}</p>
@@ -87,9 +88,6 @@ function StepArt({ index }: { index: number }) {
           </div>
         ))}
       </div>
-      <p className="mt-3 rounded-lg bg-signal-green/10 px-2.5 py-1.5 text-[0.7rem] font-medium text-green-deep">
-        Connected to your phone, calendar and CRM
-      </p>
     </div>
   );
 }

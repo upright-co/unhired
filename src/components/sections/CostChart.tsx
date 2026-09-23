@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Plus } from "lucide-react";
 import { costChart } from "@/content/copy";
 import { formatMoney, pricing } from "@/config";
 import { Reveal } from "@/components/ui/Section";
@@ -32,24 +31,16 @@ export function CostChart() {
         <label htmlFor="wage" className="mb-2 block text-sm font-semibold">
           {costChart.sliderLabel}
         </label>
-        <div className="flex items-center gap-4">
-          <input
-            id="wage"
-            type="range"
-            min={25000}
-            max={max}
-            step={1000}
-            value={wage}
-            onChange={(e) => setWage(Number(e.target.value))}
-            className="h-2 flex-1 cursor-pointer appearance-none rounded-full bg-ink/10 accent-[#9452F2]"
-          />
-          <output
-            htmlFor="wage"
-            className="w-28 shrink-0 text-right font-display text-xl font-semibold tabular-nums"
-          >
-            {formatMoney(wage)}
-          </output>
-        </div>
+        <input
+          id="wage"
+          type="range"
+          min={25000}
+          max={max}
+          step={1000}
+          value={wage}
+          onChange={(e) => setWage(Number(e.target.value))}
+          className="h-2 w-full cursor-pointer appearance-none rounded-full bg-ink/10 accent-[#9452F2]"
+        />
       </div>
 
       <div className="mt-9 space-y-6">
@@ -90,23 +81,7 @@ export function CostChart() {
         </div>
       </div>
 
-      {/* What sits on top of the human number */}
-      <div className="mt-8 rounded-2xl bg-mist px-5 py-4">
-        <p className="label-mono mb-3 text-muted">On top of the human number</p>
-        <ul className="flex flex-wrap gap-2">
-          {costChart.plusItems.map((p) => (
-            <li
-              key={p}
-              className="inline-flex items-center gap-1.5 rounded-full bg-white px-3 py-1.5 text-sm text-ink/80 ring-1 ring-ink/10"
-            >
-              <Plus className="size-3 text-coral-deep" aria-hidden />
-              {p}
-            </li>
-          ))}
-        </ul>
-      </div>
-
-      <p className="mt-5 text-sm leading-relaxed text-muted">{costChart.footnote}</p>
+      <p className="mt-8 text-sm leading-relaxed text-muted">{costChart.footnote}</p>
     </Reveal>
   );
 }

@@ -220,7 +220,6 @@ export const costChart = {
   aiSub: "Starting price to build the role",
   footnote:
     "Your price depends on the scope of the role, the volume it handles and how many systems it connects to. The assessment tells you which parts of the job AI can take on.",
-  plusItems: ["Payroll taxes", "Benefits and insurance", "Recruiting and onboarding", "Equipment and software seats", "Coverage for time off"],
 };
 
 export const howItWorks = {

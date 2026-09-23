@@ -118,6 +118,17 @@
     box-shadow: var(--shadow-glass);
   }
 
+  /* The mobile hero is dark, so the nav keeps its light pill there even at scroll 0. */
+  @media (max-width: 1023px) {
+    .glass-on-mobile {
+      background: rgba(255, 255, 255, 0.8);
+      border: 1px solid rgba(255, 255, 255, 1);
+      backdrop-filter: blur(24px) saturate(150%);
+      -webkit-backdrop-filter: blur(24px) saturate(150%);
+      box-shadow: var(--shadow-glass);
+    }
+  }
+
   .bg-signal {
     background-image: linear-gradient(90deg, var(--color-coral), var(--color-violet));
   }
@@ -136,6 +147,23 @@
       var(--color-coral) 55%,
       var(--color-violet) 80%,
       var(--color-coral) 100%
+    );
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: var(--animate-shimmer);
+  }
+
+  .text-shimmer-light {
+    background-image: linear-gradient(
+      90deg,
+      #ff9aa2 0%,
+      #d7b3ff 25%,
+      #ffffff 40%,
+      #ff9aa2 55%,
+      #d7b3ff 80%,
+      #ff9aa2 100%
     );
     background-size: 200% 100%;
     -webkit-background-clip: text;

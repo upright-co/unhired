@@ -6,24 +6,26 @@ import { CostChart } from "./CostChart";
 
 type Verdict = "yes" | "no" | "partial";
 
-function Mark({ v }: { v: Verdict }) {
+function Mark({ v, compact = false }: { v: Verdict; compact?: boolean }) {
+  const size = compact ? "size-4" : "size-6";
+  const icon = compact ? "size-2.5" : "size-3.5";
   if (v === "yes")
     return (
-      <span className="bg-signal grid size-6 shrink-0 place-items-center rounded-full text-white">
-        <Check className="size-3.5" strokeWidth={3} aria-hidden />
+      <span className={`bg-signal grid ${size} shrink-0 place-items-center rounded-full text-white`}>
+        <Check className={icon} strokeWidth={3} aria-hidden />
         <span className="sr-only">Yes</span>
       </span>
     );
   if (v === "no")
     return (
-      <span className="grid size-6 shrink-0 place-items-center rounded-full bg-ink/[0.08] text-ink/70">
-        <X className="size-3.5" strokeWidth={3} aria-hidden />
+      <span className={`grid ${size} shrink-0 place-items-center rounded-full bg-ink/[0.08] text-ink/70`}>
+        <X className={icon} strokeWidth={3} aria-hidden />
         <span className="sr-only">No</span>
       </span>
     );
   return (
-    <span className="grid size-6 shrink-0 place-items-center rounded-full bg-violet/15 text-violet-deep">
-      <Minus className="size-3.5" strokeWidth={3} aria-hidden />
+    <span className={`grid ${size} shrink-0 place-items-center rounded-full bg-violet/15 text-violet-deep`}>
+      <Minus className={icon} strokeWidth={3} aria-hidden />
       <span className="sr-only">Partly</span>
     </span>
   );
@@ -80,27 +82,25 @@ export function Comparison() {
             </tbody>
           </table>
 
-          {/* Mobile: one card per row */}
+          {/* Mobile: two tinted blocks per row, so the contrast is still side-by-side */}
           <ul className="divide-y divide-ink/[0.06] md:hidden">
             {comparison.rows.map((row) => (
-              <li key={row.label} className="p-5">
-                <p className="font-semibold">{row.label}</p>
-                <dl className="mt-3 grid grid-cols-2 gap-3">
-                  <div>
-                    <dt className="label-mono mb-1.5 text-muted">{comparison.columns.human}</dt>
-                    <dd className="flex items-start gap-2">
-                      <Mark v={row.human.verdict} />
-                      <span className="text-sm leading-snug text-muted">{fill(row.human.note)}</span>
-                    </dd>
+              <li key={row.label} className="p-4">
+                <p className="mb-3 text-[0.95rem] font-semibold">{row.label}</p>
+                <div className="grid grid-cols-2 gap-2">
+                  <div className="rounded-2xl bg-ink/[0.04] p-3">
+                    <p className="label-mono mb-2 flex items-center gap-1.5 text-[0.6rem] text-muted">
+                      <Mark v={row.human.verdict} compact /> {comparison.columns.human}
+                    </p>
+                    <p className="text-[0.8rem] leading-snug text-muted">{fill(row.human.note)}</p>
                   </div>
-                  <div className="-my-1 -mr-2 rounded-2xl bg-white/70 px-2 py-1">
-                    <dt className="label-mono mb-1.5 text-violet-deep">{comparison.columns.ai}</dt>
-                    <dd className="flex items-start gap-2">
-                      <Mark v={row.ai.verdict} />
-                      <span className="text-sm leading-snug">{fill(row.ai.note)}</span>
-                    </dd>
+                  <div className="rounded-2xl bg-violet/[0.07] p-3 ring-1 ring-violet/15">
+                    <p className="label-mono mb-2 flex items-center gap-1.5 text-[0.6rem] text-violet-deep">
+                      <Mark v={row.ai.verdict} compact /> {comparison.columns.ai}
+                    </p>
+                    <p className="text-[0.8rem] leading-snug text-ink/85">{fill(row.ai.note)}</p>
                   </div>
-                </dl>
+                </div>
               </li>
             ))}
           </ul>

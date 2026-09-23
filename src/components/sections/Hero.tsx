@@ -13,6 +13,17 @@ const ease = [0.22, 1, 0.36, 1] as const;
 export function Hero() {
   return (
     <section id="top" className="relative isolate overflow-hidden pt-28 pb-20 sm:pt-36 lg:pb-28">
+      {/* Mobile gets a deep background so white type reads properly; desktop stays light. */}
+      <div
+        aria-hidden
+        className="absolute inset-0 lg:hidden"
+        style={{ background: "linear-gradient(165deg, #1A0F3D 0%, #35197A 45%, #4A1E6B 75%, #2A1150 100%)" }}
+      />
+      <div
+        aria-hidden
+        className="absolute inset-x-0 bottom-0 h-28 lg:hidden"
+        style={{ background: "linear-gradient(to bottom, transparent, var(--color-mist))" }}
+      />
       <GridBackground />
       <GlowOrbs
         orbs={[
@@ -29,9 +40,11 @@ export function Hero() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease }}
-            className="text-[2.9rem] leading-[1.02] font-bold tracking-[-0.045em] sm:text-6xl sm:tracking-[-2.5px] lg:text-[4.4rem]"
+            className="text-[2.9rem] leading-[1.02] font-bold tracking-[-0.045em] text-white sm:text-6xl sm:tracking-[-2.5px] lg:text-[4.4rem] lg:text-ink"
           >
-            {hero.headlineBefore} <span className="text-shimmer">{hero.headlineHighlight}</span>{" "}
+            {hero.headlineBefore}{" "}
+            <span className="text-shimmer-light lg:hidden">{hero.headlineHighlight}</span>
+            <span className="text-shimmer hidden lg:inline">{hero.headlineHighlight}</span>{" "}
             {hero.headlineAfter}
           </motion.h1>
 
@@ -39,7 +52,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease, delay: 0.1 }}
-            className="mt-6 max-w-xl text-lg leading-relaxed text-muted sm:text-xl"
+            className="mt-6 max-w-xl text-lg leading-relaxed text-white/75 sm:text-xl lg:text-muted"
           >
             {hero.sub}
           </motion.p>
