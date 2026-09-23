@@ -19,9 +19,12 @@ npm run dev                  # http://localhost:3000
 Add your brand files:
 
 - `public/unhired-logo.png`: the full logo (nav, footer, printed report)
-- `public/unhired-mark.png`: icon mark (favicon, Apple touch icon)
+- `public/unhired-icon.png`: the source icon mark
+- `public/unhired-mark.png`: square 512×512 favicon, generated from the icon
+- `public/apple-icon.png`: square 512×512 on white, for iOS home screens
 
-Until they exist, the site shows a text wordmark in the same style.
+Until the logo exists, the site shows a text wordmark in the same style.
+**Filenames are case-sensitive in production** (Linux) even though macOS ignores case — keep these exact names.
 
 ## Environment variables
 

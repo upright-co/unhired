@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   ],
   icons: {
     icon: [{ url: "/unhired-mark.png", type: "image/png" }],
-    apple: [{ url: "/unhired-mark.png" }],
+    apple: [{ url: "/apple-icon.png", sizes: "512x512" }],
   },
   openGraph: {
     type: "website",
