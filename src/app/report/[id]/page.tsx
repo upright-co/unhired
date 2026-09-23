@@ -50,7 +50,7 @@ export default async function ReportPage({ params }: { params: Promise<{ id: str
           <a href="/" aria-label="Unhired home">
             <Logo className="h-7" />
           </a>
-          <a href="/#assessment" className="btn btn-secondary px-4 py-2.5 text-sm">
+          <a href="/assessment" className="btn btn-secondary px-4 py-2.5 text-sm">
             Assess another role
           </a>
         </div>

@@ -1,12 +1,11 @@
 import { Nav } from "@/components/sections/Nav";
 import { Hero } from "@/components/sections/Hero";
-import { Reframe } from "@/components/sections/Reframe";
-import { HiddenCosts } from "@/components/sections/HiddenCosts";
-import { Roles } from "@/components/sections/Roles";
+import { WhatIsAiEmployee } from "@/components/sections/WhatIsAiEmployee";
+import { Problem } from "@/components/sections/Problem";
+import { Solution } from "@/components/sections/Solution";
 import { Comparison } from "@/components/sections/Comparison";
 import { HowItWorks } from "@/components/sections/HowItWorks";
-import { AssessmentSection } from "@/components/sections/AssessmentSection";
-import { Testimonials } from "@/components/sections/Testimonials";
+import { Companies } from "@/components/sections/Companies";
 import { Faq } from "@/components/sections/Faq";
 import { FinalCta } from "@/components/sections/FinalCta";
 import { Footer } from "@/components/sections/Footer";
@@ -23,13 +22,12 @@ export default function Home() {
       <Nav />
       <main id="main">
         <Hero />
-        <Reframe />
-        <HiddenCosts />
-        <Roles />
+        <WhatIsAiEmployee />
+        <Problem />
+        <Solution />
         <Comparison />
         <HowItWorks />
-        <AssessmentSection />
-        <Testimonials />
+        <Companies />
         <Faq />
         <FinalCta />
       </main>

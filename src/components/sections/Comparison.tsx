@@ -2,6 +2,7 @@ import { Check, Minus, X } from "lucide-react";
 import { comparison } from "@/content/copy";
 import { formatAiHirePrice } from "@/config";
 import { Reveal, SectionHeading } from "@/components/ui/Section";
+import { CostChart } from "./CostChart";
 
 type Verdict = "yes" | "no" | "partial";
 
@@ -104,6 +105,8 @@ export function Comparison() {
             ))}
           </ul>
         </Reveal>
+
+        <CostChart />
       </div>
     </section>
   );

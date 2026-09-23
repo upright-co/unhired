@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { nav } from "@/content/copy";
 import { Logo } from "@/components/ui/Logo";
@@ -51,13 +52,13 @@ export function Nav() {
         </ul>
 
         <div className="flex items-center gap-2">
-          <a
-            href="#assessment"
+          <Link
+            href="/assessment"
             onClick={() => trackEvent("cta_clicked", { cta: "nav_take_assessment" })}
             className="btn btn-primary px-4 py-2.5 text-sm sm:px-5"
           >
             {nav.cta}
-          </a>
+          </Link>
           <button
             type="button"
             className="grid size-10 place-items-center rounded-full text-ink hover:bg-white/70 lg:hidden"

@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { finalCta } from "@/content/copy";
 import { GlowOrbs, GridBackground } from "@/components/ui/Decor";
@@ -28,13 +29,13 @@ export function FinalCta() {
             {words.join(" ")} <span className="text-shimmer">{last}</span>
           </h2>
           <p className="mx-auto mt-5 max-w-xl text-lg text-white/75">{finalCta.sub}</p>
-          <a
-            href="#assessment"
+          <Link
+            href="/assessment"
             onClick={() => trackEvent("cta_clicked", { cta: "final_cta" })}
             className="btn btn-primary mt-10 px-8 py-4 text-base"
           >
             {finalCta.cta} <ArrowRight className="size-4" aria-hidden />
-          </a>
+          </Link>
         </Reveal>
       </div>
     </section>

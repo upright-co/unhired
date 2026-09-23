@@ -19,11 +19,11 @@ export const faqs: FaqItem[] = [
   },
   {
     q: "What does an AI hire cost?",
-    a: "It depends on the role we're building. AI employees start at $1,295 per month for basic roles and go up from there with scope, volume and the number of systems we connect. There are no recruiting fees, payroll taxes or benefits on top. Your assessment report includes a cost comparison against what you'd pay a person for the same work.",
+    a: "It depends on the role we're building. AI employees start at $1,295 for basic roles and go up from there with the scope of the job, the volume it handles and how many systems we connect. There are no recruiting fees, payroll taxes or benefits on top. Your assessment report includes a cost comparison against what you'd pay a person for the same work.",
   },
   {
     q: "Is my data safe?",
-    a: "Your data is used to run your AI hire and nothing else. We connect with the minimum access each task needs, and you can review what your AI hire did at any time. [ADD: specific data-handling, storage and compliance details before launch.]",
+    a: "Your data is used to run your AI hire and nothing else. You choose where it lives: we can host your AI employee locally, so it runs on your own computers or server and your data stays inside your network, or in the cloud, so your team can reach it from anywhere. Where your data is stored follows that choice.\n\nEither way we connect with the least access each task needs, keep credentials in a secrets vault rather than in the AI's instructions, encrypt data in transit and at rest, and log every action it takes so anything can be traced. Anything involving money, contracts or a decision you can't undo goes to a person for approval first.",
   },
   {
     q: "What if the AI makes a mistake?",

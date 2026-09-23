@@ -1,141 +1,162 @@
 /**
- * All marketing copy for the one-page site.
+ * All marketing copy for the home page.
  * Anything wrapped in [BRACKETS] is a placeholder to replace with real, sourced info.
  */
 
 export const nav = {
   links: [
-    { label: "How it works", href: "#how-it-works" },
-    { label: "What AI hires do", href: "#roles" },
+    { label: "What's an AI employee", href: "#what-is" },
+    { label: "The solution", href: "#solution" },
     { label: "Human vs AI", href: "#compare" },
-    { label: "Assessment", href: "#assessment" },
+    { label: "How it works", href: "#how-it-works" },
     { label: "FAQ", href: "#faq" },
   ],
-  cta: "Take the assessment",
+  cta: "Take Assessment",
 };
 
 export const hero = {
-  pill: "Now staffing AI hires for trades & service businesses",
-  headlineBefore: "Let your next hire be",
-  headlineHighlight: "AI.",
-  sub: "Before you post the job, see if AI can do it. We build AI employees that answer, book, follow up and handle the admin — trained on how your business runs.",
-  primaryCta: "Can AI do this job?",
-  secondaryCta: "See how it works",
-  card: {
-    label: "Your newest hire",
-    role: "AI Receptionist",
-    status: "On shift",
-    feed: [
-      { text: "Answered call from a new lead", time: "now" },
-      { text: "Booked Thursday 10:00 AM", time: "2m" },
-      { text: "Sent follow-up text", time: "5m" },
-      { text: "Logged job details in CRM", time: "8m" },
-      { text: "Replied to a 5-star review", time: "12m" },
-      { text: "Confirmed tomorrow's 3 appointments", time: "15m" },
-    ],
-    stats: [
-      { label: "Hours", value: "24/7" },
-      { label: "Sick days", value: "0" },
-      // "Salary" value comes from config.ts → pricing
-    ],
-  },
-  jobPost: {
-    title: "Hiring: Receptionist",
-    lines: ["Full-time · On-site", "Answer phones, book jobs", "Must start ASAP"],
-    stamp: "CLOSED",
-  },
+  headlineBefore: "Let",
+  headlineHighlight: "AI",
+  headlineAfter: "Be Your Next Hire",
+  sub: "Take the assessment and discover if AI can replace the role that you're looking to hire for.",
+  primaryCta: "Take Assessment",
+  badge: "Role filled by AI",
+  /** Cards that scroll through the job-board animation behind the badge. */
+  postings: [
+    { title: "Receptionist", company: "Northwind Heating & Air", location: "Calgary, AB", salary: "$42,000–$48,000 a year", type: "Full-time" },
+    { title: "Dispatcher", company: "Summit Plumbing Co.", location: "Edmonton, AB", salary: "$45,000–$55,000 a year", type: "Full-time" },
+    { title: "Inside Sales Representative", company: "Copperline Electric", location: "Red Deer, AB", salary: "$50,000 + commission", type: "Full-time" },
+    { title: "Office Administrator", company: "Maple Ridge Renovations", location: "Calgary, AB", salary: "$44,000–$52,000 a year", type: "Full-time" },
+    { title: "Customer Service Representative", company: "Bow Valley Property Mgmt", location: "Remote", salary: "$21–$25 an hour", type: "Full-time" },
+    { title: "Transaction Coordinator", company: "Rivergate Realty Group", location: "Calgary, AB", salary: "$48,000–$58,000 a year", type: "Full-time" },
+    { title: "Scheduling Coordinator", company: "Aspen Dental Clinic", location: "Lethbridge, AB", salary: "$23–$27 an hour", type: "Full-time" },
+    { title: "Review & Reputation Manager", company: "Trailhead Roofing", location: "Airdrie, AB", salary: "$46,000 a year", type: "Full-time" },
+  ],
 };
 
-export const reframe = {
-  eyebrow: "The reframe",
-  title: "An AI agent is just an employee you don't have to hire.",
-  wrongQuestion: "What can an AI agent do?",
-  rightQuestion: "What does this employee do all day?",
+export const whatIsAiEmployee = {
+  eyebrow: "The difference",
+  title: "What's an AI employee?",
   body: [
-    "Everyone's asking what AI agents can do. It's the wrong question. It leads to demos, gadgets and tools nobody on your team has time to set up.",
-    "Ask what the person in the role actually does all day. If most of it is answering, booking, following up, organizing, writing, reporting or updating systems, an AI hire can do it.",
+    "An AI agent is a tool. You open ChatGPT or Claude, ask it something, and it answers. It has no idea what your business does, who your customers are, or what happens if it drops the ball. Every conversation starts from nothing.",
+    "An AI employee is trained to hold a specific position. It has a role, a set of responsibilities, the tools to do the work, and knowledge of how your business actually runs. It knows who it is, where it fits on your team, and what it's accountable for.",
+    "That's the whole difference. You're not buying software you have to operate. You're filling a seat.",
   ],
-  verbs: [
-    "Answering",
-    "Booking",
-    "Following up",
-    "Organizing",
-    "Writing",
-    "Reporting",
-    "Updating systems",
-  ],
+  /** Labels on the diagram. */
+  diagram: {
+    center: "Your AI hire",
+    centerSub: "AI Receptionist",
+    nodes: [
+      { icon: "badge", label: "A role", detail: "A named position on your team, not a chat window" },
+      { icon: "clipboard", label: "Responsibilities", detail: "The tasks it owns, start to finish" },
+      { icon: "plug", label: "Tools", detail: "Phone, inbox, calendar, CRM — the same ones your team uses" },
+      { icon: "book", label: "Knowledge", detail: "Your services, pricing, process and how you talk to customers" },
+      { icon: "shield", label: "Accountability", detail: "Clear rules, human review on high-stakes calls, every action logged" },
+    ],
+  },
 };
 
-export const hiddenCosts = {
-  eyebrow: "The real cost of a human hire",
-  title: "The salary is only the part you see.",
-  sub: "Your people aren't the problem. Hiring is slow, expensive and fragile, especially for roles that are mostly phones, inboxes and software.",
+export const problem = {
+  eyebrow: "The problem",
+  title: "The problem with hiring a human.",
+  sub: "Your people aren't the problem. Hiring is. Especially for roles that are mostly phones, inboxes and software.",
   tagline: "Unhire the role, not the person.",
   items: [
     {
       icon: "search",
-      title: "Recruiting time and job boards",
-      body: "Writing the post, paying the boards, screening résumés, interviewing. Weeks of owner time before anyone starts.",
-      stat: "[STAT — source needed: average time-to-hire / cost-per-hire]",
+      title: "Hiring takes months",
+      body: "Write the post, pay the boards, screen the résumés, run the interviews. The phone keeps ringing the whole time.",
     },
     {
       icon: "graduation",
-      title: "Onboarding and ramp-up",
-      body: "New hires need training and time before they're fully productive, and someone on your team has to teach them.",
-      stat: "[STAT — source needed: typical ramp-up time]",
+      title: "Then they need training",
+      body: "A new hire isn't productive on day one, and the person training them isn't doing their own job either.",
     },
     {
       icon: "refresh",
-      title: "Turnover and starting over",
-      body: "When someone leaves, the knowledge walks out with them and you're back to the job post.",
-      stat: "[STAT — source needed: cost of replacing an employee]",
+      title: "And they leave",
+      body: "When someone quits, everything you taught them walks out the door and you start the whole cycle again.",
     },
     {
       icon: "calendar-x",
-      title: "Sick days, vacation and coverage gaps",
-      body: "Everyone needs time off. The phone still rings while they're out.",
-      stat: null,
+      title: "Sick days and vacation",
+      body: "Everyone needs time off. Nobody covers the desk, or you pay someone overtime to.",
     },
     {
       icon: "clock",
-      title: "Limited hours",
-      body: "Your office runs 9 to 5. Leads come in at 9 pm, on weekends and while you're on a job site.",
-      stat: "[STAT — source needed: share of leads / calls after hours]",
+      title: "They work 9 to 5",
+      body: "Your customers don't. The lead that comes in at 9pm on a Saturday goes to whoever answers first.",
     },
     {
       icon: "alert",
-      title: "Inconsistency and human error",
-      body: "Busy days mean missed callbacks, forgotten follow-ups and a CRM that's always out of date.",
-      stat: null,
+      title: "Busy days mean mistakes",
+      body: "Missed callbacks, forgotten follow-ups, a CRM nobody updated. Not negligence, just being human on a bad day.",
     },
     {
       icon: "receipt",
-      title: "Payroll taxes, benefits and overhead",
-      body: "Employer taxes, benefits, equipment, software seats and workspace all add up on top of the wage.",
-      stat: "[STAT — source needed: total cost of employment vs. base salary]",
+      title: "The wage is only part of it",
+      body: "Payroll taxes, benefits, insurance, equipment, software seats and desk space all sit on top of the salary.",
     },
     {
       icon: "users",
-      title: "Management time",
-      body: "Scheduling, check-ins, reviews and fixing mistakes. Every hire adds to someone's plate.",
-      stat: null,
+      title: "Someone has to manage them",
+      body: "Scheduling, check-ins, reviews, corrections. Every hire takes a bite out of someone else's week.",
     },
   ],
 };
 
-export const rolesSection = {
-  eyebrow: "What AI hires do",
-  title: "Roles we staff with AI.",
-  sub: "Each AI hire is trained on your business, connected to your tools and works the way you'd train a person to.",
-  linkLabel: "Unhire this role",
-  notListed:
-    "Don't see your role? Take the assessment. If it involves a computer, a phone or a process, there's a good chance AI can do most of it.",
+export const solution = {
+  eyebrow: "The solution",
+  title: "Hire AI instead.",
+  sub: "Same work, none of the overhead. An AI employee starts fast, works constantly and does the job the same way every time.",
+  items: [
+    {
+      icon: "clock",
+      title: "Works 24/7, 365",
+      body: "Nights, weekends, holidays and the middle of your busy season. Every call answered, every lead followed up.",
+    },
+    {
+      icon: "rocket",
+      title: "On shift in days",
+      body: "No job posting, no interviews, no notice period. We build it, train it on your business and turn it on.",
+    },
+    {
+      icon: "target",
+      title: "Does it the same way every time",
+      body: "Your intake questions, your script, your process. It doesn't cut corners when it gets busy.",
+    },
+    {
+      icon: "receipt",
+      title: "No payroll taxes or benefits",
+      body: "No insurance, no vacation pay, no equipment, no desk. One price to build the role.",
+    },
+    {
+      icon: "layers",
+      title: "Handles everything at once",
+      body: "Five calls at the same time is the same as one. It doesn't get overwhelmed and it never puts anyone on hold.",
+    },
+    {
+      icon: "refresh",
+      title: "It doesn't quit",
+      body: "Everything it knows stays documented. No turnover, no retraining, no starting over.",
+    },
+    {
+      icon: "shield",
+      title: "Every action is logged",
+      body: "See exactly what it said and did, any time. High-stakes decisions route to a person first.",
+    },
+    {
+      icon: "users",
+      title: "Your team gets their week back",
+      body: "The phones and the admin stop landing on whoever's closest, so your people do the work that needs a person.",
+    },
+  ],
 };
 
 export const comparison = {
   eyebrow: "Human hire vs. AI hire",
   title: "An honest side-by-side.",
-  sub: "AI hires win on availability, speed and consistency. People still win on relationships and anything in person. The best teams use both.",
+  sub: "AI wins on availability, speed and consistency. People still win on relationships and anything in person. The best teams use both.",
   columns: { human: "Human hire", ai: "AI hire" },
   // verdict: "yes" = check, "no" = x, "partial" = tilde
   rows: [
@@ -146,17 +167,17 @@ export const comparison = {
     },
     {
       label: "Time to start",
-      human: { verdict: "no", note: "Weeks to recruit and hire [STAT — source needed]" },
+      human: { verdict: "no", note: "Months to post, interview, hire and onboard" },
       ai: { verdict: "yes", note: "On shift in days" },
     },
     {
       label: "Training time",
-      human: { verdict: "partial", note: "Weeks to months to fully ramp up" },
-      ai: { verdict: "yes", note: "Trained on your docs, scripts and process before day one" },
+      human: { verdict: "partial", note: "Weeks to months, and it costs your team's time too" },
+      ai: { verdict: "yes", note: "Trained on your process before day one" },
     },
     {
-      label: "Sick days",
-      human: { verdict: "no", note: "Everyone needs time off" },
+      label: "Sick days and vacation",
+      human: { verdict: "no", note: "Everyone needs time off, and the desk goes unmanned" },
       ai: { verdict: "yes", note: "Zero" },
     },
     {
@@ -175,9 +196,9 @@ export const comparison = {
       ai: { verdict: "yes", note: "Same script and steps every time, with a full log" },
     },
     {
-      label: "Monthly cost",
-      human: { verdict: "partial", note: "Salary + taxes + benefits + overhead" },
-      ai: { verdict: "yes", note: "__PRICE__/mo, no taxes or benefits" },
+      label: "What it costs",
+      human: { verdict: "partial", note: "Salary + payroll taxes + benefits + equipment" },
+      ai: { verdict: "yes", note: "From __PRICE__ to build the role" },
     },
     {
       label: "Relationship-building and in-person work",
@@ -187,35 +208,44 @@ export const comparison = {
   ] as const,
 };
 
+export const costChart = {
+  eyebrow: "Run your own numbers",
+  title: "What that gap looks like.",
+  sub: "Set the wage you'd pay a person for this role. Everything below is base pay only — payroll taxes, benefits, equipment and recruiting sit on top of the human side.",
+  sliderLabel: "Annual wage for this role",
+  humanLabel: "Human hire",
+  humanSub: "Base pay, first year",
+  aiLabel: "AI hire",
+  aiSub: "Starting price to build the role",
+  footnote:
+    "Your price depends on the scope of the role, the volume it handles and how many systems it connects to. The assessment tells you which parts of the job AI can take on.",
+  plusItems: ["Payroll taxes", "Benefits and insurance", "Recruiting and onboarding", "Equipment and software seats", "Coverage for time off"],
+};
+
 export const howItWorks = {
   eyebrow: "How it works",
   title: "From job post to AI hire in three steps.",
   steps: [
     {
-      title: "Take the AI Hire Assessment.",
-      body: "Tell us about the role. Upload your job post or describe it.",
+      title: "Take the free AI Employee Assessment",
+      body: "Tell us about the role you're hiring for. Upload the job post or describe it in your own words. Takes about three minutes.",
     },
     {
-      title: "Get your AI Employee Opportunity Report.",
-      body: "See exactly which parts of the job AI can take over, and what stays with your team.",
+      title: "We email you your AI Opportunity Report",
+      body: "A task-by-task breakdown of the role: what AI can handle on its own, what needs a human check, and what stays with your team.",
     },
     {
-      title: "We build and onboard your AI hire.",
-      body: "Trained on your business, connected to your tools, on shift in days.",
+      title: "We build and train your AI employee for you",
+      body: "Trained on your business, connected to your phone, inbox, calendar and CRM. On shift in days, not months.",
     },
   ],
+  cta: "Take Assessment",
 };
 
-export const assessmentSection = {
-  eyebrow: "The AI Hire Assessment",
-  title: "Can AI do this job?",
-  sub: "Takes about 3 minutes. Get a free report on how much of this role AI can handle.",
-};
-
-export const testimonialsSection = {
-  eyebrow: "Results",
-  title: "Roles already unhired.",
-  sub: "[PLACEHOLDER — real customer results coming soon]",
+export const companiesSection = {
+  eyebrow: "Our work",
+  title: "Some of the companies we have built for.",
+  sub: "[PLACEHOLDER — swap in real companies, banner images and results before launch]",
 };
 
 export const faqSection = {
@@ -226,7 +256,7 @@ export const faqSection = {
 export const finalCta = {
   title: "Your next hire is waiting.",
   sub: "Find out how much of the role AI can handle before you post the job.",
-  cta: "Take the assessment",
+  cta: "Take Assessment",
 };
 
 export const footer = {

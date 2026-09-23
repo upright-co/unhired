@@ -2,16 +2,17 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 import { hero } from "@/content/copy";
-import { GlowOrbs, GridBackground, StatusDot } from "@/components/ui/Decor";
+import { GlowOrbs, GridBackground } from "@/components/ui/Decor";
 import { trackEvent } from "@/lib/analytics";
-import { HeroCard } from "./HeroCard";
+import { JobBoard } from "./JobBoard";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
 export function Hero() {
   return (
-    <section id="top" className="relative isolate overflow-hidden pt-32 pb-20 sm:pt-40 lg:pb-28">
+    <section id="top" className="relative isolate overflow-hidden pt-28 pb-20 sm:pt-36 lg:pb-28">
       <GridBackground />
       <GlowOrbs
         orbs={[
@@ -22,31 +23,22 @@ export function Hero() {
         fade
       />
 
-      <div className="relative mx-auto grid max-w-6xl items-center gap-14 px-4 sm:px-6 lg:grid-cols-[1.1fr_1fr] lg:gap-10">
-        <div>
-          <motion.p
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, ease }}
-            className="glass inline-flex items-center gap-2.5 rounded-full py-1.5 pr-4 pl-3 text-sm font-medium text-muted"
-          >
-            <StatusDot />
-            {hero.pill}
-          </motion.p>
-
+      <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-[1.05fr_minmax(0,1fr)]">
+        <div className="min-w-0">
           <motion.h1
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, ease, delay: 0.08 }}
-            className="mt-6 text-[2.9rem] leading-[1.02] font-bold tracking-[-0.045em] sm:text-7xl sm:tracking-[-3px] lg:text-[5.2rem]"
+            transition={{ duration: 0.7, ease }}
+            className="text-[2.9rem] leading-[1.02] font-bold tracking-[-0.045em] sm:text-7xl sm:tracking-[-3px] lg:text-[5rem]"
           >
-            {hero.headlineBefore} <span className="text-shimmer">{hero.headlineHighlight}</span>
+            {hero.headlineBefore} <span className="text-shimmer">{hero.headlineHighlight}</span>{" "}
+            {hero.headlineAfter}
           </motion.h1>
 
           <motion.p
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, ease, delay: 0.16 }}
+            transition={{ duration: 0.7, ease, delay: 0.1 }}
             className="mt-6 max-w-xl text-lg leading-relaxed text-muted sm:text-xl"
           >
             {hero.sub}
@@ -55,32 +47,26 @@ export function Hero() {
           <motion.div
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, ease, delay: 0.24 }}
-            className="mt-9 flex flex-col gap-3 sm:flex-row"
+            transition={{ duration: 0.7, ease, delay: 0.18 }}
+            className="mt-9"
           >
-            <a
-              href="#assessment"
+            <Link
+              href="/assessment"
               onClick={() => trackEvent("cta_clicked", { cta: "hero_primary" })}
-              className="btn btn-primary px-7 py-4 text-base"
+              className="btn btn-primary px-8 py-4 text-base"
             >
               {hero.primaryCta} <ArrowRight className="size-4" aria-hidden />
-            </a>
-            <a
-              href="#how-it-works"
-              onClick={() => trackEvent("cta_clicked", { cta: "hero_secondary" })}
-              className="btn btn-secondary px-7 py-4 text-base"
-            >
-              {hero.secondaryCta}
-            </a>
+            </Link>
           </motion.div>
         </div>
 
         <motion.div
+          className="min-w-0"
           initial={{ opacity: 0, scale: 0.96, y: 20 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ duration: 0.9, ease, delay: 0.2 }}
         >
-          <HeroCard />
+          <JobBoard />
         </motion.div>
       </div>
     </section>

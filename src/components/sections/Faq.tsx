@@ -53,9 +53,14 @@ export function Faq() {
                       exit={{ height: 0, opacity: 0 }}
                       transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
                     >
-                      <p className="px-6 pb-6 leading-relaxed text-muted">
-                        {f.a.replace("[PRICE]", formatAiHirePrice())}
-                      </p>
+                      <div className="space-y-3 px-6 pb-6 leading-relaxed text-muted">
+                        {f.a
+                          .replace("[PRICE]", formatAiHirePrice())
+                          .split("\n\n")
+                          .map((para) => (
+                            <p key={para}>{para}</p>
+                          ))}
+                      </div>
                     </motion.div>
                   )}
                 </AnimatePresence>

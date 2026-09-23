@@ -15,7 +15,8 @@ export const siteConfig = {
 
 export const pricing = {
   /**
-   * Price depends on the role, so the site quotes a starting price rather than a flat fee.
+   * Minimum price to build an AI employee. Quoted as a starting price with no
+   * time period ("from $1,295"), since scope drives the real number.
    * Set to null to show the "[PRICE]" placeholder everywhere instead.
    */
   aiHireStartingAt: 1295 as number | null,
@@ -23,10 +24,13 @@ export const pricing = {
   placeholder: "[PRICE]",
 };
 
-/** Compact form for chips and tables, e.g. "$1,295+". */
+/**
+ * Price is quoted as a starting price with no time period attached, e.g. "$1,295".
+ * If you ever introduce a recurring fee, add it here and to the comparison row.
+ */
 export function formatAiHirePrice(): string {
   if (pricing.aiHireStartingAt == null) return pricing.placeholder;
-  return `${formatMoney(pricing.aiHireStartingAt)}+`;
+  return formatMoney(pricing.aiHireStartingAt);
 }
 
 /** Long form for prose, e.g. "from $1,295". */

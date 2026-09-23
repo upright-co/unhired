@@ -15,6 +15,12 @@ export const industries = [
 
 export const teamSizes = ["1–5", "6–15", "16–50", "50+"] as const;
 
+export const assessmentSection = {
+  eyebrow: "The AI Hire Assessment",
+  title: "Can AI do this job?",
+  sub: "Takes about 3 minutes. Get a free report on how much of this role AI can handle.",
+};
+
 export const assessmentCopy = {
   steps: ["The role", "The job", "Questions", "Your report"],
   role: {

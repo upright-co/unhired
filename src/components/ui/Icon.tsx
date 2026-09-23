@@ -1,5 +1,11 @@
 import {
   AlertTriangle,
+  BadgeCheck,
+  BookOpen,
+  Layers,
+  Rocket,
+  ShieldCheck,
+  Plug,
   CalendarX,
   ClipboardList,
   Clock,
@@ -21,6 +27,12 @@ import {
 
 const map: Record<string, LucideIcon> = {
   alert: AlertTriangle,
+  badge: BadgeCheck,
+  book: BookOpen,
+  layers: Layers,
+  plug: Plug,
+  rocket: Rocket,
+  shield: ShieldCheck,
   "calendar-x": CalendarX,
   clipboard: ClipboardList,
   clock: Clock,
