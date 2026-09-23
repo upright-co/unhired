@@ -1,15 +1,17 @@
 /** Copy and options for the AI Hire Assessment flow. */
 
 export const industries = [
-  "Contractor/Renovation",
-  "HVAC",
-  "Plumbing",
-  "Electrical",
+  "Professional Services",
   "Real Estate",
-  "Property Management",
-  "Clinic/Health",
+  "Healthcare & Clinics",
   "Legal",
-  "Agency",
+  "Finance & Accounting",
+  "Marketing & Agency",
+  "Technology & SaaS",
+  "E-commerce & Retail",
+  "Construction & Trades",
+  "Hospitality & Events",
+  "Education & Training",
   "Other",
 ] as const;
 

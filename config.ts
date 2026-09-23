@@ -5,7 +5,7 @@
 
 export const siteConfig = {
   name: "Unhired",
-  tagline: "AI employees for trade and service businesses.",
+  tagline: "AI employees for growing businesses.",
   description:
     "Before you post the job, see if AI can do it. Unhired builds AI employees that answer, book, follow up and handle the admin — trained on how your business runs.",
   url: process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000",

@@ -11,7 +11,7 @@
 export const privacy = {
   lastUpdated: "September 23, 2026",
   intro: [
-    "Unhired builds AI employees for trade and service businesses. This policy explains what we collect when you use unhired.io, why we collect it, who processes it on our behalf, and how to get it removed.",
+    "Unhired builds AI employees for growing businesses. This policy explains what we collect when you use unhired.io, why we collect it, who processes it on our behalf, and how to get it removed.",
     "We collect as little as we can, and we don't sell your information to anyone.",
   ],
   sections: [

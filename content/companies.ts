@@ -23,7 +23,7 @@ export type Company = {
 export const companies: Company[] = [
   {
     name: "[Company name]",
-    industry: "HVAC",
+    industry: "Professional Services",
     banner: null,
     roleBuilt: "AI Receptionist",
     description:
@@ -41,11 +41,11 @@ export const companies: Company[] = [
   },
   {
     name: "[Company name]",
-    industry: "Plumbing",
+    industry: "E-commerce & Retail",
     banner: null,
-    roleBuilt: "AI Dispatcher",
+    roleBuilt: "AI Customer Support Rep",
     description:
-      "[Placeholder: books and reschedules jobs, sends confirmations and reminders, and keeps the dispatch board current for two crews.]",
+      "[Placeholder: answers customer questions, handles order and delivery updates, and escalates the rest with full context.]",
     result: "[X more jobs booked]",
   },
 ];

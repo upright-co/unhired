@@ -34,9 +34,9 @@ export const metadata: Metadata = {
     "AI employees",
     "AI receptionist",
     "AI hire",
-    "AI for contractors",
-    "AI for HVAC",
+    "AI employee",
     "AI for small business",
+    "AI staffing agency",
     "AI staffing",
   ],
   icons: {
