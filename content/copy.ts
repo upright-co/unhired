@@ -45,18 +45,39 @@ export const whatIsAiEmployee = {
     "An AI Employee is built to hold one specific position on your team. It has a job title, a set of responsibilities, the tools to do the work, and knowledge of how your business actually runs. It knows who it is, where it fits, and what it's accountable for.",
     "That's the difference from a chatbot. A chatbot waits for questions. An AI Employee owns the role you were about to hire for: it answers the phone when it rings, books the appointment, updates the CRM, and follows up on Thursday if nobody called back.",
   ],
-  /** Labels on the radial diagram. */
-  diagram: {
-    center: "Your AI Employee",
-    centerSub: "AI Receptionist",
+  /** The employee file shown beside the explanation. Illustrative example. */
+  profile: {
+    label: "Employee file",
+    name: "AI Receptionist",
+    subtitle: "Front desk · Full time, 24/7",
     status: "On shift",
-    nodes: [
-      { icon: "badge", label: "A role", detail: "A named position on your team, not a chat window" },
-      { icon: "clipboard", label: "Responsibilities", detail: "The tasks it owns, start to finish" },
-      { icon: "plug", label: "Tools", detail: "Phone, inbox, calendar, CRM. The same ones your team uses" },
-      { icon: "book", label: "Knowledge", detail: "Your services, pricing, process and how you talk to customers" },
-      { icon: "shield", label: "Accountability", detail: "Clear rules, a person reviews high-stakes calls, every action logged" },
-    ],
+    role: { label: "Role", value: "Front Desk Receptionist", detail: "Reports to your office manager" },
+    responsibilities: {
+      label: "Responsibilities",
+      items: ["Answer every call and text", "Book and reschedule appointments", "Follow up on open estimates"],
+    },
+    tools: {
+      label: "Tools",
+      items: [
+        { icon: "phone", label: "Phone" },
+        { icon: "mail", label: "Inbox" },
+        { icon: "calendar", label: "Calendar" },
+        { icon: "database", label: "CRM" },
+      ],
+    },
+    knowledge: {
+      label: "Knowledge",
+      items: ["Services and pricing", "Booking rules", "Common questions", "How you talk to customers"],
+    },
+    accountability: {
+      label: "Accountability",
+      log: [
+        { time: "9:14 am", text: "Booked a new patient for Thursday", flag: false },
+        { time: "9:02 am", text: "Sent a billing dispute to you", flag: true },
+      ],
+      flagLabel: "Needs you",
+    },
+    footer: "Built, trained and maintained by Unhired",
   },
 };
 
