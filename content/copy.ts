@@ -140,25 +140,26 @@ export const solution = {
 };
 
 export const guarantee = {
-  eyebrow: "The guarantee",
+  /** 3D seal shown at the top of the section. */
+  badge: { src: "/guarantee/badge.png", alt: "50% guaranteed savings seal" },
   percent: 50,
   title: "Save at least 50% of the salary. Guaranteed.",
-  sub: "Whatever the role pays, your AI Employee costs at least half less than that salary. Most come in well under. If we can't guarantee it for your role, we'll tell you before you spend a dollar.",
+  sub: "We build AI Employees that do the same job faster, more reliably, and without any days off. And the best part? We guarantee that the cost of your AI Employee will be AT LEAST 50% cheaper than what you were planning to pay your new hire.",
   chartLabels: { human: "What the role pays a person", ai: "Your maximum with the guarantee", saved: "Yours to keep, every year" },
   promisesTitle: "You never have to touch the AI.",
   promises: [
     {
-      icon: "rocket",
+      image: "/guarantee/build.png",
       title: "We build it",
       body: "Designed around the job description you were about to post, connected to your phone, inbox, calendar and CRM.",
     },
     {
-      icon: "graduation",
+      image: "/guarantee/train.png",
       title: "We train it",
       body: "On your services, your pricing, your process and how you talk to customers. It shows up knowing the job.",
     },
     {
-      icon: "shield",
+      image: "/guarantee/maintain.png",
       title: "We maintain it",
       body: "We watch it, fix it, and improve it as your business changes. Nothing technical ever lands on your desk.",
     },

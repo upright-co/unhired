@@ -1,10 +1,10 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { guarantee } from "@/content/copy";
 import { GlowOrbs, GridBackground } from "@/components/ui/Decor";
-import { Icon } from "@/components/ui/Icon";
-import { Eyebrow, Reveal } from "@/components/ui/Section";
+import { Reveal } from "@/components/ui/Section";
 
 /** Two bars: what a person costs, and the ceiling the guarantee puts on the AI Employee. */
 function GuaranteeBars() {
@@ -72,11 +72,23 @@ export function Guarantee() {
           intensity={1.3}
         />
 
+        {/* The guarantee seal, top centre */}
+        <motion.div
+          className="relative mx-auto -mt-4 mb-6 w-28 sm:-mt-8 sm:mb-8 sm:w-36"
+          initial={{ opacity: 0, scale: 0.7, rotate: -8 }}
+          whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
+          viewport={{ once: true }}
+          transition={{ type: "spring", stiffness: 220, damping: 16 }}
+        >
+          <div aria-hidden className="absolute inset-2 -z-10 rounded-full bg-violet/40 blur-2xl" />
+          <Image src={guarantee.badge.src} alt={guarantee.badge.alt} width={288} height={288} className="h-auto w-full" priority={false} />
+        </motion.div>
+
         <div className="relative grid items-center gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:gap-16">
           <Reveal>
-            <Eyebrow dark>{guarantee.eyebrow}</Eyebrow>
-            <p className="mt-6 font-display text-[6rem] leading-none font-bold tracking-[-0.06em] sm:text-[8rem]">
-              <span className="text-shimmer">{guarantee.percent}%</span>
+            {/* inline-block + right padding so background-clip:text doesn't shave the % glyph */}
+            <p className="font-display text-[6rem] leading-[0.95] font-bold tracking-[-0.05em] sm:text-[8rem]">
+              <span className="text-shimmer inline-block pr-[0.12em] pb-[0.04em]">{guarantee.percent}%</span>
             </p>
             <h2
               id="guarantee-title"
@@ -101,11 +113,9 @@ export function Guarantee() {
           <ol className="mt-10 grid gap-10 md:grid-cols-3 md:gap-0 md:divide-x md:divide-white/10">
             {guarantee.promises.map((p, i) => (
               <Reveal as="li" key={p.title} delay={i * 0.1} className="md:px-8 first:md:pl-0 last:md:pr-0">
-                <div className="flex items-center gap-3">
-                  <span className="bg-signal grid size-11 shrink-0 place-items-center rounded-full text-white">
-                    <Icon name={p.icon} />
-                  </span>
-                  <span className="label-mono text-white/50">0{i + 1}</span>
+                <div className="flex items-end gap-3">
+                  <Image src={p.image} alt="" width={176} height={176} className="size-20 shrink-0 sm:size-[5.5rem]" />
+                  <span className="label-mono pb-2 text-white/50">0{i + 1}</span>
                 </div>
                 <h4 className="mt-4 text-xl font-semibold tracking-tight">{p.title}</h4>
                 <p className="mt-2 leading-relaxed text-white/70">{p.body}</p>
