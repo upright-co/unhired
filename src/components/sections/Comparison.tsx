@@ -1,6 +1,5 @@
 import { Check, Minus, X } from "lucide-react";
 import { comparison } from "@/content/copy";
-import { formatAiHirePrice } from "@/config";
 import { Reveal, SectionHeading } from "@/components/ui/Section";
 import { CostChart } from "./CostChart";
 
@@ -31,8 +30,6 @@ function Mark({ v, compact = false }: { v: Verdict; compact?: boolean }) {
   );
 }
 
-const fill = (s: string) => s.replace("__PRICE__", formatAiHirePrice());
-
 export function Comparison() {
   return (
     <section id="compare" aria-labelledby="compare-title" className="relative px-4 py-20 sm:px-6 sm:py-28">
@@ -41,7 +38,7 @@ export function Comparison() {
 
         <Reveal className="glass mt-14 overflow-hidden rounded-[28px]">
           <table className="hidden w-full border-collapse text-left md:table">
-            <caption className="sr-only">Human hire compared with AI hire</caption>
+            <caption className="sr-only">Human hire compared with an AI Employee</caption>
             <thead>
               <tr className="border-b border-ink/10">
                 <th scope="col" className="w-[30%] p-5">
@@ -68,13 +65,13 @@ export function Comparison() {
                   <td className="p-5 align-top">
                     <div className="flex items-start gap-2.5">
                       <Mark v={row.human.verdict} />
-                      <span className="text-sm leading-snug text-muted">{fill(row.human.note)}</span>
+                      <span className="text-sm leading-snug text-muted">{row.human.note}</span>
                     </div>
                   </td>
                   <td className="bg-white/60 p-5 align-top">
                     <div className="flex items-start gap-2.5">
                       <Mark v={row.ai.verdict} />
-                      <span className="text-sm leading-snug">{fill(row.ai.note)}</span>
+                      <span className="text-sm leading-snug">{row.ai.note}</span>
                     </div>
                   </td>
                 </tr>
@@ -92,13 +89,13 @@ export function Comparison() {
                     <p className="label-mono mb-2 flex items-center gap-1.5 text-[0.6rem] text-muted">
                       <Mark v={row.human.verdict} compact /> {comparison.columns.human}
                     </p>
-                    <p className="text-[0.8rem] leading-snug text-muted">{fill(row.human.note)}</p>
+                    <p className="text-[0.8rem] leading-snug text-muted">{row.human.note}</p>
                   </div>
                   <div className="rounded-2xl bg-violet/[0.07] p-3 ring-1 ring-violet/15">
                     <p className="label-mono mb-2 flex items-center gap-1.5 text-[0.6rem] text-violet-deep">
                       <Mark v={row.ai.verdict} compact /> {comparison.columns.ai}
                     </p>
-                    <p className="text-[0.8rem] leading-snug text-ink/85">{fill(row.ai.note)}</p>
+                    <p className="text-[0.8rem] leading-snug text-ink/85">{row.ai.note}</p>
                   </div>
                 </div>
               </li>

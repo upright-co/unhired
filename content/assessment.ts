@@ -74,13 +74,13 @@ export const assessmentCopy = {
     extract: ["Reviewing the job description…", "Pulling out the day-to-day tasks…"],
     questions: [
       "Reviewing the job description…",
-      "Interviewing your future AI hire…",
+      "Interviewing your future AI Employee…",
       "Drafting a few sharp questions…",
     ],
     followup: ["Checking my notes…", "Making sure I have the full picture…"],
     report: [
       "Breaking the role into tasks…",
-      "Interviewing your future AI hire…",
+      "Interviewing your future AI Employee…",
       "Deciding what stays with your team…",
       "Running the numbers…",
     ],

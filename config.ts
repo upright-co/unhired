@@ -47,6 +47,14 @@ export function formatMoney(n: number): string {
   }).format(n);
 }
 
+/**
+ * The headline promise on the site: an AI Employee saves at least this share of
+ * the role's annual salary. The home page leads with this instead of a price.
+ */
+export const guarantee = {
+  salarySavingsPercent: 50,
+};
+
 export const links = {
   /** Primary CTA at the end of every report. Set to null to hide the button. */
   bookCall: null as string | null,

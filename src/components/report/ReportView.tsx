@@ -134,7 +134,7 @@ export function ReportView({
 
       {/* 4–5. Day in the life + handoff */}
       <div className="grid gap-6 lg:grid-cols-2">
-        <ReportSection eyebrow="A day on the job" title="What your AI hire would do in a day." flush>
+        <ReportSection eyebrow="A day on the job" title="What your AI Employee would do in a day." flush>
           <div className="glass relative h-full overflow-hidden rounded-3xl p-6 print-avoid-break">
             <p className="mb-4 inline-flex items-center gap-2 rounded-full bg-signal-green/10 px-3 py-1 text-xs font-semibold text-green-deep">
               <StatusDot /> On shift · 24/7
@@ -209,7 +209,7 @@ export function ReportView({
         <div className="relative">
           <p className="label-mono text-white/70">Recommended next step</p>
           <h3 className="mt-3 max-w-2xl text-3xl font-semibold tracking-[-0.035em] sm:text-4xl">
-            Let&apos;s put your {r.role_title} AI hire on shift.
+            Let&apos;s put your {r.role_title} AI Employee on shift.
           </h3>
           <p className="mt-3 max-w-xl text-white/75">
             On a short call we&apos;ll walk through this report, confirm your tools and map out onboarding.
@@ -223,15 +223,15 @@ export function ReportView({
                 onClick={() => trackEvent("cta_clicked", { cta: "report_book_call", report_id: id })}
                 className="btn btn-primary px-7 py-4"
               >
-                Book a call to build your AI hire <ArrowRight className="size-4" aria-hidden />
+                Book a call to build your AI Employee <ArrowRight className="size-4" aria-hidden />
               </a>
             ) : (
               <a
-                href={`mailto:${siteConfig.contactEmail}?subject=${encodeURIComponent(`AI hire for our ${r.role_title} role`)}`}
+                href={`mailto:${siteConfig.contactEmail}?subject=${encodeURIComponent(`AI Employee for our ${r.role_title} role`)}`}
                 onClick={() => trackEvent("cta_clicked", { cta: "report_email", report_id: id })}
                 className="btn btn-primary px-7 py-4"
               >
-                Email us to build your AI hire <ArrowRight className="size-4" aria-hidden />
+                Email us to build your AI Employee <ArrowRight className="size-4" aria-hidden />
               </a>
             )}
             {links.challenge && (
@@ -327,7 +327,7 @@ function CostComparison({ r }: { r: Report }) {
         </div>
         <div className="relative overflow-hidden rounded-2xl bg-white/80 p-5 ring-1 ring-violet/25">
           <div aria-hidden className="bg-signal absolute inset-x-0 top-0 h-1" />
-          <p className="label-mono text-violet-deep">AI hire</p>
+          <p className="label-mono text-violet-deep">AI Employee</p>
           <p className="mt-2 font-display text-3xl font-semibold tracking-tight">
             {formatAiHirePrice()}
             <span className="text-base font-medium text-muted">/mo</span>
@@ -349,9 +349,9 @@ function CostComparison({ r }: { r: Report }) {
         <p className="mt-5 rounded-2xl bg-mist px-5 py-4 text-sm">
           At the starting price, the difference on base pay alone is{" "}
           <strong className="font-semibold">
-            {formatMoney(Math.abs(diff))}/yr {diff >= 0 ? "in favor of the AI hire" : "in favor of the human hire"}
+            {formatMoney(Math.abs(diff))}/yr {diff >= 0 ? "in favor of the AI Employee" : "in favor of the human hire"}
           </strong>
-          , before taxes, benefits and overhead. Your actual price depends on the scope of this role, and the AI hire
+          , before taxes, benefits and overhead. Your actual price depends on the scope of this role, and the AI Employee
           covers ~{r.coverage_percent}% of it — the rest stays with your team.
         </p>
       )}

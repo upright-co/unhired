@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Check } from "lucide-react";
 import Link from "next/link";
 import { hero } from "@/content/copy";
 import { GlowOrbs, GridBackground } from "@/components/ui/Decor";
@@ -11,6 +11,7 @@ import { JobBoard } from "./JobBoard";
 const ease = [0.22, 1, 0.36, 1] as const;
 
 export function Hero() {
+  const afterIsPunctuation = /^[.,!?]/.test(hero.headlineAfter);
   return (
     <section id="top" className="relative isolate overflow-hidden pt-28 pb-20 sm:pt-36 lg:pb-28">
       {/* Mobile gets a deep background so white type reads properly; desktop stays light. */}
@@ -40,11 +41,12 @@ export function Hero() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease }}
-            className="text-[2.9rem] leading-[1.02] font-bold tracking-[-0.045em] text-white sm:text-6xl sm:tracking-[-2.5px] lg:text-[4.4rem] lg:text-ink"
+            className="text-[2.9rem] leading-[1.02] font-bold tracking-[-0.045em] text-white sm:text-6xl sm:tracking-[-2.5px] lg:text-[4.2rem] lg:text-ink"
           >
             {hero.headlineBefore}{" "}
-            <span className="text-shimmer-light lg:hidden">{hero.headlineHighlight}</span>
-            <span className="text-shimmer hidden lg:inline">{hero.headlineHighlight}</span>{" "}
+            <span className="text-shimmer-light whitespace-nowrap lg:hidden">{hero.headlineHighlight}</span>
+            <span className="text-shimmer hidden whitespace-nowrap lg:inline">{hero.headlineHighlight}</span>
+            {afterIsPunctuation ? "" : " "}
             {hero.headlineAfter}
           </motion.h1>
 
@@ -71,6 +73,25 @@ export function Hero() {
               {hero.primaryCta} <ArrowRight className="size-4" aria-hidden />
             </Link>
           </motion.div>
+
+          {/* The promise, in four words each. */}
+          <motion.ul
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, ease, delay: 0.28 }}
+            className="mt-8 flex flex-wrap gap-x-5 gap-y-2 text-sm font-medium text-white/80 lg:text-ink/75"
+            aria-label="What Unhired does for you"
+          >
+            {hero.promises.map((p, i) => {
+              const last = i === hero.promises.length - 1;
+              return (
+                <li key={p} className="flex items-center gap-1.5">
+                  <Check className={`size-3.5 ${last ? "text-coral" : "text-green-deep lg:text-green-deep"}`} strokeWidth={3} aria-hidden />
+                  <span className={last ? "font-semibold text-white lg:text-ink" : ""}>{p}</span>
+                </li>
+              );
+            })}
+          </motion.ul>
         </div>
 
         <motion.div

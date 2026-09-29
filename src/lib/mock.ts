@@ -97,7 +97,7 @@ export async function mockReport(role: string): Promise<Report> {
     coverage_percent: 74,
     verdict_tier: "mostly_ai",
     summary:
-      "An AI hire can take over most of this role: answering every call and text, booking jobs and keeping customers updated. The judgment calls and in-person moments stay with your office manager.",
+      "An AI Employee can take over most of this role: answering every call and text, booking jobs and keeping customers updated. The judgment calls and in-person moments stay with your office manager.",
     tasks: [
       { task: "Answer inbound calls and texts", status: "ai_full", reason: "Scripted intake with clear questions; works at any volume, day or night.", human_owner_suggestion: null },
       { task: "Qualify leads and capture job details", status: "ai_full", reason: "Follows your intake checklist every time and logs it straight to the CRM.", human_owner_suggestion: null },
@@ -111,8 +111,8 @@ export async function mockReport(role: string): Promise<Report> {
     day_in_the_life:
       "At 6:40 am your AI receptionist picks up a no-heat call, captures the address and system details, and books the first open slot at 8:00. By 9, it has confirmed the day's six appointments by text and moved one reschedule without anyone lifting a finger.\n\nThrough the day it answers every call on the first ring, qualifies new leads, and chases three estimates from last week. When a customer disputes an invoice, it summarizes the issue and hands it to your office manager.\n\nAt 9:15 pm, a homeowner fills out your web form. The AI replies within a minute and books them for Thursday morning.",
     human_handoff_plan:
-      "Your office manager owns anything involving money decisions, upset customers and walk-ins. The AI hire flags these in a shared inbox with a summary and suggested reply, so nothing starts from scratch. The owner steps in only for refunds above your set limit. Your team no longer answers routine calls, books jobs or sends reminders.",
-    cost_comparison: { human_annual_cost_input: null, notes: "Compare against the full cost of the role, and remember the AI hire covers most, not all, of the work." },
+      "Your office manager owns anything involving money decisions, upset customers and walk-ins. The AI Employee flags these in a shared inbox with a summary and suggested reply, so nothing starts from scratch. The owner steps in only for refunds above your set limit. Your team no longer answers routine calls, books jobs or sends reminders.",
+    cost_comparison: { human_annual_cost_input: null, notes: "Compare against the full cost of the role, and remember the AI Employee covers most, not all, of the work." },
     tools_needed: ["Business phone line with call forwarding", "Google Calendar", "Jobber", "SMS number"],
     risks: [
       "Complex pricing questions still need a person.",

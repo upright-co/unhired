@@ -71,10 +71,10 @@ How to build it:
 3. Compute coverage_percent from the breakdown, not a gut feeling: estimate each task's share of the role's working time, then sum share × 1.0 for ai_full, share × 0.6 for ai_with_review, and share × 0 for human. Round to a whole number.
 4. verdict_tier must match coverage_percent: 80+ fully_unhireable, 60–79 mostly_ai, 35–59 ai_assisted, under 35 keep_human_add_ai.
 5. summary: 2–3 sentences for the owner. Lead with the verdict in plain words.
-6. day_in_the_life: a short narrative (120–180 words) of this AI hire's day at this specific business, from first thing in the morning through after hours. Concrete and specific to their tools and customers.
+6. day_in_the_life: a short narrative (120–180 words) of this AI Employee's day at this specific business, from first thing in the morning through after hours. Concrete and specific to their tools and customers.
 7. human_handoff_plan: a clear plan (80–150 words) for the non-AI portion: who owns what, how the AI hands off, and what the team no longer has to do.
 8. cost_comparison.notes: one or two sentences about what to weigh when comparing costs for this role. Do NOT state any dollar amounts, salaries, statistics, or AI pricing; the website calculates the numbers. Set human_annual_cost_input to null (the website fills it in).
-9. tools_needed: the integrations this AI hire would need, based on what they told you (e.g. "Google Calendar", "ServiceTitan", "business phone line with call forwarding"). Don't invent tools they didn't mention unless essential; label essentials generically.
+9. tools_needed: the integrations this AI Employee would need, based on what they told you (e.g. "Google Calendar", "ServiceTitan", "business phone line with call forwarding"). Don't invent tools they didn't mention unless essential; label essentials generically.
 10. risks: 3–6 honest limits and considerations specific to this role.
 11. confidence: how confident you are given the detail provided (high, medium, low).
 

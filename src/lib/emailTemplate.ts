@@ -54,7 +54,7 @@ export function reportEmail(opts: { firstName: string; report: Report; reportUrl
   ${
     topTasks.length
       ? `<tr><td style="padding:24px 32px 0;">
-    <p style="font-weight:700;margin:0 0 8px;font-size:15px;">What your AI hire could take over</p>
+    <p style="font-weight:700;margin:0 0 8px;font-size:15px;">What your AI Employee could take over</p>
     <ul style="margin:0;padding-left:20px;font-size:15px;line-height:1.7;color:#0E0B1F;">
       ${topTasks.map((t) => `<li>${esc(t.task)}</li>`).join("")}
     </ul>
@@ -66,7 +66,7 @@ export function reportEmail(opts: { firstName: string; report: Report; reportUrl
   </td></tr>
   <tr><td style="padding:8px 32px 28px;" align="center">
     <a href="${esc(links.bookCall ?? `mailto:${siteConfig.contactEmail}`)}" style="color:#6D2FD0;font-size:14px;font-weight:600;">${
-      links.bookCall ? "Book a call to build your AI hire →" : "Reply to this email to build your AI hire →"
+      links.bookCall ? "Book a call to build your AI Employee →" : "Reply to this email to build your AI Employee →"
     }</a>
   </td></tr>
   <tr><td style="padding:20px 32px 28px;border-top:1px solid #ECEAF4;font-size:12px;line-height:1.6;color:#4A4560;">
@@ -87,8 +87,8 @@ export function reportEmail(opts: { firstName: string; report: Report; reportUrl
     ``,
     `View your full report: ${reportUrl}`,
     links.bookCall
-      ? `Book a call to build your AI hire: ${links.bookCall}`
-      : `Reply to this email to build your AI hire.`,
+      ? `Book a call to build your AI Employee: ${links.bookCall}`
+      : `Reply to this email to build your AI Employee.`,
     ``,
     `— Unhired`,
   ].join("\n");
