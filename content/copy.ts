@@ -50,6 +50,9 @@ export const whatIsAiEmployee = {
     label: "Employee file",
     name: "AI Receptionist",
     subtitle: "Front desk · Full time, 24/7",
+    /** 3D avatar, generated for Unhired. Swap the file in /public/avatars to change it. */
+    avatar: "/avatars/ai-receptionist.png",
+    avatarAlt: "3D illustration of a friendly robot receptionist wearing a headset, shirt and tie",
     status: "On shift",
     role: { label: "Role", value: "Front Desk Receptionist", detail: "Reports to your office manager" },
     responsibilities: {

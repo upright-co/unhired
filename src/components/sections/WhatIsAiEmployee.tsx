@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { Check } from "lucide-react";
 import { whatIsAiEmployee as copy } from "@/content/copy";
 import { Icon } from "@/components/ui/Icon";
@@ -51,9 +52,13 @@ function EmployeeFile() {
           </span>
         </div>
         <div className="flex items-center gap-4 px-5 pt-4 pb-5 sm:px-7 sm:pb-6">
-          <span className="bg-signal grid size-14 shrink-0 place-items-center rounded-2xl font-display text-xl font-bold text-white shadow-[0_14px_30px_-12px_rgba(148,82,242,0.8)]">
-            AI
-          </span>
+          <Image
+            src={p.avatar}
+            alt={p.avatarAlt}
+            width={144}
+            height={144}
+            className="size-[4.5rem] shrink-0 rounded-2xl object-cover shadow-[0_14px_30px_-14px_rgba(148,82,242,0.7)] ring-1 ring-violet/15 sm:size-20"
+          />
           <div className="min-w-0">
             <p className="font-display text-xl font-semibold tracking-tight sm:text-2xl">{p.name}</p>
             <p className="text-sm text-muted">{p.subtitle}</p>
