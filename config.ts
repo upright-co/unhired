@@ -13,31 +13,13 @@ export const siteConfig = {
   privacyPolicyUrl: "/privacy",
 };
 
-export const pricing = {
-  /**
-   * Minimum price to build an AI employee. Quoted as a starting price with no
-   * time period ("from $1,295"), since scope drives the real number.
-   * Set to null to show the "[PRICE]" placeholder everywhere instead.
-   */
-  aiHireStartingAt: 1295 as number | null,
-  currency: "USD",
-  placeholder: "[PRICE]",
-};
-
 /**
- * Price is quoted as a starting price with no time period attached, e.g. "$1,295".
- * If you ever introduce a recurring fee, add it here and to the comparison row.
+ * There is no fixed price. An AI Employee is billed monthly like a salary, and
+ * costs at most (100 - guarantee.salarySavingsPercent)% of the role's annual salary.
  */
-export function formatAiHirePrice(): string {
-  if (pricing.aiHireStartingAt == null) return pricing.placeholder;
-  return formatMoney(pricing.aiHireStartingAt);
-}
-
-/** Long form for prose, e.g. "from $1,295". */
-export function formatAiHirePriceLong(): string {
-  if (pricing.aiHireStartingAt == null) return pricing.placeholder;
-  return `from ${formatMoney(pricing.aiHireStartingAt)}`;
-}
+export const pricing = {
+  currency: "USD",
+};
 
 export function formatMoney(n: number): string {
   return new Intl.NumberFormat("en-US", {

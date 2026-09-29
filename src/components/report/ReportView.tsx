@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { ArrowRight, Check, Copy, Printer, RotateCcw, ShieldAlert, Plug, UserRound, Sun, Moon } from "lucide-react";
-import { formatAiHirePrice, formatMoney, links, pricing, siteConfig } from "@/config";
+import { formatMoney, guarantee, links, siteConfig } from "@/config";
 import type { Report, TaskStatus } from "@/lib/schemas";
 import { statusInfo, tierInfo } from "@/lib/tiers";
 import { trackEvent } from "@/lib/analytics";
@@ -296,9 +296,10 @@ function Prose({ text }: { text: string }) {
 
 function CostComparison({ r }: { r: Report }) {
   const annual = r.cost_comparison.human_annual_cost_input;
-  const aiMonthly = pricing.aiHireStartingAt;
-  const aiAnnual = aiMonthly != null ? aiMonthly * 12 : null;
-  const diff = annual != null && aiAnnual != null ? annual - aiAnnual : null;
+  // Billed monthly like a salary, guaranteed to cost at most this share of the role's salary.
+  const savedPct = guarantee.salarySavingsPercent;
+  const aiMaxAnnual = annual != null ? annual * (1 - savedPct / 100) : null;
+  const minSaved = annual != null && aiMaxAnnual != null ? annual - aiMaxAnnual : null;
 
   return (
     <div className="glass rounded-3xl p-6 sm:p-8 print-avoid-break">
@@ -328,15 +329,26 @@ function CostComparison({ r }: { r: Report }) {
         <div className="relative overflow-hidden rounded-2xl bg-white/80 p-5 ring-1 ring-violet/25">
           <div aria-hidden className="bg-signal absolute inset-x-0 top-0 h-1" />
           <p className="label-mono text-violet-deep">AI Employee</p>
-          <p className="mt-2 font-display text-3xl font-semibold tracking-tight">
-            {formatAiHirePrice()}
-            <span className="text-base font-medium text-muted">/mo</span>
-          </p>
-          <p className="text-sm text-muted">
-            {aiAnnual != null
-              ? `Starting price · ${formatMoney(aiAnnual)}/yr`
-              : "Priced to the role"}
-          </p>
+          {aiMaxAnnual != null ? (
+            <>
+              <p className="mt-2 font-display text-3xl font-semibold tracking-tight">
+                <span className="text-base font-medium text-muted">at most </span>
+                {formatMoney(aiMaxAnnual / 12)}
+                <span className="text-base font-medium text-muted">/mo</span>
+              </p>
+              <p className="text-sm text-muted">
+                Guaranteed · no more than {formatMoney(aiMaxAnnual)}/yr, half the salary
+              </p>
+            </>
+          ) : (
+            <>
+              <p className="mt-2 font-display text-3xl font-semibold tracking-tight">
+                {savedPct}%+
+                <span className="text-base font-medium text-muted"> of the salary saved</span>
+              </p>
+              <p className="text-sm text-muted">Guaranteed · billed monthly, like a salary</p>
+            </>
+          )}
           <ul className="mt-4 space-y-1.5 text-sm text-muted">
             <li className="flex gap-2"><Check className="mt-0.5 size-3.5 text-green-deep" aria-hidden /> No recruiting fees or payroll taxes</li>
             <li className="flex gap-2"><Check className="mt-0.5 size-3.5 text-green-deep" aria-hidden /> Works 24/7, no sick days</li>
@@ -345,16 +357,21 @@ function CostComparison({ r }: { r: Report }) {
         </div>
       </div>
 
-      {diff != null && (
-        <p className="mt-5 rounded-2xl bg-mist px-5 py-4 text-sm">
-          At the starting price, the difference on base pay alone is{" "}
-          <strong className="font-semibold">
-            {formatMoney(Math.abs(diff))}/yr {diff >= 0 ? "in favor of the AI Employee" : "in favor of the human hire"}
-          </strong>
-          , before taxes, benefits and overhead. Your actual price depends on the scope of this role, and the AI Employee
-          covers ~{r.coverage_percent}% of it — the rest stays with your team.
-        </p>
-      )}
+      <p className="mt-5 rounded-2xl bg-mist px-5 py-4 text-sm">
+        {minSaved != null ? (
+          <>
+            We guarantee you save{" "}
+            <strong className="font-semibold">at least {formatMoney(minSaved)}/yr</strong> on base pay alone, before taxes,
+            benefits and overhead.
+          </>
+        ) : (
+          <>
+            We guarantee the AI Employee costs <strong className="font-semibold">at most half</strong> of what you&apos;d
+            pay a person for this role, billed monthly so it fits your labor budget.
+          </>
+        )}{" "}
+        The AI Employee covers ~{r.coverage_percent}% of the role; the rest stays with your team.
+      </p>
       {r.cost_comparison.notes && <p className="mt-4 text-sm leading-relaxed text-muted">{r.cost_comparison.notes}</p>}
     </div>
   );
