@@ -5,7 +5,6 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Plus } from "lucide-react";
 import { faqs } from "@/content/faq";
 import { faqSection } from "@/content/copy";
-import { formatAiHirePrice } from "@/config";
 import { SectionHeading } from "@/components/ui/Section";
 
 export function Faq() {
@@ -16,13 +15,13 @@ export function Faq() {
     <section id="faq" aria-labelledby="faq-title" className="relative px-4 py-20 sm:px-6 sm:py-28">
       <div className="mx-auto max-w-3xl">
         <SectionHeading id="faq-title" eyebrow={faqSection.eyebrow} title={faqSection.title} />
-        <ul className="mt-12 space-y-3">
+        <ul className="mt-12 divide-y divide-ink/[0.08] border-y border-ink/[0.08]">
           {faqs.map((f, i) => {
             const isOpen = open === i;
             const btnId = `${base}-q${i}`;
             const panelId = `${base}-a${i}`;
             return (
-              <li key={f.q} className="glass overflow-hidden rounded-3xl">
+              <li key={f.q}>
                 <h3>
                   <button
                     id={btnId}
@@ -30,7 +29,7 @@ export function Faq() {
                     aria-expanded={isOpen}
                     aria-controls={panelId}
                     onClick={() => setOpen(isOpen ? null : i)}
-                    className="flex w-full items-center justify-between gap-4 px-6 py-5 text-left font-display text-lg font-semibold tracking-tight"
+                    className="flex w-full items-center justify-between gap-4 px-1 py-5 text-left font-display text-lg font-semibold tracking-tight sm:px-2"
                   >
                     {f.q}
                     <span
@@ -53,13 +52,10 @@ export function Faq() {
                       exit={{ height: 0, opacity: 0 }}
                       transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
                     >
-                      <div className="space-y-3 px-6 pb-6 leading-relaxed text-muted">
-                        {f.a
-                          .replace("[PRICE]", formatAiHirePrice())
-                          .split("\n\n")
-                          .map((para) => (
-                            <p key={para}>{para}</p>
-                          ))}
+                      <div className="space-y-3 px-1 pb-6 leading-relaxed text-muted sm:px-2 sm:pr-16">
+                        {f.a.split("\n\n").map((para) => (
+                          <p key={para}>{para}</p>
+                        ))}
                       </div>
                     </motion.div>
                   )}

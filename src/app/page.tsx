@@ -3,6 +3,7 @@ import { Hero } from "@/components/sections/Hero";
 import { WhatIsAiEmployee } from "@/components/sections/WhatIsAiEmployee";
 import { Problem } from "@/components/sections/Problem";
 import { Solution } from "@/components/sections/Solution";
+import { Guarantee } from "@/components/sections/Guarantee";
 import { Comparison } from "@/components/sections/Comparison";
 import { HowItWorks } from "@/components/sections/HowItWorks";
 import { Companies } from "@/components/sections/Companies";
@@ -25,6 +26,7 @@ export default function Home() {
         <WhatIsAiEmployee />
         <Problem />
         <Solution />
+        <Guarantee />
         <Comparison />
         <HowItWorks />
         <Companies />

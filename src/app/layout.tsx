@@ -23,7 +23,7 @@ const jetbrains = JetBrains_Mono({
   display: "swap",
 });
 
-const title = "Unhired — Let your next hire be AI";
+const title = "Unhired — Your next hire is an AI Employee";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   keywords: [
     "AI employees",
     "AI receptionist",
-    "AI hire",
+    "AI Employee",
     "AI employee",
     "AI for small business",
     "AI staffing agency",
