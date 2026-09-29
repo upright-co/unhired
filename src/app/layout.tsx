@@ -23,7 +23,7 @@ const jetbrains = JetBrains_Mono({
   display: "swap",
 });
 
-const title = "Unhired — Your next hire is an AI Employee";
+const title = "Unhired — Let your next hire be AI";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),

@@ -16,9 +16,9 @@ export const nav = {
 };
 
 export const hero = {
-  headlineBefore: "Your next hire is an",
-  headlineHighlight: "AI Employee",
-  headlineAfter: ".",
+  headlineBefore: "Let",
+  headlineHighlight: "AI",
+  headlineAfter: "Be Your Next Hire",
   sub: "Tell us the role you're about to post. We build, train and fully maintain an AI Employee that does the job, and we guarantee it costs at least 50% less than the salary.",
   primaryCta: "Take Assessment",
   /** Short promises shown under the CTA. */
