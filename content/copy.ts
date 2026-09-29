@@ -141,7 +141,7 @@ export const solution = {
 
 export const guarantee = {
   /** 3D seal shown at the top of the section. */
-  badge: { src: "/guarantee/badge.png", alt: "50% guaranteed savings seal" },
+  badge: { src: "/guarantee/badge.png", alt: "Guarantee seal with a dollar sign" },
   percent: 50,
   title: "Save at least 50% of the salary. Guaranteed.",
   sub: "We build AI Employees that do the same job faster, more reliably, and without any days off. And the best part? We guarantee that the cost of your AI Employee will be AT LEAST 50% cheaper than what you were planning to pay your new hire.",
@@ -233,6 +233,7 @@ export const costChart = {
   sliderLabel: "Annual salary for this role",
   humanLabel: "Human hire",
   humanSub: "Base salary, before taxes, benefits and overhead",
+  dragHint: "Drag the bar to set the salary",
   aiLabel: "AI Employee",
   aiSub: "Guaranteed maximum. Most come in well under.",
   savedLabel: "You keep at least",
