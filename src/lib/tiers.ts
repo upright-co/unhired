@@ -3,15 +3,15 @@ import type { TaskStatus, VerdictTier } from "./schemas";
 export const tierInfo: Record<VerdictTier, { label: string; blurb: string }> = {
   fully_unhireable: {
     label: "Fully Unhire-able",
-    blurb: "An AI hire can run nearly all of this role, with a person checking in on the edge cases.",
+    blurb: "An AI Employee can run nearly all of this role, with a person checking in on the edge cases.",
   },
   mostly_ai: {
     label: "Mostly AI",
-    blurb: "An AI hire can take over most of this role. A few responsibilities stay with your team.",
+    blurb: "An AI Employee can take over most of this role. A few responsibilities stay with your team.",
   },
   ai_assisted: {
     label: "AI-Assisted",
-    blurb: "An AI hire can take a big chunk of the workload off whoever does this job.",
+    blurb: "An AI Employee can take a big chunk of the workload off whoever does this job.",
   },
   keep_human_add_ai: {
     label: "Keep the Human, Add AI",
