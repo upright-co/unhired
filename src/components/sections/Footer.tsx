@@ -30,6 +30,11 @@ export function Footer({ minimal = false }: { minimal?: boolean }) {
                 </li>
               ))}
               <li>
+                <a href="/blog" className="text-muted hover:text-ink">
+                  {footer.blogLabel}
+                </a>
+              </li>
+              <li>
                 <a href={siteConfig.privacyPolicyUrl} className="text-muted hover:text-ink">
                   {footer.privacyLabel}
                 </a>
@@ -41,9 +46,14 @@ export function Footer({ minimal = false }: { minimal?: boolean }) {
       <div className="mx-auto mt-10 flex max-w-6xl flex-col justify-between gap-2 text-sm text-muted sm:flex-row">
         <p>© {year} Unhired. All rights reserved.</p>
         {minimal && (
-          <a href={siteConfig.privacyPolicyUrl} className="hover:text-ink">
-            {footer.privacyLabel}
-          </a>
+          <span className="flex gap-6">
+            <a href="/blog" className="hover:text-ink">
+              {footer.blogLabel}
+            </a>
+            <a href={siteConfig.privacyPolicyUrl} className="hover:text-ink">
+              {footer.privacyLabel}
+            </a>
+          </span>
         )}
       </div>
     </footer>

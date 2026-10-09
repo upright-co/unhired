@@ -281,4 +281,5 @@ export const finalCta = {
 export const footer = {
   description: "Unhired builds, trains and maintains AI Employees for growing businesses.",
   privacyLabel: "Privacy policy",
+  blogLabel: "Blog",
 };

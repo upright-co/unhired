@@ -18,7 +18,7 @@ export const privacy = {
     {
       heading: "What we collect when you take the assessment",
       body: [
-        "Everything you type into the AI Hire Assessment: the role title, industry and team size, the job description you write or the text extracted from a file you upload, your answers to the follow-up questions, and the wage estimate if you choose to give one.",
+        "Everything you type into the AI Employee Assessment: the role title, industry and team size, the job description you write or the text extracted from a file you upload, your answers to the follow-up questions, and the wage estimate if you choose to give one.",
         "If you upload a job description, we read the text out of the file and store that text. We don't keep the file itself.",
       ],
       list: null,

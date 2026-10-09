@@ -5,9 +5,9 @@
 
 export const siteConfig = {
   name: "Unhired",
-  tagline: "AI employees for growing businesses.",
+  tagline: "The AI Employee Company.",
   description:
-    "Before you post the job, see if AI can do it. Unhired builds AI employees that answer, book, follow up and handle the admin — trained on how your business runs.",
+    "Before you post the job, see if an AI Employee can do it. Unhired builds, trains and maintains AI Employees that answer, book, follow up and handle the admin, guaranteed to cost at least 50% less than the salary.",
   url: process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000",
   contactEmail: "hello@unhired.io",
   privacyPolicyUrl: "/privacy",

@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Sora, DM_Sans, JetBrains_Mono } from "next/font/google";
 import { siteConfig } from "@/config";
 import { Providers } from "@/components/Providers";
+import { JsonLd } from "@/components/blog/JsonLd";
 import "./globals.css";
 
 const sora = Sora({
@@ -23,7 +24,7 @@ const jetbrains = JetBrains_Mono({
   display: "swap",
 });
 
-const title = "Unhired — Let your next hire be AI";
+const title = "Unhired | The AI Employee Company";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -63,10 +64,37 @@ export const viewport: Viewport = {
   initialScale: 1,
 };
 
+const base = siteConfig.url.replace(/\/$/, "");
+
+/** Tells search engines who Unhired is. Add social profiles to `sameAs` as they go live. */
+const orgSchema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": `${base}/#organization`,
+    name: "Unhired",
+    url: `${base}/`,
+    logo: `${base}/unhired-logo.png`,
+    email: siteConfig.contactEmail,
+    description: siteConfig.description,
+    knowsAbout: ["AI Employee", "AI Employees", "AI agents", "AI receptionist", "AI for small business"],
+    sameAs: ["https://www.linkedin.com/company/unhired-ai-employee/"],
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": `${base}/#website`,
+    name: "Unhired",
+    url: `${base}/`,
+    publisher: { "@id": `${base}/#organization` },
+  },
+];
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${sora.variable} ${dmSans.variable} ${jetbrains.variable}`}>
       <body className="min-h-dvh overflow-x-hidden">
+        <JsonLd data={orgSchema} />
         <Providers>{children}</Providers>
       </body>
     </html>

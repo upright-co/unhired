@@ -70,7 +70,7 @@ export function reportEmail(opts: { firstName: string; report: Report; reportUrl
     }</a>
   </td></tr>
   <tr><td style="padding:20px 32px 28px;border-top:1px solid #ECEAF4;font-size:12px;line-height:1.6;color:#4A4560;">
-    You're receiving this because you took the AI Hire Assessment at Unhired and asked for your report.
+    You're receiving this because you took the AI Employee Assessment at Unhired and asked for your report.
     You'll also get occasional tips from Unhired. You can unsubscribe anytime — just reply with "unsubscribe" or use the link in any of our newsletters.
   </td></tr>
 </table>
