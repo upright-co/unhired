@@ -1,0 +1,60 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&family=DM+Sans:wght@400;500;600&family=JetBrains+Mono:wght@500&display=block" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1350px;overflow:hidden}
+.b{position:relative;width:1080px;height:1350px;overflow:hidden;background:#09070F;color:#fff;font-family:'DM Sans',sans-serif}
+.grid{position:absolute;inset:0;background-image:linear-gradient(to right,rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(to bottom,rgba(255,255,255,.04) 1px,transparent 1px);background-size:54px 54px;-webkit-mask-image:radial-gradient(ellipse 80% 60% at 50% 55%,#000 20%,transparent 100%)}
+.g1{position:absolute;width:700px;height:700px;border-radius:50%;background:#F65663;filter:blur(170px);opacity:.28;left:-200px;top:520px}
+.g2{position:absolute;width:760px;height:760px;border-radius:50%;background:#9452F2;filter:blur(180px);opacity:.42;right:-260px;top:80px}
+.head{position:absolute;left:80px;right:80px;top:84px}
+.eyebrow{font:500 20px 'JetBrains Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.6);display:flex;align-items:center;gap:14px}
+.eyebrow i{display:block;width:34px;height:2px;background:linear-gradient(90deg,#F65663,#9452F2)}
+h1{margin-top:22px;font:700 78px/1.02 'Sora',sans-serif;letter-spacing:-3px}
+h1 span{background:linear-gradient(90deg,#F65663,#B07CFF);-webkit-background-clip:text;color:transparent}
+.sub{margin-top:22px;font:400 27px/1.45 'DM Sans';color:rgba(255,255,255,.74);max-width:860px}
+.card{position:absolute;left:80px;right:80px;top:395px;border-radius:36px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);box-shadow:0 40px 100px -40px rgba(0,0,0,.8);overflow:hidden}
+.top{display:flex;align-items:center;gap:24px;padding:34px 36px;border-bottom:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.03)}
+.top img{width:92px;height:92px;border-radius:24px;object-fit:cover;object-position:top;background:linear-gradient(135deg,rgba(246,86,99,.35),rgba(148,82,242,.35))}
+.top .lbl{font:500 15px 'JetBrains Mono',monospace;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.55)}
+.top .nm{margin-top:4px;font:600 34px 'Sora';letter-spacing:-1px}
+.status{margin-left:auto;display:flex;align-items:center;gap:10px;padding:10px 18px;border-radius:999px;background:rgba(34,197,94,.14);border:1px solid rgba(110,231,160,.35);color:#86EFAC;font:600 19px 'DM Sans'}
+.status i{width:10px;height:10px;border-radius:50%;background:#22C55E;box-shadow:0 0 0 5px rgba(34,197,94,.2)}
+.row{display:grid;grid-template-columns:70px 290px 1fr;align-items:center;gap:8px;padding:34px 36px;border-bottom:1px solid rgba(255,255,255,.08)}
+.row:last-child{border-bottom:0}
+.n{font:500 22px 'JetBrains Mono',monospace;background:linear-gradient(90deg,#F65663,#B07CFF);-webkit-background-clip:text;color:transparent}
+.k{font:600 29px 'Sora';letter-spacing:-.6px}
+.v{font:400 23px/1.4 'DM Sans';color:rgba(255,255,255,.72)}
+.foot{position:absolute;left:80px;right:80px;bottom:66px;display:flex;align-items:center;justify-content:space-between}
+.foot img{height:40px}
+.foot p{font:500 22px 'DM Sans';color:rgba(255,255,255,.6)}
+
+.card{top:400px}
+.cols{display:grid;grid-template-columns:230px 1fr 1fr;align-items:center;padding:0 36px}
+.hdr{padding:30px 36px;border-bottom:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.03)}
+.hdr .ag{font:600 28px 'Sora';color:rgba(255,255,255,.5);letter-spacing:-.6px}
+.hdr .em{display:flex;align-items:center;gap:16px;font:600 28px 'Sora';letter-spacing:-.6px}
+.hdr .em img{width:64px;height:64px;border-radius:18px;object-fit:cover;object-position:top;background:linear-gradient(135deg,rgba(246,86,99,.35),rgba(148,82,242,.35))}
+.hdr .em span{background:linear-gradient(90deg,#F65663,#B07CFF);-webkit-background-clip:text;color:transparent}
+.r{padding:30px 36px;border-bottom:1px solid rgba(255,255,255,.08)}
+.r:last-child{border-bottom:0}
+.r .k{font:600 26px 'Sora';letter-spacing:-.5px}
+.r .a{font:400 23px/1.35 'DM Sans';color:rgba(255,255,255,.5);padding-right:22px}
+.r .e{font:500 23px/1.35 'DM Sans';color:#fff}
+</style></head><body><div class="b">
+<div class="grid"></div><div class="g1"></div><div class="g2"></div>
+<div class="head">
+ <div class="eyebrow"><i></i>AI Employee 101</div>
+ <h1>AI agent vs.<br><span>AI Employee</span></h1>
+ <p class="sub">Same technology underneath. One is a tool you use. The other is a job it holds.</p>
+</div>
+<div class="card">
+ <div class="cols hdr"><span></span><span class="ag">AI agent</span><span class="em"><img src="../avatars/ai-customer-support.png" alt=""><span>AI Employee</span></span></div>
+ <div class="cols r"><span class="k">Scope</span><span class="a">A task you hand it</span><span class="e">A whole role it owns</span></div>
+ <div class="cols r"><span class="k">Starts when</span><span class="a">Someone prompts it</span><span class="e">The phone rings, a form comes in, a bill goes overdue</span></div>
+ <div class="cols r"><span class="k">Memory</span><span class="a">Often starts fresh</span><span class="e">Knows your business and keeps context</span></div>
+ <div class="cols r"><span class="k">Authority</span><span class="a">Whatever access it gets</span><span class="e">Clear rules: act, act and report, or ask first</span></div>
+ <div class="cols r"><span class="k">Owner</span><span class="a">Whoever set it up, if anyone</span><span class="e">Someone accountable for training and fixing it</span></div>
+</div>
+<div class="foot"><img src="logo-ondark.png" alt=""><p>Full guide: unhired.io/blog</p></div>
+</div></body></html>
