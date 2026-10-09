@@ -1,7 +1,7 @@
 import "server-only";
 import { links, siteConfig } from "@/config";
-import type { Report } from "./schemas";
-import { statusInfo, tierInfo } from "./tiers";
+import type { StoredReport } from "./schemas";
+import { pathInfo, statusInfo, tierInfo } from "./tiers";
 
 function esc(s: string) {
   return s
@@ -12,7 +12,7 @@ function esc(s: string) {
 }
 
 /** Report email: inline styles only (email clients ignore <style> and web fonts). */
-export function reportEmail(opts: { firstName: string; report: Report; reportUrl: string }) {
+export function reportEmail(opts: { firstName: string; report: StoredReport; reportUrl: string }) {
   const { firstName, report: r, reportUrl } = opts;
   const tier = tierInfo[r.verdict_tier];
   const counts = {
@@ -39,6 +39,11 @@ export function reportEmail(opts: { firstName: string; report: Report; reportUrl
   <tr><td style="padding:16px 32px 0;font-size:16px;line-height:1.6;color:#0E0B1F;">
     <p style="margin:0 0 16px;">Hi ${esc(firstName)},</p>
     <p style="margin:0 0 16px;">${esc(r.summary)}</p>
+    ${
+      r.recommendation
+        ? `<p style="margin:0 0 16px;padding:14px 16px;background:#0E0B1F;color:#ffffff;border-radius:14px;"><strong>Our recommendation: ${esc(pathInfo[r.verdict_tier].label)}.</strong><br><span style="color:#D9D6E6;">${esc(r.recommendation)}</span></p>`
+        : ""
+    }
   </td></tr>
   <tr><td style="padding:0 32px;">
     <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:separate;border-spacing:0 0;">
@@ -85,6 +90,7 @@ export function reportEmail(opts: { firstName: string; report: Report; reportUrl
     ``,
     r.summary,
     ``,
+    ...(r.recommendation ? [`Our recommendation: ${pathInfo[r.verdict_tier].label}. ${r.recommendation}`, ``] : []),
     `View your full report: ${reportUrl}`,
     links.bookCall
       ? `Book a call to build your AI Employee: ${links.bookCall}`

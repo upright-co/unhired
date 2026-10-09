@@ -60,12 +60,24 @@ export const ReportSchema = z.object({
     .array(
       z.object({
         task: z.string(),
+        share_percent: z
+          .number()
+          .int()
+          .min(1)
+          .max(100)
+          .describe("Estimated share of this person's working time, in percent. All tasks together sum to about 100."),
         status: z.enum(taskStatuses),
         reason: z.string(),
         human_owner_suggestion: z.string().nullable(),
       }),
     )
     .min(1),
+  recommendation: z
+    .string()
+    .describe("2–3 sentences: what the owner should do about this hire, and why, in their terms"),
+  value_highlights: z
+    .array(z.string())
+    .describe("2–4 concrete wins for this business, grounded in what the owner told you"),
   day_in_the_life: z.string(),
   human_handoff_plan: z.string(),
   cost_comparison: z.object({
@@ -74,9 +86,25 @@ export const ReportSchema = z.object({
   }),
   tools_needed: z.array(z.string()),
   risks: z.array(z.string()),
+  getting_started: z
+    .array(z.string())
+    .describe("3–5 short steps: access, documents and approval rules needed to put this AI Employee on shift"),
   confidence: z.enum(["high", "medium", "low"]),
+  missing_info: z
+    .array(z.string())
+    .describe("0–3 facts that would sharpen this estimate, phrased as what to tell us. Empty if nothing important is missing"),
 });
 export type Report = z.infer<typeof ReportSchema>;
+
+/** Fields added to the report on 2026-10-09. Reports saved before then don't have them. */
+type AddedReportFields = "recommendation" | "value_highlights" | "getting_started" | "missing_info";
+type ReportTask = Report["tasks"][number];
+
+/** A report as read back from storage: older reports may lack the newer fields. */
+export type StoredReport = Omit<Report, AddedReportFields | "tasks"> &
+  Partial<Pick<Report, AddedReportFields>> & {
+    tasks: (Omit<ReportTask, "share_percent"> & { share_percent?: number })[];
+  };
 
 /* ------------------------------------------------------------------ */
 /* Request bodies                                                      */

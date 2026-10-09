@@ -1,10 +1,10 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { ArrowRight, Check, Copy, Printer, RotateCcw, ShieldAlert, Plug, UserRound, Sun, Moon } from "lucide-react";
+import { ArrowRight, Check, Copy, Printer, RotateCcw, ShieldAlert, Plug, UserRound, Sun, Moon, Clock } from "lucide-react";
 import { formatMoney, guarantee, links, siteConfig } from "@/config";
-import type { Report, TaskStatus } from "@/lib/schemas";
-import { statusInfo, tierInfo } from "@/lib/tiers";
+import type { StoredReport, TaskStatus } from "@/lib/schemas";
+import { pathInfo, statusInfo, tierInfo, WEEK_HOURS } from "@/lib/tiers";
 import { trackEvent } from "@/lib/analytics";
 import { CoverageGauge } from "@/components/ui/CoverageGauge";
 import { Logo } from "@/components/ui/Logo";
@@ -25,7 +25,7 @@ export function ReportView({
   onRestart,
 }: {
   id: string;
-  report: Report;
+  report: StoredReport;
   shareUrl: string;
   business?: string | null;
   embedded?: boolean;
@@ -37,6 +37,9 @@ export function ReportView({
     n: r.tasks.filter((t) => t.status === s).length,
   }));
   const humanTasks = r.tasks.filter((t) => t.status !== "ai_full");
+  const path = pathInfo[r.verdict_tier];
+  const aiHours = Math.round((r.coverage_percent / 100) * WEEK_HOURS);
+  const hasShares = r.tasks.some((t) => t.share_percent != null);
 
   useEffect(() => {
     trackEvent("report_viewed", { report_id: id, coverage: r.coverage_percent, embedded });
@@ -84,8 +87,50 @@ export function ReportView({
               Confidence: {r.confidence}
             </span>
           </div>
+          {hasShares && (
+            <p className="mt-4 inline-flex items-center gap-2 text-sm text-muted">
+              <Clock className="size-4 text-violet-deep" aria-hidden />
+              About <strong className="font-semibold text-ink">{aiHours} of every {WEEK_HOURS} hours</strong> of this
+              job would be handled by your AI Employee.
+            </p>
+          )}
+          {r.missing_info && r.missing_info.length > 0 && (
+            <p className="mt-2 text-sm text-muted">
+              <span className="font-medium text-ink">To sharpen this estimate, tell us:</span>{" "}
+              {r.missing_info.join("; ")}.
+            </p>
+          )}
         </div>
       </section>
+
+      {/* Recommendation */}
+      {r.recommendation && (
+        <section className="relative overflow-hidden rounded-3xl bg-ink p-6 text-white sm:p-8 print-avoid-break">
+          <div aria-hidden className="absolute -top-16 -right-10 size-56 rounded-full bg-violet opacity-40 blur-[70px]" />
+          <div className="relative grid gap-4 md:grid-cols-[minmax(0,240px)_1fr] md:gap-10">
+            <div>
+              <p className="label-mono text-white/60">Our recommendation</p>
+              <p className="mt-2 font-display text-2xl leading-tight font-semibold tracking-[-0.02em]">{path.label}</p>
+            </div>
+            <p className="leading-relaxed text-white/85">{r.recommendation}</p>
+          </div>
+        </section>
+      )}
+
+      {r.value_highlights && r.value_highlights.length > 0 && (
+        <ReportSection eyebrow="What it changes" title="What this would fix for you.">
+          <ul className="divide-y divide-ink/[0.07] border-y border-ink/[0.07]">
+            {r.value_highlights.map((v, i) => (
+              <li key={i} className="flex gap-4 py-4 leading-relaxed">
+                <span className="bg-signal mt-0.5 grid size-6 shrink-0 place-items-center rounded-full text-white">
+                  <Check className="size-3.5" aria-hidden />
+                </span>
+                {v}
+              </li>
+            ))}
+          </ul>
+        </ReportSection>
+      )}
 
       {/* 3. Task breakdown */}
       <ReportSection eyebrow="Task breakdown" title="Every part of the job, sorted.">
@@ -94,6 +139,7 @@ export function ReportView({
             <thead className="border-b border-ink/10 bg-white/50">
               <tr>
                 <th scope="col" className="label-mono px-5 py-3 font-medium text-muted">Task</th>
+                {hasShares && <th scope="col" className="label-mono px-5 py-3 font-medium text-muted">Time</th>}
                 <th scope="col" className="label-mono px-5 py-3 font-medium text-muted">Status</th>
                 <th scope="col" className="label-mono px-5 py-3 font-medium text-muted">Why</th>
                 <th scope="col" className="label-mono px-5 py-3 font-medium text-muted">Human owner</th>
@@ -103,6 +149,11 @@ export function ReportView({
               {r.tasks.map((t, i) => (
                 <tr key={i} className="align-top print-avoid-break">
                   <td className="px-5 py-4 font-semibold">{t.task}</td>
+                  {hasShares && (
+                    <td className="px-5 py-4">
+                      <ShareBar share={t.share_percent} />
+                    </td>
+                  )}
                   <td className="px-5 py-4">
                     <StatusPill status={t.status} />
                   </td>
@@ -120,6 +171,11 @@ export function ReportView({
                   <p className="font-semibold">{t.task}</p>
                   <StatusPill status={t.status} compact />
                 </div>
+                {t.share_percent != null && (
+                  <div className="mt-2">
+                    <ShareBar share={t.share_percent} />
+                  </div>
+                )}
                 <p className="mt-1.5 text-sm leading-relaxed text-muted">{t.reason}</p>
                 {t.human_owner_suggestion && (
                   <p className="mt-2 inline-flex items-center gap-1.5 text-sm">
@@ -202,6 +258,24 @@ export function ReportView({
         </ReportSection>
       </div>
 
+      {r.getting_started && r.getting_started.length > 0 && (
+        <ReportSection eyebrow="Getting started" title="What it takes to put this AI Employee on shift.">
+          <ol className="space-y-0">
+            {r.getting_started.map((step, i) => (
+              <li key={i} className="relative flex gap-4 pb-5 last:pb-0">
+                {i < r.getting_started!.length - 1 && (
+                  <span aria-hidden className="absolute top-8 bottom-0 left-[15px] w-px bg-ink/10" />
+                )}
+                <span className="grid size-8 shrink-0 place-items-center rounded-full bg-white font-display text-sm font-semibold text-violet-deep ring-1 ring-violet/25">
+                  {i + 1}
+                </span>
+                <p className="pt-1 leading-relaxed">{step}</p>
+              </li>
+            ))}
+          </ol>
+        </ReportSection>
+      )}
+
       {/* 9. Next step */}
       <section className="relative mt-12 overflow-hidden rounded-[32px] bg-ink p-8 text-white sm:p-12 print-avoid-break">
         <div aria-hidden className="absolute -top-20 -right-10 size-72 rounded-full bg-violet opacity-40 blur-[80px]" />
@@ -281,6 +355,18 @@ function StatusPill({ status, compact = false }: { status: TaskStatus; compact?:
   );
 }
 
+function ShareBar({ share }: { share?: number }) {
+  if (share == null) return <span className="text-muted">—</span>;
+  return (
+    <span className="flex min-w-[96px] items-center gap-2" title={`About ${share}% of the working week`}>
+      <span className="h-1.5 w-14 overflow-hidden rounded-full bg-ink/[0.07]">
+        <span className="bg-signal block h-full rounded-full" style={{ width: `${Math.min(100, share * 2)}%` }} />
+      </span>
+      <span className="text-xs font-medium text-muted tabular-nums">~{share}%</span>
+    </span>
+  );
+}
+
 function Prose({ text }: { text: string }) {
   return (
     <div className="space-y-3 leading-relaxed">
@@ -294,8 +380,65 @@ function Prose({ text }: { text: string }) {
   );
 }
 
-function CostComparison({ r }: { r: Report }) {
+function CostComparison({ r }: { r: StoredReport }) {
+  const mode = pathInfo[r.verdict_tier].guarantee;
   const annual = r.cost_comparison.human_annual_cost_input;
+  const aiHours = Math.round((r.coverage_percent / 100) * WEEK_HOURS);
+  const personHours = WEEK_HOURS - aiHours;
+  const notes = r.cost_comparison.notes && (
+    <p className="mt-4 text-sm leading-relaxed text-muted">{r.cost_comparison.notes}</p>
+  );
+
+  // The salary guarantee only applies where the AI Employee can replace the hire. Below that,
+  // show the hours it takes off instead of promising savings against a full-time salary.
+  if (mode !== "full") {
+    return (
+      <div className="glass rounded-3xl p-6 sm:p-8 print-avoid-break">
+        <div className="grid gap-4 md:grid-cols-2">
+          <div className="rounded-2xl bg-white/80 p-5 ring-1 ring-ink/5">
+            <p className="label-mono text-muted">{mode === "hours" ? "A person, part-time" : "The person you hire"}</p>
+            <p className="mt-2 font-display text-3xl font-semibold tracking-tight">
+              ~{personHours}
+              <span className="text-base font-medium text-muted"> hrs/week</span>
+            </p>
+            <p className="text-sm text-muted">
+              {mode === "hours"
+                ? "The parts of the job that need a person"
+                : "This role still needs someone for most of the week"}
+            </p>
+          </div>
+          <div className="relative overflow-hidden rounded-2xl bg-white/80 p-5 ring-1 ring-violet/25">
+            <div aria-hidden className="bg-signal absolute inset-x-0 top-0 h-1" />
+            <p className="label-mono text-violet-deep">AI Employee</p>
+            <p className="mt-2 font-display text-3xl font-semibold tracking-tight">
+              ~{aiHours}
+              <span className="text-base font-medium text-muted"> hrs/week</span>
+            </p>
+            <p className="text-sm text-muted">
+              {mode === "hours" ? "Taken off the role, every week" : "Of admin taken off their plate"}
+            </p>
+          </div>
+        </div>
+        <p className="mt-5 rounded-2xl bg-mist px-5 py-4 text-sm">
+          {mode === "hours" ? (
+            <>
+              Instead of a full-time hire, you could hire for about <strong className="font-semibold">{personHours} hours a
+              week</strong> and let an AI Employee cover the rest, around the clock. We&apos;ll price it on a call once
+              the scope is clear.
+            </>
+          ) : (
+            <>
+              This role needs a person. An AI Employee can still take about{" "}
+              <strong className="font-semibold">{aiHours} hours a week</strong> of admin off whoever does it, so they
+              spend their time on the work only they can do.
+            </>
+          )}
+        </p>
+        {notes}
+      </div>
+    );
+  }
+
   // Billed monthly like a salary, guaranteed to cost at most this share of the role's salary.
   const savedPct = guarantee.salarySavingsPercent;
   const aiMaxAnnual = annual != null ? annual * (1 - savedPct / 100) : null;
@@ -321,7 +464,7 @@ function CostComparison({ r }: { r: Report }) {
             </>
           )}
           <ul className="mt-4 space-y-1.5 text-sm text-muted">
-            <li>+ Payroll taxes, benefits & overhead: [STAT — source needed]</li>
+            <li>+ Benefits, payroll taxes and insurance (about 30% of total pay costs in the US, per the BLS)</li>
             <li>+ Recruiting and onboarding time</li>
             <li>+ Coverage for sick days and vacation</li>
           </ul>
@@ -370,9 +513,11 @@ function CostComparison({ r }: { r: Report }) {
             pay a person for this role, billed monthly so it fits your labor budget.
           </>
         )}{" "}
-        The AI Employee covers ~{r.coverage_percent}% of the role; the rest stays with your team.
+        {r.coverage_percent >= 80
+          ? `It covers ~${r.coverage_percent}% of the role, with a person checking in on the edge cases.`
+          : `It covers ~${r.coverage_percent}% of the role; the remaining ~${personHours} hrs/week stay with your current team.`}
       </p>
-      {r.cost_comparison.notes && <p className="mt-4 text-sm leading-relaxed text-muted">{r.cost_comparison.notes}</p>}
+      {notes}
     </div>
   );
 }

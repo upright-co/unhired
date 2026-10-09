@@ -8,15 +8,23 @@ import { BackButton, StepHeading } from "./parts";
 
 export type AnswerValue = string | string[] | number | null;
 
+/** Select questions get a free-text "Other" answer, stored as "Other: <text>". */
+const OTHER = "Other: ";
+const isOther = (o: string) => o.startsWith(OTHER);
+const otherText = (o: string | undefined) => (o ? o.slice(OTHER.length) : "");
+
 export function isAnswered(q: Question, v: AnswerValue | undefined) {
   if (q.type === "short_text") return true; // optional
-  if (q.type === "multi_select") return Array.isArray(v) && v.length > 0;
+  if (q.type === "multi_select") {
+    return Array.isArray(v) && v.length > 0 && v.every((o) => !isOther(o) || otherText(o).trim() !== "");
+  }
+  if (typeof v === "string" && isOther(v)) return otherText(v).trim() !== "";
   return v !== null && v !== undefined && v !== "";
 }
 
 export function answerToText(q: Question, v: AnswerValue | undefined): string {
   if (v === null || v === undefined) return "";
-  if (Array.isArray(v)) return v.join(", ");
+  if (Array.isArray(v)) return v.map((o) => o.trim()).join(", ");
   if (q.type === "scale" && typeof v === "number") {
     const l = q.scale_labels;
     return l ? `${v}/5 (1 = ${l.min}, 5 = ${l.max})` : `${v}/5`;
@@ -84,6 +92,17 @@ export function StepQuestion({
               {value === o && <Check className="size-4 shrink-0" aria-hidden />}
             </button>
           ))}
+          <OtherChoice
+            label={c.other}
+            selected={typeof value === "string" && isOther(value)}
+            text={typeof value === "string" ? otherText(value) : ""}
+            onSelect={() => {
+              if (advanceTimer.current) clearTimeout(advanceTimer.current);
+              onChange(OTHER);
+            }}
+            onText={(t) => onChange(OTHER + t)}
+            onSubmit={() => answered && go()}
+          />
         </div>
       )}
 
@@ -107,6 +126,21 @@ export function StepQuestion({
                 </button>
               );
             })}
+            {(() => {
+              const arr = Array.isArray(value) ? value : [];
+              const current = arr.find(isOther);
+              const rest = arr.filter((o) => !isOther(o));
+              return (
+                <OtherChoice
+                  label={c.other}
+                  selected={current !== undefined}
+                  text={otherText(current)}
+                  onSelect={() => onChange(current !== undefined ? rest : [...rest, OTHER])}
+                  onText={(t) => onChange([...rest, OTHER + t])}
+                  onSubmit={() => answered && go()}
+                />
+              );
+            })()}
           </div>
         </>
       )}
@@ -167,6 +201,59 @@ export function StepQuestion({
           {q.type === "short_text" && !value ? "Skip" : c.next} <ArrowRight className="size-4" aria-hidden />
         </button>
       </div>
+    </div>
+  );
+}
+
+/** The "Other" chip on select questions; reveals a text box when picked. */
+function OtherChoice({
+  label,
+  selected,
+  text,
+  onSelect,
+  onText,
+  onSubmit,
+}: {
+  label: string;
+  selected: boolean;
+  text: string;
+  onSelect: () => void;
+  onText: (t: string) => void;
+  onSubmit: () => void;
+}) {
+  return (
+    <div className={selected ? "sm:col-span-2" : undefined}>
+      {selected ? (
+        <form
+          className="chip flex min-h-[52px] items-center gap-3 rounded-2xl border-violet/60 bg-white px-4 ring-2 ring-violet/15"
+          onSubmit={(e) => {
+            e.preventDefault();
+            onSubmit();
+          }}
+        >
+          <button type="button" className="shrink-0 font-medium text-violet-deep" onClick={onSelect} aria-label={`Clear ${label}`}>
+            {label}:
+          </button>
+          <input
+            className="min-w-0 flex-1 bg-transparent py-3 outline-none placeholder:text-muted"
+            value={text}
+            maxLength={200}
+            placeholder="Type it here"
+            aria-label={`${label}: type your answer`}
+            onChange={(e) => onText(e.target.value)}
+            autoFocus
+          />
+        </form>
+      ) : (
+        <button
+          type="button"
+          aria-pressed={false}
+          className="chip flex min-h-[52px] w-full items-center justify-between gap-3 rounded-2xl px-4 text-left"
+          onClick={onSelect}
+        >
+          <span>{label}…</span>
+        </button>
+      )}
     </div>
   );
 }
