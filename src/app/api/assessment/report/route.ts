@@ -7,7 +7,7 @@ import { mockEnabled, mockReport } from "@/lib/mock";
 import { REPORT_SYSTEM, reportUserPrompt } from "@/lib/prompts";
 import { ReportRequestSchema, ReportSchema, type Report } from "@/lib/schemas";
 import { createDraft } from "@/lib/store";
-import { annualFromBudget, tierFromCoverage } from "@/lib/tiers";
+import { annualFromBudget, coverageFromTasks, tierFromCoverage } from "@/lib/tiers";
 
 export const runtime = "nodejs";
 export const maxDuration = 120;
@@ -48,10 +48,16 @@ export async function POST(req: Request) {
     return jsonError("ai_error", "We couldn't finish your report.", 502, retryable);
   }
 
-  // Numbers the site owns: tier always matches the gauge, and cost input only comes from the user.
-  report.coverage_percent = Math.max(0, Math.min(100, Math.round(report.coverage_percent)));
+  // Numbers the site owns: coverage is computed from the task table, the tier always matches the
+  // gauge, and the cost input only comes from the user.
+  normalizeShares(report.tasks);
+  report.coverage_percent = Math.max(
+    0,
+    Math.min(100, coverageFromTasks(report.tasks) ?? Math.round(report.coverage_percent)),
+  );
   report.verdict_tier = tierFromCoverage(report.coverage_percent);
   report.cost_comparison.human_annual_cost_input = annual;
+  report.confidence = capConfidence(report.confidence, ctx.description, answers);
 
   try {
     const id = await createDraft({
@@ -74,4 +80,28 @@ export async function POST(req: Request) {
     console.error("[report] save failed", err);
     return jsonError("server_error", "We couldn't save your report.", 500, true);
   }
+}
+
+/** Scale task shares to add up to 100 (give or take rounding); the model's estimates rarely do. */
+function normalizeShares(tasks: Report["tasks"]) {
+  const total = tasks.reduce((n, t) => n + t.share_percent, 0);
+  if (total <= 0) return;
+  for (const t of tasks) t.share_percent = Math.max(1, Math.round((t.share_percent / total) * 100));
+}
+
+/**
+ * Confidence can't be higher than the detail the owner gave us. A short description with
+ * mostly skipped answers is at best "medium", whatever the model says.
+ */
+function capConfidence(
+  confidence: Report["confidence"],
+  description: string,
+  answers: { answer: string }[],
+): Report["confidence"] {
+  const words = description.split(/\s+/).filter(Boolean).length;
+  const answered = answers.filter((a) => a.answer.trim()).length;
+  const thin = (words < 60 ? 1 : 0) + (answered < 4 ? 1 : 0);
+  if (thin === 2) return "low";
+  if (thin === 1 && confidence === "high") return "medium";
+  return confidence;
 }

@@ -1,6 +1,6 @@
 "use client";
 
-import type { Question, Report, VerdictTier } from "@/lib/schemas";
+import type { Question, StoredReport, VerdictTier } from "@/lib/schemas";
 import { getProofOfWork, type Solution } from "./pow";
 
 export class ApiError extends Error {
@@ -135,7 +135,7 @@ export function generateReport(
   return call<DraftResult>("/api/assessment/report", json({ ...ctx, answers, budget }));
 }
 
-export type SubmitResult = { id: string; url: string; report: Report };
+export type SubmitResult = { id: string; url: string; report: StoredReport };
 
 export function submitContact(body: Record<string, unknown>) {
   return call<SubmitResult>("/api/assessment/submit", json(body));

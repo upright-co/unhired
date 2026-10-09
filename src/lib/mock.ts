@@ -99,14 +99,20 @@ export async function mockReport(role: string): Promise<Report> {
     summary:
       "An AI Employee can take over most of this role: answering every call and text, booking jobs and keeping customers updated. The judgment calls and in-person moments stay with your office manager.",
     tasks: [
-      { task: "Answer inbound calls and texts", status: "ai_full", reason: "Scripted intake with clear questions; works at any volume, day or night.", human_owner_suggestion: null },
-      { task: "Qualify leads and capture job details", status: "ai_full", reason: "Follows your intake checklist every time and logs it straight to the CRM.", human_owner_suggestion: null },
-      { task: "Book and reschedule appointments", status: "ai_full", reason: "Reads live calendar availability and applies your booking rules.", human_owner_suggestion: null },
-      { task: "Send confirmations and reminders", status: "ai_full", reason: "Fully automatable by text and email.", human_owner_suggestion: null },
-      { task: "Follow up on open estimates", status: "ai_with_review", reason: "AI drafts and sends follow-ups; pricing questions go to a person.", human_owner_suggestion: "Office manager" },
-      { task: "Handle billing questions", status: "ai_with_review", reason: "AI answers balance questions; disputes and refunds need approval.", human_owner_suggestion: "Owner" },
-      { task: "Calm down upset customers", status: "human", reason: "Relationship-critical and sometimes needs a goodwill decision.", human_owner_suggestion: "Office manager" },
-      { task: "Greet walk-in customers", status: "human", reason: "In-person work.", human_owner_suggestion: "Whoever is in the office" },
+      { task: "Answer inbound calls and texts", share_percent: 18, status: "ai_full", reason: "Scripted intake with clear questions; works at any volume, day or night.", human_owner_suggestion: null },
+      { task: "Qualify leads and capture job details", share_percent: 10, status: "ai_full", reason: "Follows your intake checklist every time and logs it straight to the CRM.", human_owner_suggestion: null },
+      { task: "Book and reschedule appointments", share_percent: 16, status: "ai_full", reason: "Reads live calendar availability and applies your booking rules.", human_owner_suggestion: null },
+      { task: "Send confirmations and reminders", share_percent: 8, status: "ai_full", reason: "Fully automatable by text and email.", human_owner_suggestion: null },
+      { task: "Follow up on open estimates", share_percent: 14, status: "ai_with_review", reason: "AI drafts and sends follow-ups; pricing questions go to a person.", human_owner_suggestion: "Office manager" },
+      { task: "Handle billing questions", share_percent: 10, status: "ai_with_review", reason: "AI answers balance questions; disputes and refunds need approval.", human_owner_suggestion: "Owner" },
+      { task: "Calm down upset customers", share_percent: 12, status: "human", reason: "Relationship-critical and sometimes needs a goodwill decision.", human_owner_suggestion: "Office manager" },
+      { task: "Greet walk-in customers", share_percent: 12, status: "human", reason: "In-person work.", human_owner_suggestion: "Whoever is in the office" },
+    ],
+    recommendation:
+      "Skip the hire. Your office manager keeps the money decisions, upset customers and walk-ins, and the AI Employee takes the phones, bookings and follow-ups off everyone's plate.",
+    value_highlights: [
+      "After-hours calls and web forms get answered in minutes instead of the next morning.",
+      "Every open estimate gets a follow-up, without anyone remembering to send it.",
     ],
     day_in_the_life:
       "At 6:40 am your AI receptionist picks up a no-heat call, captures the address and system details, and books the first open slot at 8:00. By 9, it has confirmed the day's six appointments by text and moved one reschedule without anyone lifting a finger.\n\nThrough the day it answers every call on the first ring, qualifies new leads, and chases three estimates from last week. When a customer disputes an invoice, it summarizes the issue and hands it to your office manager.\n\nAt 9:15 pm, a homeowner fills out your web form. The AI replies within a minute and books them for Thursday morning.",
@@ -119,6 +125,12 @@ export async function mockReport(role: string): Promise<Report> {
       "Your booking rules must be written down clearly before launch.",
       "Some callers prefer a human; offer an easy transfer.",
     ],
+    getting_started: [
+      "Forward the business line and give access to Jobber and Google Calendar.",
+      "Write down your booking rules and the questions you ask new customers.",
+      "Agree the refund limit the AI can't go past without the owner.",
+    ],
     confidence: "medium",
+    missing_info: ["How many calls come in after hours", "Which services you quote over the phone"],
   };
 }

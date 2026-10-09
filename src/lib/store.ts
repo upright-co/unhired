@@ -1,6 +1,6 @@
 import "server-only";
 import { createClient, type SupabaseClient } from "@supabase/supabase-js";
-import type { Report } from "./schemas";
+import type { Report, StoredReport } from "./schemas";
 
 /**
  * Persistence for assessments. Uses Supabase when SUPABASE_URL + SUPABASE_SERVICE_ROLE_KEY
@@ -16,7 +16,7 @@ export type AssessmentRow = {
   team_size: string;
   description: string;
   answers: unknown;
-  report: Report;
+  report: StoredReport;
   coverage_percent: number;
   email: string | null;
   first_name: string | null;
