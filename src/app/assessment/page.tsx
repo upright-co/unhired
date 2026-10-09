@@ -9,10 +9,16 @@ import { Logo } from "@/components/ui/Logo";
 import { SectionHeading } from "@/components/ui/Section";
 
 export const metadata: Metadata = {
-  title: "AI Hire Assessment — can AI do this job?",
+  title: { absolute: "Free AI Employee Assessment: Can AI Do This Job? · Unhired" },
   description:
-    "Answer a few questions about the role you're hiring for and get a free report on how much of it an AI employee could handle.",
+    "About to hire? Tell us the role and get a free task-by-task report of what an AI Employee could take on, and what you'd save. Takes about 3 minutes.",
   alternates: { canonical: "/assessment" },
+  openGraph: {
+    url: "/assessment",
+    title: "Free AI Employee Assessment",
+    description:
+      "About to hire? Tell us the role and get a task-by-task report of what an AI Employee could take on, and what you'd save. Takes about 3 minutes.",
+  },
 };
 
 export default function AssessmentPage() {
