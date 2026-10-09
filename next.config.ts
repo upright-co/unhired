@@ -7,6 +7,17 @@ const nextConfig: NextConfig = {
   poweredByHeader: false,
   // Pin the workspace root (a stray lockfile in a parent folder otherwise confuses tracing).
   outputFileTracingRoot: path.join(__dirname),
+  // One canonical host for search: www.unhired.io permanently redirects to unhired.io.
+  async redirects() {
+    return [
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "www.unhired.io" }],
+        destination: "https://unhired.io/:path*",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;
