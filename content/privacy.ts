@@ -5,11 +5,11 @@
  * (see src/lib/store.ts, src/lib/email.ts, src/lib/claude.ts). It is NOT legal
  * advice — have a lawyer review it before you rely on it, and update
  * `lastUpdated` plus the relevant section whenever the data flow changes
- * (adding analytics or an ad pixel would need a change to "Cookies").
+ * (adding a cookie-based tool like GA4 or an ad pixel would need a change to "Cookies").
  */
 
 export const privacy = {
-  lastUpdated: "September 23, 2026",
+  lastUpdated: "October 13, 2026",
   intro: [
     "Unhired builds AI employees for growing businesses. This policy explains what we collect when you use unhired.io, why we collect it, who processes it on our behalf, and how to get it removed.",
     "We collect as little as we can, and we don't sell your information to anyone.",
@@ -38,6 +38,7 @@ export const privacy = {
       body: [
         "We store a one-way hash of your IP address for a short period to rate-limit the assessment and stop automated abuse. We can't reverse it back into your IP address.",
         "We set one cookie, a short-lived session cookie that proves your browser passed our bot check. It holds no personal information and isn't used for advertising or tracking across sites.",
+        "We use Vercel Web Analytics to count page visits and see which pages are popular. It doesn't use cookies and doesn't identify you or follow you across other websites.",
       ],
       list: null,
     },
@@ -56,7 +57,7 @@ export const privacy = {
         "Anthropic — generates your report from the role details you provide.",
         "Supabase — the database where assessments, reports and contact details are stored.",
         "Resend — delivers your report email and holds our contact list.",
-        "Vercel — hosts the website.",
+        "Vercel — hosts the website and provides our cookie-free visit statistics.",
         "Porkbun — forwards email sent to our unhired.io addresses.",
         "These providers may process and store data outside Canada, including in the United States.",
       ],

@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Sora, DM_Sans, JetBrains_Mono } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import { siteConfig } from "@/config";
 import { Providers } from "@/components/Providers";
 import { JsonLd } from "@/components/blog/JsonLd";
@@ -96,6 +97,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="min-h-dvh overflow-x-hidden">
         <JsonLd data={orgSchema} />
         <Providers>{children}</Providers>
+        <Analytics />
       </body>
     </html>
   );
