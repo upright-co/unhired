@@ -31,7 +31,7 @@ faq:
   - q: "How long does it take to set up an AI Employee?"
     a: "A focused role can be on shift in days. The timeline depends mostly on how many systems it needs to connect to and how much of your process is already written down."
   - q: "How much does an AI Employee cost?"
-    a: "It depends on the scope of the role and whether you build it yourself or have it built for you. At Unhired, an AI Employee is billed monthly like a salary and is guaranteed to cost at least 50% less than what the role would pay a person."
+    a: "It depends on the scope of the role and whether you build it yourself or have it built for you. Providers that build and maintain one usually charge a monthly fee. The useful comparison is the full cost of the person you'd otherwise hire, not the price of software."
 ---
 
 Most business owners meet the idea of an "AI Employee" the same way: they're about to post a job, they've heard AI can do some of it, and they have no idea what that actually means in practice. Is it a chatbot? A piece of software someone on the team has to run? A robot?
@@ -143,7 +143,7 @@ There are two ways to get one, and the costs look very different.
 
 Either way, the right comparison isn't "AI vs. software." It's "AI Employee vs. the person you were about to hire." And a person costs a lot more than their salary. In the US, wages and salaries make up only about 70% of what private employers spend on compensation, according to the [Bureau of Labor Statistics](https://www.bls.gov/news.release/ecec.nr0.htm). Benefits, payroll taxes and insurance are the rest. Then add recruiting, equipment, training time, sick days and turnover.
 
-At Unhired, we price an AI Employee the way you'd budget for a hire: it's billed monthly like a salary, and we [guarantee it costs at least 50% less](/#guarantee) than what the role would pay a person. Nothing up front, and we build, train and maintain it so nothing technical lands on your desk.
+When you compare quotes, put each one next to the full yearly cost of the hire, and ask who maintains the AI Employee after launch and whether that's included. An AI Employee nobody maintains gets worse over time, so a cheap setup with no upkeep often costs more in the end.
 
 ## How to hire an AI Employee
 
@@ -157,7 +157,7 @@ Hiring an AI Employee looks a lot like hiring a person, just faster:
 6. **Train it on your business.** Services, pricing, policies, common questions and your tone of voice.
 7. **Launch and review.** Watch its logs closely for the first weeks, correct anything off, and expand its responsibilities as it earns trust.
 
-Step 3 is where most of the value is decided. Our free [AI Employee Assessment](/assessment) does it for you: tell us about the role you're hiring for and you'll get a task-by-task report of what an AI Employee can take on and what you'd save.
+Step 3 is where most of the value is decided. Go through the job description line by line and be honest about which tasks follow rules you could write down and which depend on judgment nobody has written down yet.
 
 <!-- cta -->
 

@@ -30,9 +30,10 @@ const afterStr = after.toLocaleDateString("en-US", { weekday: "long", month: "lo
 
 const esc = (s = "") => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 const abs = (u) => (u?.startsWith("/") ? SITE + u : u);
-// Same text on every platform: CTA markers become a plain line, site links become absolute.
+// Same text on every platform, with site links made absolute.
 const body = content
-  .replace(/<!--\s*cta\s*-->/g, `*Free: the [AI Employee Assessment](/assessment) breaks down the role you're hiring for, task by task, and shows what you'd save.*`)
+  // The site's Take Assessment box is the only promotion and stays on unhired.io; copies leave it out.
+  .replace(/^<!--\s*cta\s*-->\s*$/gm, "")
   .replace(/\]\((\/[^)]*)\)/g, (_, u) => `](${SITE}${u})`);
 const md = new Marked({ gfm: true });
 const html = (s) => md.parse(s);

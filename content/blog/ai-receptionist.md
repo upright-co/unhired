@@ -10,7 +10,7 @@ takeaways:
   - "An AI Receptionist answers every call, chat and email, books into your real calendar and logs each conversation."
   - "Emergencies, upset callers, legal or medical advice and anything about money go to a person, with a written summary."
   - "The US median wage for receptionists was $38,010 in May 2025, and wages are only about 70% of what employers spend on compensation."
-  - "Unhired guarantees an AI Employee costs at least 50% less than the salary of the role it fills, billed monthly."
+  - "AI Receptionists are usually priced as a monthly fee. Compare a quote with the full cost of a hire and the hours it covers, not just the wage."
 related:
   - what-is-an-ai-employee
   - why-your-next-hire-should-be-an-ai-employee
@@ -21,11 +21,11 @@ faq:
   - q: "Can an AI Receptionist book appointments?"
     a: "Yes. It connects to the booking system you already use, such as a practice management system, a legal intake tool or a shared calendar, and books, moves and confirms appointments under the rules you set."
   - q: "Will callers know they're talking to AI?"
-    a: "They should. We set every AI Receptionist up to say it's an AI assistant for the business and to offer a person when a caller asks for one."
+    a: "They should. A well-set-up AI Receptionist says it's an AI assistant for the business and offers a person whenever a caller asks for one."
   - q: "What should an AI Receptionist never handle on its own?"
     a: "Emergencies, clinical or legal advice, refunds and billing disputes, and callers who are upset or ask for a person. It hands those to your team with a summary of the conversation so nobody has to start over."
   - q: "How much does an AI Receptionist cost?"
-    a: "At Unhired it's billed monthly, like a salary, and guaranteed to cost at least 50% less than the salary of the receptionist role it fills. With the US median wage at $38,010, that's at most about $19,005 a year."
+    a: "It depends on how it's built. Assembling one yourself from software means monthly subscriptions plus your own time to set it up and keep it current. A provider that builds and maintains it usually charges a monthly fee. In both cases, compare the total with what a receptionist costs: a $38,010 US median wage, plus benefits and payroll taxes, for about 40 hours of coverage a week."
 syndication:
   cover: /blog/ai-receptionist/01-cover.jpg
   linkedin_title: "What an AI Receptionist Should Handle, and What It Should Always Hand to a Person"
@@ -51,7 +51,7 @@ An AI Receptionist is an [AI Employee](/blog/what-is-an-ai-employee) that holds 
 
 That's different from an answering service or a phone menu. An answering service takes a message and someone calls back tomorrow. A phone menu makes the caller do the sorting. An AI Receptionist answers the question, books the appointment, and only passes the call on when a person is actually needed.
 
-It's also different from a chatbot sitting on your website. A chatbot waits to be asked something. An AI Receptionist works the whole front desk: the phone line, the web chat, the general inbox and the appointment reminders that go out each afternoon. Our post on [AI Employees vs. AI agents](/blog/ai-employee-vs-ai-agent) covers that difference in more detail.
+It's also different from a chatbot sitting on your website. A chatbot waits to be asked something. An AI Receptionist works the whole front desk: the phone line, the web chat, the general inbox and the appointment reminders that go out each afternoon. The article on [AI Employees vs. AI agents](/blog/ai-employee-vs-ai-agent) covers that difference in more detail.
 
 ## What it does on the job
 
@@ -113,19 +113,27 @@ The wage is only part of the bill. Across US private industry, wages and salarie
 
 There's also the coverage gap. One full-time receptionist works about 40 hours a week. The other 128 hours, the phone goes to voicemail, and covering evenings and weekends with people means a second or third hire.
 
-## What an AI Receptionist costs
+## How much you'd pay for an AI Receptionist
 
-At Unhired, an AI Employee is billed monthly like a salary, and we guarantee it costs at least 50% less than the salary of the role it fills. For a receptionist at the US median wage, that's at most about $19,005 a year, and it covers every hour of the week rather than 40 of them. We build it, train it on your business and maintain it.
+There are two ways to get one, and they're priced differently.
 
-![The cost of a receptionist compared to an AI Receptionist](/blog/ai-receptionist/06-cost.jpg)
+**Building it yourself.** AI agent platforms and phone-answering tools sell the parts as monthly subscriptions. The software can be cheap. The real cost is the time it takes someone on your team to map the calls, connect the booking system, write and test the instructions, and keep all of it current. If that person is you, count your hours.
 
-## How we'd set one up
+**Having it built and maintained.** A provider sets it up, connects your tools, trains it on your business and keeps it updated, usually for a monthly fee. You pay more than the bare software, and in return nobody on your team has to run it.
+
+Prices vary with a few things: how many channels it covers (phone, chat, email, text), how many systems it connects to, how many calls it handles, whether it needs more than one language, and how much ongoing maintenance is included.
+
+To compare a quote fairly, set it against the full cost of the seat. A receptionist at the US median wage costs $38,010 a year in pay. If wages are about 70% of compensation, as the BLS figures show across private industry, the full cost is closer to $54,300 before you count hiring and training. That buys about 40 hours of coverage a week. An AI Receptionist covers all 168.
+
+![What a front-desk seat costs](/blog/ai-receptionist/06-cost.jpg)
+
+## How an AI Receptionist is set up
 
 The setup looks a lot like training a new front-desk hire, because that's most of what it is.
 
-![How we'd build an AI Receptionist](/blog/ai-receptionist/07-how-we-build-it.jpg)
+![How an AI Receptionist is set up](/blog/ai-receptionist/07-setup.jpg)
 
-The step owners skip is the last one. You'll add a service, change your hours for the holidays, hire a new associate or switch booking software. An AI Receptionist nobody updates drifts out of date and starts giving last month's answers. That's why we maintain every AI Employee we build.
+The step owners skip is the last one. You'll add a service, change your hours for the holidays, hire a new associate or switch booking software. An AI Receptionist nobody updates drifts out of date and starts giving last month's answers. Whoever builds it, decide up front who reviews its log and updates it, and how often.
 
 ## When to keep a person at the front desk
 
@@ -133,4 +141,4 @@ Some front desks are mostly in-person work. If your receptionist spends the day 
 
 If the desk is mostly phones, email and booking, an AI Receptionist can hold the whole seat. The [seven reasons to hire an AI Employee](/blog/why-your-next-hire-should-be-an-ai-employee) apply here more than to almost any other role.
 
-If you're about to post a receptionist job, run it through our free [AI Employee Assessment](/assessment) first. It splits your duties into what an AI Employee can own, what needs a person to check, and what stays with your team, and shows what you'd save.
+Before you post a receptionist job, list every duty in the description and sort each one into three groups: what an AI Employee could own, what it could do with a person checking, and what needs someone at the desk. The second group is usually smaller than people expect.

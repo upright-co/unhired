@@ -37,14 +37,14 @@ syndication:
 
     Full breakdown below 👇
   page_caption: |
-    A construction company in Edmonton is hiring an HR Administrator. We went through the posting duty by duty to show what an AI Employee would handle, what it would hand to a person, how we'd build it, and how the cost compares to the $33.89 median hourly wage.
+    A construction company in Edmonton is hiring an HR Administrator. We went through the posting duty by duty to show what an AI Employee would handle, what it would hand to a person, how one is set up, and how the cost compares to the $33.89 median hourly wage.
 ---
 
 A construction company in Edmonton posted a job for an HR Administrator this month. Full-time, benefits included, reporting into a busy HR team that onboards crews for several project sites at once.
 
 I read every posting the same way now. I go down the list of duties and sort each one: could an AI Employee own this, or does it need a person? This posting has six duties, and all six are paperwork moving between BambooHR, the payroll system, a testing clinic and the people running each site.
 
-So I worked out what the AI version of this hire would look like: what it would do in each duty, a normal day on the job, how we'd build it, and what it would cost next to the wage.
+So I worked out what the AI version of this hire would look like: what it would do in each duty, a normal day on the job, how it would be set up, and what it would cost next to the wage.
 
 ![The job posting, company name and address removed](/blog/ai-hr-administrator/02-posting.jpg)
 
@@ -84,7 +84,7 @@ Right now, a superintendent who wants to know if a new worker can start Monday p
 
 Typing the same details from BambooHR into payroll is where small, expensive mistakes come from, like a transposed bank number or last year's pay rate. The AI Employee would enter each record and compare it to the signed offer letter before saving anything.
 
-Anything that changes what someone gets paid waits for a person to approve it. That rule doesn't bend for any client we build for.
+Anything that changes what someone gets paid waits for a person to approve it. That rule shouldn't bend for any business.
 
 ### 5. Benefits enrollment and questions
 
@@ -104,15 +104,15 @@ The 5:40 am text from a superintendent gets handled before anyone is in the offi
 
 <!-- cta -->
 
-## How we'd build it
+## How an AI HR Administrator is set up
 
-Most of the work in building an AI Employee is the same work as training a new hire. Someone has to learn how this company actually does onboarding and clearances, including the steps nobody ever wrote down, and turn that into instructions.
+Most of the work in setting up an AI Employee is the same work as training a new hire. Someone has to learn how this company actually does onboarding and clearances, including the steps nobody ever wrote down, and turn that into instructions.
 
-![How we'd build the AI HR Administrator](/blog/ai-hr-administrator/06-how-we-build-it.jpg)
+![How an AI HR Administrator is set up](/blog/ai-hr-administrator/06-setup.jpg)
 
-The last step is the one people skip. This company will switch benefits providers, open a site with different clearance rules, or change payroll software, and an AI Employee nobody updates slowly drifts out of date. That's why we maintain every AI Employee we build, so the client never has to touch it.
+The last step is the one people skip. This company will switch benefits providers, open a site with different clearance rules, or change payroll software, and an AI Employee nobody updates slowly drifts out of date. Whoever builds it, the company needs to know who reviews its log and keeps it current.
 
-## What the seat costs
+## What the seat costs a person
 
 The Government of Canada's Job Bank puts the median wage for this occupation in the Edmonton region at $33.89 an hour (NOC 12101, 2024 data). Over a 2,080-hour year that's about $70,491.
 
@@ -120,9 +120,13 @@ The Government of Canada's Job Bank puts the median wage for this occupation in 
 
 The wage is only part of it. In Alberta, 93.2% of workers in this occupation get at least one benefit on top of their pay, and the employer also covers payroll taxes, recruiting, training, vacation coverage, and a second round of hiring if the first person leaves.
 
-![The cost of a person compared to an AI Employee](/blog/ai-hr-administrator/08-cost.jpg)
+## How much you'd pay for an AI HR Administrator
 
-We guarantee an AI Employee costs at least 50% less than the salary of the role it fills. For this seat, that puts the most you'd pay at about $35,246 a year, with nothing up front.
+There are two ways to get one. A company can assemble it from software subscriptions (an AI agent platform plus connections to BambooHR, payroll and a texting tool) and have someone on staff design, test and maintain it. Or it can have a provider build and maintain it, which is usually a monthly fee.
+
+The price depends on how many systems it has to connect to, how many hires and questions it handles in a month, and how much ongoing maintenance is included. A company onboarding a few people a quarter needs much less than one running crews across several sites.
+
+Whatever the quote, compare it with the full cost of the seat: about $70,491 in wages for this role, plus benefits, payroll taxes and the cost of hiring, for roughly 40 hours of coverage a week.
 
 ## Would I tell this company to skip the hire?
 
@@ -130,6 +134,6 @@ Not necessarily. They're hiring because the seat is empty, so no one's job is on
 
 If the HR manager is buried in onboarding paperwork and the company keeps adding crews, the AI Employee fills the seat in days and works the same early mornings the sites do. If they'd rather have a person, the duty breakdown is still useful: hand the chasing and the data entry to an AI Employee, and the person they hire spends their days on hiring decisions and the conversations with crews that actually need someone in the room.
 
-If you're about to post a job, our free [AI Employee Assessment](/assessment) does this breakdown for your role and shows what you'd save. We publish one of these every week, each built on a real posting.
+The same exercise works for any job you're about to post: go down the duties one at a time and ask whether each is coordination between systems or a judgment call that needs a person.
 
 *Wage data: [Job Bank, Government of Canada](https://www.jobbank.gc.ca/marketreport/wages-occupation/12511/geo25349), updated November 19, 2025. The posting is real; the company name and address have been removed. The Monday schedule is an example built from the duties in the posting.*

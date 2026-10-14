@@ -16,6 +16,28 @@ Sources this guide draws on: Wikipedia's "Signs of AI writing", GPTZero's AI pat
 tropes.fyi by ossama.is, Marian Kamenistak's anti-AI writing guide (MIT) and Margaret Efron's list of
 ChatGPT words.
 
+## 0. Inform, don't sell
+
+Articles (blog, LinkedIn, Medium, Substack) are independent guides. They answer the reader's question the
+way a knowledgeable third party would: what the role involves, how an AI Employee does it, where it needs a
+person, how one is set up, what it costs and how to judge whether it fits. They are never a pitch for
+Unhired.
+
+- Don't mention Unhired, its guarantee, its pricing, or what "we" build, train or maintain. No "how we'd
+  set one up", "we'd build it", "the clients we build for", "our free assessment".
+- Write about the subject, not the seller: "How an AI Employee is set up", "How much an AI Receptionist
+  costs", "Who maintains it", never "How we'd set one up" or "The most you'd pay".
+- Costs: give the sourced wage and the full cost of a hire, explain how AI Employees are usually priced
+  (software you assemble yourself vs. a provider that builds and maintains it, usually a monthly fee) and
+  what drives the price. Tell the reader how to compare quotes. Never quote Unhired's price or guarantee.
+- No sales lines: "what you'd save", "nothing up front", "you never have to touch it", "we replace the
+  role, not the person".
+- The byline is Brandon, so "I" is fine for the author's own analysis ("I went through the posting duty by
+  duty"). It's never "I'd build this for you".
+- The site adds its own Take Assessment box where `<!-- cta -->` sits. That box is the only promotion; the
+  article text around it doesn't plug anything. Kits leave it out of the LinkedIn, Medium and Substack copies.
+- Captions for the Unhired company page may say "we wrote up..." about the article. They still don't pitch.
+
 ## 1. Be specific
 
 The biggest tell is vagueness. AI gives the average answer, so it says "many businesses" and "significant
@@ -95,7 +117,7 @@ and why. Admit limits plainly and specifically, without a "despite these challen
 ## 8. Our own words
 
 - "AI Employee", always capitalised, never "AI hire" or "AI worker".
-- The guarantee wording comes from `content/copy.ts`; don't paraphrase it into something new.
+- The guarantee belongs on the website's sales pages (wording in `content/copy.ts`), never in articles.
 - Brandon writes in the first person on LinkedIn. The company writes as "we".
 - Examples span industries, never one trade.
 

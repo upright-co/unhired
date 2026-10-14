@@ -4,7 +4,7 @@
  * Checks the body plus prose frontmatter (title, description, takeaways, faq, share_text, page_caption).
  * Errors exit 1; warnings print but pass.
  */
-import { readFileSync } from "node:fs";
+import { readFileSync, existsSync } from "node:fs";
 import matter from "gray-matter";
 
 const WORDS = [
@@ -38,6 +38,18 @@ const SHAPES = [
   [/(?:^|[.!?]\s+)(?:(?:And |But )?(?:the|your|my|our|what['’]s the) [a-z'’ ]{1,25})\?\s+[A-Z][^?]{0,60}[.!]/i, "self-answered question: 'The result? X.'"],
   [/[—]|\s--\s/, "em dash"],
   [/→|⇒|⟶/, "unicode arrow in prose"],
+];
+// Articles inform; they never pitch Unhired (WRITING.md section 0). The company-page caption may name
+// Unhired and say "we", so only the hard sales lines apply to it.
+const SELL = [
+  [/\bUnhired\b/, "names Unhired"],
+  [/\bhow (we|I)['’]d (build|set|train|run)\b/i, "'how we'd build' framing"],
+  [/\bwe(['’]d|['’]ll| would| will| can)? (build|built|set (it|one|them) up|train|maintain|price|offer|bill|replace|recommend|guarantee)\b/i, "'we build/maintain/price' pitch"],
+  [/\bour (free|clients?|team|service|pricing|assessment|AI Employees?)\b/i, "'our ...' pitch"],
+];
+const SALES = [
+  [/\bguarantee/i, "guarantee in an article"],
+  [/most you['’]d pay|what you['’]d save|nothing up front|never (have to )?touch (it|the AI)|clients? we build|replace the role, not the person|book a (call|demo)|contact us|get in touch|sign up (now|today)/i, "sales line"],
 ];
 const SOFT = [
   [/,\s+(highlighting|underscoring|reflecting|showcasing|emphasi[sz]ing|signaling|signalling|demonstrating|contributing to)\b/i, "'-ing' add-on that says nothing"],
@@ -82,6 +94,19 @@ for (const file of process.argv.slice(2)) {
     if ((m = plain.match(phrases))) errs.push([n, `AI phrase "${m[0]}"`, plain]);
     for (const [re, why] of SHAPES) if (re.test(plain)) errs.push([n, why, plain]);
     for (const [re, why] of SOFT) if ((m = plain.match(re))) warns.push([n, `${why} "${m[0]}"`, plain]);
+    for (const [re, why] of [...(n === "fm.syndication.page_caption" ? [] : SELL), ...SALES]) if ((m = plain.match(re))) errs.push([n, `selling: ${why} "${m[0]}"`, plain]);
+    if (n !== "fm.syndication.page_caption" && (m = plain.match(/\b([Ww]e|[Ww]e['’](ve|re|d|ll)|[Oo]ur|us)\b/))) warns.push([n, `"${m[0]}" in an article: make sure it isn't about Unhired`, plain]);
+  }
+  // Image alt text and the article's infographic spec get the same selling check.
+  const alts = [...content.matchAll(/^!\[([^\]]*)\]/gm)].map((x) => ({ n: "image alt", t: x[1] }));
+  const specPath = file.replace(/content\/blog\/([^/]+)\.md$/, "content/images/$1.json");
+  const specText = specPath !== file && existsSync(specPath) ? JSON.stringify(JSON.parse(readFileSync(specPath, "utf8"))) : "";
+  const specStrings = specText ? [...specText.matchAll(/"((?:[^"\\]|\\.)*)"/g)].map((x) => ({ n: "image spec", t: x[1] })) : [];
+  for (const { n, t } of [...alts, ...specStrings]) {
+    for (const [re, why] of [...SELL, ...SALES]) {
+      const m = t.match(re);
+      if (m && !(n === "image spec" && /unhired\.io/i.test(t) && why === "names Unhired")) errs.push([n, `selling: ${why} "${m[0]}"`, t]);
+    }
   }
 
   // Bold-label bullets: 3+ list items in a row that open with bold.

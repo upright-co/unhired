@@ -5,7 +5,7 @@
    "name": "cover",
    "eyebrow": "Hire or AI Employee? · HR Administrator",
    "title": "A construction company is hiring an *HR Administrator*",
-   "sub": "What an AI Employee would do in each of the six duties on the posting, and what it would cost.",
+   "sub": "What an AI Employee would do in each of the six duties on the posting, and what the seat costs.",
    "avatar": "ai-executive-assistant",
    "series": "Job posting breakdowns · unhired.io"
   },
@@ -34,7 +34,7 @@
    "type": "quote",
    "name": "quote",
    "text": "Six duties on this posting, and all six are paperwork moving between *BambooHR, payroll, a testing clinic and the job sites.*",
-   "by": "Brandon Upright · Unhired"
+   "by": "Brandon Upright"
   },
   {
    "type": "breakdown",
@@ -120,8 +120,8 @@
   },
   {
    "type": "flow",
-   "name": "how-we-build-it",
-   "title": "How we'd *build it*",
+   "name": "setup",
+   "title": "How it's *set up*",
    "steps": [
     [
      "Map the role",
@@ -145,7 +145,7 @@
     ],
     [
      "Maintain it every week",
-     "We review the log, fix anything it got wrong and update it when policies, benefits or software change."
+     "Someone reviews the log, fixes anything it got wrong and updates it when policies, benefits or software change."
     ]
    ]
   },
@@ -169,27 +169,6 @@
     ]
    ],
    "source": "Source: Job Bank, Government of Canada (NOC 12101), updated Nov 19, 2025"
-  },
-  {
-   "type": "cost",
-   "name": "cost",
-   "eyebrow": "The cost",
-   "title": "The seat, *side by side*",
-   "suffix": " / yr",
-   "highlight": 1,
-   "rows": [
-    [
-     "Median wage for this occupation, Edmonton",
-     70491,
-     "Before benefits, payroll taxes, recruiting, training and turnover."
-    ],
-    [
-     "AI Employee, the most you'd pay",
-     35246,
-     "Unhired guarantees at least 50% less than the salary. We build, train and maintain it."
-    ]
-   ],
-   "source": "Wage: Job Bank, Government of Canada · Guarantee: unhired.io"
   }
  ]
 }
