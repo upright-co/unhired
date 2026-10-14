@@ -141,4 +141,4 @@ Some front desks are mostly in-person work. If your receptionist spends the day 
 
 If the desk is mostly phones, email and booking, an AI Receptionist can hold the whole seat. The [seven reasons to hire an AI Employee](/blog/why-your-next-hire-should-be-an-ai-employee) apply here more than to almost any other role.
 
-Before you post a receptionist job, list every duty in the description and sort each one into three groups: what an AI Employee could own, what it could do with a person checking, and what needs someone at the desk. The second group is usually smaller than people expect.
+Before you post a receptionist job, list every duty in the description and sort each one into three groups: what an AI Employee could own, what it could do with a person checking, and what needs someone at the desk. The second group is usually smaller than people expect. AI Employee assessments, such as [the one offered by Unhired](/assessment), can do that sorting for you and are a good place to start.

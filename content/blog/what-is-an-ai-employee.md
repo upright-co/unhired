@@ -157,7 +157,7 @@ Hiring an AI Employee looks a lot like hiring a person, just faster:
 6. **Train it on your business.** Services, pricing, policies, common questions and your tone of voice.
 7. **Launch and review.** Watch its logs closely for the first weeks, correct anything off, and expand its responsibilities as it earns trust.
 
-Step 3 is where most of the value is decided. Go through the job description line by line and be honest about which tasks follow rules you could write down and which depend on judgment nobody has written down yet.
+Step 3 is where most of the value is decided. Go through the job description line by line and be honest about which tasks follow rules you could write down and which depend on judgment nobody has written down yet. AI Employee assessments, such as [the one offered by Unhired](/assessment), can be a good place to start.
 
 <!-- cta -->
 

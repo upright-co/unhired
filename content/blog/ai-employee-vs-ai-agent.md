@@ -121,4 +121,4 @@ Most small businesses don't have a spare person to build and babysit agents. Tha
 
 The technology inside an AI agent and an AI Employee is often the same. What's different is everything around it: the job description, the knowledge, the guardrails and the accountability. An agent is something you use. An AI Employee is someone (well, something) you hire.
 
-To tell which one a role needs, write out its duties. If it's one repeatable task, an agent is enough. If it's a list of duties with handoffs between them and someone accountable for the result, it's a job for an AI Employee.
+To tell which one a role needs, write out its duties. If it's one repeatable task, an agent is enough. If it's a list of duties with handoffs between them and someone accountable for the result, it's a job for an AI Employee. Some websites offer [free assessments](/assessment) that break a role down this way if you'd rather not do it by hand.

@@ -88,6 +88,6 @@ Many roles are a mix. A good AI Employee is designed for exactly that: it takes 
 
 ## How to decide in three minutes
 
-You don't have to guess which parts of a role an AI Employee can do. Take the job description you were about to post and sort every duty into three groups: what an AI Employee could handle on its own, what it could do with a person checking, and what should stay with your team. If most of the list lands in the first two groups, the role is a strong fit.
+You don't have to guess which parts of a role an AI Employee can do. Take the job description you were about to post and sort every duty into three groups: what an AI Employee could handle on its own, what it could do with a person checking, and what should stay with your team. If most of the list lands in the first two groups, the role is a strong fit. Some websites also offer [free assessments](/assessment) that check whether a role can be filled by an AI Employee, which is a quick way to get a first answer.
 
 Then make the call: post the job, or hire an AI Employee.

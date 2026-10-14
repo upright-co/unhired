@@ -134,6 +134,6 @@ Not necessarily. They're hiring because the seat is empty, so no one's job is on
 
 If the HR manager is buried in onboarding paperwork and the company keeps adding crews, the AI Employee fills the seat in days and works the same early mornings the sites do. If they'd rather have a person, the duty breakdown is still useful: hand the chasing and the data entry to an AI Employee, and the person they hire spends their days on hiring decisions and the conversations with crews that actually need someone in the room.
 
-The same exercise works for any job you're about to post: go down the duties one at a time and ask whether each is coordination between systems or a judgment call that needs a person.
+The same exercise works for any job you're about to post: go down the duties one at a time and ask whether each is coordination between systems or a judgment call that needs a person. Some websites offer [free assessments](/assessment) that run this check on a job description for you.
 
 *Wage data: [Job Bank, Government of Canada](https://www.jobbank.gc.ca/marketreport/wages-occupation/12511/geo25349), updated November 19, 2025. The posting is real; the company name and address have been removed. The Monday schedule is an example built from the duties in the posting.*

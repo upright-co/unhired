@@ -23,7 +23,8 @@ way a knowledgeable third party would: what the role involves, how an AI Employe
 person, how one is set up, what it costs and how to judge whether it fits. They are never a pitch for
 Unhired.
 
-- Don't mention Unhired, its guarantee, its pricing, or what "we" build, train or maintain. No "how we'd
+- Don't mention Unhired (apart from the one assessment pointer below), its guarantee, its pricing, or what
+  "we" build, train or maintain. No "how we'd
   set one up", "we'd build it", "the clients we build for", "our free assessment".
 - Write about the subject, not the seller: "How an AI Employee is set up", "How much an AI Receptionist
   costs", "Who maintains it", never "How we'd set one up" or "The most you'd pay".
@@ -34,8 +35,14 @@ Unhired.
   role, not the person".
 - The byline is Brandon, so "I" is fine for the author's own analysis ("I went through the posting duty by
   duty"). It's never "I'd build this for you".
-- The site adds its own Take Assessment box where `<!-- cta -->` sits. That box is the only promotion; the
-  article text around it doesn't plug anything. Kits leave it out of the LinkedIn, Medium and Substack copies.
+- One subtle mention of the assessment is allowed per article, written as a neutral pointer, the way a third
+  party would mention a useful tool, with a link to `/assessment`. For example:
+  "AI Employee assessments, such as [the one offered by Unhired](/assessment), can be a good place to start."
+  or "Some websites offer [free assessments](/assessment) that check whether a role can be filled by an AI
+  Employee." Put it where the reader is deciding whether their own role fits. Never "our", never a reason to
+  buy, never more than once.
+- The site adds its own Take Assessment box where `<!-- cta -->` sits. Kits leave it out of the LinkedIn,
+  Medium and Substack copies.
 - Captions for the Unhired company page may say "we wrote up..." about the article. They still don't pitch.
 
 ## 1. Be specific

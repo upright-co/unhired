@@ -73,7 +73,7 @@ for (const file of process.argv.slice(2)) {
   content.split("\n").forEach((l, i) => {
     if (/^```/.test(l)) code = !code;
     if (code || /^!\[|^<!--|^\s*$|^```/.test(l)) return;
-    lines.push({ n: bodyStart + i + 1, t: l.replace(/\]\([^)]*\)/g, "]").replace(/https?:\/\/\S+/g, "") });
+    lines.push({ n: bodyStart + i + 1, raw: l, t: l.replace(/\]\([^)]*\)/g, "]").replace(/https?:\/\/\S+/g, "") });
   });
   for (const k of ["title", "description", "share_text", "page_caption", "body", "caption"]) {
     if (typeof data[k] === "string") data[k].split("\n").forEach((t) => t.trim() && lines.push({ n: `fm.${k}`, t }));
@@ -87,16 +87,23 @@ for (const file of process.argv.slice(2)) {
   const errs = [], warns = [];
   const words = new RegExp(`\\b(${WORDS.join("|")})\\b`, "i");
   const phrases = new RegExp(`(${PHRASES.join("|")})`, "i");
-  for (const { n, t } of lines) {
+  for (const { n, t, raw } of lines) {
     const plain = t.replace(/\*\*|__|\*|_|`/g, "");
     let m;
     if ((m = plain.match(words))) errs.push([n, `AI word "${m[0]}"`, plain]);
     if ((m = plain.match(phrases))) errs.push([n, `AI phrase "${m[0]}"`, plain]);
     for (const [re, why] of SHAPES) if (re.test(plain)) errs.push([n, why, plain]);
     for (const [re, why] of SOFT) if ((m = plain.match(re))) warns.push([n, `${why} "${m[0]}"`, plain]);
-    for (const [re, why] of [...(n === "fm.syndication.page_caption" ? [] : SELL), ...SALES]) if ((m = plain.match(re))) errs.push([n, `selling: ${why} "${m[0]}"`, plain]);
+    // The one allowed assessment pointer may name Unhired ("such as the one offered by Unhired").
+    const pointer = /\]\((https:\/\/unhired\.io)?\/assessment\)/.test(raw ?? "");
+    for (const [re, why] of [...(n === "fm.syndication.page_caption" ? [] : SELL), ...SALES]) {
+      if (pointer && why === "names Unhired") continue;
+      if ((m = plain.match(re))) errs.push([n, `selling: ${why} "${m[0]}"`, plain]);
+    }
     if (n !== "fm.syndication.page_caption" && (m = plain.match(/\b([Ww]e|[Ww]e['’](ve|re|d|ll)|[Oo]ur|us)\b/))) warns.push([n, `"${m[0]}" in an article: make sure it isn't about Unhired`, plain]);
   }
+  const pointers = (content.match(/\]\((https:\/\/unhired\.io)?\/assessment\)/g) ?? []).length;
+  if (pointers > 1) errs.push(["-", `selling: ${pointers} links to the assessment; one subtle mention per article`, ""]);
   // Image alt text and the article's infographic spec get the same selling check.
   const alts = [...content.matchAll(/^!\[([^\]]*)\]/gm)].map((x) => ({ n: "image alt", t: x[1] }));
   const specPath = file.replace(/content\/blog\/([^/]+)\.md$/, "content/images/$1.json");
