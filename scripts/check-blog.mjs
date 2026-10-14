@@ -1,14 +1,16 @@
 /**
  * Sanity-checks blog posts before publishing: frontmatter fields, slugs in `related`,
- * a link to the pillar post, and no duplicate keywords.
+ * a link to the pillar post, no duplicate keywords, and everything needed to republish the post on
+ * LinkedIn, Medium and Substack (syndication block, cover image, publish kit, no Markdown tables).
  *   node scripts/check-blog.mjs            (all posts)
  *   node scripts/check-blog.mjs <slug>     (one post, still checked against the rest)
  */
-import { readdirSync, readFileSync } from "node:fs";
+import { readdirSync, readFileSync, existsSync } from "node:fs";
 import path from "node:path";
 import matter from "gray-matter";
 
-const dir = path.resolve(path.dirname(new URL(import.meta.url).pathname), "../content/blog");
+const root = path.resolve(path.dirname(new URL(import.meta.url).pathname), "..");
+const dir = path.join(root, "content/blog");
 const files = readdirSync(dir).filter((f) => f.endsWith(".md") && f !== "README.md" && f !== "BACKLOG.md");
 const posts = files.map((f) => ({ slug: f.replace(/\.md$/, ""), ...matter(readFileSync(path.join(dir, f), "utf8")) }));
 const slugs = new Set(posts.map((p) => p.slug));
@@ -31,6 +33,13 @@ for (const p of posts) {
   const dup = posts.find((o) => o.slug !== p.slug && String(o.data.keyword).toLowerCase() === String(d.keyword).toLowerCase());
   if (dup) e(`keyword duplicates ${dup.slug}`);
   if (/—/.test(p.content)) e("contains em dashes; rewrite those sentences");
+  // Every article on the site is republished on LinkedIn, Medium and Substack (SEO), so every post,
+  // comparisons included, needs its syndication block, a cover and a built kit.
+  const syn = d.syndication ?? {};
+  for (const k of ["cover", "linkedin_title", "substack_subtitle", "tags", "share_text", "page_caption"]) if (!syn[k]) e(`syndication.${k} missing (see content/blog/README.md)`);
+  if (syn.cover && !existsSync(path.join(root, "public", syn.cover))) e(`cover image not found: public${syn.cover} (run scripts/article-images.mjs)`);
+  if (!existsSync(path.join(root, "public/kits", `${p.slug}.json`))) e(`no publish kit (run node scripts/publish-kit.mjs ${p.slug})`);
+  if (/^\|.+\|\s*$/m.test(p.content)) e("Markdown table: LinkedIn, Medium and Substack can't show tables; use a table image");
 }
 if (errors.length) {
   console.error(errors.join("\n"));

@@ -40,6 +40,11 @@ Don't use Markdown tables in new posts: LinkedIn, Medium and Substack can't show
 
 ## Republishing (LinkedIn, Medium, Substack)
 
+**Every** article on the site is republished on all three, for SEO: guides, role posts, job posting breakdowns,
+comparisons (e.g. "AI Employee vs. <product>") and anything else under `/blog`, whoever writes it.
+`scripts/check-blog.mjs` fails a post without its syndication block, cover or kit. The daily `syndication-drafts`
+task reads this folder directly, so a post published by hand still gets drafted.
+
 unhired.io is always the original. Add a `syndication` block to the frontmatter:
 
 ```yaml

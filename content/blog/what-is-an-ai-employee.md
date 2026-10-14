@@ -37,6 +37,14 @@ syndication:
   linkedin_title: "What Is an AI Employee? A Plain-English Guide for Business Owners"
   substack_subtitle: "What it is, what it does in a normal workday, where it falls short, and how to tell if a role in your business fits."
   tags: ["Artificial Intelligence", "Small Business", "Future Of Work", "Automation", "Hiring"]
+  share_text: |
+    Most business owners hear "AI Employee" for the first time right when they're about to post a job.
+
+    I wrote a plain-English guide to what it actually means: the five parts every AI Employee has, what one does in a normal workday, where it falls short, and how to tell whether the role you're hiring for is a fit.
+
+    Full article below 👇
+  page_caption: |
+    What is an AI Employee? We wrote a plain-English guide for business owners: the five parts every AI Employee has, what one handles in nine common roles, what it hands to a person, and how to tell whether a role in your business is a fit.
 ---
 
 Most business owners meet the idea of an "AI Employee" the same way: they're about to post a job, they've heard AI can do some of it, and they have no idea what that actually means in practice. Is it a chatbot? A piece of software someone on the team has to run? A robot?

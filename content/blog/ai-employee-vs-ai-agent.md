@@ -31,6 +31,16 @@ syndication:
   linkedin_title: "AI Employee vs. AI Agent: What's the Difference?"
   substack_subtitle: "Same technology, different job. One is a tool someone runs; the other holds a role on your team."
   tags: ["Artificial Intelligence", "AI Agents", "Small Business", "Future Of Work", "Automation"]
+  share_text: |
+    "AI agent" and "AI Employee" get used as if they mean the same thing, but they describe different things.
+
+    An agent is the technology: software that can reason and use tools. An AI Employee is that technology given a job, standing responsibilities, memory of your business, rules for when to hand off, and someone accountable for it.
+
+    I broke down the difference side by side, and when you need which.
+
+    Full article below 👇
+  page_caption: |
+    AI agent or AI Employee? They run on the same technology, but one is a tool someone has to drive and the other holds a role on your team. We compared them on scope, what starts the work, memory, authority and who owns it.
 ---
 
 If you've spent any time reading about AI for business, you've seen both terms: **AI agent** and **AI Employee**. Vendors use them interchangeably, articles define them differently, and the result is a lot of confusion for owners who just want to know what to buy.

@@ -29,6 +29,14 @@ syndication:
   linkedin_title: "Before You Post Your Next Job, Ask If It Needs to Be a Person"
   substack_subtitle: "Seven reasons your next hire could be an AI Employee, and the cases where you should still hire a person."
   tags: ["Artificial Intelligence", "Hiring", "Small Business", "Future Of Work", "Automation"]
+  share_text: |
+    Before you post your next job, it's worth asking a question that wasn't realistic a few years ago: does this role need to be a person at all?
+
+    I wrote up seven reasons the answer is increasingly no for roles that run on phones, inboxes and software, and the cases where you should still hire a person.
+
+    Full article below 👇
+  page_caption: |
+    Before you post your next job, ask whether the role needs to be a person. We wrote up seven reasons your next hire could be an AI Employee, from the true cost of a hire to coverage after hours, and the cases where a person is still the right call.
 ---
 
 You've decided you need help. The phones are getting missed, the inbox is piling up, or the follow-ups aren't happening. So you start writing a job post.
