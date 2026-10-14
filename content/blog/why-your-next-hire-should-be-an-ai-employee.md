@@ -24,6 +24,11 @@ faq:
     a: "They should. Being upfront that it's AI is the safer practice. In practice, customers care far more about getting a fast, correct answer at 9 pm than about who gave it."
   - q: "What happens if the AI Employee gets something wrong?"
     a: "Every action is logged, higher-risk actions go to a person first, and mistakes are corrected in its training so they don't repeat. That review and correction is part of maintaining an AI Employee."
+syndication:
+  cover: /blog/why-your-next-hire-should-be-an-ai-employee/01-cover.jpg
+  linkedin_title: "Before You Post Your Next Job, Ask If It Needs to Be a Person"
+  substack_subtitle: "Seven reasons your next hire could be an AI Employee, and the cases where you should still hire a person."
+  tags: ["Artificial Intelligence", "Hiring", "Small Business", "Future Of Work", "Automation"]
 ---
 
 You've decided you need help. The phones are getting missed, the inbox is piling up, or the follow-ups aren't happening. So you start writing a job post.

@@ -32,6 +32,11 @@ faq:
     a: "A focused role can be on shift in days. The timeline depends mostly on how many systems it needs to connect to and how much of your process is already written down."
   - q: "How much does an AI Employee cost?"
     a: "It depends on the scope of the role and whether you build it yourself or have it built for you. Providers that build and maintain one usually charge a monthly fee. The useful comparison is the full cost of the person you'd otherwise hire, not the price of software."
+syndication:
+  cover: /blog/what-is-an-ai-employee/01-cover.jpg
+  linkedin_title: "What Is an AI Employee? A Plain-English Guide for Business Owners"
+  substack_subtitle: "What it is, what it does in a normal workday, where it falls short, and how to tell if a role in your business fits."
+  tags: ["Artificial Intelligence", "Small Business", "Future Of Work", "Automation", "Hiring"]
 ---
 
 Most business owners meet the idea of an "AI Employee" the same way: they're about to post a job, they've heard AI can do some of it, and they have no idea what that actually means in practice. Is it a chatbot? A piece of software someone on the team has to run? A robot?
@@ -82,17 +87,7 @@ An AI Employee isn't on payroll, doesn't sign an employment contract and doesn't
 
 AI Employees are strongest in roles that run on phones, inboxes, calendars and software, which describes a large share of the jobs small and medium businesses post every month. Here's what that looks like across common roles:
 
-| Role | What the AI Employee handles | What it hands to a person |
-|---|---|---|
-| Receptionist | Answers every call and text, books and reschedules, answers common questions, takes messages | Upset customers, unusual requests, anything needing a judgment call |
-| Customer support rep | Answers tickets and emails, tracks orders, processes routine returns, updates records | Refunds above a set amount, complaints, policy exceptions |
-| Scheduler or dispatcher | Fills the calendar, assigns jobs by availability and location, sends confirmations and reminders | Emergencies outside the rules, schedule conflicts it can't resolve |
-| Bookkeeper or AP clerk | Enters bills and receipts, matches transactions, chases overdue invoices, prepares reports | Approving payments, anything unusual in the numbers |
-| Executive assistant | Manages the inbox and calendar, drafts replies, preps meeting notes, tracks follow-ups | Sending anything sensitive, decisions on your behalf |
-| Inside sales rep | Responds to new leads in minutes, qualifies them, books calls, follows up on quotes | The sales conversation itself, pricing negotiations |
-| Office administrator | Data entry, document filing, form processing, vendor emails, weekly reporting | Contracts, hiring, anything with legal weight |
-| Marketing coordinator | Drafts posts and newsletters, schedules content, reports on results, updates listings | Brand decisions, final approval on what goes public |
-| Data analyst | Pulls data from your systems, builds recurring reports, flags trends and outliers | Interpreting results for big decisions |
+![What an AI Employee handles in nine common roles, and what it hands to a person](/blog/what-is-an-ai-employee/02-roles.jpg)
 
 Notice the right-hand column. A well-built AI Employee doesn't try to do everything. Part of its job description is knowing which moments belong to a person.
 

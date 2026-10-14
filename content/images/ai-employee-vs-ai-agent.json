@@ -1,0 +1,51 @@
+{
+ "images": [
+  {
+   "type": "cover",
+   "name": "cover",
+   "eyebrow": "AI Employee 101",
+   "title": "AI Employee vs. *AI agent*",
+   "sub": "Both use the same technology. One is a tool you run, the other holds a job on your team.",
+   "avatar": "ai-executive-assistant",
+   "series": "The AI Employee · unhired.io"
+  },
+  {
+   "type": "table",
+   "name": "compare",
+   "eyebrow": "Side by side",
+   "title": "AI agent vs. *AI Employee*",
+   "head": [
+    "",
+    "AI agent",
+    "AI Employee"
+   ],
+   "rows": [
+    [
+     "Scope",
+     "A task or a goal you give it",
+     "A whole role with ongoing responsibilities"
+    ],
+    [
+     "What starts the work",
+     "You prompt it",
+     "Customers, the clock and events in your systems, without anyone asking"
+    ],
+    [
+     "Memory",
+     "Often starts fresh each time",
+     "Knows your business and keeps context over time"
+    ],
+    [
+     "Authority",
+     "Whatever access you happen to give it",
+     "Defined levels: act alone, act and report, or ask first"
+    ],
+    [
+     "Who owns it",
+     "Whoever set it up, if anyone",
+     "Someone accountable for training, monitoring and improving it"
+    ]
+   ]
+  }
+ ]
+}
