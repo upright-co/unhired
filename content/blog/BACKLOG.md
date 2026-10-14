@@ -5,7 +5,7 @@ The scheduled "AI Employee article" task takes the **first unchecked line**, wri
 Every article must work for small and medium businesses across industries, never one trade.
 
 ## Roles (what an AI Employee does in one seat)
-- [ ] AI Receptionist: what it does, what it hands to a person, and what it costs vs. a front-desk hire (keyword: AI receptionist)
+- [x] AI Receptionist: what it does, what it hands to a person, and what it costs vs. a front-desk hire (keyword: AI receptionist) → ai-receptionist
 - [ ] AI Bookkeeper: invoices, receivables, bank matching and month-end (keyword: AI bookkeeper)
 - [ ] AI Executive Assistant: inbox, calendar, travel and prep (keyword: AI executive assistant)
 - [ ] AI Customer Support agent as an employee, not a chatbot (keyword: AI customer support employee)

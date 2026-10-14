@@ -1,0 +1,96 @@
+{
+ "images": [
+  {
+   "type": "cover",
+   "name": "cover",
+   "eyebrow": "AI Employee roles · Receptionist",
+   "title": "What an *AI Receptionist* does, and what it costs",
+   "sub": "The front-desk job, split into what an AI Employee owns and what it hands to a person.",
+   "avatar": "ai-receptionist",
+   "series": "The AI Employee · unhired.io"
+  },
+  {
+   "type": "breakdown",
+   "name": "duties",
+   "title": "The front desk, *duty by duty*",
+   "rows": [
+    ["Calls, chats and emails", "Answers on the first ring at any hour, several at once, from your own information.", "alone"],
+    ["Booking appointments", "Books, moves and confirms in your real calendar, following your rules for each type of visit.", "alone"],
+    ["Reminders and waitlist", "Sends the day-before reminder and offers cancelled slots to the next person waiting.", "alone"],
+    ["Screening and routing", "Asks your intake questions, files work orders and sends the summary to the right person.", "reports"],
+    ["Refunds and billing disputes", "Collects the details and passes them to whoever owns billing. Makes no promises.", "asks"],
+    ["Emergencies and upset callers", "Gives your written emergency instructions and alerts the on-call person right away.", "asks"]
+   ]
+  },
+  {
+   "type": "table",
+   "name": "by-industry",
+   "title": "What it handles, *by industry*",
+   "head": ["Business", "The AI Receptionist handles", "It hands to a person"],
+   "rows": [
+    ["Dental or physio clinic", "Bookings, reminders, waitlist, hours and intake forms", "Symptoms, insurance disputes"],
+    ["Law firm", "Intake questions, consult booking, routing by practice area", "Whether someone has a case"],
+    ["Property manager", "Maintenance requests, showings, rent due dates", "Gas, flooding, eviction questions"],
+    ["Online store", "Order status, returns within policy, product questions", "Refunds outside policy"],
+    ["Marketing agency", "Discovery call booking, inbound lead details", "Pricing custom work"]
+   ],
+   "source": "Examples. Every business sets its own rules."
+  },
+  {
+   "type": "timeline",
+   "name": "day-on-shift",
+   "title": "A day at a *physio clinic*",
+   "avatar": "ai-receptionist",
+   "role": "AI Receptionist",
+   "roleSub": "Reports to the clinic manager",
+   "rows": [
+    ["6:50 am", "A patient books a 7:30 am assessment through web chat. It sends the intake form and the parking details."],
+    ["8:05 am", "Five calls come in at once about same-day slots. It answers all five and books the two open times."],
+    ["10:20 am", "A 2 pm patient cancels. It texts the waitlist and the slot is filled a few minutes later."],
+    ["12:40 pm", "A patient asks why their insurer paid less than expected. It takes the details for the billing lead.", "you"],
+    ["3:15 pm", "A caller describes a new injury and asks if it's serious. It books the earliest visit and flags it for a physio.", "you"],
+    ["4:30 pm", "Sends tomorrow's reminders and moves two appointments when patients reply asking for a new time."],
+    ["7:45 pm", "Answers an after-hours call about Saturday hours and books a first visit for next week."]
+   ],
+   "source": "Example day"
+  },
+  {
+   "type": "stats",
+   "name": "the-numbers",
+   "eyebrow": "The numbers",
+   "title": "What a receptionist *costs*",
+   "items": [
+    ["$38,010", "US median yearly wage for receptionists, May 2025"],
+    ["$18.27", "Median hourly wage"],
+    ["~70%", "Share of employer compensation costs that is wages. The rest is benefits and taxes."]
+   ],
+   "source": "Source: US Bureau of Labor Statistics, Occupational Outlook Handbook and ECEC"
+  },
+  {
+   "type": "cost",
+   "name": "cost",
+   "eyebrow": "The cost",
+   "title": "The front desk, *side by side*",
+   "suffix": " / yr",
+   "highlight": 1,
+   "rows": [
+    ["Receptionist at the US median wage", 38010, "Before benefits, payroll taxes, hiring, training and cover for breaks."],
+    ["AI Receptionist, the most you'd pay", 19005, "At least 50% less than the salary. Billed monthly. We build, train and maintain it."]
+   ],
+   "source": "Wage: BLS, May 2025 · Guarantee: unhired.io"
+  },
+  {
+   "type": "flow",
+   "name": "how-we-build-it",
+   "title": "How we'd *set one up*",
+   "steps": [
+    ["Map the desk", "Every call type, the questions people ask, your booking rules and who gets what."],
+    ["Connect the tools", "Your phone line, web chat, inbox and booking system, with only the access the job needs."],
+    ["Train it on the business", "Hours, services, published prices, policies, intake questions and how you talk to customers."],
+    ["Set its authority", "Answers and bookings alone. Routing it reports. Money, emergencies and advice go to a person."],
+    ["Shadow, then go live", "It drafts while your team watches the log, then takes on more as it gets things right."],
+    ["Maintain it every week", "We review the log, fix mistakes and update it when hours, services or software change."]
+   ]
+  }
+ ]
+}
