@@ -436,6 +436,17 @@
     border-top: 1px solid rgba(14, 11, 31, 0.1);
   }
 
+  .article-figure img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 1.25rem;
+  }
+  .article-figure figcaption {
+    margin-top: 0.6rem;
+    font-size: 0.85rem;
+    color: var(--color-muted);
+  }
   .article-table {
     overflow-x: auto;
     border-radius: 1.25rem;

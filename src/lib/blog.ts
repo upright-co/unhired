@@ -79,6 +79,13 @@ function render(markdown: string) {
         if (depth === 2) toc.push({ id, text: decodeEntities(text.replace(/<[^>]+>/g, "")) });
         return `<h${depth} id="${id}">${text}</h${depth}>\n`;
       },
+      paragraph(token) {
+        // A paragraph that is only an image becomes a figure (infographics in long-form posts).
+        const only = token.tokens?.length === 1 && token.tokens[0].type === "image" ? token.tokens[0] : null;
+        if (!only) return false;
+        const alt = only.text.replace(/"/g, "&quot;");
+        return `<figure class="article-figure"><img src="${only.href}" alt="${alt}" loading="lazy"></figure>\n`;
+      },
       table(token) {
         // Wrap tables so they scroll sideways on phones instead of breaking the layout.
         const head = token.header.map((c) => `<th>${this.parser.parseInline(c.tokens)}</th>`).join("");

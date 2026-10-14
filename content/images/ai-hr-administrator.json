@@ -1,0 +1,195 @@
+{
+ "images": [
+  {
+   "type": "cover",
+   "name": "cover",
+   "eyebrow": "Hire or AI Employee? · HR Administrator",
+   "title": "A construction company is hiring an *HR Administrator*",
+   "sub": "What an AI Employee would do in each of the six duties on the posting, and what it would cost.",
+   "avatar": "ai-executive-assistant",
+   "series": "Job posting breakdowns · unhired.io"
+  },
+  {
+   "type": "posting",
+   "name": "posting",
+   "title": "HR Administrator",
+   "location": "Edmonton, AB",
+   "posted": "Posted this month",
+   "chips": [
+    "Full-time",
+    "Benefits included"
+   ],
+   "duties": [
+    "Coordinate employee onboarding in BambooHR and track required documents",
+    "Arrange medical tests, drug and alcohol tests, criminal record checks and clearances",
+    "Maintain onboarding and clearance tracking with status updates to project teams",
+    "Enter and maintain employee information in the payroll system",
+    "Coordinate benefits enrollment and answer routine benefits questions",
+    "Support recruitment and project workforce reporting"
+   ],
+   "qualifications": "Administrative experience, ideally in HR. Strong organization and attention to detail. Proficient in Excel, Word and Outlook.",
+   "note": "Duties condensed from a real Indeed posting. Company name and address removed."
+  },
+  {
+   "type": "quote",
+   "name": "quote",
+   "text": "Six duties on this posting, and all six are paperwork moving between *BambooHR, payroll, a testing clinic and the job sites.*",
+   "by": "Brandon Upright · Unhired"
+  },
+  {
+   "type": "breakdown",
+   "name": "breakdown",
+   "title": "What the AI Employee does *in each duty*",
+   "rows": [
+    [
+     "Onboarding in BambooHR",
+     "Creates the employee record, sends the packet, tracks every signature and chases what's missing until the file is complete.",
+     "alone"
+    ],
+    [
+     "Medicals, drug tests and record checks",
+     "Books each test with the provider, texts the worker where and when, and logs the outcome when it arrives.",
+     "reports"
+    ],
+    [
+     "Clearance tracking",
+     "Keeps one live tracker per project and tells the site the moment a worker is cleared to start.",
+     "alone"
+    ],
+    [
+     "Payroll data entry",
+     "Enters new-hire details and checks them against the offer letter. Any change to pay waits for a person.",
+     "asks"
+    ],
+    [
+     "Benefits enrollment and questions",
+     "Answers routine questions from the plan booklet, 24/7, and walks new hires through enrollment.",
+     "alone"
+    ],
+    [
+     "Recruiting and workforce reports",
+     "Screens applicants against the must-haves, books interviews and sends the weekly headcount report.",
+     "reports"
+    ]
+   ]
+  },
+  {
+   "type": "timeline",
+   "name": "day-on-shift",
+   "title": "A Monday for the *AI HR Administrator*",
+   "avatar": "ai-executive-assistant",
+   "role": "AI HR Administrator",
+   "roleSub": "Reports to the HR manager",
+   "rows": [
+    [
+     "5:40 am",
+     "A superintendent texts: two new labourers start next Monday on the north site. It creates both in BambooHR and sends their onboarding packets."
+    ],
+    [
+     "7:15 am",
+     "Books both pre-access drug and alcohol tests at the nearest clinic and texts each worker the address and time."
+    ],
+    [
+     "9:30 am",
+     "Chases last week's hire for a missing TD1 and void cheque. Second reminder, logged."
+    ],
+    [
+     "11:05 am",
+     "An employee asks if physio is covered for their spouse. It answers from the benefits booklet and sends the claim form."
+    ],
+    [
+     "1:20 pm",
+     "A clearance comes back. It updates the tracker and tells the site super the worker can start Monday."
+    ],
+    [
+     "2:45 pm",
+     "A background check comes back with a flag. It takes no action and sends it to the HR manager.",
+     "you"
+    ],
+    [
+     "4:30 pm",
+     "A pay rate in the payroll system doesn't match the offer letter. It holds the record for approval.",
+     "you"
+    ],
+    [
+     "6:00 pm",
+     "Sends the weekly workforce report: headcount by project, pending clearances and open roles."
+    ]
+   ],
+   "source": "Example day, built from the duties in the posting"
+  },
+  {
+   "type": "flow",
+   "name": "how-we-build-it",
+   "title": "How we'd *build it*",
+   "steps": [
+    [
+     "Map the role",
+     "Start from this posting, then sit with whoever does the job today. Every checklist, form and 'we always do it this way' gets written down."
+    ],
+    [
+     "Connect the tools",
+     "BambooHR, the payroll system, email and text, the testing provider and the clearance tracker. Without tools it can only talk about the work."
+    ],
+    [
+     "Train it on the business",
+     "Onboarding steps per role, the benefits booklet, clearance rules per site and the tone the company uses with its crews."
+    ],
+    [
+     "Set its authority",
+     "Paperwork and reminders it does alone. Bookings it does and reports. Pay, discipline and anything sensitive go to a person first."
+    ],
+    [
+     "Shadow, then go live",
+     "For the first stretch it drafts and a person approves. As the log shows it gets things right, it takes on more."
+    ],
+    [
+     "Maintain it every week",
+     "We review the log, fix anything it got wrong and update it when policies, benefits or software change."
+    ]
+   ]
+  },
+  {
+   "type": "stats",
+   "name": "the-numbers",
+   "eyebrow": "The numbers",
+   "title": "What this seat *costs a person*",
+   "items": [
+    [
+     "$33.89",
+     "Median hourly wage, Edmonton region (2024)"
+    ],
+    [
+     "$70,491",
+     "That wage over a 2,080-hour year"
+    ],
+    [
+     "93.2%",
+     "of Alberta workers in this occupation get at least one benefit on top"
+    ]
+   ],
+   "source": "Source: Job Bank, Government of Canada (NOC 12101), updated Nov 19, 2025"
+  },
+  {
+   "type": "cost",
+   "name": "cost",
+   "eyebrow": "The cost",
+   "title": "The seat, *side by side*",
+   "suffix": " / yr",
+   "highlight": 1,
+   "rows": [
+    [
+     "Median wage for this occupation, Edmonton",
+     70491,
+     "Before benefits, payroll taxes, recruiting, training and turnover."
+    ],
+    [
+     "AI Employee, the most you'd pay",
+     35246,
+     "Unhired guarantees at least 50% less than the salary. We build, train and maintain it."
+    ]
+   ],
+   "source": "Wage: Job Bank, Government of Canada · Guarantee: unhired.io"
+  }
+ ]
+}
