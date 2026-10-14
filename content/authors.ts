@@ -6,7 +6,7 @@ export type Author = {
   name: string;
   role: string;
   bio: string;
-  /** Profile URLs (LinkedIn, YouTube, X). Emitted as `sameAs` in the Article schema. */
+  /** Profile URLs (LinkedIn, Medium, Substack, YouTube). Emitted as `sameAs` in the Article schema. */
   links: { label: string; href: string }[];
 };
 
@@ -16,7 +16,11 @@ export const authors = {
     name: "Brandon Upright",
     role: "Founder, Unhired",
     bio: "Brandon Upright founded Unhired to build, train and maintain AI Employees for growing businesses. He works with owners on one question: which roles on the team should be an AI Employee, and which need a person.",
-    links: [{ label: "LinkedIn", href: "https://www.linkedin.com/in/brandon-upright/" }],
+    links: [
+      { label: "LinkedIn", href: "https://www.linkedin.com/in/brandon-upright/" },
+      { label: "Medium", href: "https://medium.com/@brandonupright" },
+      { label: "Substack", href: "https://aiemployee.substack.com" },
+    ],
   },
   unhired: {
     name: "The Unhired Team",
