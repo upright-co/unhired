@@ -2,7 +2,8 @@
  * Builds the publish kit for a blog post: one page with everything needed to republish it on
  * Medium, LinkedIn (as a newsletter article) and Substack, plus the company page caption.
  *   node scripts/publish-kit.mjs <slug>
- * Output: public/kits/<slug>.html, served at https://unhired.io/kits/<slug>.html (noindex, and
+ * Output: public/kits/<slug>.html (for people) and <slug>.json (for the draft automation), served at
+ * https://unhired.io/kits/<slug>.html (noindex, and
  * /kits/ is disallowed in robots.ts). Reads the post's optional `syndication` frontmatter:
  *   cover, linkedin_title, substack_subtitle, tags[], share_text, page_caption
  *
@@ -167,4 +168,33 @@ document.querySelectorAll("[data-text]").forEach(b=>b.onclick=async()=>{await na
 mkdirSync(path.join(root, "public/kits"), { recursive: true });
 const out = path.join(root, "public/kits", `${slug}.html`);
 writeFileSync(out, page);
+
+// The same content as data, for the browser automation that saves drafts on each platform
+// (it fetches https://unhired.io/kits/<slug>.json and pastes the HTML into each editor).
+// LinkedIn gets the body with the "first published" line at the end; Substack gets it at the top
+// after the takeaways. Images stay as absolute unhired.io URLs.
+const bodyHtml = html(body);
+writeFileSync(
+  path.join(root, "public/kits", `${slug}.json`),
+  JSON.stringify(
+    {
+      slug,
+      url,
+      published: pub,
+      republish_after: after.toISOString().slice(0, 10),
+      title: fm.title,
+      linkedin_title: syn.linkedin_title ?? fm.title,
+      substack_subtitle: syn.substack_subtitle ?? fm.description,
+      tags: syn.tags ?? [],
+      cover: syn.cover ? abs(syn.cover) : null,
+      images: parts.filter((p) => p.img).map((p) => ({ src: abs(p.img), alt: p.alt })),
+      share_text: syn.share_text ?? null,
+      page_caption: `${syn.page_caption ?? fm.description}\n\n${url}`,
+      substack_html: `${takeaways}${origin}${bodyHtml}`,
+      linkedin_html: `${bodyHtml}${origin}`,
+    },
+    null,
+    1,
+  ),
+);
 console.log(`${out}\n${SITE}/kits/${slug}.html`);
