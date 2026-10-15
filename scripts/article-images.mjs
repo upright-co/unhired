@@ -77,7 +77,7 @@ h1{margin-top:28px;font:700 88px/1.03 'Sora';letter-spacing:-3.2px}
 .sub{margin-top:30px;font:400 31px/1.45 'DM Sans';color:rgba(255,255,255,.74);max-width:860px}
 .series{position:absolute;left:120px;bottom:84px;display:flex;align-items:center;gap:24px}
 .series img{height:44px}.series span{font:500 22px 'DM Sans';color:rgba(255,255,255,.55);padding-left:24px;border-left:1px solid rgba(255,255,255,.2)}
-.av{position:absolute;right:-30px;bottom:0;height:940px}
+.av{position:absolute;right:-30px;bottom:0;height:940px;-webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 16%);mask-image:linear-gradient(to bottom,transparent 0,#000 16%)}
 .halo{position:absolute;right:120px;top:220px;width:640px;height:640px;border-radius:50%;background:radial-gradient(circle,rgba(176,124,255,.28),transparent 70%)}`,
     html: (s) => `<div class="b"><div class="grid"></div><div class="g1"></div><div class="g2"></div>
 ${s.avatar ? `<div class="halo"></div><img class="av" src="${avatarUrl(s.avatar)}">` : ""}

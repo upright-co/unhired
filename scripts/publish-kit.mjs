@@ -62,13 +62,16 @@ const field = (label, value) => `<div class="blk"><div class="bar">${label}<butt
 
 const linkedin = (() => {
   n = 0;
+  // Cover and title first, so the step numbers run in the order Brandon works.
+  const cover = syn.cover ? imgBlock(syn.cover, fm.title).replace("Add image", "Cover image") : "";
+  const title = copyBlock("Title", `<p>${esc(syn.linkedin_title ?? fm.title)}</p>`);
   const blocks = parts.map((p) => {
     if (p.img) return imgBlock(p.img, p.alt);
     return p.text.trim() ? copyBlock("Paste text", html(p.text.trim())) : "";
   });
   return [
-    syn.cover ? imgBlock(syn.cover, fm.title).replace("Add image", "Cover image") : "",
-    copyBlock("Title", `<p>${esc(syn.linkedin_title ?? fm.title)}</p>`),
+    cover,
+    title,
     ...blocks,
     copyBlock("Last block", origin),
   ].join("\n");
