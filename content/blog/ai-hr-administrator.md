@@ -1,7 +1,7 @@
 ---
 title: "A Construction Company Is Hiring an HR Administrator. What Would an AI Employee Do in Each Duty?"
 seoTitle: "AI HR Administrator: A Real Job Posting, Duty by Duty"
-description: "A real HR Administrator posting from an Edmonton construction company, broken down duty by duty: what an AI Employee would handle, what it hands to a person, and the cost."
+description: "A real HR Administrator posting from a construction company, broken down duty by duty: what an AI Employee would handle, what it hands to a person, and the cost."
 keyword: "AI HR administrator"
 category: "Job posting breakdowns"
 author: brandon
@@ -10,7 +10,7 @@ takeaways:
   - "All six duties on this HR Administrator posting are paperwork moving between BambooHR, payroll, a testing clinic and the job sites."
   - "An AI Employee would run onboarding, clearance tracking and benefits questions on its own, and book tests and screen applicants while reporting back."
   - "Anything that changes someone's pay, and any flagged background check, goes to a person first."
-  - "The median wage for this occupation in the Edmonton region is $33.89 an hour, about $70,491 a year before benefits."
+  - "The median wage for this occupation in Canada is $33.33 an hour, about $69,326 a year before benefits."
 related:
   - what-is-an-ai-employee
   - why-your-next-hire-should-be-an-ai-employee
@@ -19,28 +19,28 @@ faq:
     a: "It can do most of the administrative side: creating employee records, sending onboarding packets, following up on missing forms, booking pre-employment tests, keeping clearance trackers current, answering routine benefits questions and building workforce reports. Decisions about pay, discipline and hiring stay with a person."
   - q: "What would an AI HR Administrator need access to?"
     a: "The HR system (BambooHR in this posting), the payroll system, email and text messaging, the testing provider's booking system and wherever the company tracks clearances. Each connection is set up with only the permissions the job needs."
-  - q: "What does an HR Administrator cost in Edmonton?"
-    a: "Job Bank puts the median wage for this occupation in the Edmonton region at $33.89 an hour (2024 data), or about $70,491 over a 2,080-hour year. Benefits, payroll taxes, recruiting and training come on top of that."
+  - q: "What does an HR Administrator cost?"
+    a: "Job Bank puts the median wage for this occupation in Canada at $33.33 an hour (2023-2024 data), or about $69,326 over a 2,080-hour year. Benefits, payroll taxes, recruiting and training come on top of that."
   - q: "Does an AI Employee replace the HR manager?"
     a: "No. In this breakdown the AI Employee reports to the HR manager, and the manager makes every call that involves pay, test results, discipline or who gets hired."
 syndication:
   cover: /blog/ai-hr-administrator/01-cover.jpg
   linkedin_title: "A Construction Company Is Hiring an HR Administrator. I Worked Out How an AI Employee Would Do the Job."
-  substack_subtitle: "A real posting from Edmonton, duty by duty: what an AI Employee would handle, what it hands back to a person, and what it would cost."
+  substack_subtitle: "A real job posting, duty by duty: what an AI Employee would handle, what it hands back to a person, and what it would cost."
   tags: ["Artificial Intelligence", "Human Resources", "Small Business", "Future Of Work", "Automation"]
   share_text: |
-    A construction company in Edmonton is hiring an HR Administrator. Full-time, benefits included, six duties on the posting.
+    A construction company is hiring an HR Administrator. Full-time, benefits included, six duties on the posting.
 
-    I went through it line by line to see how much of the job an AI Employee could take on, what it would have to hand back to a person, and what it would cost next to the $33.89 median hourly wage for the role.
+    I went through it line by line to see how much of the job an AI Employee could take on, what it would have to hand back to a person, and what it would cost next to the $33.33 median hourly wage for the role.
 
     Short version: all six duties are paperwork moving between BambooHR, payroll, a testing clinic and the project sites.
 
     Full breakdown below 👇
   page_caption: |
-    A construction company in Edmonton is hiring an HR Administrator. We went through the posting duty by duty to show what an AI Employee would handle, what it would hand to a person, how one is set up, and how the cost compares to the $33.89 median hourly wage.
+    A construction company is hiring an HR Administrator. We went through the posting duty by duty to show what an AI Employee would handle, what it would hand to a person, how one is set up, and how the cost compares to the $33.33 median hourly wage.
 ---
 
-A construction company in Edmonton posted a job for an HR Administrator this month. Full-time, benefits included, reporting into a busy HR team that onboards crews for several project sites at once.
+A construction company posted a job for an HR Administrator this month. Full-time, benefits included, reporting into a busy HR team that onboards crews for several project sites at once.
 
 I read every posting the same way now. I go down the list of duties and sort each one: could an AI Employee own this, or does it need a person? This posting has six duties, and all six are paperwork moving between BambooHR, the payroll system, a testing clinic and the people running each site.
 
@@ -114,11 +114,11 @@ The last step is the one people skip. This company will switch benefits provider
 
 ## What the seat costs a person
 
-The Government of Canada's Job Bank puts the median wage for this occupation in the Edmonton region at $33.89 an hour (NOC 12101, 2024 data). Over a 2,080-hour year that's about $70,491.
+The Government of Canada's Job Bank puts the national median wage for this occupation at $33.33 an hour (NOC 12101, 2023-2024 data). Over a 2,080-hour year that's about $69,326.
 
 ![What this seat costs a person](/blog/ai-hr-administrator/07-the-numbers.jpg)
 
-The wage is only part of it. In Alberta, 93.2% of workers in this occupation get at least one benefit on top of their pay, and the employer also covers payroll taxes, recruiting, training, vacation coverage, and a second round of hiring if the first person leaves.
+The wage is only part of it. Across Canada, 90% of workers in this occupation get at least one benefit on top of their pay, and the employer also covers payroll taxes, recruiting, training, vacation coverage, and a second round of hiring if the first person leaves.
 
 ## How much you'd pay for an AI HR Administrator
 
@@ -126,7 +126,7 @@ There are two ways to get one. A company can assemble it from software subscript
 
 The price depends on how many systems it has to connect to, how many hires and questions it handles in a month, and how much ongoing maintenance is included. A company onboarding a few people a quarter needs much less than one running crews across several sites.
 
-Whatever the quote, compare it with the full cost of the seat: about $70,491 in wages for this role, plus benefits, payroll taxes and the cost of hiring, for roughly 40 hours of coverage a week.
+Whatever the quote, compare it with the full cost of the seat: about $69,326 in wages for this role, plus benefits, payroll taxes and the cost of hiring, for roughly 40 hours of coverage a week.
 
 ## Would I tell this company to skip the hire?
 
@@ -136,4 +136,4 @@ If the HR manager is buried in onboarding paperwork and the company keeps adding
 
 The same exercise works for any job you're about to post: go down the duties one at a time and ask whether each is coordination between systems or a judgment call that needs a person. Some websites offer [free assessments](/assessment) that run this check on a job description for you.
 
-*Wage data: [Job Bank, Government of Canada](https://www.jobbank.gc.ca/marketreport/wages-occupation/12511/geo25349), updated November 19, 2025. The posting is real; the company name and address have been removed. The Monday schedule is an example built from the duties in the posting.*
+*Wage data: [Job Bank, Government of Canada](https://www.jobbank.gc.ca/marketreport/wages-occupation/12511/ca), updated November 19, 2025. The posting is real; the company name and address have been removed. The Monday schedule is an example built from the duties in the posting.*

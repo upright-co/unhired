@@ -51,6 +51,21 @@ const SALES = [
   [/\bguarantee/i, "guarantee in an article"],
   [/most you['’]d pay|what you['’]d save|nothing up front|never (have to )?touch (it|the AI)|clients? we build|replace the role, not the person|book a (call|demo)|contact us|get in touch|sign up (now|today)/i, "sales line"],
 ];
+// Brandon markets everywhere, so articles never name a city, province, state or region.
+const PLACES = new RegExp("\\b(" + [
+  "Edmonton", "Calgary", "Toronto", "Vancouver", "Montreal", "Montréal", "Ottawa", "Winnipeg", "Saskatoon", "Regina",
+  "Halifax", "Hamilton", "Kitchener", "Mississauga", "Surrey", "Kelowna", "Red Deer", "Lethbridge",
+  "Alberta", "British Columbia", "Saskatchewan", "Manitoba", "Ontario", "Quebec", "Québec", "Nova Scotia",
+  "New Brunswick", "Newfoundland", "Prince Edward Island", "Yukon", "Nunavut", "Northwest Territories",
+  "New York City", "Los Angeles", "Chicago", "Houston", "Phoenix", "Philadelphia", "San Antonio", "San Diego",
+  "Dallas", "Austin", "Jacksonville", "Fort Worth", "Columbus", "Charlotte", "Indianapolis", "San Francisco",
+  "Seattle", "Denver", "Nashville", "Boston", "Las Vegas", "Portland", "Detroit", "Atlanta", "Miami",
+  "Minneapolis", "Tampa", "Orlando", "Sacramento", "Salt Lake City", "Pittsburgh", "Cincinnati", "Cleveland",
+  "California", "Texas", "Florida", "Arizona", "Colorado", "Illinois", "Ohio", "Michigan", "Pennsylvania",
+  "Massachusetts", "Tennessee", "Nevada", "Oregon", "Minnesota", "North Carolina", "New Jersey", "Utah",
+  "region", "metro area", "Greater [A-Z][a-z]+ Area",
+].join("|") + ")\\b");
+
 const SOFT = [
   [/,\s+(highlighting|underscoring|reflecting|showcasing|emphasi[sz]ing|signaling|signalling|demonstrating|contributing to)\b/i, "'-ing' add-on that says nothing"],
   [/\b(seamlessly|effectively|efficiently|consistently|quietly|deeply|fundamentally|truly|remarkably|arguably|undoubtedly|certainly|incredibly)\b/i, "empty adverb"],
@@ -94,6 +109,7 @@ for (const file of process.argv.slice(2)) {
     if ((m = plain.match(phrases))) errs.push([n, `AI phrase "${m[0]}"`, plain]);
     for (const [re, why] of SHAPES) if (re.test(plain)) errs.push([n, why, plain]);
     for (const [re, why] of SOFT) if ((m = plain.match(re))) warns.push([n, `${why} "${m[0]}"`, plain]);
+    if ((m = plain.match(PLACES))) errs.push([n, `names a place "${m[0]}": articles are for businesses everywhere`, plain]);
     // The one allowed assessment pointer may name Unhired ("such as the one offered by Unhired").
     const pointer = /\]\((https:\/\/unhired\.io)?\/assessment\)/.test(raw ?? "");
     for (const [re, why] of [...(n === "fm.syndication.page_caption" ? [] : SELL), ...SALES]) {
@@ -114,6 +130,8 @@ for (const file of process.argv.slice(2)) {
       const m = t.match(re);
       if (m && !(n === "image spec" && /unhired\.io/i.test(t) && why === "names Unhired")) errs.push([n, `selling: ${why} "${m[0]}"`, t]);
     }
+    const pm = t.match(PLACES);
+    if (pm) errs.push([n, `names a place "${pm[0]}": articles are for businesses everywhere`, t]);
   }
 
   // Bold-label bullets: 3+ list items in a row that open with bold.

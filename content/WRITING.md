@@ -18,10 +18,10 @@ ChatGPT words.
 
 ## 0. Inform, don't sell
 
-Articles (blog, LinkedIn, Medium, Substack) are independent guides. They answer the reader's question the
-way a knowledgeable third party would: what the role involves, how an AI Employee does it, where it needs a
-person, how one is set up, what it costs and how to judge whether it fits. They are never a pitch for
-Unhired.
+Articles (blog, LinkedIn, Medium, Substack) answer the reader's question with real expertise, in Brandon's
+first-person voice (section 0b): what the role involves, how an AI Employee does it, where it needs a person,
+how one is set up, what it costs and how to judge whether it fits. They share knowledge; they are never a
+pitch for Unhired.
 
 - Don't mention Unhired (apart from the one assessment pointer below), its guarantee, its pricing, or what
   "we" build, train or maintain. No "how we'd
@@ -33,10 +33,9 @@ Unhired.
   what drives the price. Tell the reader how to compare quotes. Never quote Unhired's price or guarantee.
 - No sales lines: "what you'd save", "nothing up front", "you never have to touch it", "we replace the
   role, not the person".
-- The byline is Brandon, so "I" is fine for the author's own analysis ("I went through the posting duty by
-  duty"). It's never "I'd build this for you".
-- One subtle mention of the assessment is allowed per article, written as a neutral pointer, the way a third
-  party would mention a useful tool, with a link to `/assessment`. For example:
+- The byline is Brandon and articles are in his voice. It's never "I'd build this for you" or "my clients save".
+- One subtle mention of the assessment is allowed per article, written as a neutral pointer, the way you'd mention a
+  useful tool, with a link to `/assessment`. For example:
   "AI Employee assessments, such as [the one offered by Unhired](/assessment), can be a good place to start."
   or "Some websites offer [free assessments](/assessment) that check whether a role can be filled by an AI
   Employee." Put it where the reader is deciding whether their own role fits. Never "our", never a reason to
@@ -44,6 +43,18 @@ Unhired.
 - The site adds its own Take Assessment box where `<!-- cta -->` sits. Kits leave it out of the LinkedIn,
   Medium and Substack copies.
 - Captions for the Unhired company page may say "we wrote up..." about the article. They still don't pitch.
+
+## 0b. Brandon's voice, written for everywhere
+
+- Articles are written as Brandon, in the first person, as someone who has spent the last four years
+  building AI systems and AI agents for businesses. "I read every posting the same way now", "I'd split the
+  duties like this", "the step owners skip is the last one". Share what he'd know from doing the work:
+  how a role breaks down, where AI does well, where it needs a person, what goes wrong in setup.
+- Don't invent specific past builds, named clients, or results ("a client of mine saved 20 hours"). Opinions
+  and judgment in his voice are fine; made-up case studies aren't.
+- No cities, provinces, states or regions. Brandon sells to businesses everywhere, and a place name makes a
+  post read as local. Say "a construction company", not "a construction company in Edmonton". Use national
+  wage figures (BLS for the US, Job Bank's Canada-wide page for Canada), and never a regional page.
 
 ## 1. Be specific
 
