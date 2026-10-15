@@ -83,3 +83,25 @@ export const assessmentConfig = {
     tag: "assessment_completed",
   },
 };
+
+/**
+ * What happens after someone gets their report (built 2026-10-15).
+ * Brandon gets an alert the moment a report goes out, and the lead gets four
+ * short follow-ups from him. Copy lives in src/lib/followUps.ts.
+ */
+export const followUpConfig = {
+  /** Brandon's name on the follow-ups. Sent from contactEmail, so replies reach him. */
+  senderName: "Brandon Upright",
+  /** Days after the report each follow-up is due. The daily run sends at most one per lead per day. */
+  days: [2, 5, 9, 16],
+  /** Reports from before this moment never get follow-ups (older leads and test runs). */
+  startAfter: "2026-10-15T00:00:00Z",
+  /** Safety cap per daily run (Resend Free allows 100 emails a day across everything). */
+  maxPerRun: 40,
+  /** 30-minute call with Brandon, offered in the first follow-up. */
+  bookingUrl: "https://cal.com/brandon-upright/demo-call",
+  /** CASL: every commercial email names the sender and a real mailing address. */
+  mailingAddress: "Unhired, 122 Marlborough Place NW, Edmonton AB, T5T 1Y6, Canada",
+  /** Where the new-lead alert goes (forwards to Brandon's inbox). */
+  alertTo: "hello@unhired.io",
+};

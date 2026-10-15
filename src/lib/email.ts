@@ -1,6 +1,6 @@
 import "server-only";
 import { Resend } from "resend";
-import { assessmentConfig, siteConfig } from "@/config";
+import { assessmentConfig, followUpConfig, siteConfig } from "@/config";
 
 /**
  * Email + list provider: Resend.
@@ -33,12 +33,21 @@ function from() {
   return `${name} <${address}>`;
 }
 
+/** One-click unsubscribe headers (RFC 8058), so Gmail and Outlook show their own unsubscribe button. */
+function unsubscribeHeaders(unsubscribeUrl: string) {
+  return {
+    "List-Unsubscribe": `<${unsubscribeUrl}>, <mailto:${siteConfig.contactEmail}?subject=unsubscribe>`,
+    "List-Unsubscribe-Post": "List-Unsubscribe=One-Click",
+  };
+}
+
 export async function sendReportEmail(m: {
   toEmail: string;
   toName: string;
   subject: string;
   html: string;
   text: string;
+  unsubscribeUrl: string;
 }) {
   const { error } = await getClient().emails.send({
     from: from(),
@@ -47,12 +56,70 @@ export async function sendReportEmail(m: {
     html: m.html,
     text: m.text,
     replyTo: siteConfig.contactEmail.includes("@") ? siteConfig.contactEmail : undefined,
-    headers: {
-      // One-click unsubscribe target for the marketing consent given at the email gate.
-      "List-Unsubscribe": `<mailto:${process.env.RESEND_FROM_EMAIL}?subject=unsubscribe>`,
-    },
+    // One-click unsubscribe target for the marketing consent given at the email gate.
+    headers: unsubscribeHeaders(m.unsubscribeUrl),
   });
   if (error) throw new Error(`Resend send failed: ${error.name}: ${error.message}`);
+}
+
+/** A follow-up from Brandon. Sent from contactEmail (forwards to him), so a reply lands in his inbox. */
+export async function sendFollowUpEmail(m: {
+  toEmail: string;
+  subject: string;
+  html: string;
+  text: string;
+  unsubscribeUrl: string;
+  step: number;
+}) {
+  const { error } = await getClient().emails.send({
+    from: `${followUpConfig.senderName} <${siteConfig.contactEmail}>`,
+    to: [m.toEmail],
+    subject: m.subject,
+    html: m.html,
+    text: m.text,
+    replyTo: siteConfig.contactEmail,
+    headers: unsubscribeHeaders(m.unsubscribeUrl),
+    tags: [
+      { name: "kind", value: "assessment_follow_up" },
+      { name: "step", value: String(m.step + 1) },
+    ],
+  });
+  if (error) throw new Error(`Resend send failed: ${error.name}: ${error.message}`);
+}
+
+/** Internal alert to Brandon. Reply-To is the lead, so hitting Reply writes to them. */
+export async function sendLeadAlert(m: { subject: string; html: string; text: string; replyTo: string }) {
+  const { error } = await getClient().emails.send({
+    from: from(),
+    to: [followUpConfig.alertTo],
+    subject: m.subject,
+    html: m.html,
+    text: m.text,
+    replyTo: m.replyTo,
+    tags: [{ name: "kind", value: "lead_alert" }],
+  });
+  if (error) throw new Error(`Resend send failed: ${error.name}: ${error.message}`);
+}
+
+/**
+ * True if the address unsubscribed through Resend (a newsletter footer link, for example).
+ * A missing contact counts as subscribed: the assessment row holds the consent.
+ */
+export async function contactUnsubscribed(email: string): Promise<boolean> {
+  const { data, error } = await getClient().contacts.get({ email });
+  if (error) {
+    if (error.name === "not_found") return false;
+    throw new Error(`Resend contact lookup failed: ${error.name}: ${error.message}`);
+  }
+  return Boolean(data?.unsubscribed);
+}
+
+/** Unsubscribes the address from everything Unhired sends through Resend. */
+export async function unsubscribeContact(email: string) {
+  const { error } = await getClient().contacts.update({ email, unsubscribed: true });
+  if (error && error.name !== "not_found") {
+    throw new Error(`Resend unsubscribe failed: ${error.name}: ${error.message}`);
+  }
 }
 
 /**

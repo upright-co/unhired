@@ -1,5 +1,5 @@
 import "server-only";
-import { links, siteConfig } from "@/config";
+import { followUpConfig, links, siteConfig } from "@/config";
 import type { StoredReport } from "./schemas";
 import { pathInfo, statusInfo, tierInfo } from "./tiers";
 
@@ -12,8 +12,8 @@ function esc(s: string) {
 }
 
 /** Report email: inline styles only (email clients ignore <style> and web fonts). */
-export function reportEmail(opts: { firstName: string; report: StoredReport; reportUrl: string }) {
-  const { firstName, report: r, reportUrl } = opts;
+export function reportEmail(opts: { firstName: string; report: StoredReport; reportUrl: string; unsubscribeUrl: string }) {
+  const { firstName, report: r, reportUrl, unsubscribeUrl } = opts;
   const tier = tierInfo[r.verdict_tier];
   const counts = {
     ai_full: r.tasks.filter((t) => t.status === "ai_full").length,
@@ -76,7 +76,8 @@ export function reportEmail(opts: { firstName: string; report: StoredReport; rep
   </td></tr>
   <tr><td style="padding:20px 32px 28px;border-top:1px solid #ECEAF4;font-size:12px;line-height:1.6;color:#4A4560;">
     You're receiving this because you took the AI Employee Assessment at Unhired and asked for your report.
-    You'll also get occasional tips from Unhired. You can unsubscribe anytime — just reply with "unsubscribe" or use the link in any of our newsletters.
+    You'll also hear from Brandon at Unhired about your report and get occasional tips. <a href="${esc(unsubscribeUrl)}" style="color:#4A4560;">Unsubscribe</a> anytime.
+    <br>${esc(followUpConfig.mailingAddress)}
   </td></tr>
 </table>
 </td></tr></table>
@@ -97,6 +98,8 @@ export function reportEmail(opts: { firstName: string; report: StoredReport; rep
       : `Reply to this email to build your AI Employee.`,
     ``,
     `— Unhired`,
+    ``,
+    `Unsubscribe: ${unsubscribeUrl}`,
   ].join("\n");
 
   return { subject, html, text };

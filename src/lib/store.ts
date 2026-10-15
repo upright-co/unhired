@@ -27,6 +27,12 @@ export type AssessmentRow = {
   utm_source: string | null;
   utm_medium: string | null;
   utm_campaign: string | null;
+  // Added by migration 003 (follow-ups). Older rows read back with the defaults.
+  follow_up_step?: number;
+  follow_up_sent_at?: string | null;
+  follow_ups_stopped?: string | null;
+  unsubscribed_at?: string | null;
+  alerted_at?: string | null;
 };
 
 export type DraftInput = Pick<
@@ -130,9 +136,76 @@ export async function completeAssessment(id: string, contact: ContactInput): Pro
   return updated;
 }
 
-export async function markDelivery(id: string, fields: { email_sent_at?: string; list_synced_at?: string }) {
+export async function markDelivery(
+  id: string,
+  fields: { email_sent_at?: string; list_synced_at?: string; alerted_at?: string },
+) {
   const db = getSupabase();
   if (!db || Object.keys(fields).length === 0) return;
   const { error } = await db.from("assessments").update(fields).eq("id", id);
   if (error) console.error("[store] markDelivery failed", error.message);
+}
+
+/* ------------------------------------------------------------------ */
+/* Follow-ups (migration 003). Supabase only: the dev store skips them. */
+/* ------------------------------------------------------------------ */
+
+/** Completed reports, after `since`, whose follow-up sequence hasn't finished or been stopped. */
+export async function followUpCandidates(opts: { since: string; maxStep: number; limit: number }): Promise<AssessmentRow[]> {
+  const db = getSupabase();
+  if (!db) return [];
+  const { data, error } = await db
+    .from("assessments")
+    .select("*")
+    .eq("status", "completed")
+    .is("follow_ups_stopped", null)
+    .is("unsubscribed_at", null)
+    .not("email", "is", null)
+    .not("consent_at", "is", null)
+    .gte("consent_at", opts.since)
+    .lt("follow_up_step", opts.maxStep)
+    .order("consent_at", { ascending: true })
+    .limit(opts.limit);
+  if (error) throw new Error(`Supabase select failed: ${error.message}`);
+  return (data ?? []) as AssessmentRow[];
+}
+
+/**
+ * Moves a lead from `step` to `step + 1` only if no other run got there first,
+ * so two overlapping runs can never send the same follow-up twice.
+ */
+export async function claimFollowUp(id: string, step: number): Promise<boolean> {
+  const db = getSupabase();
+  if (!db) return false;
+  const { data, error } = await db
+    .from("assessments")
+    .update({ follow_up_step: step + 1, follow_up_sent_at: new Date().toISOString() })
+    .eq("id", id)
+    .eq("follow_up_step", step)
+    .is("follow_ups_stopped", null)
+    .select("id");
+  if (error) throw new Error(`Supabase update failed: ${error.message}`);
+  return (data ?? []).length === 1;
+}
+
+/** Puts a claimed step back when the send itself failed, so tomorrow's run retries it. */
+export async function releaseFollowUp(id: string, step: number, previousSentAt: string | null) {
+  const db = getSupabase();
+  if (!db) return;
+  const { error } = await db
+    .from("assessments")
+    .update({ follow_up_step: step, follow_up_sent_at: previousSentAt })
+    .eq("id", id)
+    .eq("follow_up_step", step + 1);
+  if (error) console.error("[store] releaseFollowUp failed", error.message);
+}
+
+export async function stopFollowUps(id: string, reason: "unsubscribed" | "stopped_by_brandon" | "superseded"): Promise<AssessmentRow | null> {
+  const db = getSupabase();
+  if (!db) return null;
+  const fields: Record<string, string> = { follow_ups_stopped: reason };
+  if (reason === "unsubscribed") fields.unsubscribed_at = new Date().toISOString();
+  const { data, error } = await db.from("assessments").update(fields).eq("id", id).select("*").maybeSingle();
+  if (error) throw new Error(`Supabase update failed: ${error.message}`);
+  return (data as AssessmentRow) ?? null;
 }

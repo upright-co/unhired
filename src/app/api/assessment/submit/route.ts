@@ -1,6 +1,7 @@
 import { after, NextResponse } from "next/server";
 import { assessmentConfig, siteConfig } from "@/config";
 import { emailConfigured, sendReportEmail, upsertContact } from "@/lib/email";
+import { alertNewLead, reportUrl, unsubscribeUrl } from "@/lib/followUps";
 import { reportEmail } from "@/lib/emailTemplate";
 import { guard, jsonError, readJson } from "@/lib/http";
 import { SubmitRequestSchema } from "@/lib/schemas";
@@ -59,23 +60,25 @@ function payload(row: AssessmentRow) {
   return { id: row.id, url: reportUrl(row.id), report: row.report };
 }
 
-function reportUrl(id: string) {
-  return `${siteConfig.url.replace(/\/$/, "")}/report/${id}`;
-}
-
 async function deliver(row: AssessmentRow) {
   if (!emailConfigured()) {
     console.warn("[submit] Resend not configured: skipping email + list sync for", row.id);
     return;
   }
-  const email = reportEmail({ firstName: row.first_name!, report: row.report, reportUrl: reportUrl(row.id) });
-  const [sent, synced] = await Promise.allSettled([
+  const email = reportEmail({
+    firstName: row.first_name!,
+    report: row.report,
+    reportUrl: reportUrl(row.id),
+    unsubscribeUrl: unsubscribeUrl(row.id),
+  });
+  const [sent, synced, alerted] = await Promise.allSettled([
     sendReportEmail({
       toEmail: row.email!,
       toName: row.first_name!,
       subject: email.subject,
       html: email.html,
       text: email.text,
+      unsubscribeUrl: unsubscribeUrl(row.id),
     }),
     upsertContact({
       email: row.email!,
@@ -86,12 +89,15 @@ async function deliver(row: AssessmentRow) {
       coverage: row.coverage_percent,
       teamSize: row.team_size,
     }),
+    alertNewLead(row),
   ]);
   const now = new Date().toISOString();
   if (sent.status === "rejected") console.error("[submit] email failed", sent.reason);
   if (synced.status === "rejected") console.error("[submit] contact sync failed", synced.reason);
+  if (alerted.status === "rejected") console.error("[submit] lead alert failed", alerted.reason);
   await markDelivery(row.id, {
     ...(sent.status === "fulfilled" ? { email_sent_at: now } : {}),
     ...(synced.status === "fulfilled" ? { list_synced_at: now } : {}),
+    ...(alerted.status === "fulfilled" ? { alerted_at: now } : {}),
   });
 }
