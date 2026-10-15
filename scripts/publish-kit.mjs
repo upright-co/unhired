@@ -149,8 +149,12 @@ ${field("Subtitle", syn.substack_subtitle ?? fm.description)}
 </section>
 
 <section class="tab" id="pages">
-<ol class="how"><li>Post on the Unhired LinkedIn page and the Facebook page once the article is up.</li></ol>
-${field("Caption", `${syn.page_caption ?? fm.description}\n\n${url}`)}
+<ol class="how">
+<li><b>Unhired LinkedIn page:</b> after your LinkedIn article is live, copy the caption below, add your article's LinkedIn link at the end, and post it from the page. The link sends readers to your newsletter, which builds your following.</li>
+<li><b>Facebook page:</b> post the caption with the unhired.io link.</li>
+</ol>
+${field("LinkedIn page caption (add your LinkedIn article link at the end)", syn.page_caption ?? fm.description)}
+${field("Facebook caption", `${syn.page_caption ?? fm.description}\n\n${url}`)}
 </section>
 </div>
 <script>
@@ -192,7 +196,10 @@ writeFileSync(
       cover: syn.cover ? abs(syn.cover) : null,
       images: parts.filter((p) => p.img).map((p) => ({ src: abs(p.img), alt: p.alt })),
       share_text: syn.share_text ?? null,
-      page_caption: `${syn.page_caption ?? fm.description}\n\n${url}`,
+      // The Unhired LinkedIn page links to Brandon's LinkedIn article (to grow his following);
+      // Facebook links to unhired.io. The portal adds the LinkedIn link once it's saved.
+      page_caption: syn.page_caption ?? fm.description,
+      facebook_caption: `${syn.page_caption ?? fm.description}\n\n${url}`,
       substack_html: `${takeaways}${origin}${bodyHtml}`,
       linkedin_html: `${bodyHtml}${origin}`,
     },
