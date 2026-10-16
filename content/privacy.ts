@@ -9,7 +9,7 @@
  */
 
 export const privacy = {
-  lastUpdated: "October 13, 2026",
+  lastUpdated: "October 16, 2026",
   intro: [
     "Unhired builds AI employees for growing businesses. This policy explains what we collect when you use unhired.io, why we collect it, who processes it on our behalf, and how to get it removed.",
     "We collect as little as we can, and we don't sell your information to anyone.",
@@ -39,6 +39,7 @@ export const privacy = {
         "We store a one-way hash of your IP address for a short period to rate-limit the assessment and stop automated abuse. We can't reverse it back into your IP address.",
         "We set one cookie, a short-lived session cookie that proves your browser passed our bot check. It holds no personal information and isn't used for advertising or tracking across sites.",
         "We use Vercel Web Analytics to count page visits and see which pages are popular. It doesn't use cookies and doesn't identify you or follow you across other websites.",
+        "Your browser remembers how you first reached our site (the website or link that sent you and the first page you saw) for up to 90 days. This stays on your device unless you take the assessment, in which case it's saved with your report so we know which of our articles and posts bring people in.",
       ],
       list: null,
     },

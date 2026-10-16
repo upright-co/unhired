@@ -45,6 +45,8 @@ export async function POST(req: Request) {
       utm_source: body.utm_source ?? null,
       utm_medium: body.utm_medium ?? null,
       utm_campaign: body.utm_campaign ?? null,
+      referrer: body.referrer ?? null,
+      landing_path: body.landing_path ?? null,
     });
   } catch (err) {
     console.error("[submit] save failed", err);

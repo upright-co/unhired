@@ -1,7 +1,8 @@
 import type { Metadata, Viewport } from "next";
 import { Sora, DM_Sans, JetBrains_Mono } from "next/font/google";
+import Script from "next/script";
 import { Analytics } from "@vercel/analytics/next";
-import { siteConfig } from "@/config";
+import { analyticsConfig, siteConfig } from "@/config";
 import { Providers } from "@/components/Providers";
 import { JsonLd } from "@/components/blog/JsonLd";
 import "./globals.css";
@@ -98,6 +99,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <JsonLd data={orgSchema} />
         <Providers>{children}</Providers>
         <Analytics />
+        {analyticsConfig.ga4MeasurementId && (
+          <>
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${analyticsConfig.ga4MeasurementId}`}
+              strategy="afterInteractive"
+            />
+            <Script id="ga4" strategy="afterInteractive">
+              {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date());gtag("config","${analyticsConfig.ga4MeasurementId}");`}
+            </Script>
+          </>
+        )}
       </body>
     </html>
   );

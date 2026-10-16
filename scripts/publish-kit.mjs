@@ -36,6 +36,16 @@ const body = content
   // The site's Take Assessment box is the only promotion and stays on unhired.io; copies leave it out.
   .replace(/^<!--\s*cta\s*-->\s*$/gm, "")
   .replace(/\]\((\/[^)]*)\)/g, (_, u) => `](${SITE}${u})`);
+// Links back to unhired.io carry UTM tags per platform, so the site can tell which copy sent a
+// reader (src/lib/utm.ts saves them with the assessment). Images and downloads stay untagged.
+// Medium imports the page itself, so its copy can't be tagged; its visits show up as medium.com.
+const utm = (u, source, medium = "syndication") => {
+  if (!u.startsWith(SITE) || /\.(png|jpe?g|webp|svg|gif|html|json)(\?|#|$)/i.test(u)) return u;
+  const [base, hash = ""] = u.split("#");
+  const q = `utm_source=${source}&utm_medium=${medium}&utm_campaign=${slug}`;
+  return `${base}${base.includes("?") ? "&" : "?"}${q}${hash ? `#${hash}` : ""}`;
+};
+const tagLinks = (htmlStr, source) => htmlStr.replace(/href="([^"]+)"/g, (_, u) => `href="${utm(u, source)}"`);
 const md = new Marked({ gfm: true });
 const html = (s) => md.parse(s);
 const hasTable = /^\|.+\|\s*$/m.test(content);
@@ -74,10 +84,13 @@ const linkedin = (() => {
     title,
     ...blocks,
     copyBlock("Last block", origin),
-  ].join("\n");
+  ]
+    .map((b) => tagLinks(b, "linkedin"))
+    .join("\n");
 })();
 
-const substackHtml = `${origin}${html(body)}`;
+const substackHtml = tagLinks(`${origin}${html(body)}`, "substack");
+const facebookCaption = `${syn.page_caption ?? fm.description}\n\n${utm(url, "facebook", "social")}`;
 
 const page = `<!doctype html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow">
@@ -156,7 +169,7 @@ ${field("Subtitle", syn.substack_subtitle ?? fm.description)}
 <li><b>Facebook page:</b> post the caption with the unhired.io link.</li>
 </ol>
 ${field("LinkedIn page caption (add your LinkedIn article link at the end)", syn.page_caption ?? fm.description)}
-${field("Facebook caption", `${syn.page_caption ?? fm.description}\n\n${url}`)}
+${field("Facebook caption", facebookCaption)}
 </section>
 </div>
 <script>
@@ -201,9 +214,9 @@ writeFileSync(
       // The Unhired LinkedIn page links to Brandon's LinkedIn article (to grow his following);
       // Facebook links to unhired.io. The portal adds the LinkedIn link once it's saved.
       page_caption: syn.page_caption ?? fm.description,
-      facebook_caption: `${syn.page_caption ?? fm.description}\n\n${url}`,
-      substack_html: `${takeaways}${origin}${bodyHtml}`,
-      linkedin_html: `${bodyHtml}${origin}`,
+      facebook_caption: facebookCaption,
+      substack_html: tagLinks(`${takeaways}${origin}${bodyHtml}`, "substack"),
+      linkedin_html: tagLinks(`${bodyHtml}${origin}`, "linkedin"),
     },
     null,
     1,

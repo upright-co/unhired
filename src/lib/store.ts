@@ -27,6 +27,9 @@ export type AssessmentRow = {
   utm_source: string | null;
   utm_medium: string | null;
   utm_campaign: string | null;
+  // Added by migration 004 (first-touch source).
+  referrer?: string | null;
+  landing_path?: string | null;
   // Added by migration 003 (follow-ups). Older rows read back with the defaults.
   follow_up_step?: number;
   follow_up_sent_at?: string | null;
@@ -51,6 +54,8 @@ export type ContactInput = Pick<
   | "utm_source"
   | "utm_medium"
   | "utm_campaign"
+  | "referrer"
+  | "landing_path"
 >;
 
 let supabase: SupabaseClient | null = null;

@@ -89,6 +89,16 @@ export const assessmentConfig = {
  * Brandon gets an alert the moment a report goes out, and the lead gets four
  * short follow-ups from him. Copy lives in src/lib/followUps.ts.
  */
+/**
+ * Google Analytics 4. Off while this is null. To turn it on, create a GA4 property for
+ * unhired.io, paste its measurement ID ("G-XXXXXXXXXX") here, and update the "Technical
+ * information" section of content/privacy.ts first: GA4 sets cookies. Events from
+ * src/lib/analytics.ts (assessment_started, email_submitted, ...) flow to it automatically.
+ */
+export const analyticsConfig = {
+  ga4MeasurementId: null as string | null,
+};
+
 export const followUpConfig = {
   /** Brandon's name on the follow-ups. Sent from contactEmail, so replies reach him. */
   senderName: "Brandon Upright",

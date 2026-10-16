@@ -3,6 +3,7 @@ import { createHash, createHmac, timingSafeEqual } from "crypto";
 import { followUpConfig, siteConfig } from "@/config";
 import { contactUnsubscribed, emailConfigured, sendFollowUpEmail, sendLeadAlert } from "./email";
 import { renderFollowUp } from "./followUpEmails";
+import { describeFirstTouch } from "./source";
 import { claimFollowUp, followUpCandidates, releaseFollowUp, stopFollowUps, type AssessmentRow } from "./store";
 import { tierInfo } from "./tiers";
 
@@ -64,7 +65,7 @@ function scheduleLine(consentAt: string) {
 /** Emails Brandon the moment someone gets their report. Throws on failure; the caller logs it. */
 export async function alertNewLead(row: AssessmentRow) {
   const r = row.report;
-  const source = [row.utm_source, row.utm_medium, row.utm_campaign].filter(Boolean).join(" / ") || "direct or unknown";
+  const source = describeFirstTouch(row);
   const salary = r.cost_comparison?.human_annual_cost_input;
   const lines: Array<[string, string]> = [
     ["Name", row.first_name ?? ""],

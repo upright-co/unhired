@@ -156,6 +156,8 @@ export const SubmitRequestSchema = z.object({
   utm_source: text(200).nullable().optional(),
   utm_medium: text(200).nullable().optional(),
   utm_campaign: text(200).nullable().optional(),
+  referrer: text(200).nullable().optional(),
+  landing_path: text(200).nullable().optional(),
 });
 export type SubmitRequest = z.infer<typeof SubmitRequestSchema>;
 
