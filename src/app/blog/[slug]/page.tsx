@@ -32,8 +32,15 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
       publishedTime: post.published,
       modifiedTime: post.updated,
       authors: [post.author.name],
+      // The same cover as the LinkedIn newsletter, so a pasted link previews the same way.
+      ...(post.cover ? { images: [{ url: post.cover, width: 2880, height: 1620, alt: post.title }] } : {}),
     },
-    twitter: { card: "summary_large_image", title: post.title, description: post.description },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.description,
+      ...(post.cover ? { images: [post.cover] } : {}),
+    },
   };
 }
 

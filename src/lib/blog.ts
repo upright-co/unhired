@@ -34,6 +34,8 @@ export type PostMeta = {
   /** Pillar posts are featured at the top of /blog. */
   pillar: boolean;
   readingMinutes: number;
+  /** 16:9 cover (syndication.cover), also the LinkedIn newsletter cover. Used as the link preview image. */
+  cover?: string;
 };
 
 export type Post = PostMeta & {
@@ -121,6 +123,7 @@ function readFile(slug: string) {
     faq: data.faq ?? [],
     related: data.related ?? [],
     pillar: Boolean(data.pillar),
+    cover: data.syndication?.cover,
     readingMinutes: Math.max(1, Math.round(words / 230)),
   };
   return { meta, content, draft: Boolean(data.draft) };
