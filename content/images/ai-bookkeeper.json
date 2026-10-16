@@ -1,0 +1,96 @@
+{
+ "images": [
+  {
+   "type": "cover",
+   "name": "cover",
+   "eyebrow": "AI Employee roles · Bookkeeper",
+   "title": "What an *AI Bookkeeper* does, and what it costs",
+   "sub": "Invoices, receivables, bank matching and month-end, split into what an AI Employee owns and what stays with a person.",
+   "avatar": "ai-bookkeeper",
+   "series": "The AI Employee · unhired.io"
+  },
+  {
+   "type": "breakdown",
+   "name": "duties",
+   "title": "The bookkeeping job, *duty by duty*",
+   "rows": [
+    ["Invoicing", "Creates invoices from the time tracker, practice system or lease and sends them the day they're due.", "alone"],
+    ["Receivables", "Sends reminders before and after the due date in your wording. Payment plan requests go to a person.", "alone"],
+    ["Bills and receipts", "Reads each bill, codes it, matches the purchase order and flags duplicates and price jumps.", "reports"],
+    ["Bank matching", "Matches every bank and card line each morning and splits payouts into sales, fees and refunds.", "alone"],
+    ["Month-end close", "Reconciles accounts and drafts the reports. A person reviews and closes the month.", "reports"],
+    ["Payments and bank details", "Prepares the payment run. A person releases money and confirms any new bank details.", "asks"]
+   ]
+  },
+  {
+   "type": "table",
+   "name": "by-industry",
+   "title": "What it handles, *by industry*",
+   "head": ["Business", "The AI Bookkeeper handles", "It hands to a person"],
+   "rows": [
+    ["Dental or physio clinic", "Patient balances, insurer remittances, supplier bills", "Disputed claims, write-offs"],
+    ["Law firm", "Invoices from time entries, reminders, operating account matching", "Every trust account movement"],
+    ["Property manager", "Rent charges, tenant reminders, maintenance bills", "Security deposit refunds"],
+    ["Online store", "Payout splits, fees, refunds, inventory bills", "Chargebacks, sales tax questions"],
+    ["Marketing agency", "Retainer invoices, contractor bills, card receipts", "Credits for unhappy clients"]
+   ],
+   "source": "Examples. Every business sets its own rules."
+  },
+  {
+   "type": "timeline",
+   "name": "day-on-shift",
+   "title": "A day at a *marketing agency*",
+   "avatar": "ai-bookkeeper",
+   "role": "AI Bookkeeper",
+   "roleSub": "Reports to the owner",
+   "rows": [
+    ["6:30 am", "Matches 41 new bank and card lines from overnight. Three don't match and go on a question list."],
+    ["8:15 am", "Sends the 30-day reminder on an overdue invoice and resends a copy to a client who says they never got it."],
+    ["10:40 am", "Codes 12 bills from the inbox and catches a contractor invoice sent twice."],
+    ["12:10 pm", "A vendor emails new bank details. It holds the change and asks the owner to confirm by phone.", "you"],
+    ["2:30 pm", "Bills three retainers when the milestones close in the project tracker."],
+    ["4:00 pm", "Prepares Thursday's payment run, 9 bills, and sends it to the owner to approve.", "you"],
+    ["5:45 pm", "Updates the aged receivables list and asks the account lead about a $1,180 card charge."]
+   ],
+   "source": "Example day"
+  },
+  {
+   "type": "stats",
+   "name": "the-numbers",
+   "eyebrow": "The numbers",
+   "title": "What a bookkeeper *costs*",
+   "items": [
+    ["$50,670", "US median yearly wage for bookkeeping, accounting and auditing clerks, May 2025"],
+    ["$24.36", "Median hourly wage"],
+    ["~70%", "Share of employer compensation costs that is wages. The rest is benefits and taxes."]
+   ],
+   "source": "Source: US Bureau of Labor Statistics, Occupational Outlook Handbook and ECEC"
+  },
+  {
+   "type": "cost",
+   "name": "cost",
+   "eyebrow": "The cost",
+   "title": "What a bookkeeping seat *really costs*",
+   "suffix": " / yr",
+   "highlight": null,
+   "rows": [
+    ["Bookkeeper, US median wage", 50670, "About 40 hours a week."],
+    ["Wage plus benefits and payroll taxes", 72400, "Wages are about 70% of compensation across US private industry."]
+   ],
+   "source": "Source: US Bureau of Labor Statistics, May 2025 wages and ECEC"
+  },
+  {
+   "type": "flow",
+   "name": "setup",
+   "title": "How an AI Bookkeeper *is set up*",
+   "steps": [
+    ["Map the books", "Every account, payment processor, bill source and the rules for how each kind of transaction is coded."],
+    ["Connect the tools", "Accounting software, bank feeds, payouts and the bills inbox, with only the access the job needs."],
+    ["Set approval limits", "What it codes and sends alone, and what waits for a person: payments, bank details, write-offs."],
+    ["Shadow the current month", "It codes and matches everything while a person checks. Nothing posts until the mistakes stop."],
+    ["Go live", "It takes on more as its work holds up, and every change goes into the log."],
+    ["Maintain it every week", "Someone reads the log and updates it when accounts, clients or software change."]
+   ]
+  }
+ ]
+}

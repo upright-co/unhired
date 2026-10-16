@@ -6,7 +6,7 @@ Every article must work for small and medium businesses across industries, never
 
 ## Roles (what an AI Employee does in one seat)
 - [x] AI Receptionist: what it does, what it hands to a person, and what it costs vs. a front-desk hire (keyword: AI receptionist) → ai-receptionist
-- [ ] AI Bookkeeper: invoices, receivables, bank matching and month-end (keyword: AI bookkeeper)
+- [x] AI Bookkeeper: invoices, receivables, bank matching and month-end (keyword: AI bookkeeper) → ai-bookkeeper
 - [ ] AI Executive Assistant: inbox, calendar, travel and prep (keyword: AI executive assistant)
 - [ ] AI Customer Support agent as an employee, not a chatbot (keyword: AI customer support employee)
 - [ ] AI Sales Rep: lead response, follow-up and booking meetings (keyword: AI sales rep)
