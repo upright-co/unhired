@@ -1,0 +1,196 @@
+{
+ "images": [
+  {
+   "type": "cover",
+   "name": "cover",
+   "eyebrow": "Hire or AI Employee? · Administrative Coordinator",
+   "title": "A dental office is hiring an *Administrative Coordinator*",
+   "sub": "What an AI Employee would do in each of the six duties on the posting, and what the seat costs.",
+   "avatar": "ai-receptionist",
+   "series": "Job posting breakdowns · unhired.io"
+  },
+  {
+   "type": "posting",
+   "name": "posting",
+   "title": "Administrative Coordinator, Dental Office",
+   "salary": "From $23 an hour",
+   "location": "",
+   "posted": "Posted this week",
+   "chips": [
+    "30 hours a week",
+    "Permanent"
+   ],
+   "duties": [
+    "Manage and optimize hygiene scheduling",
+    "Fill cancellations and keep the schedule flowing",
+    "Prepare estimates and insurance predeterminations",
+    "Respond to patient inquiries by phone and email",
+    "Assist with payments, insurance processing and administrative support",
+    "Support reception and front desk operations as needed"
+   ],
+   "qualifications": "Previous administrative experience required. Dental experience is an asset.",
+   "note": "Duties condensed from a real Indeed posting. Company name and address removed."
+  },
+  {
+   "type": "quote",
+   "name": "quote",
+   "text": "Most of this job is keeping the *hygiene chairs full* and getting an *insurance answer* before the patient sits down.",
+   "by": "Brandon Upright"
+  },
+  {
+   "type": "breakdown",
+   "name": "breakdown",
+   "title": "What the AI Employee does *in each duty*",
+   "rows": [
+    [
+     "Hygiene scheduling",
+     "Works the recall list every morning, texts patients who are due and books their pick into the hygiene column.",
+     "alone"
+    ],
+    [
+     "Filling cancellations",
+     "Messages the short-notice list the moment a slot opens and books the first patient who confirms.",
+     "alone"
+    ],
+    [
+     "Estimates and predeterminations",
+     "Builds the estimate from the signed treatment plan, sends the predetermination and chases the insurer.",
+     "reports"
+    ],
+    [
+     "Patient calls and emails",
+     "Answers routine questions at any hour and books or moves appointments. Clinical questions go to the dentist.",
+     "reports"
+    ],
+    [
+     "Payments and insurance",
+     "Submits claims, posts payments and sends balance reminders. Refunds, write-offs and payment plans wait for a person.",
+     "asks"
+    ],
+    [
+     "Front desk support",
+     "Sends intake forms, confirms tomorrow's patients, checks eligibility and picks up the phone when the desk is busy.",
+     "alone"
+    ]
+   ]
+  },
+  {
+   "type": "timeline",
+   "name": "day-on-shift",
+   "title": "A Tuesday for the *AI Administrative Coordinator*",
+   "avatar": "ai-receptionist",
+   "role": "AI Administrative Coordinator",
+   "roleSub": "Reports to the office manager",
+   "rows": [
+    [
+     "7:10 am",
+     "A patient cancels a 10 am cleaning. It texts the short-notice list and books the first reply by 7:25."
+    ],
+    [
+     "8:00 am",
+     "Works the recall list: 14 patients due this month get a text with three open hygiene times."
+    ],
+    [
+     "9:40 am",
+     "Builds an estimate for a crown from the signed treatment plan and sends the predetermination to the insurer."
+    ],
+    [
+     "11:15 am",
+     "A patient calls about a swollen jaw. It takes the details, holds the emergency slot and passes it to the dentist.",
+     "you"
+    ],
+    [
+     "1:30 pm",
+     "Posts three insurance payments that came in overnight and matches each to its claim."
+    ],
+    [
+     "3:05 pm",
+     "A patient asks for a refund on a prepaid whitening kit. It sends the request to the office manager to approve.",
+     "you"
+    ],
+    [
+     "4:30 pm",
+     "Confirms tomorrow's patients, checks their insurance eligibility and sends intake forms to two new patients."
+    ],
+    [
+     "9:00 pm",
+     "Answers an email asking whether a filling is covered and books the appointment for next week."
+    ]
+   ],
+   "source": "Example day, built from the duties in the posting"
+  },
+  {
+   "type": "flow",
+   "name": "setup",
+   "title": "How it's *set up*",
+   "steps": [
+    [
+     "Map the role",
+     "Start from this posting, then sit with whoever runs the desk now. Appointment lengths, recall rules and every 'we always do it this way' get written down."
+    ],
+    [
+     "Connect the tools",
+     "The practice management software, the claims network, the phone line, email, texting and the billing screen. Each gets only the permissions the job needs."
+    ],
+    [
+     "Train it on the office",
+     "The fee guide, which insurers need a predetermination, what the office says about bills and how it talks to nervous patients."
+    ],
+    [
+     "Set its authority",
+     "Recalls, confirmations and cancellation fills it does alone. Estimates it does and reports. Refunds, write-offs and clinical questions go to a person."
+    ],
+    [
+     "Shadow, then go live",
+     "For the first stretch it drafts and a person approves. As the log shows it gets things right, it takes on more."
+    ],
+    [
+     "Maintain it every week",
+     "Someone reviews the log, fixes what it got wrong and updates it when the fee guide, insurers, staff or software change."
+    ]
+   ]
+  },
+  {
+   "type": "stats",
+   "name": "the-numbers",
+   "eyebrow": "The numbers",
+   "title": "The occupation *across Canada*",
+   "items": [
+    [
+     "$25.00",
+     "Median hourly wage in Canada (2023-2024)"
+    ],
+    [
+     "79.8%",
+     "of workers in this occupation get at least one benefit on top"
+    ]
+   ],
+   "source": "Source: Job Bank, Government of Canada (NOC 13112), updated Nov 19, 2025"
+  },
+  {
+   "type": "cost",
+   "name": "cost",
+   "eyebrow": "The numbers",
+   "title": "What this seat *costs a person* each year",
+   "rows": [
+    [
+     "Posting's starting rate, 30 hrs/week",
+     35880,
+     "$23.00 an hour × 1,560 hours"
+    ],
+    [
+     "National median, 30 hrs/week",
+     39000,
+     "$25.00 an hour × 1,560 hours"
+    ],
+    [
+     "National median, full-time",
+     52000,
+     "$25.00 an hour × 2,080 hours, before benefits and payroll taxes"
+    ]
+   ],
+   "highlight": 1,
+   "source": "Wages only. Source: Job Bank (NOC 13112), Nov 2025"
+  }
+ ]
+}
