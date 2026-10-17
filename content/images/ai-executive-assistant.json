@@ -1,0 +1,96 @@
+{
+ "images": [
+  {
+   "type": "cover",
+   "name": "cover",
+   "eyebrow": "AI Employee roles · Executive Assistant",
+   "title": "What an *AI Executive Assistant* does, and what it costs",
+   "sub": "Inbox, calendar, travel and meeting prep, split into what an AI Employee owns and what stays with the person it works for.",
+   "avatar": "ai-executive-assistant",
+   "series": "The AI Employee · unhired.io"
+  },
+  {
+   "type": "breakdown",
+   "name": "duties",
+   "title": "The assistant job, *duty by duty*",
+   "rows": [
+    ["The inbox", "Sorts everything overnight, answers routine requests and puts the emails that need the owner on one list with a draft under each.", "reports"],
+    ["The calendar", "Offers times, sends invites, moves meetings when someone cancels and follows the owner's scheduling rules.", "alone"],
+    ["Travel", "Books and rebooks within a written policy and keeps one itinerary on the calendar. Anything outside policy goes to the owner.", "reports"],
+    ["Meeting prep and follow-up", "Writes a one-page brief before each meeting and drafts the follow-up and action items after it.", "alone"],
+    ["Admin around the edges", "Files receipts, sends contracts for signature and puts renewals and deadlines on the calendar.", "alone"],
+    ["New commitments and payments", "Drafts the reply. The owner agrees to anything new and approves money above the limit.", "asks"]
+   ]
+  },
+  {
+   "type": "table",
+   "name": "by-industry",
+   "title": "What it handles, *by industry*",
+   "head": ["Works for", "The AI Executive Assistant handles", "It leaves to the person"],
+   "rows": [
+    ["Law firm managing partner", "Client scheduling, court date reminders, meeting briefs", "New engagements, trust account questions"],
+    ["Clinic owner", "Supplier and staff meetings, conference travel, licence renewals", "Anything about a patient"],
+    ["Property manager", "Owner meetings, site visit routes, rent roll briefs", "Lease terms and tenant disputes"],
+    ["E-commerce founder", "Supplier calls, trade show travel, investor updates", "Pricing and supplier contracts"],
+    ["Agency owner", "Client calls, pitch prep, contractor paperwork", "Scope changes and difficult client emails"]
+   ],
+   "source": "Examples. Every business sets its own rules."
+  },
+  {
+   "type": "timeline",
+   "name": "day-on-shift",
+   "title": "A day for a *law firm partner*",
+   "avatar": "ai-executive-assistant",
+   "role": "AI Executive Assistant",
+   "roleSub": "Works for the managing partner",
+   "rows": [
+    ["6:45 am", "Sorts 112 overnight emails. Eight need the partner and go on one list, each with a drafted reply."],
+    ["8:20 am", "A client asks to move Thursday's call. It offers two open times and sends the new invite."],
+    ["9:30 am", "A prospective client wants to sign an engagement letter. It drafts a reply and holds it for the partner.", "you"],
+    ["11:10 am", "Wednesday's flight is cancelled. It rebooks within policy and moves the dinner reservation."],
+    ["1:00 pm", "An unhappy client emails about a bill. It drafts nothing and sends it straight to the partner.", "you"],
+    ["3:15 pm", "Writes the brief for tomorrow's client meeting: matter status, last bill, last three emails."],
+    ["4:40 pm", "Someone asks about a transfer from the trust account. It confirms nothing and asks the partner.", "you"]
+   ],
+   "source": "Example day"
+  },
+  {
+   "type": "stats",
+   "name": "the-numbers",
+   "eyebrow": "The numbers",
+   "title": "What an executive assistant *costs*",
+   "items": [
+    ["$76,590", "US median yearly wage for executive secretaries and executive administrative assistants, May 2025"],
+    ["489,300", "Jobs in this occupation in 2025, with no growth projected to 2035"],
+    ["~70%", "Share of employer compensation costs that is wages. The rest is benefits and taxes."]
+   ],
+   "source": "Source: US Bureau of Labor Statistics, Occupational Outlook Handbook and ECEC"
+  },
+  {
+   "type": "cost",
+   "name": "cost",
+   "eyebrow": "The cost",
+   "title": "What an assistant seat *really costs*",
+   "suffix": " / yr",
+   "highlight": null,
+   "rows": [
+    ["Executive assistant, US median wage", 76590, "About 40 hours a week."],
+    ["Wage plus benefits and payroll taxes", 109400, "Wages are about 70% of compensation across US private industry."]
+   ],
+   "source": "Source: US Bureau of Labor Statistics, May 2025 wages and ECEC"
+  },
+  {
+   "type": "flow",
+   "name": "setup",
+   "title": "How an AI Executive Assistant *is set up*",
+   "steps": [
+    ["Write down the unwritten rules", "Who always gets through, which hours stay clear, the travel policy, and what the owner never says in writing."],
+    ["Connect the accounts", "Delegate access to email and calendar, plus the drive, the CRM and travel accounts, with only the access the job needs."],
+    ["Set its limits", "What it sends and books alone, and what waits: new commitments, money above a limit, confidential matters."],
+    ["Run it in draft mode", "It writes every reply and the owner presses send. Each edit teaches it tone and priorities."],
+    ["Hand over one category at a time", "Scheduling confirmations first, then document requests, as the drafts stop needing changes."],
+    ["Maintain it every week", "Someone reads the log and updates the rules when people, policies or tools change."]
+   ]
+  }
+ ]
+}
