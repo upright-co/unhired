@@ -1,0 +1,96 @@
+{
+ "images": [
+  {
+   "type": "cover",
+   "name": "cover",
+   "eyebrow": "AI Employee roles · Customer Support",
+   "title": "An *AI Customer Support* employee owns the ticket",
+   "sub": "What it looks up, what it fixes within limits, what it hands to a person, and what the job costs.",
+   "avatar": "ai-customer-support",
+   "series": "The AI Employee · unhired.io"
+  },
+  {
+   "type": "table",
+   "name": "vs-chatbot",
+   "title": "Support chatbot vs. *AI Customer Support employee*",
+   "head": ["", "Support chatbot", "AI Customer Support employee"],
+   "rows": [
+    ["Knows the customer", "No, answers anyone the same way", "Sees their orders, account and past tickets"],
+    ["Can change things", "No, links to help articles", "Refunds, reships and changes within written limits"],
+    ["When it can't help", "Sends a contact form", "Hands the ticket to a person with a summary"],
+    ["After the chat ends", "Done", "Follows up until the ticket is closed"],
+    ["Reports to", "Nobody", "A named person on the team, with a full log"]
+   ],
+   "source": "How the two usually compare. Products vary."
+  },
+  {
+   "type": "breakdown",
+   "name": "duties",
+   "title": "The support job, *duty by duty*",
+   "rows": [
+    ["First reply on every channel", "Answers email, chat, social messages and forms within minutes, at any hour, with the customer's details in front of it.", "alone"],
+    ["Lookups", "Order status, renewals, payments and appointments, checked in the systems the business runs on.", "alone"],
+    ["Routine fixes", "Address changes, resent invoices, small refunds, replacements and rebookings within written limits.", "reports"],
+    ["Escalation", "Hands exceptions to a person with the history, what was tried and a suggested reply.", "asks"],
+    ["Follow-up", "Chases the supplier, technician or manager and writes back to the customer until it's closed.", "alone"],
+    ["Patterns and feedback", "A Friday report of ticket volume by reason and anything that looks like a product problem.", "reports"]
+   ]
+  },
+  {
+   "type": "timeline",
+   "name": "day-on-shift",
+   "title": "A day at an *online kitchenware store*",
+   "avatar": "ai-customer-support",
+   "role": "AI Customer Support",
+   "roleSub": "Reports to the support lead",
+   "rows": [
+    ["6:30 am", "Answers 38 overnight messages. Most are order status, each with the tracking link."],
+    ["8:15 am", "A parcel the carrier left at the wrong address. It sends a replacement, inside the limit."],
+    ["9:50 am", "A customer disputes a charge with their bank. It pulls the order and hands it to the lead.", "you"],
+    ["11:30 am", "Changes a delivery address on an order that hasn't shipped yet."],
+    ["1:45 pm", "A $420 refund request on a damaged set, above the limit. Drafted and held.", "you"],
+    ["3:10 pm", "A customer says a pan handle broke and burned them. Sent straight to the lead, untouched.", "you"],
+    ["4:30 pm", "Supplier confirms restock date. It writes to the 12 customers waiting on back orders."]
+   ],
+   "source": "Example day"
+  },
+  {
+   "type": "stats",
+   "name": "the-numbers",
+   "eyebrow": "The numbers",
+   "title": "The customer service job *in numbers*",
+   "items": [
+    ["$44,770", "US median yearly wage for customer service representatives, May 2025"],
+    ["2.67M", "Jobs in this occupation in 2025, projected to fall 5% by 2035"],
+    ["289,500", "Openings projected each year, mostly to replace people who leave"]
+   ],
+   "source": "Source: US Bureau of Labor Statistics, Occupational Outlook Handbook"
+  },
+  {
+   "type": "cost",
+   "name": "cost",
+   "eyebrow": "The cost",
+   "title": "What a support seat *really costs*",
+   "suffix": " / yr",
+   "highlight": null,
+   "rows": [
+    ["Customer service rep, US median wage", 44770, "About 40 of the 168 hours in a week."],
+    ["Wage plus benefits and payroll taxes", 64000, "Wages are about 70% of compensation across US private industry."]
+   ],
+   "source": "Source: US Bureau of Labor Statistics, May 2025 wages and ECEC"
+  },
+  {
+   "type": "flow",
+   "name": "setup",
+   "title": "Setting up an *AI Customer Support employee*",
+   "steps": [
+    ["Sort the tickets you already have", "Export a few hundred recent tickets and group them by reason. That list is the job."],
+    ["Write the rules and limits", "Return policy, refund ceiling, who gets extra care, and what always goes to a person."],
+    ["Connect the systems", "Helpdesk, store or billing, calendar and carrier tracking, with only the access the job needs."],
+    ["Run it in draft mode", "It writes every reply and a person sends it. Each edit teaches it tone and policy."],
+    ["Hand over one category at a time", "Order status first, then changes, then refunds within the limit."],
+    ["Maintain it every week", "Someone reads the log and updates the rules when policies, products or carriers change."]
+   ]
+  }
+ ]
+}
