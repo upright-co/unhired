@@ -1,0 +1,82 @@
+{
+ "images": [
+  {
+   "type": "cover",
+   "name": "cover",
+   "eyebrow": "AI Employee roles · Sales",
+   "title": "An *AI Sales Rep* answers every lead",
+   "sub": "Lead response, qualifying, follow-up and booking meetings: what it owns, what it hands to a person, and what the job costs.",
+   "avatar": "ai-sales-rep",
+   "series": "The AI Employee · unhired.io"
+  },
+  {
+   "type": "breakdown",
+   "name": "duties",
+   "title": "The sales job, *duty by duty*",
+   "rows": [
+    ["First reply to every lead", "Answers forms, emails, ad leads, chats and voicemails within minutes, at any hour, with a question back and times to talk.", "alone"],
+    ["Qualifying", "Asks the questions the business cares about, records the answers in the CRM and scores the lead against written rules.", "alone"],
+    ["Follow-up", "Works a written sequence for weeks and picks up the conversation when the lead replies.", "alone"],
+    ["Booking meetings", "Offers times from the salesperson's calendar, sends the invite with a short brief and reschedules cancellations.", "reports"],
+    ["Keeping the CRM current", "Logs every message, outcome and stage change, and fills in missing fields from the conversation.", "alone"],
+    ["Reviving old leads", "With consent, checks in with leads that went quiet and passes anyone interested to the salesperson.", "asks"]
+   ]
+  },
+  {
+   "type": "timeline",
+   "name": "day-on-shift",
+   "title": "A day at an *IT services company*",
+   "avatar": "ai-sales-rep",
+   "role": "AI Sales Rep",
+   "roleSub": "Reports to the sales manager",
+   "rows": [
+    ["6:45 am", "Replies to 4 overnight form fills. Two answer its questions before 8 am."],
+    ["8:20 am", "A dental clinic with 12 staff qualifies. Books a call with the sales manager for Thursday."],
+    ["10:05 am", "Sends day-five follow-ups to 9 leads from last week, each with a relevant case study."],
+    ["11:40 am", "A law office asks for 15% off a three-year contract. Drafted and held.", "you"],
+    ["1:30 pm", "A lead cancels tomorrow's call. It offers three new times and rebooks for Monday."],
+    ["3:15 pm", "A company with six offices asks for a quote. Brief sent to the manager.", "you"],
+    ["4:50 pm", "Logs every conversation in the CRM and updates each lead's stage."]
+   ],
+   "source": "Example day"
+  },
+  {
+   "type": "stats",
+   "name": "the-numbers",
+   "eyebrow": "The numbers",
+   "title": "The sales rep job *in numbers*",
+   "items": [
+    ["$76,460", "US median yearly wage, wholesale and manufacturing sales representatives, 2025"],
+    ["1.57M", "Jobs in this occupation in 2025"],
+    ["123,400", "Openings projected each year through 2035, mostly to replace people who leave"]
+   ],
+   "source": "Source: US Bureau of Labor Statistics, Occupational Outlook Handbook"
+  },
+  {
+   "type": "cost",
+   "name": "cost",
+   "eyebrow": "The cost",
+   "title": "What a sales seat *costs a year*",
+   "suffix": " / yr",
+   "highlight": null,
+   "rows": [
+    ["Sales rep, US median wage", 76460, "Before commission or bonuses."],
+    ["Wage plus benefits and payroll taxes", 109000, "Wages are about 70% of compensation across US private industry."]
+   ],
+   "source": "Source: US Bureau of Labor Statistics, 2025 wages and ECEC"
+  },
+  {
+   "type": "flow",
+   "name": "setup",
+   "title": "Setting up an *AI Sales Rep*",
+   "steps": [
+    ["Study the leads you lost", "Pull the last 50 lost leads and note where each one went quiet."],
+    ["Write the playbook", "Who counts as a good lead, the questions to ask, the follow-up sequence and what always goes to a person."],
+    ["Connect the systems", "Inbox, web forms, CRM and calendar, with only the access the job needs."],
+    ["Run it in draft mode", "It writes every message and a person approves it. Each edit teaches it tone and limits."],
+    ["Hand over one step at a time", "First replies first, then follow-ups, then anything that touches price."],
+    ["Maintain it every week", "Someone reads the log and updates the playbook when prices or services change."]
+   ]
+  }
+ ]
+}
