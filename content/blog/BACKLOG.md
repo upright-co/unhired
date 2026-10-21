@@ -10,7 +10,7 @@ Every article must work for small and medium businesses across industries, never
 - [x] AI Executive Assistant: inbox, calendar, travel and prep (keyword: AI executive assistant) → ai-executive-assistant
 - [x] AI Customer Support agent as an employee, not a chatbot (keyword: AI customer support employee) → ai-customer-support-employee
 - [x] AI Sales Rep: lead response, follow-up and booking meetings (keyword: AI sales rep) → ai-sales-rep
-- [ ] AI Administrative Assistant: the admin work that eats a week (keyword: AI administrative assistant)
+- [x] AI Administrative Assistant: the admin work that eats a week (keyword: AI administrative assistant) → ai-administrative-assistant
 - [ ] AI Data Entry clerk: documents into your systems, with checks (keyword: AI data entry)
 - [ ] AI Scheduler / dispatcher: booking, rescheduling and reminders (keyword: AI scheduling assistant)
 

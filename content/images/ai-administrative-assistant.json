@@ -1,0 +1,84 @@
+{
+ "images": [
+  {
+   "type": "cover",
+   "name": "cover",
+   "eyebrow": "AI Employee roles · Admin",
+   "title": "An *AI Administrative Assistant* runs the office admin",
+   "sub": "The shared inbox, bookings, forms, filing, orders and reports: what it owns, what stays with a person, and what the job costs.",
+   "avatar": "ai-executive-assistant",
+   "series": "The AI Employee · unhired.io"
+  },
+  {
+   "type": "breakdown",
+   "name": "duties",
+   "title": "The admin job, *duty by duty*",
+   "rows": [
+    ["Shared inbox and messages", "Reads and files every email and voicemail, answers routine questions from written answers and forwards the rest with a summary.", "alone"],
+    ["Scheduling and rooms", "Books meetings across calendars, reserves rooms, sends reminders and rebooks cancellations.", "alone"],
+    ["Forms and data entry", "Enters intake forms, delivery notes and documents into the right system and flags anything that doesn't match.", "reports"],
+    ["Filing and records", "Files documents by the office's rules and chases renewals 30 days before insurance or licences lapse.", "alone"],
+    ["Vendors and supplies", "Places routine reorders under a set limit. Larger or new-supplier orders are prepared and held.", "asks"],
+    ["Reports and chasing", "Sends the Friday reports and follows up on missing forms and quotes.", "alone"]
+   ]
+  },
+  {
+   "type": "timeline",
+   "name": "day-on-shift",
+   "title": "A day at a *property management company*",
+   "avatar": "ai-executive-assistant",
+   "role": "AI Administrative Assistant",
+   "roleSub": "Reports to the office manager",
+   "rows": [
+    ["7:00 am", "Sorts 63 weekend emails. Logs 11 maintenance requests in the work order system."],
+    ["8:40 am", "Two tenants booked the amenity room for Saturday. Offers the second one Sunday, and they accept."],
+    ["9:30 am", "Sends the owner the vacancy report, built from the leasing system."],
+    ["10:15 am", "A plumbing contractor's insurance lapsed Friday. Requests the new certificate."],
+    ["11:50 am", "A vendor emails asking to change their bank details. Held for a phone check.", "you"],
+    ["2:20 pm", "A $2,400 furniture quote for the leasing office. Prepared and held for approval.", "you"],
+    ["4:30 pm", "Reorders printer paper and cleaning supplies under the limit and files the day's documents."]
+   ],
+   "source": "Example day"
+  },
+  {
+   "type": "stats",
+   "name": "the-numbers",
+   "eyebrow": "The numbers",
+   "title": "The admin assistant job *in numbers*",
+   "items": [
+    ["$48,310", "US median yearly wage, secretaries and administrative assistants, 2025"],
+    ["3.5M", "Jobs in this occupation in 2025"],
+    ["314,400", "Openings projected each year through 2035, mostly to replace people who leave"]
+   ],
+   "source": "Source: US Bureau of Labor Statistics, Occupational Outlook Handbook"
+  },
+  {
+   "type": "cost",
+   "name": "cost",
+   "eyebrow": "The cost",
+   "title": "What an admin seat *costs a year*",
+   "suffix": " / yr",
+   "highlight": null,
+   "rows": [
+    ["Medical administrative assistant, median", 45930, "BLS, May 2025."],
+    ["All secretaries and admin assistants, median", 48310, "BLS, May 2025."],
+    ["Legal administrative assistant, median", 55570, "BLS, May 2025."],
+    ["Median wage plus benefits and payroll taxes", 69000, "Wages are about 70% of compensation across US private industry."]
+   ],
+   "source": "Source: US Bureau of Labor Statistics, 2025 wages and ECEC"
+  },
+  {
+   "type": "flow",
+   "name": "setup",
+   "title": "Setting up an *AI Administrative Assistant*",
+   "steps": [
+    ["Keep a one-week task list", "Every task, where the information came from, where it went and how long it took."],
+    ["Write the rules", "Routine answers, filing rules, spending limits and what always goes to a person."],
+    ["Connect the systems", "Shared inbox, calendar, document storage and the business software, with only the access the job needs."],
+    ["Run it in draft mode", "It prepares replies, bookings and entries, and a person approves them for the first couple of weeks."],
+    ["Hand over one duty at a time", "Inbox and filing first, then bookings, then data entry. Money comes last."],
+    ["Maintain it every week", "Someone reads the log and updates the rules when a supplier, form or system changes."]
+   ]
+  }
+ ]
+}
