@@ -1,0 +1,81 @@
+{
+ "images": [
+  {
+   "type": "cover",
+   "name": "cover",
+   "eyebrow": "AI Employee roles · Data entry",
+   "title": "An *AI Data Entry clerk* checks before it saves",
+   "sub": "Invoices, forms and orders into your systems: what it enters, what it checks, and what still goes to a person.",
+   "avatar": "ai-bookkeeper",
+   "series": "The AI Employee · unhired.io"
+  },
+  {
+   "type": "breakdown",
+   "name": "steps",
+   "title": "The data entry job, *step by step*",
+   "rows": [
+    ["Collecting the documents", "Watches the inboxes, scanner folders and upload forms, and pulls every new document into one queue.", "alone"],
+    ["Reading the fields", "Pulls supplier, dates, line items and totals, or names and details from forms. Marks any field it isn't sure of.", "alone"],
+    ["Checking before it saves", "Matches invoices to the PO and delivery note, catches duplicates, recalculates totals and checks required fields.", "alone"],
+    ["Entering and filing", "Enters passed records into the right system and files the original with a link back to it.", "reports"],
+    ["Exceptions", "Anything that fails a check, can't be read or changes bank details goes to a person with the document.", "asks"]
+   ]
+  },
+  {
+   "type": "timeline",
+   "name": "day-on-shift",
+   "title": "A day at a *wholesale distributor*",
+   "avatar": "ai-bookkeeper",
+   "role": "AI Data Entry clerk",
+   "roleSub": "Reports to the office manager",
+   "rows": [
+    ["6:30 am", "Reads 14 overnight supplier invoices. Matches 12 to purchase orders and delivery notes and enters them."],
+    ["7:10 am", "One invoice number was already paid in September. Held as a duplicate and logged."],
+    ["8:45 am", "A unit price is 6% higher than the purchase order. Held with both documents attached.", "you"],
+    ["10:20 am", "Enters three faxed packing lists into the inventory sheet and updates stock counts."],
+    ["1:15 pm", "A supplier invoice lists new bank details. Held for a phone check with a known contact.", "you"],
+    ["3:40 pm", "Files the day's PDFs by supplier and month, each linked to its accounting entry."],
+    ["4:30 pm", "Sends the daily summary: 15 entered, 1 duplicate stopped, 2 waiting on a person."]
+   ],
+   "source": "Example day"
+  },
+  {
+   "type": "stats",
+   "name": "the-numbers",
+   "eyebrow": "The numbers",
+   "title": "The data entry job *in numbers*",
+   "items": [
+    ["$41,340", "US median yearly wage, data entry keyers, May 2025"],
+    ["$19.88", "US median hourly wage, May 2025"],
+    ["127,080", "People employed as data entry keyers"]
+   ],
+   "source": "Source: US Bureau of Labor Statistics, OEWS May 2025"
+  },
+  {
+   "type": "cost",
+   "name": "cost",
+   "eyebrow": "The cost",
+   "title": "What a data entry seat *costs a year*",
+   "suffix": " / yr",
+   "highlight": 1,
+   "rows": [
+    ["Data entry keyer, US median wage", 41340, "BLS, May 2025."],
+    ["Median wage plus benefits and payroll taxes", 59000, "Wages are about 70% of compensation across US private industry."]
+   ],
+   "source": "Source: US Bureau of Labor Statistics, OEWS May 2025 and ECEC"
+  },
+  {
+   "type": "flow",
+   "name": "setup",
+   "title": "Setting up an *AI Data Entry clerk*",
+   "steps": [
+    ["Pull 50 real documents", "Last month's documents, including the faxed, crooked and oddly formatted ones."],
+    ["Write the checks", "What each entry is compared to, which fields are required, and what always goes to a person."],
+    ["Connect the systems", "Inboxes, scanner folders and the software it enters into, with only the access the job needs."],
+    ["Test on the 50", "Compare every field it pulls to what a person entered, before it touches a live system."],
+    ["Run it in draft mode", "It prepares entries and a person approves them. Each document type goes live on its own."],
+    ["Maintain it", "Someone reads the exception list and updates the rules when a supplier or form changes."]
+   ]
+  }
+ ]
+}
