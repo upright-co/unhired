@@ -12,7 +12,7 @@ Every article must work for small and medium businesses across industries, never
 - [x] AI Sales Rep: lead response, follow-up and booking meetings (keyword: AI sales rep) → ai-sales-rep
 - [x] AI Administrative Assistant: the admin work that eats a week (keyword: AI administrative assistant) → ai-administrative-assistant
 - [x] AI Data Entry clerk: documents into your systems, with checks (keyword: AI data entry) → ai-data-entry
-- [ ] AI Scheduler / dispatcher: booking, rescheduling and reminders (keyword: AI scheduling assistant)
+- [x] AI Scheduler / dispatcher: booking, rescheduling and reminders (keyword: AI scheduling assistant) → ai-scheduling-assistant
 
 ## Buyer questions
 - [ ] How much does an AI Employee cost? Pricing models compared (keyword: AI employee cost)

@@ -1,0 +1,83 @@
+{
+ "images": [
+  {
+   "type": "cover",
+   "name": "cover",
+   "eyebrow": "AI Employee roles · Scheduling",
+   "title": "An *AI Scheduling Assistant* runs the calendar",
+   "sub": "Booking, rescheduling, reminders, waitlists and dispatch: what it owns, what stays with a person, and what the job costs.",
+   "avatar": "ai-receptionist",
+   "series": "The AI Employee · unhired.io"
+  },
+  {
+   "type": "breakdown",
+   "name": "duties",
+   "title": "The scheduling job, *duty by duty*",
+   "rows": [
+    ["Booking requests", "Reads requests from email, text, calls and forms, offers times that fit the rules and books the one the client picks.", "alone"],
+    ["Rescheduling and cancellations", "Offers new times, applies the cancellation policy as written and works through a full day when staff are out.", "reports"],
+    ["Reminders and confirmations", "Confirms each booking, sends reminders with what to bring and handles replies like running late.", "alone"],
+    ["Waitlists and open slots", "Offers every cancelled slot to the next person on the waitlist who fits, until someone takes it.", "alone"],
+    ["Assigning visits and dispatch", "Matches visits to staff by skill and availability, groups them by area and warns clients when a visit runs long.", "reports"],
+    ["Policy exceptions", "Requests to waive a fee or book into blocked time are prepared and held for a person.", "asks"]
+   ]
+  },
+  {
+   "type": "timeline",
+   "name": "day-on-shift",
+   "title": "A day at a *physiotherapy clinic*",
+   "avatar": "ai-receptionist",
+   "role": "AI Scheduling Assistant",
+   "roleSub": "Reports to the clinic manager",
+   "rows": [
+    ["7:10 am", "A practitioner calls in sick with six patients booked. Moves four to colleagues, two choose next week."],
+    ["7:45 am", "Offers the two open slots to the waitlist. Both are taken by 8:20."],
+    ["8:30 am", "Books the two overnight email requests and texts the web form patient to fix their number."],
+    ["10:15 am", "A patient asks to skip the late cancellation fee. Held for the manager.", "you"],
+    ["12:40 pm", "A referral mentions a recent fall. Details sent to the manager before booking.", "you"],
+    ["2:00 pm", "Sends tomorrow's reminders with intake forms for three new patients."],
+    ["5:30 pm", "Emails the manager tomorrow's schedule with one unconfirmed booking marked."]
+   ],
+   "source": "Example day"
+  },
+  {
+   "type": "stats",
+   "name": "the-numbers",
+   "eyebrow": "The numbers",
+   "title": "The scheduler and dispatcher job *in numbers*",
+   "items": [
+    ["$50,340", "US median yearly wage, dispatchers outside police, fire and ambulance, May 2025"],
+    ["$24.20", "Median hourly wage for the same occupation"],
+    ["202,810", "Jobs in this occupation in May 2025"]
+   ],
+   "source": "Source: US Bureau of Labor Statistics, OEWS, SOC 43-5032"
+  },
+  {
+   "type": "cost",
+   "name": "cost",
+   "eyebrow": "The cost",
+   "title": "What a scheduling seat *costs a year*",
+   "suffix": " / yr",
+   "highlight": null,
+   "rows": [
+    ["Receptionist, median", 38010, "BLS, May 2025."],
+    ["Dispatcher outside emergency services, median", 50340, "BLS, May 2025."],
+    ["Dispatcher median plus benefits and payroll taxes", 72000, "Wages are about 70% of compensation across US private industry."]
+   ],
+   "source": "Source: US Bureau of Labor Statistics, 2025 wages and ECEC"
+  },
+  {
+   "type": "flow",
+   "name": "setup",
+   "title": "Setting up an *AI Scheduling Assistant*",
+   "steps": [
+    ["Walk through a normal week", "Go through real bookings with whoever runs the schedule and ask why each one went where it did."],
+    ["Write the booking rules", "Appointment types, lengths, who can do what, what clients need first and the cancellation policy."],
+    ["Connect the systems", "Booking system, staff calendars, email and text, with only the access the job needs."],
+    ["Run it in draft mode", "It prepares each booking and change, and a person approves them for the first couple of weeks."],
+    ["Hand over one duty at a time", "Reminders first, then new bookings, then rescheduling. Staff-out days come last."],
+    ["Maintain it every week", "Someone reads the log and updates the rules when staff or services change."]
+   ]
+  }
+ ]
+}
