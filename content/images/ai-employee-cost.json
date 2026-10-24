@@ -1,0 +1,74 @@
+{
+ "images": [
+  {
+   "type": "cover",
+   "name": "cover",
+   "eyebrow": "AI Employee 101 · Cost",
+   "title": "What an *AI Employee* costs",
+   "sub": "The four ways AI Employees are priced, what drives the price, and how to compare a quote with a hire.",
+   "avatar": "ai-bookkeeper",
+   "series": "The AI Employee · unhired.io"
+  },
+  {
+   "type": "table",
+   "name": "cost-parts",
+   "title": "What the cost of an AI Employee *is made of*",
+   "head": ["Part", "What it is", "Billed as"],
+   "rows": [
+    ["AI model", "Reads and writes the messages, notes and replies", "Software, by usage"],
+    ["Channels", "Phone line, texting and email tools", "Software, by usage"],
+    ["Connections", "Logins to booking, CRM, accounting or helpdesk", "People time"],
+    ["Rules and testing", "Writing down how the job is done and testing it on real cases", "People time"],
+    ["Maintenance", "Reading the log, updating rules, fixing broken connections", "People time"]
+   ],
+   "source": "Most of the cost of a working AI Employee is people time"
+  },
+  {
+   "type": "table",
+   "name": "pricing-models",
+   "title": "The four pricing models, *compared*",
+   "head": ["Model", "You pay", "Where the hidden cost sits"],
+   "rows": [
+    ["Assemble it yourself", "Software subscriptions", "Your staff's hours to build and maintain it"],
+    ["Usage-based", "Per minute, conversation or ticket", "Busy months, and what counts as one unit"],
+    ["One-time build", "Project fee, then hourly changes", "Every change after handover"],
+    ["Provider monthly fee", "A fee per role, sometimes a setup fee", "Volume past the range the fee covers"]
+   ],
+   "source": "unhired.io"
+  },
+  {
+   "type": "cost",
+   "name": "person-cost",
+   "eyebrow": "The comparison",
+   "title": "What a person costs *a year*",
+   "suffix": " / yr",
+   "highlight": null,
+   "rows": [
+    ["Receptionist", 54300, "Median wage $38,010, plus benefits and payroll taxes."],
+    ["Customer service representative", 64000, "Median wage $44,770, plus benefits and payroll taxes."],
+    ["Administrative assistant", 69000, "Median wage $48,310, plus benefits and payroll taxes."],
+    ["Bookkeeping clerk", 72400, "Median wage $50,670, plus benefits and payroll taxes."]
+   ],
+   "source": "Source: US Bureau of Labor Statistics, May 2025 medians; wages are about 70% of compensation (ECEC)"
+  },
+  {
+   "type": "flow",
+   "name": "compare-quotes",
+   "title": "How to compare *two quotes*",
+   "steps": [
+    ["Write down the job", "Duties, monthly volume for each one, and every system the work touches."],
+    ["Price the first year", "Setup, software, usage at your real volume and expected changes."],
+    ["Match the duties", "Note which duties each quote covers and which still need a person."],
+    ["Count the hours", "Hours of coverage a week, and the hours your staff will spend on it."],
+    ["Check the exit", "Whether you keep the rules, the log and the phone number if you leave."],
+    ["Set it against the seat", "Compare with the full cost of a person for the same duties."]
+   ]
+  },
+  {
+   "type": "quote",
+   "name": "quote",
+   "text": "The software bill is usually the smallest number. *Most of the cost is people's time.*",
+   "by": "Brandon Upright"
+  }
+ ]
+}

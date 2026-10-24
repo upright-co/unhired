@@ -15,7 +15,7 @@ Every article must work for small and medium businesses across industries, never
 - [x] AI Scheduler / dispatcher: booking, rescheduling and reminders (keyword: AI scheduling assistant) → ai-scheduling-assistant
 
 ## Buyer questions
-- [ ] How much does an AI Employee cost? Pricing models compared (keyword: AI employee cost)
+- [x] How much does an AI Employee cost? Pricing models compared (keyword: AI employee cost) → ai-employee-cost
 - [ ] How to hire an AI Employee, step by step (keyword: how to hire an AI employee)
 - [ ] How to train an AI Employee on your business (keyword: train AI employee)
 - [ ] What an AI Employee can't do (and shouldn't) (keyword: AI employee limitations)
