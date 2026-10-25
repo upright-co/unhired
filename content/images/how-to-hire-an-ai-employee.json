@@ -1,0 +1,75 @@
+{
+ "images": [
+  {
+   "type": "cover",
+   "name": "cover",
+   "eyebrow": "AI Employee 101 · Hiring",
+   "title": "How to hire an *AI Employee*",
+   "sub": "Write the job, sort the duties, test it on real cases and supervise the first month, in that order.",
+   "avatar": "ai-executive-assistant",
+   "series": "The AI Employee · unhired.io"
+  },
+  {
+   "type": "flow",
+   "name": "steps",
+   "title": "Hiring an AI Employee, *step by step*",
+   "steps": [
+    ["Write the job down", "Every duty, how often it happens each month, and the systems it touches."],
+    ["Sort each duty by authority", "Does it alone, does it and reports back, or asks a person first."],
+    ["Decide who builds it", "Software you assemble yourself, or a provider that builds and maintains it."],
+    ["Interview it on real cases", "30 to 50 cases from last month, including the awkward ones."],
+    ["Give it only the logins it needs", "Its own user in each system, with the narrowest permissions."],
+    ["Run a supervised first month", "A person approves its work, then duties move to \"alone\" one at a time."],
+    ["Name a manager", "One person reads its log weekly and keeps its rules current."]
+   ]
+  },
+  {
+   "type": "breakdown",
+   "name": "authority",
+   "title": "A front desk job, *sorted by authority*",
+   "rows": [
+    ["Booking confirmations and reminders", "Sends them from the calendar and logs each one", "alone"],
+    ["Chasing missing forms or referrals", "Follows up by text and email on a schedule", "alone"],
+    ["Answering routine questions", "Replies from the written policies, sends a daily summary", "reports"],
+    ["Rescheduling and cancellations", "Moves the booking and fills the gap from the waitlist", "reports"],
+    ["Complaints", "Collects the details and hands them to the manager", "asks"],
+    ["Refunds and payment changes", "Prepares the request for a person to approve", "asks"]
+   ]
+  },
+  {
+   "type": "table",
+   "name": "build-or-provider",
+   "title": "Build it yourself *or use a provider*",
+   "head": ["", "Assemble it yourself", "Provider builds it"],
+   "rows": [
+    ["You pay for", "Software subscriptions and usage", "Usually a monthly fee, sometimes a setup fee"],
+    ["Who writes the rules", "Someone on your staff", "The provider, with you"],
+    ["Who maintains it", "Someone on your staff", "The provider"],
+    ["Fits best when", "Simple rules, common systems, a technical person with time", "Phone work, several systems or sensitive records"]
+   ],
+   "source": "Compare either one with the full cost of the seat"
+  },
+  {
+   "type": "timeline",
+   "name": "first-month",
+   "eyebrow": "Probation",
+   "title": "The first month, *week by week*",
+   "avatar": "ai-executive-assistant",
+   "role": "New AI Employee",
+   "roleSub": "Supervised first month",
+   "rows": [
+    ["Week 1", "Draft mode: it prepares every reply and action, a person approves each one", "you"],
+    ["Week 2", "Rules updated from every change the person made in week 1"],
+    ["Week 3", "Confirmations and reminders move to \"does it alone\""],
+    ["Week 4", "Routine questions move to \"reports back\"; money and complaints stay with a person", "you"],
+    ["After", "One short log review a week, and rule updates when the business changes"]
+   ]
+  },
+  {
+   "type": "quote",
+   "name": "quote",
+   "text": "Most failed setups skip straight to the software. *Start with the job description.*",
+   "by": "Brandon Upright"
+  }
+ ]
+}
