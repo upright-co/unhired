@@ -1,0 +1,77 @@
+{
+ "images": [
+  {
+   "type": "cover",
+   "name": "cover",
+   "eyebrow": "AI Employee 101 · Training",
+   "title": "How to train an *AI Employee* on your business",
+   "sub": "Write down how the job is done here, clean up the documents, and turn every correction into a rule.",
+   "avatar": "ai-customer-support",
+   "series": "The AI Employee · unhired.io"
+  },
+  {
+   "type": "flow",
+   "name": "steps",
+   "title": "Training an AI Employee, *in order*",
+   "steps": [
+    ["Watch the person who does it best", "An afternoon of listening for the exceptions and small judgment calls."],
+    ["Write the handbook", "Organised by situation, in full sentences, with the tone spelled out."],
+    ["Clean the reference material", "Current prices and policies only. Old versions deleted, conflicts fixed."],
+    ["Pick examples of good work", "20 or 30 past emails or notes you'd send again, including hard ones."],
+    ["Write down where it stops", "Each escalation says what to tell the customer and who gets it."],
+    ["Test it on last month's work", "30 to 50 real cases, compared with what your staff actually did."],
+    ["Turn every correction into a rule", "Supervised first weeks, then a short weekly log review."]
+   ]
+  },
+  {
+   "type": "table",
+   "name": "new-hire-vs-ai",
+   "title": "What a new hire picks up, *what an AI Employee needs written*",
+   "head": ["", "New hire", "AI Employee"],
+   "rows": [
+    ["How the job is done", "Shadows a coworker for a week or two", "A written handbook, organised by situation"],
+    ["Unwritten rules", "Overhears them at the front desk", "Only knows the ones someone wrote down"],
+    ["Prices and policies", "Asks when unsure", "Treats every document it's given as true"],
+    ["Tone", "Copies the people around them", "Copies the examples it's shown"],
+    ["When they leave", "What they learned leaves too", "The handbook stays with the business"]
+   ],
+   "source": "Training an AI Employee leaves the AI model untouched"
+  },
+  {
+   "type": "breakdown",
+   "name": "handbook",
+   "title": "A handbook page for *law firm intake*",
+   "rows": [
+    ["New enquiry by email", "Replies within the hour and asks for the matter type and the other party's name", "alone"],
+    ["Booking a consultation", "Offers open slots from the lawyer's calendar and sends the intake form", "alone"],
+    ["Possible conflict of interest", "Collects the names and flags it; no booking until a lawyer clears it", "asks"],
+    ["Questions about fees", "Answers from the current fee schedule and logs the question", "reports"],
+    ["Anything that sounds like legal advice", "Says a lawyer will answer and passes it on with the details", "asks"],
+    ["Upset or urgent caller", "Tells them a person will call today and alerts the office manager", "asks"]
+   ]
+  },
+  {
+   "type": "timeline",
+   "name": "correction",
+   "eyebrow": "The correction loop",
+   "title": "How one correction *becomes a rule*",
+   "avatar": "ai-customer-support",
+   "role": "AI Employee",
+   "roleSub": "First month, supervised",
+   "rows": [
+    ["Mon 9:10", "Drafts a reply promising a callback \"tomorrow\""],
+    ["Mon 9:25", "Manager changes it to \"within two business days\" and approves it", "you"],
+    ["Mon 9:30", "Manager notes why: the team books callbacks two days out", "you"],
+    ["Mon 4:00", "The sentence goes into the handbook under \"Callback requests\""],
+    ["Tue", "Last month's test cases run again with the new rule"],
+    ["Friday", "Weekly log review: no repeat of the mistake", "you"]
+   ]
+  },
+  {
+   "type": "quote",
+   "name": "quote",
+   "text": "An AI Employee only knows what's written down. *Training it means writing down what your staff already know.*",
+   "by": "Brandon Upright"
+  }
+ ]
+}

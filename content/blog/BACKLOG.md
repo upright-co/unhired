@@ -17,7 +17,7 @@ Every article must work for small and medium businesses across industries, never
 ## Buyer questions
 - [x] How much does an AI Employee cost? Pricing models compared (keyword: AI employee cost) → ai-employee-cost
 - [x] How to hire an AI Employee, step by step (keyword: how to hire an AI employee) → how-to-hire-an-ai-employee
-- [ ] How to train an AI Employee on your business (keyword: train AI employee)
+- [x] How to train an AI Employee on your business (keyword: train AI employee) → train-ai-employee
 - [ ] What an AI Employee can't do (and shouldn't) (keyword: AI employee limitations)
 - [ ] AI Employee onboarding: the first 30 days (keyword: AI employee onboarding)
 - [ ] Is an AI Employee safe with customer data? (keyword: AI employee data security)
