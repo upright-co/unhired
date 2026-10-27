@@ -1,0 +1,70 @@
+{
+ "images": [
+  {
+   "type": "cover",
+   "name": "cover",
+   "eyebrow": "AI Employee 101 · Limits",
+   "title": "What an *AI Employee* can't do (and shouldn't)",
+   "sub": "The limits that come with the technology, and the ones a business should set on purpose.",
+   "avatar": "ai-executive-assistant",
+   "series": "The AI Employee · unhired.io"
+  },
+  {
+   "type": "table",
+   "name": "cant-vs-shouldnt",
+   "title": "What it *can't* do, and what it *shouldn't*",
+   "head": ["", "Can't do at all", "Shouldn't do, even though it could"],
+   "rows": [
+    ["Knowledge", "Know rules nobody wrote down", "Make promises outside the written policy"],
+    ["The physical world", "See a leak or check a parcel", "Decide an unclear emergency from a photo"],
+    ["Accountability", "Hold a licence or sign for the business", "Give legal, medical, tax or investment advice"],
+    ["Money", "Nothing technical stops it", "Refund past a set limit or change anyone's pay"],
+    ["People", "Nothing technical stops it", "Hire, fire, discipline, or handle someone upset"],
+    ["Accuracy", "Be right every time", "Do anything that can't be undone"]
+   ],
+   "source": "Every item in the right column needs a written rule"
+  },
+  {
+   "type": "breakdown",
+   "name": "by-industry",
+   "title": "Where the line sits in *five kinds of business*",
+   "rows": [
+    ["Clinic: booking and reminders", "Books, reschedules and sends reminders from the schedule", "alone"],
+    ["Clinic: a patient describes symptoms", "Says a clinician will call back and flags it to the front desk", "asks"],
+    ["Law firm: new enquiry", "Collects the details and books the consultation after a conflict check", "reports"],
+    ["Property manager: maintenance request", "Logs it, asks for photos and books the trade", "reports"],
+    ["Online store: refund over the limit", "Prepares it with the order history and waits for approval", "asks"],
+    ["Agency: client wants to cancel", "Tells them the account lead will call today", "asks"]
+   ]
+  },
+  {
+   "type": "flow",
+   "name": "three-questions",
+   "title": "Three questions that *sort any duty*",
+   "steps": [
+    ["Can a mistake be undone easily?", "Rebooking an appointment can. A final notice to a client can't."],
+    ["Does it need a licence, signature or name?", "If yes, the AI Employee prepares and the professional decides."],
+    ["Is money, health or a job on the line?", "Or is the person on the other end upset? Then a person handles it."],
+    ["Passes all three", "It goes to the AI Employee alone, or with a report back."],
+    ["Fails one", "It stays with a person, and the AI Employee does the preparation."]
+   ]
+  },
+  {
+   "type": "stats",
+   "name": "the-numbers",
+   "title": "The full cost of a *front-desk hire*",
+   "items": [
+    ["$38,010", "US median receptionist wage, May 2025"],
+    ["~70%", "Share of private employer compensation paid as wages"],
+    ["~$54,300", "Full yearly cost of the seat"]
+   ],
+   "source": "US Bureau of Labor Statistics: Occupational Outlook Handbook; Employer Costs for Employee Compensation"
+  },
+  {
+   "type": "quote",
+   "name": "quote",
+   "text": "Most problems start the same way. Someone asked what the AI could do, and *never wrote down what it shouldn't.*",
+   "by": "Brandon Upright"
+  }
+ ]
+}
