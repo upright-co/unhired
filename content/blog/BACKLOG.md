@@ -19,7 +19,7 @@ Every article must work for small and medium businesses across industries, never
 - [x] How to hire an AI Employee, step by step (keyword: how to hire an AI employee) → how-to-hire-an-ai-employee
 - [x] How to train an AI Employee on your business (keyword: train AI employee) → train-ai-employee
 - [x] What an AI Employee can't do (and shouldn't) (keyword: AI employee limitations) → ai-employee-limitations
-- [ ] AI Employee onboarding: the first 30 days (keyword: AI employee onboarding)
+- [x] AI Employee onboarding: the first 30 days (keyword: AI employee onboarding) → ai-employee-onboarding
 - [ ] Is an AI Employee safe with customer data? (keyword: AI employee data security)
 - [ ] How to measure an AI Employee's performance (keyword: AI employee performance)
 - [ ] AI Employee vs. virtual assistant vs. outsourcing (keyword: AI employee vs virtual assistant)

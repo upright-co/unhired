@@ -1,0 +1,71 @@
+{
+ "images": [
+  {
+   "type": "cover",
+   "name": "cover",
+   "eyebrow": "AI Employee 101 · Onboarding",
+   "title": "AI Employee onboarding: *the first 30 days*",
+   "sub": "Hand over authority in steps, from watching to drafting to working alone, and earn each step with evidence.",
+   "avatar": "ai-executive-assistant",
+   "series": "The AI Employee · unhired.io"
+  },
+  {
+   "type": "flow",
+   "name": "month",
+   "title": "The first 30 days, *week by week*",
+   "steps": [
+    ["Before day one", "Its own logins with only the permissions the job needs, a named manager and written stopping points."],
+    ["Week 1: shadow mode", "Sees live work and decides what it would do. Nothing is sent and no record changes."],
+    ["Week 2: approved drafts", "Does the work for real. A person approves everything, and each edit becomes a handbook line."],
+    ["Week 3: routine work alone", "Duties that needed almost no edits move to \"does it alone\", one at a time."],
+    ["Week 4: full duties", "Every duty at its written authority level. The daily check becomes a weekly log review."]
+   ]
+  },
+  {
+   "type": "table",
+   "name": "checklist",
+   "title": "Ready *before day one*",
+   "head": ["What", "Why it matters", "Example"],
+   "rows": [
+    ["Its own logins", "Every action shows who took it", "A named help desk account, not a shared password"],
+    ["Narrow permissions", "It can only touch what the job uses", "Reads lease records, can't change rent"],
+    ["A named manager", "Someone owns its work and its escalations", "The support lead, 30 minutes a day"],
+    ["Stopping points", "It knows where to hand work back", "Legal advice requests go to a lawyer"],
+    ["Handbook and documents", "It only knows what's written down", "Current fee schedule, old one deleted"]
+   ],
+   "source": "Set up before it sees a single real email or call"
+  },
+  {
+   "type": "breakdown",
+   "name": "authority",
+   "title": "Where each duty *ends the month*",
+   "rows": [
+    ["Appointment reminders", "Sends them on schedule after two weeks with no edits", "alone"],
+    ["Chasing missing paperwork", "Follows up by email and text until the file is complete", "alone"],
+    ["Order status replies", "Answers from the order system and logs each one", "alone"],
+    ["Fee and pricing questions", "Answers from the current price list and flags anything unusual", "reports"],
+    ["Refunds and exceptions", "Collects the details and hands it to the manager", "asks"],
+    ["Complaints and legal questions", "Tells the customer a person will follow up today", "asks"]
+   ]
+  },
+  {
+   "type": "table",
+   "name": "measure",
+   "title": "Four numbers to *track every week*",
+   "head": ["Number", "What it counts", "Healthy direction"],
+   "rows": [
+    ["Unedited drafts", "Share of drafts approved without changes", "Rises each week"],
+    ["Escalations", "Work handed to a person", "Settles, never hits zero"],
+    ["Customer mistakes", "Errors that reach a customer", "Rare, each with a written fix"],
+    ["Review time", "Manager's minutes on its work", "Daily check becomes weekly"]
+   ],
+   "source": "One row per week in a plain spreadsheet"
+  },
+  {
+   "type": "quote",
+   "name": "quote",
+   "text": "An AI Employee should earn each step of authority *with evidence from the step before.*",
+   "by": "Brandon Upright"
+  }
+ ]
+}
