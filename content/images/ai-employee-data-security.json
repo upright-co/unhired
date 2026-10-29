@@ -1,0 +1,75 @@
+{
+ "images": [
+  {
+   "type": "cover",
+   "name": "cover",
+   "eyebrow": "AI Employee 101 · Data security",
+   "title": "Is an *AI Employee* safe with customer data?",
+   "sub": "Where the data goes, the risks that are new with AI, and the controls to set before it gets a login.",
+   "avatar": "ai-customer-support",
+   "series": "The AI Employee · unhired.io"
+  },
+  {
+   "type": "table",
+   "name": "where-data-goes",
+   "title": "Where customer data goes, and *what to check*",
+   "head": ["", "What happens there", "What to check"],
+   "rows": [
+    ["Your systems", "It reads and writes in the inbox, calendar, CRM and accounts", "Its own login, with only the permissions the role needs"],
+    ["The AI model", "Text is sent to a model provider to draft and read", "A business plan with no training on your data"],
+    ["Its memory and logs", "It keeps notes and a record of everything it did", "Who can read them and how long they're kept"]
+   ],
+   "source": "The business stays responsible for the data at every stop"
+  },
+  {
+   "type": "flow",
+   "name": "controls",
+   "title": "The controls that keep *customer data in place*",
+   "steps": [
+    ["Its own account in every system", "Never a shared login, so every action traces back and can be shut off."],
+    ["Least access", "Read-only where it only looks things up. No export or delete rights."],
+    ["Identity rules", "Documents only go to the contact already on file."],
+    ["Approval for anything going out", "A person signs off before files leave the business."],
+    ["A log a person reads", "Daily in the first month, then weekly."]
+   ]
+  },
+  {
+   "type": "breakdown",
+   "name": "authority",
+   "title": "What it can do with data, and *who approves it*",
+   "rows": [
+    ["Clinic: look up an appointment time", "Confirms the time with the patient after checking identity", "alone"],
+    ["Property manager: update a phone number", "Changes the record and notes the old number in the log", "reports"],
+    ["Law firm: send a file to a new address", "Holds it and flags the mismatch to the assigned lawyer", "asks"],
+    ["Accounting firm: change banking details", "Never from an email. A person confirms by phone", "asks"],
+    ["Online store: export the customer list", "Passes the request to the owner. Its account can't export", "asks"]
+   ]
+  },
+  {
+   "type": "table",
+   "name": "questions",
+   "title": "Questions to ask before you *give it a login*",
+   "head": ["Question", "A good answer"],
+   "rows": [
+    ["Which AI model company processes our data?", "A named provider, on a business plan"],
+    ["Is our data used to train models?", "No, in writing"],
+    ["How long is our data kept, and where?", "A set retention period you can read"],
+    ["What can its account open, change and delete?", "A written list of permissions per system"],
+    ["What needs a person's approval?", "Anything that sends data outside the business"],
+    ["Will you sign our agreement?", "Yes, including a business associate agreement for health data"]
+   ],
+   "source": "Get every answer in writing before customer data goes in"
+  },
+  {
+   "type": "stats",
+   "name": "the-numbers",
+   "title": "What a breach costs, from *IBM's 2025 report*",
+   "items": [
+    ["$4.44M", "Global average cost of a data breach"],
+    ["$670K", "Extra cost with high levels of unapproved AI use"],
+    ["97%", "Of AI-related breaches had no AI access controls"]
+   ],
+   "source": "IBM, Cost of a Data Breach Report 2025"
+  }
+ ]
+}
