@@ -1,0 +1,71 @@
+{
+ "images": [
+  {
+   "type": "cover",
+   "name": "cover",
+   "eyebrow": "AI Employee 101 · Performance",
+   "title": "How to measure an *AI Employee's performance*",
+   "sub": "Six numbers, a weekly sample of 20 and a monthly review, measured against the job before it started.",
+   "avatar": "ai-customer-support",
+   "series": "The AI Employee · unhired.io"
+  },
+  {
+   "type": "table",
+   "name": "scorecard",
+   "title": "Six numbers on the *scorecard*",
+   "head": ["Number", "What it counts", "Where it comes from"],
+   "rows": [
+    ["Accuracy", "Share of the weekly sample graded right", "The manager's sample of 20"],
+    ["Finished alone", "Work done with nothing handed back", "Its log and your systems"],
+    ["Escalations", "Work handed to a person, and if it was the right call", "Its log, checked by the manager"],
+    ["Speed", "Time from a request to a reply or a finished task", "Timestamps in its log"],
+    ["Customer mistakes", "Errors a customer saw, each with a written fix", "Complaints and corrections"],
+    ["Manager's time", "Minutes a week reviewing its work", "The manager's own count"]
+   ],
+   "source": "Track weekly, review monthly"
+  },
+  {
+   "type": "flow",
+   "name": "weekly-check",
+   "title": "The weekly sample, *about 30 minutes*",
+   "steps": [
+    ["Pull 20 items at random", "From every duty, including escalations, not just the easy work."],
+    ["Grade each one", "Right, right but badly worded, or wrong, by the handbook's standard."],
+    ["Name the cause of each wrong one", "A missing instruction, an old document, a bad example or a limit that's too loose."],
+    ["Fix the cause", "Change the handbook or the documents so the whole kind of mistake stops."],
+    ["Log the week", "One row in the scorecard spreadsheet, with the fixes made."]
+   ]
+  },
+  {
+   "type": "table",
+   "name": "by-role",
+   "title": "Add *one or two numbers* for the role",
+   "head": ["Role", "Number to add", "Why it matters"],
+   "rows": [
+    ["Clinic front desk", "Missed calls, open slots filled from the waitlist", "Empty chairs cost more than slow replies"],
+    ["Bookkeeping", "Transactions recoded at month-end", "Shows the errors the sample can miss"],
+    ["Online store emails", "Conversations reopened within a week", "A reply that didn't fix it comes back"],
+    ["Inside sales", "Time to first reply, meetings booked", "Leads go cold within hours"],
+    ["Law firm intake", "Hours from inquiry to booked consult", "Prospects call the next firm on the list"]
+   ],
+   "source": "Choose these with the manager before the numbers come in"
+  },
+  {
+   "type": "stats",
+   "name": "cost",
+   "title": "What a *receptionist seat* costs",
+   "items": [
+    ["$38,010", "US median receptionist wage, May 2025"],
+    ["$54,300", "Full yearly cost, with wages at about 70% of compensation"],
+    ["$4,500", "Per month, to compare with cost per finished task"]
+   ],
+   "source": "Sources: BLS Occupational Outlook Handbook; BLS Employer Costs for Employee Compensation"
+  },
+  {
+   "type": "quote",
+   "name": "quote",
+   "text": "Measure an AI Employee by the work it finished *and how much of everyone else's time it took.*",
+   "by": "Brandon Upright"
+  }
+ ]
+}
