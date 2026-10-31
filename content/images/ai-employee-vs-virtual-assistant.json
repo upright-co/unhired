@@ -1,0 +1,86 @@
+{
+ "images": [
+  {
+   "type": "cover",
+   "name": "cover",
+   "eyebrow": "AI Employee 101 · Comparison",
+   "title": "AI Employee vs. virtual assistant *vs. outsourcing*",
+   "sub": "Hours, a function, or a job. Where each one is the right call, and who keeps the process when you part ways.",
+   "avatar": "ai-executive-assistant",
+   "series": "The AI Employee · unhired.io"
+  },
+  {
+   "type": "table",
+   "name": "three-options",
+   "title": "Three ways to fill a seat, *three different things*",
+   "head": ["", "Virtual assistant", "Outsourcing firm", "AI Employee"],
+   "rows": [
+    ["What you buy", "One person's hours", "A function, run on the firm's process", "A job held by software, on your rules"],
+    ["Hours covered", "The block you pay for, in their time zone", "Shifts, up to 24/7", "Every hour of the week"],
+    ["How the work is done", "Their judgment, your instructions", "The firm's script and tools", "A written handbook you can read"],
+    ["Who sees your data", "The person, often with broad logins", "Another company's systems and agents", "Scoped connections, every action logged"],
+    ["When it ends", "The process leaves with them", "The playbook stays with the firm", "The handbook and log can stay with you"]
+   ],
+   "source": "How each option is usually set up; terms vary by provider"
+  },
+  {
+   "type": "table",
+   "name": "which-work",
+   "title": "Which option *fits which work*",
+   "head": ["The work", "Best fit", "Why"],
+   "rows": [
+    ["Research, projects, one-off clean-ups", "Virtual assistant", "No written process, needs judgment, can wait until morning"],
+    ["Client relationships and difficult conversations", "Virtual assistant or in-house", "The person on the other end needs a human"],
+    ["Overnight phone lines at high volume", "Outsourcing firm", "People on shift, supervisors and cover for absences"],
+    ["Payroll or support for hundreds of people", "Outsourcing firm", "A mature process and a trained team already exist"],
+    ["The same forty questions by email and text", "AI Employee", "Clear rules, high repetition, arrives at all hours"],
+    ["Booking, document chasing, data entry between systems", "AI Employee", "Coordination between systems, with a log of every step"]
+   ],
+   "source": "Most offices end up with a mix, split by duty"
+  },
+  {
+   "type": "quote",
+   "name": "quote",
+   "text": "The process is the asset. A person takes it with them, a firm keeps it, and an AI Employee *writes it down.*",
+   "by": "Brandon Upright"
+  },
+  {
+   "type": "stats",
+   "name": "seat-cost",
+   "eyebrow": "The in-house seat",
+   "title": "What an *administrative assistant* costs a year",
+   "items": [
+    ["$48,310", "US median wage, secretaries and administrative assistants, May 2025"],
+    ["$69,000", "Full yearly cost, with wages at about 70% of compensation"],
+    ["40 hrs", "Of a 168-hour week covered by one full-time person"]
+   ],
+   "source": "Sources: BLS Occupational Outlook Handbook; BLS Employer Costs for Employee Compensation"
+  },
+  {
+   "type": "table",
+   "name": "pricing",
+   "title": "How each option is priced, and *what the rate hides*",
+   "head": ["Option", "How it's priced", "What the headline number leaves out"],
+   "rows": [
+    ["Virtual assistant", "By the hour, often in part-time packages; agencies add a markup", "Hours you pay for with no work in them, your time assigning and reviewing, retraining when the person changes"],
+    ["Outsourcing firm", "Per seat, hour, call or ticket, with a setup fee and a monthly minimum", "The minimum, escalation charges, the cost and wait for every change to the script"],
+    ["AI Employee, assembled yourself", "Software subscriptions and usage", "The staff hours to design, test and maintain it, usually the owner's or office manager's"],
+    ["AI Employee, from a provider", "A monthly fee per role, sometimes a setup fee, within a volume range", "Overages past the range, charges for changes, and whether you keep the rules and log if you leave"]
+   ],
+   "source": "Compare on cost per hour of coverage and per finished task, for the same duties"
+  },
+  {
+   "type": "flow",
+   "name": "decide",
+   "eyebrow": "For your own role",
+   "title": "How to decide, *duty by duty*",
+   "steps": [
+    ["List every duty on one page", "The job you're filling, as it's done today, including the things nobody wrote down."],
+    ["Mark each one four ways", "Is there a process you could write down? Does it repeat? Does it arrive outside office hours? Does the other person need a human?"],
+    ["Sort the duties", "Written process, repeats, all hours: AI Employee. No process, judgment: a person. High volume on a process you'd rather not own: a firm."],
+    ["Price the options against the page", "First-year cost at your real volume, hours of coverage a week, and your team's hours a month, for each."],
+    ["Ask what you keep", "Before signing with anyone: when this ends, what stays with us? Rules, logs, recordings, the phone number."]
+   ]
+  }
+ ]
+}
