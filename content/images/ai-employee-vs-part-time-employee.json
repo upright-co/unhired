@@ -1,0 +1,72 @@
+{
+ "images": [
+  {
+   "type": "cover",
+   "name": "cover",
+   "eyebrow": "AI Employee 101 · Comparison",
+   "title": "AI Employee vs. *a part-time hire*",
+   "sub": "Twenty hours of a person, or every hour on a narrow job. Start with when the work arrives.",
+   "avatar": "ai-receptionist",
+   "series": "The AI Employee · unhired.io"
+  },
+  {
+   "type": "table",
+   "name": "compare",
+   "title": "Two ways to fill the gap, *side by side*",
+   "head": ["", "Part-time employee", "AI Employee"],
+   "rows": [
+    ["Hours covered", "Their shift, often 10 to 30 a week", "All 168 hours of the week"],
+    ["What it can do", "Anything a person can, including in-person work", "Duties it has written rules for, by phone, email and text"],
+    ["New tasks", "Picks them up the same day", "Needs rules written first"],
+    ["Busy and quiet hours", "Fixed shift either way", "Handles three requests or thirty in the same hour"],
+    ["When it ends", "The know-how leaves with the person", "The handbook and log stay"]
+   ],
+   "source": "How each is usually set up; terms vary by employer and provider"
+  },
+  {
+   "type": "quote",
+   "name": "quote",
+   "text": "Before you post a part-time job, find out *which hours the overflow arrives in.*",
+   "by": "Brandon Upright"
+  },
+  {
+   "type": "stats",
+   "name": "seat-cost",
+   "eyebrow": "The part-time seat",
+   "title": "What a *20-hour receptionist* costs a year",
+   "items": [
+    ["$18.27", "US median hourly wage for receptionists, May 2025"],
+    ["$19,000", "Yearly pay at 20 hours a week"],
+    ["$23,750", "With benefits and payroll costs, wages at about 80% of the total"]
+   ],
+   "source": "Sources: BLS Occupational Outlook Handbook; BLS Employer Costs for Employee Compensation, June 2026"
+  },
+  {
+   "type": "table",
+   "name": "which-duties",
+   "title": "Which duties fit *which option*",
+   "head": ["The duty", "Best fit", "Why"],
+   "rows": [
+    ["Checking patients in, taking payments at the counter", "Part-time person", "Needs someone physically there"],
+    ["An upset client or a tenant dispute", "Part-time person", "The other person wants a human"],
+    ["Routine questions on hours, prices and insurance", "AI Employee", "Same answers, arrives at all hours"],
+    ["Booking, rescheduling and reminders", "AI Employee", "Clear rules, high repetition"],
+    ["Replying to web leads and chasing documents", "AI Employee", "Speed matters, often after hours"],
+    ["A predictable Monday-morning rush", "Either", "A shift can be scheduled right on top of it"]
+   ],
+   "source": "Most small offices end up with a mix, split by duty"
+  },
+  {
+   "type": "flow",
+   "name": "decide",
+   "eyebrow": "For your own role",
+   "title": "How to decide, *duty by duty*",
+   "steps": [
+    ["List every duty", "Everything you'd hand the part-time person, including the small things nobody wrote down."],
+    ["Check when the work arrives", "Pull two weeks of call logs, form submissions and email timestamps."],
+    ["Sort the duties", "In-person or judgment calls: a person. Written process, arrives at all hours: an AI Employee."],
+    ["Price both against the same list", "First-year cost, hours covered a week, and your team's time spent managing each."]
+   ]
+  }
+ ]
+}

@@ -23,7 +23,7 @@ Every article must work for small and medium businesses across industries, never
 - [x] Is an AI Employee safe with customer data? (keyword: AI employee data security) → ai-employee-data-security
 - [x] How to measure an AI Employee's performance (keyword: AI employee performance) → ai-employee-performance
 - [x] AI Employee vs. virtual assistant vs. outsourcing (keyword: AI employee vs virtual assistant) → ai-employee-vs-virtual-assistant
-- [ ] AI Employee vs. hiring a part-time person (keyword: AI employee vs part-time employee)
+- [x] AI Employee vs. hiring a part-time person (keyword: AI employee vs part-time employee) → ai-employee-vs-part-time-employee
 - [ ] Will an AI Employee replace my staff? (keyword: will AI replace my employees)
 - [ ] Should customers know they're talking to an AI Employee? (keyword: AI disclosure customers)
 - [ ] Which job should your first AI Employee do? (keyword: first AI employee)
