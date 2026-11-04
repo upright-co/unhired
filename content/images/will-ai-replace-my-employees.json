@@ -1,0 +1,71 @@
+{
+ "images": [
+  {
+   "type": "cover",
+   "name": "cover",
+   "eyebrow": "AI Employee 101",
+   "title": "Will an AI Employee *replace my staff?*",
+   "sub": "It takes over duties, not people. Here's which work moves and what stays with your team.",
+   "avatar": "ai-executive-assistant",
+   "series": "The AI Employee · unhired.io"
+  },
+  {
+   "type": "table",
+   "name": "duties",
+   "title": "One job, *split by duty*",
+   "head": ["The duty", "Who holds it", "Why"],
+   "rows": [
+    ["Routine questions by phone, email and text", "AI Employee", "Same answers, at any hour"],
+    ["Booking, rescheduling and reminders", "AI Employee", "Clear rules, high repetition"],
+    ["Chasing missing documents and signatures", "AI Employee", "Follow-ups on a schedule"],
+    ["Checking people in, taking payments", "Your staff", "Needs someone physically there"],
+    ["An upset client or a billing dispute", "Your staff", "Needs judgment and a human voice"],
+    ["Reviewing what the AI Employee holds back", "Your staff", "A new duty that comes with it"]
+   ],
+   "source": "Typical front-desk and admin roles; the split varies by business"
+  },
+  {
+   "type": "quote",
+   "name": "quote",
+   "text": "An AI Employee takes over *duties, not people.* What happens to headcount is a decision you make later.",
+   "by": "Brandon Upright"
+  },
+  {
+   "type": "stats",
+   "name": "numbers",
+   "eyebrow": "US receptionists, 2025 to 2035",
+   "title": "A small decline, but *steady openings*",
+   "items": [
+    ["947,500", "Receptionist jobs in the US in 2025"],
+    ["-2%", "Projected change by 2035, about 16,000 fewer jobs"],
+    ["105,100", "Openings a year, all from people leaving the job"]
+   ],
+   "source": "Source: BLS Occupational Outlook Handbook, Receptionists"
+  },
+  {
+   "type": "cost",
+   "name": "seat-cost",
+   "title": "What a full-time *receptionist seat* costs a year",
+   "rows": [
+    ["Median pay", 38010, "$18.27 an hour, May 2025"],
+    ["Benefits and payroll costs", 16290, "About 30% of total compensation"],
+    ["Full cost of the seat", 54300, "Before hiring and training a replacement"]
+   ],
+   "highlight": 2,
+   "source": "Sources: BLS Occupational Outlook Handbook; BLS Employer Costs for Employee Compensation, June 2026"
+  },
+  {
+   "type": "flow",
+   "name": "tell-your-team",
+   "eyebrow": "Before it goes live",
+   "title": "How to *tell your team*",
+   "steps": [
+    ["Tell them early", "Before anyone starts documenting their job, so the news doesn't arrive as a rumour."],
+    ["Show the duty list", "Exactly which duties the AI Employee takes, which it hands back, and who it reports to."],
+    ["Have them write the rules", "The people doing the work know the steps nobody ever wrote down."],
+    ["Name what they get back", "The counter, the clients who need a conversation, the project that keeps slipping."],
+    ["Review it together weekly", "A short look at what it handled and what it held for a person, for the first month."]
+   ]
+  }
+ ]
+}

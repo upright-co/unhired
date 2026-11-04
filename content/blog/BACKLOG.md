@@ -24,7 +24,7 @@ Every article must work for small and medium businesses across industries, never
 - [x] How to measure an AI Employee's performance (keyword: AI employee performance) → ai-employee-performance
 - [x] AI Employee vs. virtual assistant vs. outsourcing (keyword: AI employee vs virtual assistant) → ai-employee-vs-virtual-assistant
 - [x] AI Employee vs. hiring a part-time person (keyword: AI employee vs part-time employee) → ai-employee-vs-part-time-employee
-- [ ] Will an AI Employee replace my staff? (keyword: will AI replace my employees)
+- [x] Will an AI Employee replace my staff? (keyword: will AI replace my employees) → will-ai-replace-my-employees
 - [ ] Should customers know they're talking to an AI Employee? (keyword: AI disclosure customers)
 - [ ] Which job should your first AI Employee do? (keyword: first AI employee)
 
