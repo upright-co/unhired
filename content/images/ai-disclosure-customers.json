@@ -1,0 +1,68 @@
+{
+ "images": [
+  {
+   "type": "cover",
+   "name": "cover",
+   "eyebrow": "AI Employee 101",
+   "title": "Should customers know it's *an AI Employee?*",
+   "sub": "Yes, in the first line. What to say on each channel, what the rules say, and how to hand off to a person.",
+   "avatar": "ai-receptionist",
+   "series": "The AI Employee · unhired.io"
+  },
+  {
+   "type": "table",
+   "name": "by-channel",
+   "title": "The disclosure line, *channel by channel*",
+   "head": ["Channel", "Where it goes", "Example"],
+   "rows": [
+    ["Phone", "The greeting", "\"You've reached the clinic's AI assistant. Say 'person' any time.\""],
+    ["Website chat", "First message and a label on the window", "\"Hi, I'm the store's AI assistant. I can check any order.\""],
+    ["Text", "The first message in the thread", "\"This is the property office's automated assistant.\""],
+    ["Email", "The signature", "\"Sent by our AI assistant. Reply 'person' to reach the team.\""]
+   ],
+   "source": "Example wording; adjust it to your business"
+  },
+  {
+   "type": "stats",
+   "name": "want-to-know",
+   "eyebrow": "What consumers say",
+   "title": "Most people *want to know*",
+   "items": [
+    ["88%", "want to know when they're interacting with something created by AI"],
+    ["41%", "say they always want to know"]
+   ],
+   "source": "Source: Qualtrics, June 2023"
+  },
+  {
+   "type": "table",
+   "name": "rules",
+   "title": "The rules that touch *AI disclosure*",
+   "head": ["Rule", "What it covers", "Since"],
+   "rows": [
+    ["EU AI Act, Article 50", "AI that talks to people must say it's AI, unless that's obvious", "Aug 2, 2026"],
+    ["FCC ruling under the TCPA (US)", "AI-generated voices in calls count as artificial voices: consent and caller ID rules apply", "Feb 8, 2024"],
+    ["Moffatt v. Air Canada", "A business answers for what its chatbot tells customers", "Feb 2024"]
+   ],
+   "source": "General information, not legal advice. Check the rules for your industry."
+  },
+  {
+   "type": "quote",
+   "name": "quote",
+   "text": "Say it's AI *in the first line.* Customers who find out halfway through feel tricked. The rest just want their appointment booked.",
+   "by": "Brandon Upright"
+  },
+  {
+   "type": "flow",
+   "name": "handoff",
+   "eyebrow": "Keeping the promise",
+   "title": "How the *handoff to a person* works",
+   "steps": [
+    ["The customer asks", "A plain word like \"person\", said or typed, works at any point in the conversation."],
+    ["Or the AI Employee decides", "Complaints, money it can't approve, and anyone upset or confused go to a person without being asked."],
+    ["It passes along the details", "Name, account and the problem so far, so nobody has to repeat themselves."],
+    ["It gives an honest time", "\"The front desk will call you before noon\", not \"someone will be in touch.\""],
+    ["It checks the follow-up happened", "If nobody has called by noon, it flags it to the person in charge."]
+   ]
+  }
+ ]
+}
