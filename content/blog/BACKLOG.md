@@ -26,7 +26,7 @@ Every article must work for small and medium businesses across industries, never
 - [x] AI Employee vs. hiring a part-time person (keyword: AI employee vs part-time employee) → ai-employee-vs-part-time-employee
 - [x] Will an AI Employee replace my staff? (keyword: will AI replace my employees) → will-ai-replace-my-employees
 - [x] Should customers know they're talking to an AI Employee? (keyword: AI disclosure customers) → ai-disclosure-customers
-- [ ] Which job should your first AI Employee do? (keyword: first AI employee)
+- [x] Which job should your first AI Employee do? (keyword: first AI employee) → first-ai-employee
 
 ## By industry (one role, one industry, real day-to-day examples)
 - [ ] AI Employees for dental and medical clinics (keyword: AI receptionist for dental office)

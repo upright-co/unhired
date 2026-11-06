@@ -1,0 +1,74 @@
+{
+ "images": [
+  {
+   "type": "cover",
+   "name": "cover",
+   "eyebrow": "AI Employee 101",
+   "title": "Which job should your *first AI Employee* do?",
+   "sub": "Start with the dullest job in the building. Five tests to run on any role, and the jobs that usually pass.",
+   "avatar": "ai-executive-assistant",
+   "series": "The AI Employee · unhired.io"
+  },
+  {
+   "type": "table",
+   "name": "five-tests",
+   "title": "Five tests for a *first job*",
+   "head": ["Test", "Ask", "Passes", "Fails"],
+   "rows": [
+    ["It repeats", "Does the same request arrive many times a week?", "Booking cleanings", "A one-off office move"],
+    ["Rules can be written", "Could you explain it in a few pages?", "Return policy questions", "\"It depends, ask Maria\""],
+    ["Mistakes can be undone", "Can an error be fixed the same day?", "A wrong appointment time", "A wire to the wrong account"],
+    ["Work happens in software", "Is it all email, phone and systems?", "A support inbox", "A walk-in counter"],
+    ["Someone checks it", "Will one person read its log daily?", "The office manager owns it", "\"Everyone\" owns it"]
+   ],
+   "source": "A role that fails any test is a job for later"
+  },
+  {
+   "type": "breakdown",
+   "name": "first-jobs",
+   "title": "Jobs that usually *pass first*",
+   "rows": [
+    ["Front desk phone", "Books, changes and cancels appointments, answers hours and directions, hands unusual calls to a person", "alone"],
+    ["Support inbox", "Answers order status and return questions from written policy, escalates complaints", "reports"],
+    ["Scheduling", "Books viewings, repairs and appointments, sends reminders, fills cancellations", "alone"],
+    ["Data entry", "Moves invoices and intake forms into your systems, checks each before saving", "reports"],
+    ["Admin follow-ups", "Chases unsigned letters, missing documents and overdue invoices on a schedule", "alone"],
+    ["Refunds and exceptions", "Prepares the case and the numbers, then waits for a person to approve", "asks"]
+   ]
+  },
+  {
+   "type": "quote",
+   "name": "quote",
+   "text": "Give your first AI Employee *the dullest job in the building.* The one with the most volume and mistakes you can undo the same afternoon.",
+   "by": "Brandon Upright"
+  },
+  {
+   "type": "flow",
+   "name": "pick-the-job",
+   "eyebrow": "One afternoon",
+   "title": "How to *pick the first job*",
+   "steps": [
+    ["List the recurring tasks", "Take two or three roles and write down every task that comes back week after week."],
+    ["Add the hours", "Ask the person doing the work how long each task takes in a normal week."],
+    ["Run the five tests", "Cross out any task that fails one. What's left is the shortlist."],
+    ["Pick the biggest group", "Choose the tasks with the most hours and the fewest exceptions. That's the first job."],
+    ["Write the job down", "One paragraph, the person it reports to, and what it can do alone versus what it asks about."]
+   ]
+  },
+  {
+   "type": "cost",
+   "name": "seat-cost",
+   "eyebrow": "The comparison",
+   "title": "What common first-job seats *cost a person*",
+   "suffix": " / yr",
+   "highlight": null,
+   "rows": [
+    ["Receptionist", 54300, "Median wage $38,010, plus benefits and payroll taxes."],
+    ["Customer service representative", 64000, "Median wage $44,770, plus benefits and payroll taxes."],
+    ["Administrative assistant", 69000, "Median wage $48,310, plus benefits and payroll taxes."],
+    ["Bookkeeping clerk", 72400, "Median wage $50,670, plus benefits and payroll taxes."]
+   ],
+   "source": "Source: US Bureau of Labor Statistics, May 2025 medians; wages are about 70% of compensation (ECEC)"
+  }
+ ]
+}
