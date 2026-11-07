@@ -29,7 +29,7 @@ Every article must work for small and medium businesses across industries, never
 - [x] Which job should your first AI Employee do? (keyword: first AI employee) → first-ai-employee
 
 ## By industry (one role, one industry, real day-to-day examples)
-- [ ] AI Employees for dental and medical clinics (keyword: AI receptionist for dental office)
+- [x] AI Employees for dental and medical clinics (keyword: AI receptionist for dental office) → ai-receptionist-for-dental-office
 - [ ] AI Employees for law firms (keyword: AI legal intake)
 - [ ] AI Employees for property management (keyword: AI property management assistant)
 - [ ] AI Employees for accounting and bookkeeping firms (keyword: AI for accounting firms)

@@ -1,0 +1,87 @@
+{
+ "images": [
+  {
+   "type": "cover",
+   "name": "cover",
+   "eyebrow": "AI Employees by industry · Clinics",
+   "title": "An *AI Receptionist* for a dental office",
+   "sub": "Recalls, confirmations, new patient intake and after-hours calls, and what stays with your team.",
+   "avatar": "ai-receptionist",
+   "series": "The AI Employee · unhired.io"
+  },
+  {
+   "type": "breakdown",
+   "name": "duties",
+   "title": "The clinic front desk, *duty by duty*",
+   "rows": [
+    ["Confirmations and cancellations", "Confirms tomorrow's schedule, handles replies and fills open slots from the short-notice list.", "alone"],
+    ["Recalls", "Works the overdue list every day, offers open times and follows up with patients who don't answer.", "alone"],
+    ["New patient intake", "Asks the intake questions, books the right visit type and chases forms that aren't back.", "alone"],
+    ["After-hours and overflow", "Answers when the desk is busy or closed, from the clinic's own information.", "reports"],
+    ["Treatment and payment plans", "Shares published fees, then passes the conversation to the treatment coordinator.", "asks"],
+    ["Pain, swelling or distress", "Gives the clinic's written instructions and alerts the on-call person right away.", "asks"]
+   ]
+  },
+  {
+   "type": "table",
+   "name": "by-clinic",
+   "title": "What it handles, *by type of clinic*",
+   "head": ["Clinic", "The AI Receptionist handles", "It hands to a person"],
+   "rows": [
+    ["Dental office", "Hygiene recalls, confirmations, new patient forms", "Pain, treatment plan costs"],
+    ["Family medical clinic", "Follow-up bookings, annual physical reminders", "Symptoms, medication questions"],
+    ["Physiotherapy clinic", "Assessments, rebooking, short-notice list", "New injuries, insurer disputes"],
+    ["Eye clinic", "Exam recalls, frame pickup notices", "Sudden vision changes"],
+    ["Veterinary clinic", "Vaccine reminders, surgery drop-off times", "Sick or injured animals"]
+   ],
+   "source": "Examples. Every clinic sets its own rules."
+  },
+  {
+   "type": "timeline",
+   "name": "day-on-shift",
+   "title": "A day at a *dental office*",
+   "avatar": "ai-receptionist",
+   "role": "AI Receptionist",
+   "roleSub": "Reports to the office manager",
+   "rows": [
+    ["7:40 am", "A hygiene patient cancels by text. It offers the 9 am slot to the short-notice list and fills it."],
+    ["8:20 am", "Both lines are busy. It takes the overflow and books two new patient exams."],
+    ["10:00 am", "Sends recall texts to 25 overdue patients with open times this week and next."],
+    ["11:30 am", "A patient calls with swelling after an extraction. It gives the written instructions and alerts the dentist.", "you"],
+    ["1:15 pm", "A patient asks what insurance will cover on a crown. It books a call with the treatment coordinator.", "you"],
+    ["3:00 pm", "Sends tomorrow's confirmations and moves three appointments when patients reply."],
+    ["4:45 pm", "A patient says their claim was denied. It collects the details for billing.", "you"],
+    ["7:10 pm", "Answers an after-hours call about parking and books a cleaning for next week."]
+   ],
+   "source": "Example day"
+  },
+  {
+   "type": "cost",
+   "name": "cost",
+   "eyebrow": "The cost",
+   "title": "What a clinic front-desk seat *costs*",
+   "suffix": " / yr",
+   "highlight": null,
+   "rows": [
+    ["Receptionist, US median wage", 38010, "Healthcare median is $19.00 an hour."],
+    ["Receptionist, with benefits and payroll taxes", 54300, "Wages are about 70% of compensation."],
+    ["Medical secretary, US median wage", 45930, "About 40 hours of coverage a week."],
+    ["Medical secretary, with benefits and payroll taxes", 65600, "Same 70% ratio."]
+   ],
+   "source": "Source: US Bureau of Labor Statistics, May 2025 wages and ECEC"
+  },
+  {
+   "type": "flow",
+   "name": "setup",
+   "title": "How an AI Receptionist *is set up* at a clinic",
+   "steps": [
+    ["Sign the privacy agreement", "A business associate agreement in the US, or your country's equivalent, before any patient data."],
+    ["Map the calls", "Tally a week of calls by type and write the booking rules for each visit and provider."],
+    ["Connect with limited access", "Schedule, contact and insurance fields. No charts, notes or X-rays."],
+    ["Write the handoff rules", "Pain, clinical questions, money and upset patients go to a named person."],
+    ["Shadow, then go live", "It drafts while the office manager reads the log, then takes on more."],
+    ["Review the log every week", "Update it when providers, hours or insurance networks change."]
+   ]
+  }
+ ]
+}
