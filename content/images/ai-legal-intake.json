@@ -1,0 +1,86 @@
+{
+ "images": [
+  {
+   "type": "cover",
+   "name": "cover",
+   "eyebrow": "AI Employees by industry · Law firms",
+   "title": "*AI legal intake* for a law firm",
+   "sub": "First calls, screening, conflict check details and follow-up, and what stays with the lawyers.",
+   "avatar": "ai-receptionist",
+   "series": "The AI Employee · unhired.io"
+  },
+  {
+   "type": "breakdown",
+   "name": "duties",
+   "title": "Legal intake, *duty by duty*",
+   "rows": [
+    ["Answering new inquiries", "Answers calls, forms and chats within a minute and routes existing clients to their lawyer's team.", "alone"],
+    ["Screening", "Asks the firm's questions for each practice area and writes up the answers.", "alone"],
+    ["Conflict check details", "Collects the names and searches the practice management system. A person clears any match.", "reports"],
+    ["Booking consultations", "Books the right lawyer under the firm's rules and sends the intake form.", "alone"],
+    ["Following up", "Reschedules no-shows and reminds people about unsigned engagement letters.", "alone"],
+    ["Advice, fees, deadlines", "Gives no opinion on the merits. Passes the matter to a lawyer with a summary.", "asks"]
+   ]
+  },
+  {
+   "type": "table",
+   "name": "by-practice",
+   "title": "What it handles, *by practice area*",
+   "head": ["Practice area", "AI legal intake handles", "It hands to a lawyer"],
+   "rows": [
+    ["Personal injury", "Accident date, injuries, insurer details", "Limitation periods, settlement offers"],
+    ["Family law", "Children, filings, opposing party names", "Court dates, safety risks"],
+    ["Estate planning", "Assets, family members, document checklist", "Capacity concerns, disputes"],
+    ["Employment", "Termination date, documents signed", "Severance advice, filing deadlines"],
+    ["Immigration", "Status, dates, documents on hand", "Removal notices, eligibility advice"]
+   ],
+   "source": "Examples. Every firm sets its own rules."
+  },
+  {
+   "type": "timeline",
+   "name": "evening",
+   "title": "An evening of *legal intake*",
+   "avatar": "ai-receptionist",
+   "role": "AI legal intake",
+   "roleSub": "Reports to the office manager",
+   "rows": [
+    ["5:45 pm", "A web form asks about a will for a couple with two children. It screens and books a video consultation."],
+    ["6:20 pm", "Reminds a client that the engagement letter sent Friday is still unsigned."],
+    ["7:15 pm", "A caller was rear-ended on the way home. It screens, runs the conflict search and books a consultation."],
+    ["7:50 pm", "A caller has a custody hearing on Friday. It flags the intake as urgent for a family lawyer.", "you"],
+    ["8:30 pm", "A conflict search finds the opposing party's company in the system. It sends it to the person who clears conflicts.", "you"],
+    ["9:10 pm", "A caller describes threats from a former partner. It gives the firm's safety instructions and alerts a lawyer.", "you"],
+    ["10:40 pm", "Answers a question about parking and what to bring to tomorrow's consultation."]
+   ],
+   "source": "Example evening"
+  },
+  {
+   "type": "cost",
+   "name": "cost",
+   "eyebrow": "The cost",
+   "title": "What an intake seat *costs*",
+   "suffix": " / yr",
+   "highlight": null,
+   "rows": [
+    ["Paralegal, US median wage", 62890, "$30.24 an hour, May 2025."],
+    ["Paralegal, with benefits and payroll taxes", 89800, "Wages are about 70% of compensation."],
+    ["Legal secretary, US median wage", 55570, "About 40 hours of coverage a week."],
+    ["Legal secretary, with benefits and payroll taxes", 79400, "Same 70% ratio."]
+   ],
+   "source": "Source: US Bureau of Labor Statistics, May 2025 wages and ECEC"
+  },
+  {
+   "type": "flow",
+   "name": "setup",
+   "title": "How AI legal intake *is set up*",
+   "steps": [
+    ["Do the ethics review", "Read your bar's AI guidance and settle vendor terms before any client data."],
+    ["Map the inquiries", "Pull a month of inquiries and write screening questions for each practice area."],
+    ["Connect with limited access", "Contacts, conflict search and calendar. No open case files."],
+    ["Write the handoff rules", "Advice, conflicts, fees, deadlines and safety risks go to a named person."],
+    ["Shadow, then go live", "It drafts intake summaries while a lawyer reads each one, then takes on more."],
+    ["Review the log every week", "Update it when practice areas, fees or lawyers change."]
+   ]
+  }
+ ]
+}

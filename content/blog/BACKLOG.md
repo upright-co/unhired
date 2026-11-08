@@ -30,7 +30,7 @@ Every article must work for small and medium businesses across industries, never
 
 ## By industry (one role, one industry, real day-to-day examples)
 - [x] AI Employees for dental and medical clinics (keyword: AI receptionist for dental office) → ai-receptionist-for-dental-office
-- [ ] AI Employees for law firms (keyword: AI legal intake)
+- [x] AI Employees for law firms (keyword: AI legal intake) → ai-legal-intake
 - [ ] AI Employees for property management (keyword: AI property management assistant)
 - [ ] AI Employees for accounting and bookkeeping firms (keyword: AI for accounting firms)
 - [ ] AI Employees for e-commerce stores (keyword: AI customer service ecommerce)
