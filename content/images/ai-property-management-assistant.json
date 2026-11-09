@@ -1,0 +1,87 @@
+{
+ "images": [
+  {
+   "type": "cover",
+   "name": "cover",
+   "eyebrow": "AI Employees by industry · Property management",
+   "title": "An *AI property management assistant*",
+   "sub": "Leasing inquiries, maintenance requests, rent reminders and renewals, and what stays with your team.",
+   "avatar": "ai-customer-support",
+   "series": "The AI Employee · unhired.io"
+  },
+  {
+   "type": "breakdown",
+   "name": "duties",
+   "title": "Property management, *duty by duty*",
+   "rows": [
+    ["Leasing inquiries", "Answers every prospect with the same facts about the unit and books showings.", "alone"],
+    ["Maintenance requests", "Takes the request, sorts it under the triage rules and dispatches the vendor.", "reports"],
+    ["Rent reminders", "Sends reminders, confirms payments and answers questions from the lease.", "alone"],
+    ["Renewals and notices", "Sends approved renewal terms on schedule. Legal notices are drafted for a person.", "reports"],
+    ["Owner updates", "Drafts the monthly summary from the software. The manager sends anything with a decision.", "reports"],
+    ["Applications, money, disputes", "Collects the file and the facts. A person decides.", "asks"]
+   ]
+  },
+  {
+   "type": "table",
+   "name": "by-portfolio",
+   "title": "What it handles, *by portfolio type*",
+   "head": ["Portfolio", "The AI Employee handles", "It hands to a person"],
+   "rows": [
+    ["Single-family rentals", "Inquiries, showings, repair requests, renewals", "Application decisions, deposit deductions"],
+    ["Apartment buildings", "High inquiry volume, after-hours maintenance, rent reminders", "Noise disputes, lease violations"],
+    ["Condo and HOA boards", "Owner questions, amenity bookings, vendor scheduling", "Fines, rule changes, board decisions"],
+    ["Small commercial", "Tenant requests, vendor dispatch, CAM questions", "Lease terms, rent changes"],
+    ["Student housing", "Turnover scheduling, roommate move-ins, move-out instructions", "Guarantor issues, damage charges"]
+   ],
+   "source": "Examples. Every company sets its own rules."
+  },
+  {
+   "type": "timeline",
+   "name": "weekend",
+   "title": "A Saturday for the *AI property management assistant*",
+   "avatar": "ai-customer-support",
+   "role": "AI property management assistant",
+   "roleSub": "Reports to the senior property manager",
+   "rows": [
+    ["7:05 am", "A prospect asks about a two-bedroom listed last night. It sends the facts and books a showing for Sunday at 1 pm."],
+    ["9:30 am", "A tenant reports a dripping kitchen faucet. It logs the work order and schedules the plumber for Tuesday."],
+    ["11:15 am", "Sends renewal offers to four tenants whose leases end in 90 days, with the terms the manager approved."],
+    ["1:40 pm", "A tenant asks to split this month's rent into two payments. It writes up the request for the manager.", "you"],
+    ["4:20 pm", "Two neighbours each message about the same parking spot. It logs both accounts and flags the dispute.", "you"],
+    ["6:50 pm", "An owner asks whether the HVAC repair at their unit is done. It answers from the closed work order."],
+    ["10:40 pm", "\"No hot water in 4B.\" It replies in a minute, opens a work order and books the on-call plumber for Sunday morning, then alerts the manager.", "you"]
+   ],
+   "source": "Example Saturday"
+  },
+  {
+   "type": "cost",
+   "name": "cost",
+   "eyebrow": "The cost",
+   "title": "What a property management seat *costs*",
+   "suffix": " / yr",
+   "highlight": null,
+   "rows": [
+    ["Property manager, US median wage", 69990, "$33.65 an hour, May 2025."],
+    ["Property manager, with benefits and payroll taxes", 100000, "Wages are about 70% of compensation."],
+    ["Administrative assistant, US median wage", 47540, "About 40 hours of coverage a week."],
+    ["Administrative assistant, with benefits and payroll taxes", 67900, "Same 70% ratio."]
+   ],
+   "source": "Source: US Bureau of Labor Statistics, May 2025 wages and ECEC June 2026"
+  },
+  {
+   "type": "flow",
+   "name": "setup",
+   "title": "How the assistant *is set up*",
+   "steps": [
+    ["Do the fair housing review", "Decide what it may and may not ask, say and do before any tenant data is connected."],
+    ["Map a month of messages", "Pull every inquiry, request and question and sort it by type."],
+    ["Write the triage rules", "What counts as an emergency, who is on call, and what waits until business hours."],
+    ["Connect with limited access", "Listings, work orders, the rent ledger and the calendar. No applicant reports."],
+    ["Write the handoff rules", "Applications, money, legal notices, disputes and emergencies go to a named person."],
+    ["Shadow, then go live", "It drafts replies and work orders while the manager reads each one, then takes on more."],
+    ["Review the log every week", "Update it when vendors, rents, policies or owners change."]
+   ]
+  }
+ ]
+}
