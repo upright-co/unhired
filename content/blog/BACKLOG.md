@@ -32,7 +32,7 @@ Every article must work for small and medium businesses across industries, never
 - [x] AI Employees for dental and medical clinics (keyword: AI receptionist for dental office) → ai-receptionist-for-dental-office
 - [x] AI Employees for law firms (keyword: AI legal intake) → ai-legal-intake
 - [x] AI Employees for property management (keyword: AI property management assistant) → ai-property-management-assistant
-- [ ] AI Employees for accounting and bookkeeping firms (keyword: AI for accounting firms)
+- [x] AI Employees for accounting and bookkeeping firms (keyword: AI for accounting firms) → ai-for-accounting-firms
 - [ ] AI Employees for e-commerce stores (keyword: AI customer service ecommerce)
 - [ ] AI Employees for real estate teams (keyword: AI assistant for real estate agents)
 - [ ] AI Employees for insurance brokerages (keyword: AI for insurance agencies)

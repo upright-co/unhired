@@ -1,0 +1,87 @@
+{
+ "images": [
+  {
+   "type": "cover",
+   "name": "cover",
+   "eyebrow": "AI Employees by industry · Accounting",
+   "title": "*AI* for accounting firms",
+   "sub": "Document chasing, intake, deadlines and status questions, and what stays with the accountants.",
+   "avatar": "ai-bookkeeper",
+   "series": "The AI Employee · unhired.io"
+  },
+  {
+   "type": "breakdown",
+   "name": "duties",
+   "title": "An accounting firm, *duty by duty*",
+   "rows": [
+    ["Document collection", "Sends each client's checklist, chases what's missing and files every upload.", "alone"],
+    ["Intake and engagement letters", "Sends the approved letter and intake forms. A person sets scope and fees.", "reports"],
+    ["Deadlines and reminders", "Keeps every client's calendar current and warns the accountant early.", "alone"],
+    ["Bookkeeping prep", "Categorizes transactions and prepares reconciliations for the bookkeeper to review.", "reports"],
+    ["Status questions", "Answers \"is it done?\" from the practice management software at any hour.", "alone"],
+    ["Returns, advice, notices", "Gathers the file and the facts. A credentialed person decides and signs.", "asks"]
+   ]
+  },
+  {
+   "type": "table",
+   "name": "by-firm",
+   "title": "What it handles, *by type of firm*",
+   "head": ["Firm", "The AI Employee handles", "It hands to a person"],
+   "rows": [
+    ["Individual tax practice", "Document checklists, uploads, status questions", "Preparing, signing and filing returns"],
+    ["Small business bookkeeping", "Bank feeds, categorizing, reconciliation prep", "Adjusting entries, closing the month"],
+    ["Payroll services", "Collecting hours and new-hire forms, reminders", "Pay changes, filings with tax authorities"],
+    ["Audit and review", "Request lists, chasing client support, scheduling", "Testing, findings, the opinion"],
+    ["Advisory and CFO services", "Meeting prep, pulling reports, follow-ups", "Recommendations to the client"]
+   ],
+   "source": "Examples. Every firm sets its own rules."
+  },
+  {
+   "type": "timeline",
+   "name": "tax-season-day",
+   "title": "A March Tuesday at an *accounting firm*",
+   "avatar": "ai-bookkeeper",
+   "role": "AI Employee, client coordination",
+   "roleSub": "Reports to the managing partner",
+   "rows": [
+    ["6:50 am", "A client uploads a W-2 from two years back. It spots the wrong year and asks for the right one."],
+    ["8:15 am", "Sends second reminders to 14 clients still missing documents, each with their own list."],
+    ["10:30 am", "Answers six \"is my return done?\" emails from the practice management software."],
+    ["11:40 am", "A client forwards an IRS letter. It files it and sends it to the assigned accountant.", "you"],
+    ["1:20 pm", "Categorizes March transactions for three bookkeeping clients and lists the questions it has."],
+    ["3:05 pm", "A client asks whether they should amend last year's return. It books a call with their accountant.", "you"],
+    ["4:45 pm", "A client asks to split their invoice into two payments. It writes up the request for a partner.", "you"]
+   ],
+   "source": "Example day"
+  },
+  {
+   "type": "cost",
+   "name": "cost",
+   "eyebrow": "The cost",
+   "title": "What an accounting firm seat *costs*",
+   "suffix": " / yr",
+   "highlight": null,
+   "rows": [
+    ["Accountant, US median wage", 83680, "$40.23 an hour, May 2025."],
+    ["Accountant, with benefits and payroll taxes", 119500, "Wages are about 70% of compensation."],
+    ["Bookkeeping clerk, US median wage", 50670, "About 40 hours of coverage a week."],
+    ["Bookkeeping clerk, with benefits and payroll taxes", 72400, "Same 70% ratio."]
+   ],
+   "source": "Source: US Bureau of Labor Statistics, May 2025 wages and ECEC"
+  },
+  {
+   "type": "flow",
+   "name": "setup",
+   "title": "How it *is set up* at a firm",
+   "steps": [
+    ["Start with the security plan", "Add the AI Employee as a user and vendor in the firm's written information security plan."],
+    ["Map a season of client email", "Sort last spring's messages by type: documents, status, scheduling, billing, advice."],
+    ["Write the client checklists", "What each client usually sends, built from last year's file."],
+    ["Connect with limited access", "Portal, practice management and client books. No e-filing, no moving money."],
+    ["Write the handoff rules", "Returns, advice, notices, fee changes and upset clients go to a named person."],
+    ["Shadow in the quiet months", "It drafts every message and categorization while someone reads each one."],
+    ["Review the log every week", "Update it when forms, deadlines, banks or clients change."]
+   ]
+  }
+ ]
+}
