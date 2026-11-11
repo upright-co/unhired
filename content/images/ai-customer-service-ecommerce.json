@@ -1,0 +1,86 @@
+{
+ "images": [
+  {
+   "type": "cover",
+   "name": "cover",
+   "eyebrow": "AI Employees by industry · Ecommerce",
+   "title": "*AI* customer service for ecommerce",
+   "sub": "Order status, returns, order changes and carrier claims, and what stays with your team.",
+   "avatar": "ai-customer-support",
+   "series": "The AI Employee · unhired.io"
+  },
+  {
+   "type": "breakdown",
+   "name": "duties",
+   "title": "A store's support inbox, *duty by duty*",
+   "rows": [
+    ["Order status", "Answers from the order record and carrier scans, and checks when tracking looks wrong.", "alone"],
+    ["Returns and refunds", "Sends labels, starts exchanges and refunds inside the written policy and a dollar limit.", "reports"],
+    ["Order changes", "Fixes addresses, sizes and cancellations before the order is picked.", "alone"],
+    ["Product questions", "Answers from the product page and size chart, and lists the gaps it finds.", "alone"],
+    ["Lost and damaged parcels", "Opens carrier traces, collects photos and files claims before the deadline.", "reports"],
+    ["Exceptions, disputes, safety", "Gathers the order and the conversation. A person decides.", "asks"]
+   ]
+  },
+  {
+   "type": "table",
+   "name": "by-store",
+   "title": "What it handles, *by type of store*",
+   "head": ["Store", "The AI Employee handles", "It hands to a person"],
+   "rows": [
+    ["Apparel and footwear", "Sizing questions, exchanges, return labels", "Returns outside the window"],
+    ["Skincare and supplements", "Ingredient questions, subscription changes", "Any reaction or health complaint"],
+    ["Furniture and large items", "Delivery booking, damage photos, carrier claims", "Replacements above the limit"],
+    ["Electronics", "Setup help from the manual, warranty lookups", "Overheating and other safety reports"],
+    ["Custom and personalized", "Proof approvals, production status", "Changes after production starts"]
+   ],
+   "source": "Examples. Every store sets its own rules."
+  },
+  {
+   "type": "timeline",
+   "name": "sale-monday",
+   "title": "The Monday after a *sale weekend*",
+   "avatar": "ai-customer-support",
+   "role": "AI Employee, customer service",
+   "roleSub": "Reports to the store owner",
+   "rows": [
+    ["7:10 am", "Answers 38 overnight \"where is my order?\" emails from the order records and carrier tracking."],
+    ["8:30 am", "A customer wants a different size. The order hasn't been picked, so it makes the change."],
+    ["9:45 am", "One parcel hasn't had a scan in six days. It opens a carrier trace and tells the customer what happens next."],
+    ["11:20 am", "A customer sends photos of a cracked lamp. The value is under its limit, so it ships a replacement and files the claim."],
+    ["1:05 pm", "A return request arrives 12 days after the window closed. It writes up the request for the owner.", "you"],
+    ["2:40 pm", "A card dispute notice lands. It gathers the order, tracking and messages for the person who responds.", "you"],
+    ["4:15 pm", "A customer reports a rash from a face cream. It apologizes and sends it to the owner right away.", "you"]
+   ],
+   "source": "Example day"
+  },
+  {
+   "type": "cost",
+   "name": "cost",
+   "eyebrow": "The cost",
+   "title": "What a support seat *costs*",
+   "suffix": " / yr",
+   "highlight": null,
+   "rows": [
+    ["Customer service representative, US median wage", 44770, "$21.53 an hour, May 2025."],
+    ["With benefits and payroll taxes", 64000, "Wages are about 70% of compensation."],
+    ["Two representatives, for evenings and weekends", 128000, "Same ratio, two full-time seats."]
+   ],
+   "source": "Source: US Bureau of Labor Statistics, May 2025 wages and ECEC"
+  },
+  {
+   "type": "flow",
+   "name": "setup",
+   "title": "How it *is set up* at an online store",
+   "steps": [
+    ["Export 90 days of tickets", "Sort them by type: order status, returns, order changes, product questions, carrier problems."],
+    ["Write the policies as rules", "The return window, who pays return shipping, final-sale items, and the unwritten habits too."],
+    ["Set the money limits", "The refund and replacement amount it can approve alone."],
+    ["Connect with limited access", "Store platform, help desk, shipping software and carriers. No payment settings, no price edits."],
+    ["Write the handoff rules", "Exceptions, disputes, fraud signs, safety complaints and upset customers go to a named person."],
+    ["Shadow for a few weeks", "It drafts every reply while someone approves each one, starting with order status."],
+    ["Review the log every week", "Update the rules before every sale and every policy change."]
+   ]
+  }
+ ]
+}
