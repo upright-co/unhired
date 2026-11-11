@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Client Care Email Signature</title>
+<style>
+  body { margin: 0; background: #f7f6fb; font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; color: #0e0b1f; }
+  .wrap { max-width: 720px; margin: 48px auto; padding: 0 16px; }
+  h1 { font-size: 20px; margin: 0 0 6px; }
+  p.lead { color: #4a4560; margin: 0 0 24px; font-size: 14px; line-height: 1.5; }
+  .card { background: #fff; border: 1px solid #e6e3f0; border-radius: 12px; padding: 32px; }
+  button { margin-top: 20px; background: #0e0b1f; color: #fff; border: 0; border-radius: 8px; padding: 12px 18px; font-size: 14px; font-weight: 600; cursor: pointer; }
+  ol { color: #4a4560; font-size: 14px; line-height: 1.7; padding-left: 20px; margin-top: 28px; }
+  #status { margin-left: 12px; font-size: 13px; color: #15803d; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Email signature: hello@getunhired.com</h1>
+  <p class="lead">Copy the signature below and paste it into Gmail. Images load from unhired.io, so they show up in every inbox.</p>
+
+  <div class="card">
+    <!-- SIGNATURE START -->
+    <div id="signature">
+    <table cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;font-family:Arial,Helvetica,sans-serif;color:#0e0b1f;">
+      <tr>
+        <td valign="middle" style="padding:0 18px 0 0;">
+          <img src="https://unhired.io/email/client-care.png" width="92" height="92" alt="Unhired Client Care" style="display:block;width:92px;height:92px;border:0;">
+        </td>
+        <td valign="middle" style="padding:0 0 0 18px;border-left:2px solid #9452f2;">
+          <div style="font-size:17px;line-height:22px;font-weight:bold;color:#0e0b1f;margin:0;">Unhired Client Care</div>
+          <div style="font-size:13px;line-height:18px;color:#4a4560;margin:0 0 10px;">The AI Employee company</div>
+          <div style="font-size:13px;line-height:20px;margin:0;">
+            <a href="mailto:hello@getunhired.com" style="color:#0e0b1f;text-decoration:none;">hello@getunhired.com</a>
+          </div>
+          <div style="font-size:13px;line-height:20px;margin:0 0 12px;">
+            <a href="https://unhired.io" style="color:#9452f2;text-decoration:none;font-weight:bold;">unhired.io</a>
+          </div>
+          <a href="https://unhired.io" style="text-decoration:none;"><img src="https://unhired.io/email/unhired-logo.png" width="96" height="24" alt="Unhired" style="display:block;width:96px;height:auto;border:0;"></a>
+        </td>
+      </tr>
+    </table>
+    </div>
+    <!-- SIGNATURE END -->
+  </div>
+
+  <button id="copy">Copy signature</button><span id="status"></span>
+
+  <ol>
+    <li>Click <strong>Copy signature</strong>.</li>
+    <li>In Gmail, open Settings (gear) → <strong>See all settings</strong> → <strong>General</strong> → <strong>Signature</strong>.</li>
+    <li>Click <strong>Create new</strong>, name it "Client Care", and paste (Cmd+V) into the box.</li>
+    <li>Under <strong>Signature defaults</strong>, pick it for new emails and replies. Scroll down and click <strong>Save Changes</strong>.</li>
+  </ol>
+</div>
+<script>
+document.getElementById('copy').addEventListener('click', async () => {
+  const el = document.getElementById('signature');
+  const status = document.getElementById('status');
+  try {
+    await navigator.clipboard.write([new ClipboardItem({
+      'text/html': new Blob([el.innerHTML], { type: 'text/html' }),
+      'text/plain': new Blob([el.innerText], { type: 'text/plain' })
+    })]);
+    status.textContent = 'Copied. Paste it into Gmail.';
+  } catch (e) {
+    const r = document.createRange(); r.selectNodeContents(el);
+    const s = getSelection(); s.removeAllRanges(); s.addRange(r);
+    document.execCommand('copy'); s.removeAllRanges();
+    status.textContent = 'Copied. Paste it into Gmail.';
+  }
+});
+</script>
+</body>
+</html>
