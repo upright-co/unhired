@@ -1,0 +1,87 @@
+{
+ "images": [
+  {
+   "type": "cover",
+   "name": "cover",
+   "eyebrow": "AI Employees by industry · Real estate",
+   "title": "An *AI assistant* for real estate agents",
+   "sub": "Lead replies, showings, contract deadlines and follow-up, and what stays with the agents.",
+   "avatar": "ai-sales-rep",
+   "series": "The AI Employee · unhired.io"
+  },
+  {
+   "type": "breakdown",
+   "name": "duties",
+   "title": "A real estate team assistant, *duty by duty*",
+   "rows": [
+    ["Replying to new leads", "Sends the property facts in minutes, asks the intake questions and books the agent.", "alone"],
+    ["Booking showings", "Requests, confirms and reschedules showings, and collects feedback on listings.", "alone"],
+    ["Contract deadlines", "Builds the timeline from the contract, reminds every party and chases documents.", "reports"],
+    ["Listing prep", "Books photos and signs, drafts the description and open house reminders for the agent.", "reports"],
+    ["Past-client follow-up", "Keeps anniversaries and check-ins going from the CRM.", "reports"],
+    ["Pricing, offers, contracts", "Writes up the question with its context. A licensed agent answers.", "asks"]
+   ]
+  },
+  {
+   "type": "table",
+   "name": "handoffs",
+   "title": "Who handles it: *AI Employee or agent*",
+   "head": ["Situation", "The AI Employee", "The agent"],
+   "rows": [
+    ["\"Is this house still available?\"", "Answers with the facts and offers showing times", "Takes the booked call"],
+    ["\"What's my home worth?\"", "Books a call and gathers the address and details", "Gives the opinion of value"],
+    ["Inspection period ends Friday", "Reminds the buyer, lender and other agent", "Advises on repair requests"],
+    ["\"Is this a safe area for kids?\"", "Gives the same public links to everyone", "Handles any follow-up"],
+    ["Seller asks about a price drop", "Writes up the request and showing feedback", "Advises and decides with the seller"]
+   ],
+   "source": "Examples. Every broker sets its own rules."
+  },
+  {
+   "type": "timeline",
+   "name": "saturday",
+   "title": "A Saturday for the *AI team assistant*",
+   "avatar": "ai-sales-rep",
+   "role": "AI team assistant",
+   "roleSub": "Reports to the team lead",
+   "rows": [
+    ["7:30 am", "Reminds a buyer, their lender and the listing agent that the inspection period ends Monday at 5 pm."],
+    ["9:10 am", "A portal lead asks about a three-bedroom. It sends the facts, asks the intake questions and books a showing."],
+    ["11:45 am", "A listing agent declines the 2 pm showing. It moves the buyer's tour and resends the route."],
+    ["1:20 pm", "A seller asks whether they should drop the price. It writes up the question with this week's feedback.", "you"],
+    ["4:30 pm", "Texts all 14 open house sign-ins with the property details and books one second showing."],
+    ["7:05 pm", "A buyer under contract asks if they can back out after the appraisal. It sends the question to their agent.", "you"],
+    ["9:15 pm", "A new lead asks about a listing. It replies in minutes and books a call with the agent on rotation for Sunday.", "you"]
+   ],
+   "source": "Example Saturday"
+  },
+  {
+   "type": "cost",
+   "name": "cost",
+   "eyebrow": "The cost",
+   "title": "What a team assistant *costs*",
+   "suffix": " / yr",
+   "highlight": null,
+   "rows": [
+    ["Administrative assistant, US median wage", 47540, "About 40 hours of coverage a week."],
+    ["Administrative assistant, with benefits and payroll taxes", 67900, "Wages are about 70% of compensation."],
+    ["Real estate sales agent, US median", 52830, "The agent's own time, if they do the admin."],
+    ["Real estate broker, US median", 73220, "May 2025."]
+   ],
+   "source": "Source: US Bureau of Labor Statistics, May 2025 wages and ECEC"
+  },
+  {
+   "type": "flow",
+   "name": "setup",
+   "title": "How the assistant *is set up*",
+   "steps": [
+    ["Write the broker's rules", "What an unlicensed assistant may say and do, and the fair housing limits."],
+    ["Map a month of messages", "Every lead, showing request, deadline and question, sorted by type."],
+    ["Write the intake and showing rules", "The questions to ask, the agent rotation and how showings get booked."],
+    ["Connect with limited access", "CRM, calendar, texting and transaction files. No sending contracts."],
+    ["Write the handoff rules", "Pricing, offers, contracts and advice go to the agent on the file."],
+    ["Shadow, then go live", "It drafts while an agent reads each message, then takes on more."],
+    ["Review the log every week", "Update it when listings, lenders, software or policies change."]
+   ]
+  }
+ ]
+}
