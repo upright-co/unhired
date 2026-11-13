@@ -20,7 +20,7 @@ function useImageFailed() {
 export function Logo({ className = "h-7", dark = false }: { className?: string; dark?: boolean }) {
   const { ref, failed, setFailed } = useImageFailed();
 
-  if (failed || dark) {
+  if (failed) {
     return (
       <span
         className={`font-display text-[1.6rem] leading-none font-bold tracking-[-0.04em] ${className}`}
@@ -36,7 +36,7 @@ export function Logo({ className = "h-7", dark = false }: { className?: string; 
     // eslint-disable-next-line @next/next/no-img-element
     <img
       ref={ref}
-      src="/unhired-logo.png"
+      src={dark ? "/unhired-logo-ondark.png" : "/unhired-logo.png"}
       alt="Unhired"
       className={`w-auto ${className}`}
       onError={() => setFailed(true)}

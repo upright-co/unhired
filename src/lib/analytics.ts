@@ -9,7 +9,9 @@ export type AnalyticsEvent =
   | "step_completed"
   | "email_submitted"
   | "report_viewed"
-  | "cta_clicked";
+  | "cta_clicked"
+  | "pilot_step_completed"
+  | "pilot_applied";
 
 type Props = Record<string, string | number | boolean | null | undefined>;
 

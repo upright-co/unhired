@@ -7,6 +7,8 @@ const nextConfig: NextConfig = {
   poweredByHeader: false,
   // Pin the workspace root (a stray lockfile in a parent folder otherwise confuses tracing).
   outputFileTracingRoot: path.join(__dirname),
+  // The pilot confirmation email attaches this PDF from disk.
+  outputFileTracingIncludes: { "/api/pilot/apply": ["./public/pilot/**"] },
   // Publish kits' data files are read by the browser automation that drafts posts on Medium,
   // Substack and LinkedIn, from those sites' own pages, so they need CORS. Nothing private lives there.
   async headers() {

@@ -72,6 +72,7 @@ export const assessmentConfig = {
     questions: 20,
     report: 10,
     submit: 10,
+    apply: 6,
   },
   /** Anthropic model used for all assessment calls. */
   model: "claude-sonnet-5",
@@ -114,4 +115,28 @@ export const followUpConfig = {
   mailingAddress: "Unhired, 122 Marlborough Place NW, Edmonton AB, T5T 1Y6, Canada",
   /** Where the new-lead alert goes (forwards to Brandon's inbox). */
   alertTo: "hello@unhired.io",
+};
+
+/**
+ * The Edmonton pilot offer at /pilot (built 2026-11-13). Facebook ads send local owners here;
+ * they watch Brandon's video and apply. Applications land in Supabase (pilot_applications)
+ * and in Brandon's inbox with a fit score so he can pick the best ones.
+ */
+export const pilotConfig = {
+  city: "Edmonton",
+  spotsPerMonth: 5,
+  /**
+   * Brandon's VSL. A YouTube/Vimeo/Loom share link or a direct .mp4 URL. While this is
+   * null the page shows the Opportunity Map mockup in the video's place, so it can go live first.
+   */
+  videoUrl: null as string | null,
+  /** Poster frame shown before the video plays (direct .mp4 only). */
+  videoPoster: null as string | null,
+  /**
+   * The applicant's confirmation comes from Brandon's own Google Workspace address, so a reply
+   * lands in his Gmail. getunhired.com must be verified in Resend (DKIM + send.* records at Porkbun).
+   */
+  sender: { name: "Brandon Upright", email: "brandon@getunhired.com" },
+  /** Attached to every confirmation. Source HTML: brand/proposals/pilot-overview/overview.html. */
+  attachment: { filename: "Unhired - Introduction.pdf", path: "pilot/Unhired-Introduction.pdf" },
 };
