@@ -1,0 +1,87 @@
+{
+ "images": [
+  {
+   "type": "cover",
+   "name": "cover",
+   "eyebrow": "AI Employees by industry · Insurance",
+   "title": "*AI* for insurance agencies",
+   "sub": "Certificates, renewals, quote intake and service requests, and what stays with the licensed agents.",
+   "avatar": "ai-customer-support",
+   "series": "The AI Employee · unhired.io"
+  },
+  {
+   "type": "breakdown",
+   "name": "duties",
+   "title": "An insurance agency, *duty by duty*",
+   "rows": [
+    ["Certificates of insurance", "Issues standard certificates. Special wording goes to the account manager.", "alone"],
+    ["Renewals", "Sends questionnaires, chases answers and flags what changed since last year.", "reports"],
+    ["Quote intake", "Collects the details and fills in the rater. A licensed agent presents the quote.", "reports"],
+    ["ID cards and proof of insurance", "Sends them to clients, lenders and landlords on request.", "alone"],
+    ["Adding drivers, vehicles, locations", "Prepares the change. A licensed person submits it.", "asks"],
+    ["After-hours claims", "Gives the carrier claims number, logs the details, briefs the team.", "reports"]
+   ]
+  },
+  {
+   "type": "table",
+   "name": "by-line",
+   "title": "What it handles, *by line of business*",
+   "head": ["Line", "The AI Employee handles", "It hands to a licensed person"],
+   "rows": [
+    ["Personal auto and home", "ID cards, mortgagee requests, renewal check-ins", "Coverage advice, adding drivers"],
+    ["Small commercial", "Certificates, renewal questionnaires, payroll updates", "Special wording, market choice"],
+    ["Group benefits", "Enrollment forms, census updates, plan questions", "Plan recommendations, renewals"],
+    ["Life and health", "Application follow-ups, document collection", "Needs analysis, the sale itself"],
+    ["Claims, any line", "First report, carrier claims number, status", "Disputes, denials, coverage opinions"]
+   ],
+   "source": "Examples. Every agency sets its own rules."
+  },
+  {
+   "type": "timeline",
+   "name": "monday",
+   "title": "A Monday at an *insurance agency*",
+   "avatar": "ai-customer-support",
+   "role": "AI Employee, client service",
+   "roleSub": "Reports to the service manager",
+   "rows": [
+    ["6:30 am", "Reports two weekend claims to the carriers and leaves the claim numbers on each file."],
+    ["7:45 am", "Issues a standard certificate to a contractor's property owner before the crew starts."],
+    ["8:10 am", "The same contractor asks for additional insured wording. It sends the contract to the account manager.", "you"],
+    ["9:30 am", "Sends renewal questionnaires to 11 commercial clients renewing in 90 days."],
+    ["11:15 am", "A client bought a car Saturday. It prepares the change for a licensed person to submit.", "you"],
+    ["1:40 pm", "Spots a pending cancellation notice for nonpayment and texts the client the same hour."],
+    ["3:20 pm", "A client asks whether a burst pipe is covered. It pulls the policy and books a call.", "you"]
+   ],
+   "source": "Example day"
+  },
+  {
+   "type": "cost",
+   "name": "cost",
+   "eyebrow": "The cost",
+   "title": "What an agency seat *costs*",
+   "suffix": " / yr",
+   "highlight": null,
+   "rows": [
+    ["Insurance sales agent, US median wage", 62280, "$29.94 an hour, May 2025."],
+    ["Agent, with benefits and payroll taxes", 89000, "Wages are about 70% of compensation."],
+    ["CSR in insurance, US median wage", 46700, "$22.47 an hour, about 40 hours a week."],
+    ["CSR, with benefits and payroll taxes", 66800, "Same 70% ratio."]
+   ],
+   "source": "Source: US Bureau of Labor Statistics, May 2025 wages and ECEC"
+  },
+  {
+   "type": "flow",
+   "name": "setup",
+   "title": "How it *is set up* at an agency",
+   "steps": [
+    ["Check carrier agreements", "Read agency agreements and portal terms for rules on automated access and data."],
+    ["Map a month of activities", "Tag last month's requests: certificates, renewals, changes, billing, claims."],
+    ["Write the certificate rules", "Which holders get a standard certificate and which need a person."],
+    ["Connect with limited access", "Management system, rater, email and phone. No binding, no cancelling."],
+    ["Write the handoff rules", "Coverage questions, changes, disputes and upset clients go to a named person."],
+    ["Shadow for a few weeks", "It drafts every certificate and message while someone reads each one."],
+    ["Review the log every week", "Update it when carriers change forms, appetite or portals."]
+   ]
+  }
+ ]
+}
