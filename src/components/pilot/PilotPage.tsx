@@ -1,6 +1,6 @@
 "use client";
 
-import { useId, useState } from "react";
+import { useEffect, useId, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import { ArrowRight, Check, Play, Plus, X } from "lucide-react";
@@ -121,11 +121,7 @@ function Hero() {
           transition={{ duration: 0.9, ease, delay: 0.2 }}
           className="mx-auto mt-12 max-w-4xl"
         >
-          {pilotConfig.videoUrl ? (
-            <VideoFrame url={pilotConfig.videoUrl} poster={pilotConfig.videoPoster} title={pilotHero.videoTitle} />
-          ) : (
-            <VideoPlaceholder />
-          )}
+          <HeroVideo />
         </motion.div>
 
         <motion.div
@@ -193,6 +189,36 @@ function StepBody({ s, align }: { s: (typeof pilotSteps.steps)[number]; align: "
       <h3 className="mt-2 font-display text-2xl font-semibold tracking-tight">{s.title}</h3>
       <p className="mt-2 leading-relaxed text-muted">{s.body}</p>
     </div>
+  );
+}
+
+/**
+ * Landscape cut on tablets and desktops, portrait cut on phones (under 768px wide).
+ * Both are in the page and CSS shows one; the hidden one never loads its player
+ * (lazy iframe, or a <video> with preload=metadata that stays display:none).
+ */
+function HeroVideo() {
+  const { videoUrl, videoUrlPortrait, videoPoster, videoPosterPortrait } = pilotConfig;
+  const wide = videoUrl ?? videoUrlPortrait;
+  const tall = videoUrlPortrait ?? videoUrl;
+  // Which cut is on screen. Until hydration both stay preload="none" (the posters still show).
+  const [phone, setPhone] = useState<boolean | null>(null);
+  useEffect(() => {
+    const mq = window.matchMedia("(max-width: 767px)");
+    const update = () => setPhone(mq.matches);
+    update();
+    mq.addEventListener("change", update);
+    return () => mq.removeEventListener("change", update);
+  }, []);
+  if (!wide || !tall) return <VideoPlaceholder />;
+  if (wide === tall) {
+    return <VideoFrame url={wide} poster={videoPoster ?? videoPosterPortrait} title={pilotHero.videoTitle} portrait={!videoUrl} />;
+  }
+  return (
+    <>
+      <VideoFrame url={wide} poster={videoPoster} title={pilotHero.videoTitle} className="hidden md:block" preload={phone === false ? "metadata" : "none"} />
+      <VideoFrame url={tall} poster={videoPosterPortrait} title={pilotHero.videoTitle} portrait className="md:hidden" preload={phone ? "metadata" : "none"} />
+    </>
   );
 }
 

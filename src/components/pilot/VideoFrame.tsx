@@ -18,10 +18,27 @@ function embedUrl(url: string): string | null {
   }
 }
 
-export function VideoFrame({ url, poster, title }: { url: string; poster?: string | null; title: string }) {
+export function VideoFrame({
+  url,
+  poster,
+  title,
+  portrait = false,
+  className = "",
+  preload = "metadata",
+}: {
+  url: string;
+  poster?: string | null;
+  title: string;
+  /** Vertical 9:16 cut for phones, capped so it fits on screen with the headline. */
+  portrait?: boolean;
+  className?: string;
+  /** "none" for the cut this screen size doesn't show, so it never downloads. */
+  preload?: "none" | "metadata";
+}) {
   const embed = embedUrl(url);
+  const shape = portrait ? "mx-auto aspect-[9/16] w-full max-w-[min(100%,calc(78svh*9/16))]" : "aspect-video";
   return (
-    <div className="relative aspect-video overflow-hidden rounded-[26px] border border-white/15 bg-black shadow-[0_40px_90px_-30px_rgba(40,14,90,0.7)]">
+    <div className={`${className} relative ${shape} overflow-hidden rounded-[26px] border border-white/15 bg-black shadow-[0_40px_90px_-30px_rgba(40,14,90,0.7)]`}>
       {embed ? (
         <iframe
           src={embed}
@@ -29,6 +46,7 @@ export function VideoFrame({ url, poster, title }: { url: string; poster?: strin
           className="absolute inset-0 size-full"
           allow="autoplay; fullscreen; picture-in-picture; encrypted-media"
           allowFullScreen
+          loading="lazy"
         />
       ) : (
         <video
@@ -36,7 +54,7 @@ export function VideoFrame({ url, poster, title }: { url: string; poster?: strin
           poster={poster ?? undefined}
           controls
           playsInline
-          preload="metadata"
+          preload={preload}
           className="absolute inset-0 size-full object-cover"
           aria-label={title}
         />

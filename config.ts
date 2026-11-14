@@ -127,11 +127,15 @@ export const pilotConfig = {
   spotsPerMonth: 5,
   /**
    * Brandon's VSL. A YouTube/Vimeo/Loom share link or a direct .mp4 URL. While this is
-   * null the page shows the Opportunity Map mockup in the video's place, so it can go live first.
+   * null the page shows a "video coming soon" placeholder in the video's place.
+   * `videoUrl` is the landscape cut (tablets and desktops); `videoUrlPortrait` is the vertical
+   * cut shown on phones. If only one is set, it's used everywhere.
    */
-  videoUrl: null as string | null,
-  /** Poster frame shown before the video plays (direct .mp4 only). */
-  videoPoster: null as string | null,
+  videoUrl: "https://qipricvcuppnnlzvixgn.supabase.co/storage/v1/object/public/site-media/pilot/landscape.mp4" as string | null,
+  videoUrlPortrait: "https://qipricvcuppnnlzvixgn.supabase.co/storage/v1/object/public/site-media/pilot/portrait.mp4" as string | null,
+  /** Poster frames shown before the video plays (direct .mp4 only). */
+  videoPoster: "https://qipricvcuppnnlzvixgn.supabase.co/storage/v1/object/public/site-media/pilot/landscape-poster.jpg" as string | null,
+  videoPosterPortrait: "https://qipricvcuppnnlzvixgn.supabase.co/storage/v1/object/public/site-media/pilot/portrait-poster.jpg" as string | null,
   /**
    * The applicant's confirmation comes from Brandon's own Google Workspace address, so a reply
    * lands in his Gmail. getunhired.com must be verified in Resend (DKIM + send.* records at Porkbun).
