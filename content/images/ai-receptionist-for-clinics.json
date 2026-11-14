@@ -1,0 +1,87 @@
+{
+ "images": [
+  {
+   "type": "cover",
+   "name": "cover",
+   "eyebrow": "AI Employees by industry · Clinics",
+   "title": "An *AI Receptionist* for physio and wellness clinics",
+   "sub": "Plans of care, insurer paperwork, no-shows and after-hours calls, and what stays with the practitioners.",
+   "avatar": "ai-receptionist",
+   "series": "The AI Employee · unhired.io"
+  },
+  {
+   "type": "breakdown",
+   "name": "duties",
+   "title": "The clinic front desk, *duty by duty*",
+   "rows": [
+    ["Booking the plan of care", "Books the visits a practitioner sets and follows up with patients who have visits left and nothing booked.", "alone"],
+    ["Reminders and no-shows", "Sends reminders, moves appointments and fills freed-up times from the short-notice list.", "alone"],
+    ["New patient intake", "Asks the clinic's intake questions and books the right visit type with the right practitioner.", "alone"],
+    ["Insurer paperwork", "Collects claim numbers and referrals, tracks approved visits and flags what's missing.", "reports"],
+    ["Coverage and billing disputes", "Gathers the details, then passes them to whoever does billing.", "asks"],
+    ["New injury or red-flag symptoms", "Gives the clinic's written instructions and alerts the practitioner on duty.", "asks"]
+   ]
+  },
+  {
+   "type": "table",
+   "name": "by-clinic",
+   "title": "What it handles, *by type of clinic*",
+   "head": ["Clinic", "The AI Receptionist handles", "It hands to a person"],
+   "rows": [
+    ["Physiotherapy", "Plan-of-care rebooking, claim numbers", "New injuries, plan changes"],
+    ["Chiropractic", "Recurring visits, visit limits", "New or worse symptoms"],
+    ["Massage therapy", "Bookings, referral reminders", "Medical history questions"],
+    ["Naturopathic", "Intake forms, follow-up visits", "Supplement and medication questions"],
+    ["Acupuncture", "Treatment series, short-notice list", "Pregnancy and health concerns"]
+   ],
+   "source": "Examples. Every clinic sets its own rules."
+  },
+  {
+   "type": "timeline",
+   "name": "day-on-shift",
+   "title": "A day at a *physiotherapy clinic*",
+   "avatar": "ai-receptionist",
+   "role": "AI Receptionist",
+   "roleSub": "Reports to the clinic manager",
+   "rows": [
+    ["7:15 am", "A patient cancels by text. It offers the 8 am slot to the short-notice list and fills it."],
+    ["8:30 am", "Checks today's files. Two auto insurance patients are missing claim numbers, so it texts both."],
+    ["10:00 am", "Plan-of-care check: four patients have visits left and nothing booked. It sends each one open times."],
+    ["11:40 am", "A caller hurt their knee yesterday and has swelling. It gives the written instructions and alerts the physio.", "you"],
+    ["1:20 pm", "A patient asks whether to keep doing an exercise that hurts. It books a call back with their physio.", "you"],
+    ["3:00 pm", "Sends tomorrow's reminders and moves two appointments when patients reply."],
+    ["4:30 pm", "A patient says their extended health claim was denied. It collects the details for billing.", "you"],
+    ["8:05 pm", "Answers an after-hours call and books a massage therapy appointment for Saturday."]
+   ],
+   "source": "Example day"
+  },
+  {
+   "type": "cost",
+   "name": "cost",
+   "eyebrow": "The cost",
+   "title": "What a clinic front-desk seat *costs*",
+   "suffix": " / yr",
+   "highlight": null,
+   "rows": [
+    ["Receptionist, US median wage", 38010, "Healthcare median is $19.00 an hour."],
+    ["Receptionist, with benefits and payroll taxes", 54300, "Wages are about 70% of compensation."],
+    ["Medical secretary, US median wage", 45930, "About 40 hours of coverage a week."],
+    ["Medical secretary, with benefits and payroll taxes", 65600, "Same 70% ratio."]
+   ],
+   "source": "Source: US Bureau of Labor Statistics, May 2025 wages and ECEC"
+  },
+  {
+   "type": "flow",
+   "name": "setup",
+   "title": "How an AI Receptionist *is set up* at a clinic",
+   "steps": [
+    ["Sign the privacy agreement", "A business associate agreement in the US, or your country's equivalent, before any patient data."],
+    ["Write the booking rules", "Visit types, lengths and assessment slots for each practitioner."],
+    ["Map the insurer paperwork", "What each insurer or plan needs before a visit, and who handles disputes."],
+    ["Connect with limited access", "Schedule, contacts, visit types and insurer fields. No treatment notes."],
+    ["Shadow, then go live", "It drafts while the clinic manager reads the log, then takes on more."],
+    ["Review the log every week", "Update it when practitioners, hours or insurer forms change."]
+   ]
+  }
+ ]
+}

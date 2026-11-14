@@ -36,6 +36,6 @@ Every article must work for small and medium businesses across industries, never
 - [x] AI Employees for e-commerce stores (keyword: AI customer service ecommerce) → ai-customer-service-ecommerce
 - [x] AI Employees for real estate teams (keyword: AI assistant for real estate agents) → ai-assistant-for-real-estate-agents
 - [x] AI Employees for insurance brokerages (keyword: AI for insurance agencies) → ai-for-insurance-agencies
-- [ ] AI Employees for physiotherapy and wellness clinics (keyword: AI receptionist for clinics)
+- [x] AI Employees for physiotherapy and wellness clinics (keyword: AI receptionist for clinics) → ai-receptionist-for-clinics
 - [ ] AI Employees for recruiting and staffing agencies (keyword: AI recruiting assistant)
 - [ ] AI Employees for salons and spas (keyword: AI booking assistant salon)
