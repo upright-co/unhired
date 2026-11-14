@@ -18,6 +18,7 @@ type Values = {
   hiring: string;
   role: string;
   why_choose: string;
+  budget: string;
   owner_present: string;
   first_name: string;
   last_name: string;
@@ -35,6 +36,7 @@ const EMPTY: Values = {
   hiring: "",
   role: "",
   why_choose: "",
+  budget: "",
   owner_present: "",
   first_name: "",
   last_name: "",
@@ -61,6 +63,7 @@ const STEPS: Step[] = [
   { key: "hiring", kind: "choice", ...q.hiring, options: o.hiring },
   { key: "role", kind: "long", ...q.role },
   { key: "why_choose", kind: "long", ...q.why_choose },
+  { key: "budget", kind: "choice", ...q.budget, options: o.budget },
   { key: "owner_present", kind: "choice", ...q.owner_present, options: o.ownerPresent },
   { key: "name", kind: "name", title: q.name.title },
   { key: "email", kind: "email", ...q.email },
@@ -138,7 +141,7 @@ export function Questionnaire() {
         body: JSON.stringify({ ...v, ...getUtm() }),
       });
       if (!res.ok) throw new Error(String(res.status));
-      trackEvent("pilot_applied", { team_size: v.team_size, revenue: v.revenue, hiring: v.hiring });
+      trackEvent("pilot_applied", { team_size: v.team_size, revenue: v.revenue, budget: v.budget, hiring: v.hiring });
       go(STEPS.length);
     } catch {
       setError(pilotQuiz.errors.generic);

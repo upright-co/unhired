@@ -170,7 +170,7 @@ export const pilotQuiz = {
   intro: {
     kicker: "Pilot application",
     title: "Let's see if your business is a fit.",
-    sub: "12 quick questions, one at a time. About two minutes.",
+    sub: "13 quick questions, one at a time. About two minutes.",
     start: "Start",
   },
   options: {
@@ -178,6 +178,7 @@ export const pilotQuiz = {
     revenue: ["Under $250K", "$250K to $500K", "$500K to $1M", "$1M to $3M", "$3M to $10M", "$10M+"],
     area: ["Edmonton", "St. Albert", "Sherwood Park", "Spruce Grove / Stony Plain", "Leduc / Nisku", "Further out"],
     hiring: ["Posted a job in the last 90 days", "Planning to hire in the next 3 months", "Not hiring right now"],
+    budget: ["Under $500", "$500 to $1,000", "$1,000 to $2,500", "$2,500 to $5,000", "$5,000+", "Not sure yet"],
     ownerPresent: ["Yes", "No, a manager will be"],
   },
   questions: {
@@ -195,6 +196,10 @@ export const pilotQuiz = {
       title: "Why should we pick {business} as one of the 5?",
       hint: "Tell me what's going on right now, what it's costing you, and why you want this solved now.",
       placeholder: "We're turning away calls every afternoon because our front desk is buried in...",
+    },
+    budget: {
+      title: "If the pilot works, how much could you budget per month for AI Employees in 2027?",
+      hint: "A rough number is fine. It helps us plan what to build for you.",
     },
     owner_present: { title: "Will the owner be there for the visit?" },
     name: { title: "Last few. What's your name?", first: "First name", last: "Last name" },

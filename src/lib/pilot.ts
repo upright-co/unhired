@@ -33,6 +33,7 @@ export const PilotApplicationSchema = z.object({
   hiring: oneOf(o.hiring),
   role: short(),
   why_choose: short(4000),
+  budget: oneOf(o.budget),
   time_drain: optional(2000),
   owner_present: oneOf(o.ownerPresent),
   first_name: short(80),
@@ -54,22 +55,25 @@ export type PilotRow = Omit<PilotApplication, "company_url"> & { id: string; cre
 
 /**
  * 0 to 10, so Brandon can sort applications. Hiring now is the strongest signal: that open
- * role is what the pilot replaces. Revenue and team size show the business can afford to keep it.
+ * role is what the pilot replaces. Revenue, team size and the 2027 budget show the business
+ * can afford to keep it after the free month.
  */
 export function fitScore(
-  a: Pick<PilotApplication, "hiring" | "team_size" | "revenue" | "owner_present" | "area" | "why_choose">,
+  a: Pick<PilotApplication, "hiring" | "team_size" | "revenue" | "budget" | "owner_present" | "area">,
 ) {
   let score = 0;
   const [postedJob, planning] = o.hiring;
-  if (a.hiring === postedJob) score += 3;
+  if (a.hiring === postedJob) score += 2;
   else if (a.hiring === planning) score += 1;
   if (a.team_size !== o.teamSize[0]) score += 2; // 5 or more people
   const rev = o.revenue.indexOf(a.revenue); // 0 = under $250K ... 5 = $10M+
   if (rev >= 3) score += 2; // $1M+
   else if (rev === 2) score += 1; // $500K to $1M
+  const budget = o.budget.indexOf(a.budget); // 0 = under $500 ... 4 = $5,000+, 5 = not sure
+  if (budget === 3 || budget === 4) score += 2; // $2,500+
+  else if (budget === 2) score += 1; // $1,000 to $2,500
   if (a.owner_present === o.ownerPresent[0]) score += 1;
   if (a.area !== o.area[o.area.length - 1]) score += 1;
-  if (a.why_choose.trim().length >= 150) score += 1; // took the time to explain: a sign of urgency
   return score;
 }
 
@@ -113,6 +117,7 @@ function answerLines(r: PilotRow): Array<[string, string]> {
     ["Hiring", r.hiring],
     ["Role / biggest job", r.role],
     ["Why pick them", r.why_choose],
+    ["2027 monthly AI budget", r.budget],
     ["Owner at the visit", r.owner_present],
     ["Name", `${r.first_name} ${r.last_name}${r.title ? `, ${r.title}` : ""}`],
     ["Email", r.email],
