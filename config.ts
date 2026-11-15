@@ -131,11 +131,11 @@ export const pilotConfig = {
    * `videoUrl` is the landscape cut (tablets and desktops); `videoUrlPortrait` is the vertical
    * cut shown on phones. If only one is set, it's used everywhere.
    */
-  videoUrl: "https://qipricvcuppnnlzvixgn.supabase.co/storage/v1/object/public/site-media/pilot/landscape.mp4" as string | null,
-  videoUrlPortrait: "https://qipricvcuppnnlzvixgn.supabase.co/storage/v1/object/public/site-media/pilot/portrait.mp4" as string | null,
+  videoUrl: "https://qipricvcuppnnlzvixgn.supabase.co/storage/v1/object/public/site-media/pilot/landscape-v3.mp4" as string | null,
+  videoUrlPortrait: "https://qipricvcuppnnlzvixgn.supabase.co/storage/v1/object/public/site-media/pilot/portrait-v3.mp4" as string | null,
   /** Poster frames shown before the video plays (direct .mp4 only). */
-  videoPoster: "https://qipricvcuppnnlzvixgn.supabase.co/storage/v1/object/public/site-media/pilot/landscape-poster.jpg" as string | null,
-  videoPosterPortrait: "https://qipricvcuppnnlzvixgn.supabase.co/storage/v1/object/public/site-media/pilot/portrait-poster.jpg" as string | null,
+  videoPoster: "https://qipricvcuppnnlzvixgn.supabase.co/storage/v1/object/public/site-media/pilot/landscape-v3-poster.jpg" as string | null,
+  videoPosterPortrait: "https://qipricvcuppnnlzvixgn.supabase.co/storage/v1/object/public/site-media/pilot/portrait-v3-poster.jpg" as string | null,
   /**
    * The applicant's confirmation comes from Brandon's own Google Workspace address, so a reply
    * lands in his Gmail. getunhired.com must be verified in Resend (DKIM + send.* records at Porkbun).

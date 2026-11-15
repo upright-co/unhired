@@ -17,7 +17,6 @@ import {
   pilotWhy,
 } from "@/content/pilot";
 import { GlowOrbs, GridBackground } from "@/components/ui/Decor";
-import { Logo } from "@/components/ui/Logo";
 import { Eyebrow, Reveal, SectionHeading } from "@/components/ui/Section";
 import { trackEvent } from "@/lib/analytics";
 import { VideoFrame } from "./VideoFrame";
@@ -44,7 +43,6 @@ function CardHeading({ children }: { children: React.ReactNode }) {
 export function PilotPage() {
   return (
     <>
-      <Header />
       <main id="main">
         <Hero />
         <Steps />
@@ -59,28 +57,9 @@ export function PilotPage() {
   );
 }
 
-function Header() {
-  return (
-    <header className="fixed inset-x-0 top-0 z-50 px-3 pt-3 sm:px-5">
-      <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 rounded-full border border-white/10 bg-ink/80 py-2 pr-2 pl-5 backdrop-blur-xl">
-        <a href="#top" aria-label="Back to top">
-          <Logo className="h-6" dark />
-        </a>
-        <Link
-          href="/pilot/apply"
-          onClick={() => trackEvent("cta_clicked", { cta: "pilot_header" })}
-          className="btn btn-primary px-5 py-2.5 text-sm"
-        >
-          Apply
-        </Link>
-      </div>
-    </header>
-  );
-}
-
 function Hero() {
   return (
-    <section id="top" className="relative isolate overflow-hidden bg-ink pt-32 pb-20 text-white sm:pt-40 sm:pb-28">
+    <section id="top" className="relative isolate overflow-hidden bg-ink pt-14 pb-20 text-white sm:pt-20 sm:pb-28">
       <GridBackground dark />
       <GlowOrbs
         orbs={[
