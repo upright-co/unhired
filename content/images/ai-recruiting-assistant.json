@@ -1,0 +1,85 @@
+{
+ "images": [
+  {
+   "type": "cover",
+   "name": "cover",
+   "eyebrow": "AI Employees by industry · Recruiting",
+   "title": "The *AI recruiting* assistant",
+   "sub": "Screening, scheduling, shift fills and paperwork, and what stays with the recruiters.",
+   "avatar": "ai-executive-assistant",
+   "series": "The AI Employee · unhired.io"
+  },
+  {
+   "type": "breakdown",
+   "name": "duties",
+   "title": "A recruiting agency, *duty by duty*",
+   "rows": [
+    ["Job intake", "Turns the client's request into a job order. Missing details go to the recruiter.", "reports"],
+    ["Knockout screening", "Asks every applicant the client's written requirements and logs each answer.", "reports"],
+    ["Interview scheduling", "Books, confirms, reminds and reschedules both sides.", "alone"],
+    ["References and paperwork", "Requests references, collects forms and keeps each file's checklist.", "alone"],
+    ["Shift fills", "Texts available, qualified workers and books the first to confirm.", "alone"],
+    ["Submissions and offers", "Prepares the file. A recruiter decides and makes the call.", "asks"]
+   ]
+  },
+  {
+   "type": "table",
+   "name": "by-desk",
+   "title": "What it handles, *by desk*",
+   "head": ["Desk", "The AI Employee handles", "It hands to a recruiter"],
+   "rows": [
+    ["Permanent placement", "Screens, books interviews, chases references", "Who gets submitted, offers"],
+    ["Temporary staffing", "Fills shifts, confirms start times, chases timesheets", "Client complaints, pay disputes"],
+    ["Contract roles", "Collects paperwork, tracks end dates, asks about extensions", "Rates and renewals"],
+    ["Candidates, any desk", "Status updates after every step", "Judgment rejections, sensitive issues"]
+   ],
+   "source": "Examples. Every agency sets its own rules."
+  },
+  {
+   "type": "timeline",
+   "name": "monday",
+   "title": "A Monday at a *staffing agency*",
+   "avatar": "ai-executive-assistant",
+   "role": "AI Employee, recruiting coordinator",
+   "roleSub": "Reports to the lead recruiter",
+   "rows": [
+    ["5:50 am", "A forklift operator is a no-show. It texts four available workers and books one by 6:20."],
+    ["7:30 am", "Asks 42 overnight applicants the client's knockout questions for a receptionist role."],
+    ["8:15 am", "A candidate has a competing offer. It sends the client's feedback to the recruiter.", "you"],
+    ["10:00 am", "Books six interviews and sends reminders for tomorrow's panel."],
+    ["11:40 am", "A background check comes back flagged. It goes to the recruiter untouched.", "you"],
+    ["1:30 pm", "Tells three candidates from last week where they stand."],
+    ["3:45 pm", "A client is unhappy with a temp. It books a call with the account owner.", "you"]
+   ],
+   "source": "Example day"
+  },
+  {
+   "type": "cost",
+   "name": "cost",
+   "eyebrow": "The cost",
+   "title": "What a recruiting seat *costs*",
+   "suffix": " / yr",
+   "highlight": null,
+   "rows": [
+    ["HR specialist, US median wage", 75940, "$36.51 an hour, May 2025."],
+    ["HR specialist, with benefits and taxes", 108500, "Wages are about 70% of compensation."],
+    ["HR specialist in employment services", 60550, "Median inside staffing and recruiting firms."],
+    ["Same, with benefits and payroll taxes", 86500, "Same 70% ratio."]
+   ],
+   "source": "Source: US Bureau of Labor Statistics, May 2025 wages and ECEC"
+  },
+  {
+   "type": "flow",
+   "name": "setup",
+   "title": "How it *is set up* at an agency",
+   "steps": [
+    ["Map a month of activity", "Tag ATS activity: screening, scheduling, references, shifts, timesheets."],
+    ["Write each client's screening rules", "Only job-related requirements, the same for every applicant."],
+    ["Connect with limited access", "ATS, email, texting and calendars. No submitting, no offers."],
+    ["Write the handoff rules", "Submissions, judgment calls, pay and complaints go to a named recruiter."],
+    ["Shadow for a few weeks", "It drafts every message and rejection while a recruiter reads each one."],
+    ["Review rejections every week", "Check a sample against the rules and update them as clients change."]
+   ]
+  }
+ ]
+}
