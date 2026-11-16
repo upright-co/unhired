@@ -5,8 +5,8 @@ import { GlowOrbs, GridBackground } from "@/components/ui/Decor";
 import { Logo } from "@/components/ui/Logo";
 
 export const metadata: Metadata = {
-  title: { absolute: "Apply for the AI Employee Pilot · Unhired" },
-  description: "Apply for one of 5 free AI Employee pilot spots for Edmonton businesses.",
+  title: { absolute: "Apply for a Free AI Transformation Audit · Unhired" },
+  description: "Apply for one of 5 Free AI Transformation Audits for Edmonton businesses.",
   alternates: { canonical: "/pilot/apply" },
   robots: { index: false, follow: false },
 };

@@ -90,12 +90,12 @@ export const pilotRisk = {
   heading: "What it costs you",
   title: "A few hours of your time. That's our fee.",
   items: [
-    { title: "No credit card", body: "We don't ask for payment details when you apply or at any point during the pilot." },
+    { title: "No credit card", body: "We don't ask for payment details when you apply or at any point during your AI Transformation Audit." },
     { title: "No contract", body: "There's nothing to sign to start. You decide at the review." },
     { title: "Keep the map", body: "The AI Opportunity Map is yours even if you never work with me." },
     {
       title: "50% savings, guaranteed",
-      body: "Should you choose to keep your AI Employee after the pilot, we guarantee that you will save at least 50% of the cost of hiring a human to do the same job.",
+      body: "Should you choose to keep your AI Employee after your AI Transformation Audit, we guarantee that you will save at least 50% of the cost of hiring a human to do the same job.",
     },
   ],
 };
@@ -121,7 +121,7 @@ export const pilotFaq = {
       a: "Yes! The visit, the Opportunity Map, the build and the time it spends doing real work in your business cost nothing. We won't even ask for your credit card.\n\nThe only thing we ask for is your time: a few hours for the visit and an hour or so for the review.",
     },
     {
-      q: "What happens after the pilot?",
+      q: "What happens after the audit?",
       a: "You get to decide! If you want to keep the AI operational in your business, then you pay monthly, just like any other employee.\n\nAnd don't worry, my team will let you know what the price would be before we build anything, so there are no surprises. If you don't keep it, we shake hands and go our separate ways.",
     },
     {
@@ -130,7 +130,7 @@ export const pilotFaq = {
     },
     {
       q: "What if my business uses confidential client information?",
-      a: "Before the build, we show you exactly what data the AI Employee will touch and how it will operate. We implement secure data-handling systems to ensure that none of your data is ever used or stored in any way that you wouldn't approve of. You can read everything that the AI does during the pilot.",
+      a: "Before the build, we show you exactly what data the AI Employee will touch and how it will operate. We implement secure data-handling systems to ensure that none of your data is ever used or stored in any way that you wouldn't approve of. You can read everything that the AI does, at any time.",
     },
     {
       q: "How do you choose the 5 businesses?",
@@ -168,7 +168,7 @@ export const pilotFinal = {
  */
 export const pilotQuiz = {
   intro: {
-    kicker: "Pilot application",
+    kicker: "Free AI Transformation Audit",
     title: "Let's see if your business is a fit.",
     sub: "13 quick questions, one at a time. About two minutes.",
     start: "Start",
@@ -198,7 +198,7 @@ export const pilotQuiz = {
       placeholder: "We're turning away calls every afternoon because our front desk is buried in...",
     },
     budget: {
-      title: "If the pilot works, how much could you budget per month for AI Employees in 2027?",
+      title: "If the AI Employee works for you, how much could you budget per month for AI Employees in 2027?",
       hint: "A rough number is fine. It helps us plan what to build for you.",
     },
     owner_present: { title: "Will the owner be there for the visit?" },
@@ -217,7 +217,7 @@ export const pilotQuiz = {
     "My team and I will review your application within the next 48 hours. If your business is a fit, the next step will be to schedule a follow up call so we can answer any of your questions and arrange a time for Brandon to come to your business.",
   skipLine: {
     title: "Already know you need AI?",
-    body: "The free pilot is for owners who want to see it work before they commit. If you're past that point, skip the line. Become a client now and you're guaranteed a spot: same visit, same audit, same build, and we start as soon as you want.",
+    body: "The Free AI Transformation Audit is for owners who want to see it work before they commit. If you're past that point, skip the line. Become a client now and you're guaranteed a spot: same visit, same audit, same build, and we start as soon as you want.",
     cta: "Skip the line",
     note: "A 20-minute call with Brandon to get you started.",
     href: "https://cal.com/brandon-upright/fast-track",

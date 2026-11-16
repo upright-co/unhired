@@ -154,16 +154,16 @@ export async function alertPilotApplication(r: PilotRow) {
     landing_path: r.landing_path ?? null,
   });
   const lines = [...answerLines(r), ["Came from", source] as [string, string]];
-  const subject = `Pilot application (fit ${r.fit_score}/10): ${r.business}, ${r.role}`;
+  const subject = `AI Transformation Audit application (fit ${r.fit_score}/10): ${r.business}, ${r.role}`;
   const text = [
-    `${r.first_name} ${r.last_name} at ${r.business} applied for a pilot spot. Fit score ${r.fit_score}/10.`,
+    `${r.first_name} ${r.last_name} at ${r.business} applied for a Free AI Transformation Audit. Fit score ${r.fit_score}/10.`,
     "",
     ...lines.map(([k, v]) => `${k}: ${v}`),
     "",
     "Hit Reply to write to them directly.",
   ].join("\n");
   const html = wrap(
-    `<p style="margin:0 0 14px;"><strong>${esc(r.first_name)} ${esc(r.last_name)} at ${esc(r.business)}</strong> applied for a pilot spot.</p>
+    `<p style="margin:0 0 14px;"><strong>${esc(r.first_name)} ${esc(r.last_name)} at ${esc(r.business)}</strong> applied for a Free AI Transformation Audit.</p>
 <p style="margin:0 0 16px;"><span style="display:inline-block;background:#9452F2;color:#fff;font-weight:700;padding:6px 14px;border-radius:999px;">Fit ${r.fit_score}/10</span></p>
 ${table(lines)}
 <p style="margin:0;">Hit Reply to write to them directly.</p>`,
@@ -210,7 +210,7 @@ async function introAttachment() {
 export async function confirmPilotApplication(r: PilotRow) {
   const key = process.env.RESEND_API_KEY;
   if (!key) throw new Error("RESEND_API_KEY is not set");
-  const subject = `Got your pilot application, ${r.first_name}`;
+  const subject = `Got your application, ${r.first_name}`;
   const body1 = `Thanks for applying! My team and I will review your application within the next 48 hours. If ${r.business} is a fit, the next step will be to schedule a follow up call so we can answer any of your questions and arrange a time for me to come to your business.`;
   const fastText = "Already know you need AI? You don't have to wait to be picked. Skip the line, become a client now, and we'll start on your business right away. Same visit, same audit, same build, guaranteed spot.";
   const body2 = "In the meantime, I've attached a short introduction to Unhired: who we are, some of the AI Employees we've built for clients, and why an AI Employee is there to support your team, not replace it.";

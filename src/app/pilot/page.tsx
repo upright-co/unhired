@@ -3,7 +3,7 @@ import { PilotPage } from "@/components/pilot/PilotPage";
 import { Footer } from "@/components/sections/Footer";
 
 export const metadata: Metadata = {
-  title: { absolute: "Free AI Employee Pilot for Edmonton Businesses · Unhired" },
+  title: { absolute: "Free AI Transformation Audit for Edmonton Businesses · Unhired" },
   description:
     "We come to your business, interview your team, map the work AI can take on, then build your first AI Employee and put it to work so you can see the value. Free. 5 spots a month.",
   alternates: { canonical: "/pilot" },
