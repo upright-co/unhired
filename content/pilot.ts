@@ -215,6 +215,13 @@ export const pilotQuiz = {
   successLead: "Thanks for applying!",
   successBody:
     "My team and I will review your application within the next 48 hours. If your business is a fit, the next step will be to schedule a follow up call so we can answer any of your questions and arrange a time for Brandon to come to your business.",
+  skipLine: {
+    title: "Already know you need AI?",
+    body: "The free pilot is for owners who want to see it work before they commit. If you're past that point, skip the line. Become a client now and you're guaranteed a spot: same visit, same audit, same build, and we start as soon as you want.",
+    cta: "Skip the line",
+    note: "A 20-minute call with Brandon to get you started.",
+    href: "https://cal.com/brandon-upright/fast-track",
+  },
   backToPage: "Back to the page",
   errors: {
     required: "Please answer this one to continue.",

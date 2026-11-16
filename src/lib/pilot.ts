@@ -212,7 +212,7 @@ export async function confirmPilotApplication(r: PilotRow) {
   if (!key) throw new Error("RESEND_API_KEY is not set");
   const subject = `Got your pilot application, ${r.first_name}`;
   const body1 = `Thanks for applying! My team and I will review your application within the next 48 hours. If ${r.business} is a fit, the next step will be to schedule a follow up call so we can answer any of your questions and arrange a time for me to come to your business.`;
-  const fastText = "Don't want to wait for the review? You can skip it and book a 20-minute call with me to go through your application together:";
+  const fastText = "Already know you need AI? You don't have to wait to be picked. Skip the line, become a client now, and we'll start on your business right away. Same visit, same audit, same build, guaranteed spot.";
   const body2 = "In the meantime, I've attached a short introduction to Unhired: who we are, some of the AI Employees we've built for clients, and why an AI Employee is there to support your team, not replace it.";
   const body3 = "Here's what you sent, in case you want to check it:";
   const lines = answerLines(r).filter(([k]) => k !== "Email" && k !== "Phone");
@@ -222,7 +222,7 @@ export async function confirmPilotApplication(r: PilotRow) {
     "",
     body1,
     "",
-    `${fastText} ${FAST_TRACK_URL}`,
+    `${fastText} Book a call with me: ${FAST_TRACK_URL}`,
     "",
     body2,
     "",
@@ -239,7 +239,7 @@ export async function confirmPilotApplication(r: PilotRow) {
   const html = wrap(
     `<p style="margin:0 0 14px;">Hi ${esc(r.first_name)},</p>
 <p style="margin:0 0 14px;">${esc(body1)}</p>
-<p style="margin:0 0 14px;">${esc(fastText)} <a href="${FAST_TRACK_URL}" style="color:#9452F2;font-weight:600;">Book a fast-track call</a></p>
+<p style="margin:0 0 14px;">${esc(fastText)} <a href="${FAST_TRACK_URL}" style="color:#9452F2;font-weight:600;">Skip the line and book a call with me</a></p>
 <p style="margin:0 0 14px;">${esc(body2)}</p>
 <p style="margin:0 0 10px;">${esc(body3)}</p>
 ${table(lines)}

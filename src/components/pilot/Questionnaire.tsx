@@ -362,7 +362,21 @@ export function Questionnaire() {
                   <h1 className="mt-8 text-4xl font-bold tracking-[-0.03em] text-white sm:text-5xl">{pilotQuiz.successTitle}</h1>
                   <p className="mx-auto mt-4 max-w-md text-xl font-semibold text-white">{pilotQuiz.successLead}</p>
                   <p className="mx-auto mt-3 max-w-lg text-lg leading-relaxed text-white/70">{pilotQuiz.successBody}</p>
-                  <Link href="/pilot" className="btn mt-10 border border-white/20 px-6 py-3 text-white hover:bg-white/10">
+                  <div className="mx-auto mt-10 max-w-lg rounded-2xl border border-white/15 bg-white/[0.06] px-6 py-7 sm:px-8">
+                    <p className="text-xl font-bold text-white">{pilotQuiz.skipLine.title}</p>
+                    <p className="mt-3 text-base leading-relaxed text-white/70">{pilotQuiz.skipLine.body}</p>
+                    <a
+                      href={pilotQuiz.skipLine.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={() => trackEvent("pilot_skip_line_click")}
+                      className="btn btn-primary mt-6 px-7 py-3.5 text-base"
+                    >
+                      {pilotQuiz.skipLine.cta} <ArrowRight className="size-4" aria-hidden />
+                    </a>
+                    <p className="mt-3 text-sm text-white/50">{pilotQuiz.skipLine.note}</p>
+                  </div>
+                  <Link href="/pilot" className="btn mt-8 border border-white/20 px-6 py-3 text-white hover:bg-white/10">
                     {pilotQuiz.backToPage}
                   </Link>
                 </div>

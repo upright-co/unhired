@@ -12,7 +12,8 @@ export type AnalyticsEvent =
   | "cta_clicked"
   | "pilot_started"
   | "pilot_step_completed"
-  | "pilot_applied";
+  | "pilot_applied"
+  | "pilot_skip_line_click";
 
 type Props = Record<string, string | number | boolean | null | undefined>;
 
