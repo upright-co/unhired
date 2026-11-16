@@ -38,4 +38,4 @@ Every article must work for small and medium businesses across industries, never
 - [x] AI Employees for insurance brokerages (keyword: AI for insurance agencies) → ai-for-insurance-agencies
 - [x] AI Employees for physiotherapy and wellness clinics (keyword: AI receptionist for clinics) → ai-receptionist-for-clinics
 - [x] AI Employees for recruiting and staffing agencies (keyword: AI recruiting assistant) → ai-recruiting-assistant
-- [ ] AI Employees for salons and spas (keyword: AI booking assistant salon)
+- [x] AI Employees for salons and spas (keyword: AI booking assistant salon) → ai-booking-assistant-salon

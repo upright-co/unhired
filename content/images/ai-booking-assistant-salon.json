@@ -1,0 +1,86 @@
+{
+ "images": [
+  {
+   "type": "cover",
+   "name": "cover",
+   "eyebrow": "AI Employees by industry · Salons and spas",
+   "title": "An *AI booking assistant* for salons and spas",
+   "sub": "Service timing, patch tests, deposits and rebooking, and what stays with the stylists and the desk.",
+   "avatar": "ai-receptionist",
+   "series": "The AI Employee · unhired.io"
+  },
+  {
+   "type": "breakdown",
+   "name": "duties",
+   "title": "The salon booking desk, *duty by duty*",
+   "rows": [
+    ["Booking services", "Books the right length, stylist, room and processing time from the salon's own rules.", "alone"],
+    ["Consults and patch tests", "Books them before the main appointment and moves it if the test wasn't done.", "alone"],
+    ["Deposits and no-shows", "Takes deposits, sends reminders and fills cancellations from the waitlist.", "alone"],
+    ["Rebooking", "Texts clients past their usual visit gap with times from their stylist's calendar.", "reports"],
+    ["Spa intake forms", "Collects the form and sends health details to the therapist before confirming.", "asks"],
+    ["Complaints, refunds and fee waivers", "Gathers the details and alerts the manager the same day.", "asks"]
+   ]
+  },
+  {
+   "type": "table",
+   "name": "by-business",
+   "title": "What it handles, *by type of business*",
+   "head": ["Business", "The AI booking assistant handles", "It hands to a person"],
+   "rows": [
+    ["Hair salon", "Colour timing, consults, rebooking", "Colour corrections, complaints"],
+    ["Barbershop", "Regulars' rebooking, waitlist", "Walk-in queue at the counter"],
+    ["Nail studio", "Service lengths, deposits", "Reactions, redo requests"],
+    ["Day spa", "Rooms, therapists, couples bookings", "Health details on intake forms"],
+    ["Med spa", "Consult booking, reminders", "Treatment and medical questions"]
+   ],
+   "source": "Examples. Every salon and spa sets its own rules."
+  },
+  {
+   "type": "timeline",
+   "name": "day-on-shift",
+   "title": "A Saturday at a *hair salon*",
+   "avatar": "ai-receptionist",
+   "role": "AI booking assistant",
+   "roleSub": "Reports to the salon manager",
+   "rows": [
+    ["7:50 am", "A client cancels a 10 am cut by text. It offers the time to the waitlist and fills it."],
+    ["9:15 am", "A new colour client never came in for her patch test. It moves her colour to next week and books the test."],
+    ["10:30 am", "A caller wants to fix box dye that went orange. It books a consultation and sends notes to the stylist.", "you"],
+    ["12:10 pm", "Answers six messages about prices and parking while the desk checks out clients."],
+    ["2:40 pm", "A client says Tuesday's toner faded in two days. It alerts the manager with her photos.", "you"],
+    ["4:00 pm", "Texts 14 clients who are past their usual colour interval with open times."],
+    ["5:30 pm", "A client asks to skip the late-cancel fee. It collects the reason for the manager.", "you"],
+    ["9:40 pm", "Books a balayage and trim for next Saturday, with a deposit."]
+   ],
+   "source": "Example day"
+  },
+  {
+   "type": "cost",
+   "name": "cost",
+   "eyebrow": "The cost",
+   "title": "What a salon front-desk seat *costs*",
+   "suffix": " / yr",
+   "highlight": null,
+   "rows": [
+    ["Receptionist, personal care services median", 34470, "$16.57 an hour over 2,080 hours."],
+    ["Same seat, with benefits and payroll taxes", 49200, "Wages are about 70% of compensation."],
+    ["Receptionist, all-industry median", 38010, "For comparison."]
+   ],
+   "source": "Source: US Bureau of Labor Statistics, May 2025 wages and ECEC"
+  },
+  {
+   "type": "flow",
+   "name": "setup",
+   "title": "How an AI booking assistant *is set up* at a salon",
+   "steps": [
+    ["Write the service rules", "Length, processing time, consult and patch-test rules for every service."],
+    ["Add each stylist and therapist", "Their specialties, speed, days and which services they don't do."],
+    ["Set the policies", "Deposits, cancellation fees, waitlist and who decides exceptions."],
+    ["Connect with limited access", "Calendar, menu, contacts and history. Payment links, never card numbers."],
+    ["Shadow, then go live", "It drafts replies while the manager reads the log, then takes on more."],
+    ["Review the log every week", "Update it when stylists, prices or services change."]
+   ]
+  }
+ ]
+}
