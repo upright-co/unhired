@@ -98,6 +98,8 @@ export const assessmentConfig = {
  */
 export const analyticsConfig = {
   ga4MeasurementId: null as string | null,
+  /** Meta Pixel (dataset) in the Unhired business portfolio. Lead = pilot application. */
+  metaPixelId: "1160643646307761" as string | null,
 };
 
 export const followUpConfig = {

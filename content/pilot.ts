@@ -21,13 +21,13 @@ export const pilotProof = [
   "In-person visit at your business",
   "An AI Employee built for you",
   "Your AI Opportunity Map to keep",
-  "30 days running in your business, completely free",
+  "Put to work on real tasks, completely free",
 ];
 
 export const pilotSteps = {
   eyebrow: "If you're picked",
-  title: "What the next 30 days look like",
-  sub: "You give me a few hours at the start and an hour at the end. I do the rest.",
+  title: "What happens next",
+  sub: "You give us a few hours at the start and an hour at the end. We do the rest.",
   steps: [
     {
       when: "Week 1 · At your business",
@@ -45,14 +45,14 @@ export const pilotSteps = {
       body: "I take the task that frees up the most hours and build an AI Employee for it, connected to the phone line, inbox, calendar or software you already use. Nobody on your team learns a new tool.",
     },
     {
-      when: "Days 1 to 30",
-      title: "A month on real work",
-      body: "It works next to your team on real customers and real paperwork. You can read every message it sends and every task it closes, and I tune it every week.",
+      when: "Once it's built",
+      title: "Real work, not a demo",
+      body: "It works next to your team on real customers and real paperwork. You can read every message it sends and every task it closes, and we tune it as it goes.",
     },
     {
-      when: "Day 30",
+      when: "When you've seen the value",
       title: "The review",
-      body: "We sit down with the numbers: hours saved, tasks done, anything it got wrong. If you want to keep it, it stays on for no more than half of what you'd pay a person in that role. If you don't, I switch it off and you owe nothing.",
+      body: "We sit down with the numbers: hours saved, tasks done, anything it got wrong. If you want to keep it, it stays on for no more than half of what you'd pay a person in that role. If you don't, we switch it off and you owe nothing.",
     },
   ],
 };
@@ -62,8 +62,8 @@ export const pilotWhy = {
   title: "You should see it working before you pay for it",
   paragraphs: [
     "Most business owners have heard plenty about AI and seen very little of it working inside a business like theirs. A demo on a video call won't change that, which is why I want to show you the real value of AI first, before you ever have to pay anything.",
-    "After 30 days, if the AI Employee earns its place within your company, then my business maintains it and manages all of the technical stuff for you.",
-    "If you don't see the value in using AI at the end of the month, then we part ways and you pay nothing.",
+    "Once you've seen it doing real work, and if the AI Employee earns its place within your company, then my business maintains it and manages all of the technical stuff for you.",
+    "If you don't see the value, then we part ways and you pay nothing.",
   ],
   signoff: "Brandon",
 };
@@ -90,12 +90,12 @@ export const pilotRisk = {
   heading: "What it costs you",
   title: "A few hours of your time. That's our fee.",
   items: [
-    { title: "No credit card", body: "I don't ask for payment details when you apply or at any point in the 30 days." },
-    { title: "No contract", body: "There's nothing to sign to start. You decide at the day-30 review." },
+    { title: "No credit card", body: "We don't ask for payment details when you apply or at any point during the pilot." },
+    { title: "No contract", body: "There's nothing to sign to start. You decide at the review." },
     { title: "Keep the map", body: "The AI Opportunity Map is yours even if you never work with me." },
     {
       title: "50% savings, guaranteed",
-      body: "Should you choose to continue running your AI Employee after the 30 days, we guarantee that you will save at least 50% of the cost of hiring a human to do the same job.",
+      body: "Should you choose to keep your AI Employee after the pilot, we guarantee that you will save at least 50% of the cost of hiring a human to do the same job.",
     },
   ],
 };
@@ -118,10 +118,10 @@ export const pilotFaq = {
     },
     {
       q: "Is it really free?",
-      a: "Yes! The visit, the Opportunity Map, the build and the 30 days of operation cost nothing. I won't even ask for your credit card.\n\nThe only thing I ask for is your time: a few hours for the visit and an hour or so for the review.",
+      a: "Yes! The visit, the Opportunity Map, the build and the time it spends doing real work in your business cost nothing. We won't even ask for your credit card.\n\nThe only thing we ask for is your time: a few hours for the visit and an hour or so for the review.",
     },
     {
-      q: "What happens after the 30 days?",
+      q: "What happens after the pilot?",
       a: "You get to decide! If you want to keep the AI operational in your business, then you pay monthly, just like any other employee.\n\nAnd don't worry, my team will let you know what the price would be before we build anything, so there are no surprises. If you don't keep it, we shake hands and go our separate ways.",
     },
     {
@@ -130,18 +130,18 @@ export const pilotFaq = {
     },
     {
       q: "What if my business uses confidential client information?",
-      a: "Before the build, we show you exactly what data the AI Employee will touch and how it will operate. We implement secure data-handling systems to ensure that none of your data is ever used or stored in any way that you wouldn't approve of. You can read everything that the AI does during the 30 days.",
+      a: "Before the build, we show you exactly what data the AI Employee will touch and how it will operate. We implement secure data-handling systems to ensure that none of your data is ever used or stored in any way that you wouldn't approve of. You can read everything that the AI does during the pilot.",
     },
     {
       q: "How do you choose the 5 businesses?",
-      a: "I read every application myself. I pick the businesses where an AI Employee can make the biggest impact and help their team the most. Our goal is to show you first-hand how AI can EMPOWER your team, NOT replace them.",
+      a: "We read every application and pick the businesses where an AI Employee can make the biggest impact and help their team the most. Our goal is to show you first-hand how AI can EMPOWER your team, NOT replace them.",
     },
     {
       q: "How much does an AI Employee typically cost?",
       a: "The price of an AI Employee will range depending on the specific job that it is taking on and the size of the workload. The average cost to the business is approximately $2,000 per month, but we guarantee that it is AT LEAST 50% cheaper than hiring a human for the same role.",
     },
     {
-      q: "After the 30 days, do I need to sign a contract with you?",
+      q: "If I keep it, do I need to sign a contract with you?",
       a: "No. Just like any employee, you can \"fire\" them at any time. There are no long-term contracts to sign, so you can cancel or pause the AI Employee whenever necessary.",
     },
     {
@@ -158,7 +158,7 @@ export const pilotFaq = {
 export const pilotFinal = {
   title: "5 spots available.",
   highlight: "Apply for yours.",
-  sub: "The application takes about two minutes, one question at a time. I read every one myself and reach out to the businesses I pick to book the visit.",
+  sub: "The application takes about two minutes, one question at a time. We read every one and reach out to the businesses we pick to book the visit.",
 };
 
 /**

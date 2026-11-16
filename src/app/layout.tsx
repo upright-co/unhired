@@ -5,6 +5,7 @@ import { Analytics } from "@vercel/analytics/next";
 import { analyticsConfig, siteConfig } from "@/config";
 import { Providers } from "@/components/Providers";
 import { JsonLd } from "@/components/blog/JsonLd";
+import { MetaPixel } from "@/components/MetaPixel";
 import "./globals.css";
 
 const sora = Sora({
@@ -99,6 +100,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <JsonLd data={orgSchema} />
         <Providers>{children}</Providers>
         <Analytics />
+        {analyticsConfig.metaPixelId && <MetaPixel pixelId={analyticsConfig.metaPixelId} />}
         {analyticsConfig.ga4MeasurementId && (
           <>
             <Script

@@ -5,14 +5,14 @@ import { Footer } from "@/components/sections/Footer";
 export const metadata: Metadata = {
   title: { absolute: "Free AI Employee Pilot for Edmonton Businesses · Unhired" },
   description:
-    "Brandon comes to your business, interviews your team, maps the work AI can take on, and puts your first AI Employee to work for 30 days, free. 8 spots a month.",
+    "We come to your business, interview your team, map the work AI can take on, then build your first AI Employee and put it to work so you can see the value. Free. 5 spots a month.",
   alternates: { canonical: "/pilot" },
   // Ad landing page: keep it out of search results.
   robots: { index: false, follow: false },
   openGraph: {
     url: "/pilot",
-    title: "Your first AI Employee, free for 30 days",
-    description: "An in-person AI visit for Edmonton businesses, plus an AI Employee built and run for you for a month. 8 spots a month.",
+    title: "Your first AI Employee, built free",
+    description: "An in-person AI visit for Edmonton businesses, plus a free AI Employee built and put to work in your business. 5 spots a month.",
   },
 };
 

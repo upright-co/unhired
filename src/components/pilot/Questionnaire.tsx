@@ -192,7 +192,11 @@ export function Questionnaire() {
                     {pilotQuiz.intro.title}
                   </h1>
                   <p className="mt-5 text-lg text-white/70">{pilotQuiz.intro.sub}</p>
-                  <button type="button" onClick={() => go(0)} className="btn btn-primary mt-10 px-9 py-4 text-base">
+                  <button type="button" onClick={() => {
+                      trackEvent("pilot_started");
+                      go(0);
+                    }}
+                    className="btn btn-primary mt-10 px-9 py-4 text-base">
                     {pilotQuiz.intro.start} <ArrowRight className="size-4" aria-hidden />
                   </button>
                 </div>

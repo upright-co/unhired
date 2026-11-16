@@ -10,6 +10,7 @@ export type AnalyticsEvent =
   | "email_submitted"
   | "report_viewed"
   | "cta_clicked"
+  | "pilot_started"
   | "pilot_step_completed"
   | "pilot_applied";
 
@@ -33,9 +34,12 @@ export function trackEvent(event: AnalyticsEvent, props: Props = {}) {
   // GA4 (gtag.js)
   window.gtag?.("event", event, props);
 
-  // Meta Pixel: map to standard events where it makes sense
+  // Meta Pixel: map to standard events where it makes sense.
+  // "Lead" is reserved for pilot applications: it's what the Meta Leads campaign optimizes for.
   if (window.fbq) {
-    if (event === "email_submitted") window.fbq("track", "Lead", props);
+    if (event === "pilot_applied") window.fbq("track", "Lead", { content_name: "edmonton_pilot", ...props });
+    else if (event === "pilot_started") window.fbq("track", "StartApplication", { content_name: "edmonton_pilot" });
+    else if (event === "email_submitted") window.fbq("track", "CompleteRegistration", props);
     else window.fbq("trackCustom", event, props);
   }
 
