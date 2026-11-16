@@ -25,7 +25,7 @@ declare global {
   }
 }
 
-export function trackEvent(event: AnalyticsEvent, props: Props = {}) {
+export function trackEvent(event: AnalyticsEvent, props: Props = {}, opts: { eventId?: string } = {}) {
   if (typeof window === "undefined") return;
 
   // Google Tag Manager / GA4 via dataLayer
@@ -38,7 +38,7 @@ export function trackEvent(event: AnalyticsEvent, props: Props = {}) {
   // Meta Pixel: map to standard events where it makes sense.
   // "Lead" is reserved for pilot applications: it's what the Meta Leads campaign optimizes for.
   if (window.fbq) {
-    if (event === "pilot_applied") window.fbq("track", "Lead", { content_name: "edmonton_pilot", ...props });
+    if (event === "pilot_applied") window.fbq("track", "Lead", { content_name: "edmonton_pilot", ...props }, opts.eventId ? { eventID: opts.eventId } : undefined);
     else if (event === "pilot_started") window.fbq("track", "StartApplication", { content_name: "edmonton_pilot" });
     else if (event === "email_submitted") window.fbq("track", "CompleteRegistration", props);
     else window.fbq("trackCustom", event, props);

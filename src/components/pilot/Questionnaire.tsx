@@ -134,14 +134,16 @@ export function Questionnaire() {
   async function submit() {
     setSending(true);
     setError(null);
+    // Shared by the browser pixel and the server's Conversions API so Meta counts the Lead once.
+    const eventId = crypto.randomUUID();
     try {
       const res = await fetch("/api/pilot/apply", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...v, ...getUtm() }),
+        body: JSON.stringify({ ...v, ...getUtm(), event_id: eventId }),
       });
       if (!res.ok) throw new Error(String(res.status));
-      trackEvent("pilot_applied", { team_size: v.team_size, revenue: v.revenue, budget: v.budget, hiring: v.hiring });
+      trackEvent("pilot_applied", { team_size: v.team_size, revenue: v.revenue, budget: v.budget, hiring: v.hiring }, { eventId });
       go(STEPS.length);
     } catch {
       setError(pilotQuiz.errors.generic);
