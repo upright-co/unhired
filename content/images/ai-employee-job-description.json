@@ -1,0 +1,89 @@
+{
+ "images": [
+  {
+   "type": "cover",
+   "name": "cover",
+   "eyebrow": "AI Employee 101",
+   "title": "How to write a *job description* for an AI Employee",
+   "sub": "The eight parts it needs, how to word each duty so it can be followed, and a sample you can copy.",
+   "avatar": "ai-executive-assistant",
+   "series": "The AI Employee · unhired.io"
+  },
+  {
+   "type": "table",
+   "name": "posting-vs-description",
+   "title": "A posting vs. an *AI Employee job description*",
+   "head": ["", "Job posting for a person", "AI Employee job description"],
+   "rows": [
+    ["Written to", "Get the right person to apply", "Be followed every working day"],
+    ["Duties", "\"Manage the inbox\"", "When an email arrives, sort it into six types"],
+    ["Systems", "\"Comfortable with software\"", "Each login and what it may do there"],
+    ["Decisions", "\"Uses good judgment\"", "Alone, reports or asks, for every duty"],
+    ["Gaps", "Filled by asking around", "Written as exceptions, or handed to a person"]
+   ],
+   "source": "Culture, perks and soft skills mostly drop out"
+  },
+  {
+   "type": "table",
+   "name": "eight-parts",
+   "title": "The *eight parts*",
+   "head": ["Part", "What it says", "Example"],
+   "rows": [
+    ["Title and manager", "The job name and one person it reports to", "AI Intake Coordinator, reports to the office manager"],
+    ["Outcome", "What the job exists to get done", "Every enquiry answered within 15 minutes"],
+    ["Duties", "Trigger, action and system for each task", "When a web form arrives, reply and ask the intake questions"],
+    ["Systems and access", "Every login and what it may do", "Clio: read matters, create contacts, no billing"],
+    ["Authority", "Alone, reports or asks, per duty", "Books consults alone, asks before any refund"],
+    ["Handoffs", "Who gets what, and how", "Urgent matters to the lawyer on duty by text"],
+    ["Limits", "What it never does", "Never gives legal advice or quotes fees"],
+    ["Measures", "Numbers its manager reviews weekly", "Reply time, handoffs, items left open"]
+   ],
+   "source": "Duties and exceptions take most of the page"
+  },
+  {
+   "type": "breakdown",
+   "name": "sample",
+   "title": "Sample: *AI Client Coordinator* at an accounting firm",
+   "rows": [
+    ["New client signs on", "Creates the client in TaxDome and sends the engagement letter", "alone"],
+    ["Missing documents", "Chases W-2s, 1099s and last year's return on a fixed schedule, email then text", "alone"],
+    ["Status questions", "Answers \"where's my return?\" from the status in TaxDome", "alone"],
+    ["Review calls", "Books them into the accountant's calendar", "alone"],
+    ["Documents that don't match", "Flags a new rental property or missing income to the accountant", "reports"],
+    ["Fees, extensions, what to claim", "Hands the question to a person with the client's file", "asks"]
+   ]
+  },
+  {
+   "type": "quote",
+   "name": "quote",
+   "text": "If you can't write a duty as *a trigger, an action and a system,* you've found the part of the job that still needs a person.",
+   "by": "Brandon Upright"
+  },
+  {
+   "type": "flow",
+   "name": "rewrite",
+   "eyebrow": "From posting to job description",
+   "title": "Rewrite the posting you *already have*",
+   "steps": [
+    ["Strip the sales parts", "Remove perks, culture and soft skills. Keep the duties list."],
+    ["Sit with the person doing it", "For each duty: what starts it, what they do, which system, what goes wrong."],
+    ["Write trigger, action, system", "Turn every duty into a sentence that can be followed as written."],
+    ["Set authority with the manager", "Mark each duty alone, reports or asks, and list what it never does."],
+    ["Pick the measures", "Choose the few numbers the manager will review each week."]
+   ]
+  },
+  {
+   "type": "cost",
+   "name": "seat-cost",
+   "eyebrow": "The comparison",
+   "title": "What an admin seat *costs a person*",
+   "suffix": " / yr",
+   "highlight": 1,
+   "rows": [
+    ["Median wage", 48310, "Secretaries and administrative assistants, May 2025."],
+    ["Full cost with benefits and payroll taxes", 69000, "Wages are about 70% of total compensation."]
+   ],
+   "source": "Source: US Bureau of Labor Statistics, OOH and ECEC"
+  }
+ ]
+}

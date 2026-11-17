@@ -39,3 +39,16 @@ Every article must work for small and medium businesses across industries, never
 - [x] AI Employees for physiotherapy and wellness clinics (keyword: AI receptionist for clinics) → ai-receptionist-for-clinics
 - [x] AI Employees for recruiting and staffing agencies (keyword: AI recruiting assistant) → ai-recruiting-assistant
 - [x] AI Employees for salons and spas (keyword: AI booking assistant salon) → ai-booking-assistant-salon
+
+## Added 2026-11-17 (backlog had run out)
+- [x] How to write a job description for an AI Employee (keyword: AI employee job description) → ai-employee-job-description
+- [ ] AI Office Manager: the coordination work that holds a small office together (keyword: AI office manager)
+- [ ] AI Accounts Receivable clerk: invoices out, payments chased, accounts matched (keyword: AI accounts receivable)
+- [ ] AI Marketing Assistant: the scheduling, reporting and follow-up side of marketing (keyword: AI marketing assistant)
+- [ ] AI Order Processing: orders in, checked and moving without retyping (keyword: AI order processing)
+- [ ] AI Patient Intake: forms, insurance details and first appointments (keyword: AI patient intake)
+- [ ] What happens when an AI Employee makes a mistake (keyword: AI employee mistakes)
+- [ ] Who manages an AI Employee, and how much of their week it takes (keyword: managing AI employees)
+- [ ] How to work out the return on an AI Employee (keyword: AI employee ROI)
+- [ ] AI Employees for marketing agencies (keyword: AI for marketing agencies)
+- [ ] AI Employees for veterinary clinics (keyword: AI receptionist for veterinary clinic)
