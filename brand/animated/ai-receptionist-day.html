@@ -1,0 +1,191 @@
+<!doctype html><html><head><meta charset="utf-8">
+<title>AI Receptionist Day</title>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&family=DM+Sans:wght@400;500;600&family=JetBrains+Mono:wght@500;600&display=block" rel="stylesheet">
+<!-- Animated LinkedIn post, 1080x1350 (4:5), seamless loop of DURATION seconds.
+     Open in a browser to watch it live. scripts/render-animation.mjs renders it to MP4. -->
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1350px;overflow:hidden;background:#09070F}
+.b{position:relative;width:1080px;height:1350px;overflow:hidden;background:#09070F;color:#fff;font-family:'DM Sans',sans-serif}
+.grid{position:absolute;inset:0;background-image:linear-gradient(to right,rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(to bottom,rgba(255,255,255,.035) 1px,transparent 1px);background-size:54px 54px;-webkit-mask-image:radial-gradient(ellipse 85% 70% at 50% 50%,#000 30%,transparent 100%)}
+.g1{position:absolute;width:640px;height:640px;border-radius:50%;background:#F65663;filter:blur(170px);opacity:.24;left:-240px;top:420px}
+.g2{position:absolute;width:700px;height:700px;border-radius:50%;background:#9452F2;filter:blur(180px);opacity:.34;right:-280px;top:-120px}
+.head{position:absolute;left:44px;right:44px;top:44px;display:flex;align-items:center;justify-content:space-between}
+.head img{height:38px;display:block}
+.tag{font:600 15px 'JetBrains Mono',monospace;letter-spacing:.16em;color:#FF8A94;border:1.5px solid rgba(246,86,99,.55);border-radius:999px;padding:10px 20px}
+h1{position:absolute;left:44px;right:44px;top:112px;font:700 80px/1.0 'Sora',sans-serif;letter-spacing:-3.4px;text-align:center}
+h1 span{background:linear-gradient(90deg,#F65663,#B07CFF);-webkit-background-clip:text;color:transparent}
+.sub{position:absolute;left:90px;right:90px;top:292px;text-align:center;font:400 24px/1.42 'DM Sans';color:rgba(255,255,255,.7)}
+.sub b{font-weight:600;color:#fff}
+.stage{position:absolute;inset:0}
+
+/* left: profile + counters */
+.left{position:absolute;left:44px;top:384px;width:330px}
+.prof{position:relative;height:344px;border-radius:24px;padding:22px;background:linear-gradient(180deg,rgba(246,86,99,.10),rgba(148,82,242,.10));border:1.5px solid rgba(246,86,99,.32);text-align:center}
+.ringwrap{position:relative;width:168px;height:168px;margin:2px auto 0}
+.ring{position:absolute;inset:0;border-radius:50%;border:2px dashed rgba(246,86,99,.6)}
+.pulse{position:absolute;inset:-10px;border-radius:50%;border:2px solid rgba(246,86,99,.6)}
+.face{position:absolute;inset:12px;border-radius:50%;overflow:hidden;background:linear-gradient(135deg,rgba(246,86,99,.4),rgba(148,82,242,.4))}
+.face img{width:100%;height:100%;object-fit:cover;object-position:50% 10%}
+.live{position:absolute;right:6px;bottom:10px;width:26px;height:26px;border-radius:50%;background:#5CE6A6;border:4px solid #1a1222}
+.pname{margin-top:14px;font:600 25px 'Sora';letter-spacing:-.8px}
+.prole{margin-top:4px;font:500 12px 'JetBrains Mono',monospace;letter-spacing:.16em;color:rgba(255,255,255,.55)}
+.clock{margin-top:14px;display:inline-flex;align-items:center;gap:10px;height:40px;padding:0 16px;border-radius:999px;background:#000;font:600 18px 'JetBrains Mono',monospace;color:#5CE6A6}
+.clock i{width:9px;height:9px;border-radius:50%;background:#5CE6A6}
+.stats{margin-top:18px;border-radius:24px;padding:18px 20px;background:rgba(255,255,255,.035);border:1.5px solid rgba(255,255,255,.1)}
+.stats .lbl{font:500 12px 'JetBrains Mono',monospace;letter-spacing:.18em;color:rgba(255,255,255,.5)}
+.sr{display:flex;align-items:baseline;justify-content:space-between;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.08)}
+.sr:last-child{border-bottom:0;padding-bottom:2px}
+.sr span{font:500 18px 'DM Sans';color:rgba(255,255,255,.72)}
+.sr b{font:700 32px 'Sora';letter-spacing:-1px}
+.sr.staff b{color:#C6A2FF}
+
+/* right: timeline */
+.tl{position:absolute;left:398px;right:44px;top:384px}
+.rail{position:absolute;left:84px;top:20px;bottom:20px;width:2px;background:rgba(255,255,255,.12)}
+.railfill{position:absolute;left:84px;top:20px;width:2px;background:linear-gradient(180deg,#F65663,#9452F2)}
+.ev{position:relative;height:94px;margin-bottom:12px;display:flex;align-items:center}
+.ev:last-child{margin-bottom:0}
+.time{width:70px;text-align:right;font:600 14px 'JetBrains Mono',monospace;color:rgba(255,255,255,.45);line-height:1.25}
+.node{position:absolute;left:77px;top:50%;width:16px;height:16px;margin-top:-8px;border-radius:50%;background:#1a1426;border:2px solid rgba(255,255,255,.25)}
+.card{position:absolute;left:112px;right:0;top:0;bottom:0;border-radius:18px;padding:13px 18px;background:rgba(255,255,255,.035);border:1.5px solid rgba(255,255,255,.1);transform-origin:center}
+.card .t{display:flex;align-items:center;gap:10px}
+.card .ttl{font:600 19px 'Sora';letter-spacing:-.5px;color:rgba(255,255,255,.55)}
+.badge{margin-left:auto;font:600 11px 'JetBrains Mono',monospace;letter-spacing:.12em;padding:4px 8px;border-radius:7px;border:1.2px solid rgba(255,255,255,.2);color:rgba(255,255,255,.45)}
+.card .d{margin-top:7px;font:400 16.5px/1.35 'DM Sans';color:rgba(255,255,255,.42);white-space:nowrap}
+.card .caret{display:inline-block;width:2px;height:16px;background:#F65663;vertical-align:-2px;margin-left:2px}
+
+.banner{position:absolute;left:44px;right:44px;top:1146px;height:118px;border-radius:24px;border:1.5px solid rgba(255,255,255,.1);background:rgba(255,255,255,.035);display:flex;align-items:center;padding:0 36px;overflow:hidden}
+.banner .bg{position:absolute;inset:0;background:linear-gradient(90deg,#F65663,#9452F2);opacity:0}
+.banner .l{position:relative;flex:1}
+.banner .big{font:700 46px/1 'Sora';letter-spacing:-2px}
+.banner .small{margin-top:9px;font:400 19px 'DM Sans';color:rgba(255,255,255,.75)}
+.banner .sep{position:relative;width:1.5px;height:66px;background:rgba(255,255,255,.2);margin:0 32px}
+.banner .st{position:relative}
+.banner .st b{display:block;font:700 44px/1 'Sora';letter-spacing:-2px}
+.banner .st span{display:block;margin-top:6px;font:500 16px 'DM Sans';color:rgba(255,255,255,.75)}
+.foot{position:absolute;left:44px;right:44px;bottom:30px;display:flex;justify-content:space-between;align-items:center;font:500 16px 'DM Sans';color:rgba(255,255,255,.5)}
+.foot .mono{font:500 16px 'JetBrains Mono',monospace;letter-spacing:.08em;color:rgba(255,255,255,.65)}
+</style></head><body><div class="b">
+<div class="grid"></div><div class="g1"></div><div class="g2"></div>
+<div class="head"><img src="../facebook/logo-ondark.png" alt="Unhired"><div class="tag">1 AI EMPLOYEE · 1 DAY</div></div>
+<h1>A Day in the Life of<br><span>an AI Receptionist</span></h1>
+<p class="sub">From the first voicemail to the last late call, <b>the front desk is covered.</b><br>Anything that needs a person goes to your staff with notes.</p>
+
+<div class="stage" id="stage">
+ <div class="left">
+  <div class="prof">
+   <div class="ringwrap"><div class="pulse" id="pulse"></div><div class="ring" id="ring"></div><div class="face"><img src="../avatars/ai-receptionist.png"></div><div class="live" id="live"></div></div>
+   <div class="pname">AI Receptionist</div>
+   <div class="prole" id="prole">ON SHIFT</div>
+   <div class="clock"><i id="cdot"></i><span id="clock">7:58 AM</span></div>
+  </div>
+  <div class="stats"><div class="lbl">TODAY SO FAR</div>
+   <div class="sr"><span>Calls answered</span><b id="s0">0</b></div>
+   <div class="sr"><span>Appointments booked</span><b id="s1">0</b></div>
+   <div class="sr"><span>Texts sent</span><b id="s2">0</b></div>
+   <div class="sr staff"><span>Handed to your staff</span><b id="s3">0</b></div>
+  </div>
+ </div>
+ <div class="tl" id="tl"><div class="rail"></div><div class="railfill" id="railfill"></div></div>
+ <div class="banner"><div class="bg" id="bbg"></div>
+  <div class="l"><div class="big">The front desk, covered</div><div class="small">Calls, bookings and reminders, all day and after close.</div></div>
+  <div class="sep"></div>
+  <div class="st"><b>24/7</b><span>on shift</span></div>
+ </div>
+</div>
+<div class="foot"><span>Example day for an AI Receptionist</span><span class="mono">unhired.io</span></div>
+</div>
+
+<script>
+window.DURATION=21;
+const EV=[
+ {time:'7:58 AM',ttl:'Clears overnight voicemails',d:'Calls back 3 people before the doors open',s:[3,1,3,0]},
+ {time:'9:12 AM',ttl:'Books a new customer',d:'Thursday 2:30 PM, confirmation sent by text',s:[11,4,12,0]},
+ {time:'10:40 AM',ttl:'Fills a cancellation',d:'Offers the slot to the waitlist, booked in 4 min',s:[17,7,21,0]},
+ {time:'12:15 PM',ttl:'Handles the lunch rush',d:'4 calls at once, nobody sits on hold',s:[26,10,30,1]},
+ {time:'2:05 PM',ttl:'Hands off a billing dispute',d:'Office manager gets the call summary and notes',s:[30,11,34,3],staff:true},
+ {time:'4:30 PM',ttl:'Sends tomorrow\'s reminders',d:'Texts every appointment and logs who confirmed',s:[34,13,49,3]},
+ {time:'9:47 PM',ttl:'Picks up an after-hours call',d:'Books the first opening tomorrow morning',s:[38,14,52,3]},
+];
+const T=window.DURATION, START=.9, STEP=2.15, RUN=1.75;
+const $=id=>document.getElementById(id);
+EV.forEach((e,i)=>{const el=document.createElement('div');el.className='ev';el.id='e'+i;
+ const [h,ap]=e.time.split(' ');
+ el.innerHTML=`<div class="time">${h}<br>${ap}</div><div class="node"></div><div class="card"><div class="t"><span class="ttl">${e.ttl}</span><span class="badge">LATER</span></div><div class="d"></div></div>`;
+ $('tl').appendChild(el);});
+const clamp=(x,a=0,b=1)=>Math.min(b,Math.max(a,x));
+const ease=x=>x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2;
+const toMin=s=>{const [hm,ap]=s.split(' ');let [h,m]=hm.split(':').map(Number);if(ap==='PM'&&h!==12)h+=12;return h*60+m;};
+const fmt=m=>{let h=Math.floor(m/60),mm=Math.round(m%60);if(mm===60){h++;mm=0}const ap=h>=12?'PM':'AM';let hh=h%12||12;return `${hh}:${String(mm).padStart(2,'0')} ${ap}`;};
+
+window.render=function(tt){
+ let t=((tt%T)+T)%T, op=1;
+ const fo=T-1.3;
+ if(t>=fo&&t<fo+.5)op=1-ease((t-fo)/.5);
+ if(t>=fo+.5){op=ease(clamp((t-fo-.5)/.5));t=0;}
+ $('stage').style.opacity=op;
+ let active=-1,doneN=0;
+ EV.forEach((e,i)=>{const s=START+i*STEP;if(t>=s&&t<s+RUN)active=i;if(t>=s+RUN)doneN++;});
+
+ EV.forEach((e,i)=>{
+  const s=START+i*STEP,p=clamp((t-s)/RUN),run=i===active,done=t>=s+RUN;
+  const el=$('e'+i),card=el.querySelector('.card'),ttl=el.querySelector('.ttl'),d=el.querySelector('.d'),badge=el.querySelector('.badge'),node=el.querySelector('.node'),tm=el.querySelector('.time');
+  const c=e.staff?'148,82,242':'246,86,99';
+  const lift=run?ease(clamp((t-s)/.25)):(done?1-ease(clamp((t-s-RUN)/.3)):0);
+  card.style.transform=`scale(${1+.025*lift})`;
+  if(run||lift>0){card.style.borderColor=`rgba(${c},${.35+.55*lift})`;card.style.background=`rgba(${c},${.07+.08*lift})`;card.style.boxShadow=`0 0 ${46*lift}px rgba(${c},${.42*lift})`;}
+  else if(done){card.style.borderColor=e.staff?'rgba(148,82,242,.5)':'rgba(92,230,166,.3)';card.style.background=e.staff?'rgba(148,82,242,.09)':'rgba(92,230,166,.045)';card.style.boxShadow='none';}
+  else {card.style.borderColor='rgba(255,255,255,.1)';card.style.background='rgba(255,255,255,.035)';card.style.boxShadow='none';}
+  ttl.style.color=(run||done)?'#fff':'rgba(255,255,255,.55)';
+  tm.style.color=run?(e.staff?'#C6A2FF':'#FF8A94'):(done?'rgba(255,255,255,.75)':'rgba(255,255,255,.4)');
+  // detail line types in while running
+  if(run){const n=Math.round(e.d.length*clamp(p*1.3));d.innerHTML=e.d.slice(0,n)+'<span class="caret" style="opacity:'+(Math.floor(t*4)%2?0:1)+'"></span>';d.style.color='rgba(255,255,255,.9)';}
+  else if(done){d.textContent=e.d;d.style.color='rgba(255,255,255,.7)';}
+  else {d.textContent=e.d;d.style.color='rgba(255,255,255,.32)';}
+  if(run){badge.textContent=e.staff?'● HANDING OFF':'● ON IT';badge.style.color=e.staff?'#C6A2FF':'#FF8A94';badge.style.borderColor=`rgba(${c},.7)`;badge.style.background=`rgba(${c},.12)`;}
+  else if(done){badge.textContent=e.staff?'✓ TO STAFF':'✓ DONE';badge.style.color=e.staff?'#C6A2FF':'#5CE6A6';badge.style.borderColor=e.staff?'rgba(148,82,242,.6)':'rgba(92,230,166,.55)';badge.style.background=e.staff?'rgba(148,82,242,.12)':'rgba(92,230,166,.1)';}
+  else {badge.textContent='LATER';badge.style.color='rgba(255,255,255,.45)';badge.style.borderColor='rgba(255,255,255,.2)';badge.style.background='transparent';}
+  node.style.background=run?`rgb(${c})`:(done?(e.staff?'#9452F2':'#5CE6A6'):'#1a1426');
+  node.style.borderColor=run?'#fff':(done?'transparent':'rgba(255,255,255,.25)');
+  node.style.boxShadow=run?`0 0 0 ${6+3*Math.sin(t*8)}px rgba(${c},.25)`:'none';
+ });
+
+ // rail fill: grows to the active/last done node center (each row 106px, center at 47)
+ const idx=active>=0?active+clamp((t-(START+active*STEP))/RUN)*0:doneN-1;
+ let h=0;
+ if(active>=0){h=47+active*106-20;}else if(doneN>0){h=47+(doneN-1)*106-20;}
+ // smooth travel between nodes
+ if(active>0){const k=ease(clamp((t-(START+active*STEP))/.4));h=47+(active-1)*106-20+106*k;}
+ $('railfill').style.height=Math.max(0,h)+'px';
+
+ // counters: interpolate toward current step totals during the run
+ const prev=doneN>0?EV[Math.min(doneN,EV.length)-1].s:[0,0,0,0];
+ const cur=active>=0?EV[active].s:prev;
+ const k=active>=0?ease(clamp((t-(START+active*STEP))/RUN)):1;
+ const from=active>0?EV[active-1].s:(active===0?[0,0,0,0]:prev);
+ for(let j=0;j<4;j++){$('s'+j).textContent=Math.round(from[j]+(cur[j]-from[j])*k);}
+
+ // clock: runs toward the active event's time
+ let m;
+ if(active>=0){const a=toMin(EV[active].time),b=active>0?toMin(EV[active-1].time):a;m=b+(a-b)*ease(clamp((t-(START+active*STEP))/.6));}
+ else if(doneN>0)m=toMin(EV[doneN-1].time);else m=toMin(EV[0].time);
+ $('clock').textContent=fmt(m);
+ const staffNow=active>=0&&EV[active].staff;
+ $('prole').textContent=active>=0?(staffNow?'HANDING OFF TO STAFF':'ON A TASK'):(doneN===EV.length?'ALL CAUGHT UP':'ON SHIFT');
+ $('prole').style.color=staffNow?'#C6A2FF':(active>=0?'#FF8A94':'rgba(255,255,255,.55)');
+ $('ring').style.transform=`rotate(${t*24}deg)`;
+ const pk=(t*1.1)%1;$('pulse').style.transform=`scale(${1+.18*pk})`;$('pulse').style.opacity=active>=0?(1-pk)*.9:0;
+ $('cdot').style.opacity=Math.floor(t*2)%2?.35:1;
+
+ // banner
+ const endT=START+(EV.length-1)*STEP+RUN, bk=ease(clamp((t-(endT+.2))/.6));
+ $('bbg').style.opacity=bk;
+ document.querySelector('.banner').style.boxShadow=`0 20px ${60*bk}px rgba(246,86,99,${.35*bk})`;
+};
+
+window.ready=document.fonts.ready.then(()=>Promise.all([...document.images].map(i=>i.complete?1:new Promise(r=>{i.onload=i.onerror=r}))));
+if(!location.search.includes('capture')){const t0=performance.now();window.ready.then(()=>{const loop=()=>{render((performance.now()-t0)/1000);requestAnimationFrame(loop)};loop();});}
+else render(0);
+</script>
+</body></html>

@@ -1,0 +1,232 @@
+<!doctype html><html><head><meta charset="utf-8">
+<title>AI Employee Team</title>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&family=DM+Sans:wght@400;500;600&family=JetBrains+Mono:wght@500;600&display=block" rel="stylesheet">
+<!-- Animated LinkedIn post, 1080x1350 (4:5), 20s seamless loop.
+     Open in a browser to watch it live. scripts/render-animation.mjs calls window.render(t)
+     frame by frame (?capture) and pipes the frames to ffmpeg. render(t) is a pure function of t. -->
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1350px;overflow:hidden;background:#09070F}
+.b{position:relative;width:1080px;height:1350px;overflow:hidden;background:#09070F;color:#fff;font-family:'DM Sans',sans-serif}
+.grid{position:absolute;inset:0;background-image:linear-gradient(to right,rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(to bottom,rgba(255,255,255,.035) 1px,transparent 1px);background-size:54px 54px;-webkit-mask-image:radial-gradient(ellipse 85% 70% at 50% 50%,#000 30%,transparent 100%)}
+.g1{position:absolute;width:640px;height:640px;border-radius:50%;background:#F65663;filter:blur(170px);opacity:.22;left:-260px;top:520px}
+.g2{position:absolute;width:700px;height:700px;border-radius:50%;background:#9452F2;filter:blur(180px);opacity:.34;right:-280px;top:-120px}
+.mono{font-family:'JetBrains Mono',monospace}
+
+/* header */
+.head{position:absolute;left:44px;right:44px;top:44px;display:flex;align-items:center;justify-content:space-between}
+.head img{height:38px;display:block}
+.tag{font:600 15px 'JetBrains Mono',monospace;letter-spacing:.16em;color:#FF8A94;border:1.5px solid rgba(246,86,99,.55);border-radius:999px;padding:10px 20px}
+h1{position:absolute;left:44px;right:44px;top:112px;font:700 80px/1.0 'Sora',sans-serif;letter-spacing:-3.4px;text-align:center}
+h1 span{background:linear-gradient(90deg,#F65663,#B07CFF);-webkit-background-clip:text;color:transparent}
+.sub{position:absolute;left:90px;right:90px;top:292px;text-align:center;font:400 24px/1.42 'DM Sans';color:rgba(255,255,255,.7)}
+.sub b{font-weight:600;color:#fff}
+
+/* stage */
+.stage{position:absolute;inset:0}
+.col{position:absolute;top:384px;width:318px;display:flex;flex-direction:column;gap:18px}
+.col.l{left:44px}.col.r{right:44px}
+.card{position:relative;height:230px;border-radius:22px;padding:18px 20px 18px;background:rgba(255,255,255,.035);border:1.5px solid rgba(255,255,255,.1);display:flex;flex-direction:column;transform-origin:center}
+.card .row1{display:flex;align-items:center;gap:12px}
+.av{width:46px;height:46px;border-radius:50%;overflow:hidden;background:linear-gradient(135deg,rgba(246,86,99,.35),rgba(148,82,242,.35));flex:none;filter:grayscale(1) brightness(.75)}
+.av img{width:100%;height:100%;object-fit:cover;object-position:50% 12%;display:block}
+.av.staff{display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.08)}
+.meta{flex:1;min-width:0}
+.num{font:500 12px 'JetBrains Mono',monospace;letter-spacing:.14em;color:rgba(255,255,255,.45)}
+.name{font:600 20px/1.15 'Sora',sans-serif;letter-spacing:-.6px;margin-top:3px;white-space:nowrap}
+.badge{position:absolute;top:16px;right:16px;font:600 11px 'JetBrains Mono',monospace;letter-spacing:.12em;padding:5px 9px;border-radius:7px;border:1.2px solid rgba(255,255,255,.22);color:rgba(255,255,255,.5)}
+.desc{margin-top:12px;font:400 17.5px/1.38 'DM Sans';color:rgba(255,255,255,.68)}
+.chip{position:relative;margin-top:auto;height:44px;border-radius:999px;background:rgba(255,255,255,.05);border:1.2px solid rgba(255,255,255,.1);display:flex;align-items:center;padding:0 16px;gap:10px;overflow:hidden}
+.chip .fill{position:absolute;left:0;top:0;bottom:0;width:0;background:linear-gradient(90deg,rgba(246,86,99,.28),rgba(148,82,242,.28))}
+.chip .dot{position:relative;width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.3);flex:none}
+.chip .txt{position:relative;font:600 16px 'DM Sans';color:rgba(255,255,255,.45);white-space:nowrap}
+.chip .caret{position:relative;display:inline-block;width:2px;height:18px;background:#F65663;margin-left:-8px;opacity:0}
+.chip .pct{position:relative;margin-left:auto;font:500 13px 'JetBrains Mono',monospace;color:rgba(255,255,255,.55)}
+.stub{position:absolute;top:50%;width:22px;height:0;border-top:2px dashed rgba(255,255,255,.18)}
+.col.l .stub{right:-24px}.col.r .stub{left:-24px}
+
+/* center */
+.mid{position:absolute;left:383px;width:314px;top:384px}
+.inbox{height:58px;border-radius:16px;background:rgba(255,255,255,.05);border:1.5px solid rgba(255,255,255,.12);display:flex;align-items:center;padding:0 16px;gap:12px}
+.inbox .lbl{font:500 11px 'JetBrains Mono',monospace;letter-spacing:.14em;color:rgba(255,255,255,.45);white-space:nowrap}
+.inbox .msg{font:500 15.5px 'JetBrains Mono',monospace;color:#fff;white-space:nowrap;overflow:hidden}
+.inbox .cur{display:inline-block;width:2px;height:18px;background:#F65663;vertical-align:-3px;margin-left:2px}
+.vline{width:2px;height:16px;margin:0 auto;background:rgba(255,255,255,.18)}
+.hub{position:relative;border-radius:24px;padding:18px 18px 16px;background:linear-gradient(180deg,rgba(246,86,99,.10),rgba(148,82,242,.10));border:1.5px solid rgba(246,86,99,.32)}
+.hub .ttl{text-align:center;font:600 13px 'JetBrains Mono',monospace;letter-spacing:.2em;color:rgba(255,255,255,.75)}
+.hub .ttl i{display:inline-block;width:8px;height:8px;border-radius:50%;background:#F65663;margin:0 6px 0 10px;vertical-align:1px}
+.hub .ttl em{font-style:normal;color:#FF8A94}
+.ringwrap{position:relative;width:112px;height:112px;margin:14px auto 12px}
+.ring{position:absolute;inset:0;border-radius:50%;border:2px dashed rgba(246,86,99,.55)}
+.core{position:absolute;inset:14px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 6px rgba(246,86,99,.12)}
+.core img{width:54px;height:54px}
+.list{display:flex;flex-direction:column;gap:6px}
+.li{height:34px;border-radius:10px;background:rgba(255,255,255,.04);border:1.2px solid rgba(255,255,255,.08);display:flex;align-items:center;gap:10px;padding:0 12px;font:500 15px 'DM Sans';color:rgba(255,255,255,.42)}
+.li i{width:9px;height:9px;border-radius:50%;background:rgba(255,255,255,.25);flex:none}
+.count{text-align:center;margin-top:12px;font:600 19px 'Sora';letter-spacing:-.4px}
+.count small{display:block;margin-top:2px;font:500 12px 'JetBrains Mono',monospace;letter-spacing:.08em;color:rgba(255,255,255,.5)}
+.term{margin-top:10px;height:32px;border-radius:9px;background:#000;display:flex;align-items:center;padding:0 12px;font:500 13px 'JetBrains Mono',monospace;color:#5CE6A6;white-space:nowrap;overflow:hidden}
+.tools{margin-top:16px}
+.tools .lbl{text-align:center;font:500 11px 'JetBrains Mono',monospace;letter-spacing:.18em;color:rgba(255,255,255,.45)}
+.tg{margin-top:9px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:7px}
+.tool{height:34px;border-radius:9px;border:1.2px solid rgba(255,255,255,.1);background:rgba(255,255,255,.03);display:flex;align-items:center;justify-content:center;font:500 13.5px 'DM Sans';color:rgba(255,255,255,.5)}
+
+/* banner */
+.banner{position:absolute;left:44px;right:44px;top:1146px;height:118px;border-radius:24px;border:1.5px solid rgba(255,255,255,.1);background:rgba(255,255,255,.035);display:flex;align-items:center;padding:0 36px;overflow:hidden}
+.banner .bg{position:absolute;inset:0;background:linear-gradient(90deg,#F65663,#9452F2);opacity:0}
+.banner .l{position:relative;flex:1}
+.banner .big{font:700 46px/1 'Sora';letter-spacing:-2px}
+.banner .small{margin-top:9px;font:400 19px 'DM Sans';color:rgba(255,255,255,.75)}
+.banner .sep{position:relative;width:1.5px;height:66px;background:rgba(255,255,255,.2);margin:0 32px}
+.banner .st{position:relative;margin-left:30px}
+.banner .st b{display:block;font:700 44px/1 'Sora';letter-spacing:-2px}
+.banner .st span{display:block;margin-top:6px;font:500 16px 'DM Sans';color:rgba(255,255,255,.75)}
+.foot{position:absolute;left:44px;right:44px;bottom:30px;display:flex;justify-content:space-between;align-items:center;font:500 16px 'DM Sans';color:rgba(255,255,255,.5)}
+.foot .mono{font-size:16px;letter-spacing:.08em;color:rgba(255,255,255,.65)}
+</style></head><body><div class="b">
+<div class="grid"></div><div class="g1"></div><div class="g2"></div>
+
+<div class="head"><img src="../facebook/logo-ondark.png" alt="Unhired"><div class="tag">5 AI EMPLOYEES · 1 TEAM</div></div>
+<h1>What an AI Employee<br><span>Team Looks Like</span></h1>
+<p class="sub">Inside one business, <b>each AI Employee has one job.</b><br>Anything that needs a person goes to your staff.</p>
+
+<div class="stage" id="stage">
+ <div class="col l" id="colL"></div>
+ <div class="col r" id="colR"></div>
+ <div class="mid">
+  <div class="inbox"><span class="lbl">INCOMING</span><span class="msg" id="msg"></span></div>
+  <div class="vline"></div>
+  <div class="hub">
+   <div class="ttl">THE TEAM<i></i><em>ON SHIFT</em></div>
+   <div class="ringwrap"><div class="ring" id="ring"></div><div class="core"><img src="../facebook/mark.png" alt=""></div></div>
+   <div class="list" id="list"></div>
+   <div class="count"><span id="cnt">0/6</span> jobs done<small id="clock">9:00 AM</small></div>
+   <div class="term" id="term"></div>
+  </div>
+  <div class="tools"><div class="lbl">WORKS INSIDE YOUR TOOLS</div><div class="tg" id="tools"></div></div>
+ </div>
+ <div class="banner" id="banner"><div class="bg" id="bbg"></div>
+  <div class="l"><div class="big">One team, every shift</div><div class="small">Five AI Employees and your staff, one job each.</div></div>
+  <div class="sep"></div>
+  <div class="st"><b>24/7</b><span>on shift</span></div>
+  <div class="st"><b>5</b><span>AI Employees</span></div>
+ </div>
+</div>
+<div class="foot"><span>Built, trained and maintained by Unhired</span><span class="mono">unhired.io</span></div>
+</div>
+
+<script>
+const ROLES=[
+ {name:'AI Receptionist',img:'ai-receptionist',desc:'Answers every call and books the appointment',out:'Appointment booked',done:'Call answered',inb:'New call · 9:02 AM',tools:['Phone','Calendar'],term:'receptionist'},
+ {name:'AI Sales Rep',img:'ai-sales-rep',desc:'Replies to new leads and follows up on every quote',out:'Quote followed up',done:'Lead followed up',inb:'Web lead · 9:14 AM',tools:['Email','CRM'],term:'sales-rep'},
+ {name:'AI Customer Support',img:'ai-customer-support',desc:'Answers customer questions by email and chat',out:'Question answered',done:'Ticket resolved',inb:'Chat: "Where\'s my order?"',tools:['Chat','CRM'],term:'support'},
+ {name:'AI Bookkeeper',img:'ai-bookkeeper',desc:'Codes receipts and chases unpaid invoices',out:'Invoices chased',done:'Invoices chased',inb:'Supplier receipt.pdf',tools:['Accounting','Email'],term:'bookkeeper'},
+ {name:'AI Executive Assistant',img:'ai-executive-assistant',desc:'Runs the owner\'s calendar and sorts the inbox',out:'Inbox sorted',done:'Inbox sorted',inb:'Meeting request · 2 PM',tools:['Calendar','Email'],term:'exec-assistant'},
+ {name:'Your Staff',staff:true,desc:'Get the calls and decisions that need a person',out:'Handoff with notes',done:'Handed to your staff',inb:'Customer asks for a refund',tools:[],term:'handoff'},
+];
+const TOOLS=['Phone','Email','Calendar','CRM','Chat','Accounting'];
+const T=20, START=1.0, STEP=2.15, RUN=1.75;
+const clockTimes=['9:00 AM','9:02 AM','9:14 AM','10:31 AM','11:05 AM','1:48 PM','3:20 PM'];
+const $=id=>document.getElementById(id);
+
+// build DOM
+ROLES.forEach((r,i)=>{
+ const c=document.createElement('div');c.className='card';c.id='c'+i;
+ const av=r.staff?`<div class="av staff"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><circle cx="9" cy="8" r="3.2"/><path d="M3.5 19c.6-3.2 2.8-5 5.5-5s4.9 1.8 5.5 5"/><circle cx="17" cy="9" r="2.4"/><path d="M15.8 14.2c2.3.2 4 1.7 4.6 4.6"/></svg></div>`
+  :`<div class="av"><img src="../avatars/${r.img}.png"></div>`;
+ c.innerHTML=`<div class="row1">${av}<div class="meta"><div class="num">${r.staff?'PEOPLE':'0'+(i+1)}</div><div class="name">${r.name}</div></div></div>
+ <div class="badge">QUEUED</div><p class="desc">${r.desc}</p>
+ <div class="chip"><div class="fill"></div><i class="dot"></i><span class="txt"></span><span class="caret"></span><span class="pct"></span></div><div class="stub"></div>`;
+ (i<3?$('colL'):$('colR')).appendChild(c);
+ const li=document.createElement('div');li.className='li';li.id='li'+i;li.innerHTML=`<i></i>${r.done}`;$('list').appendChild(li);
+});
+TOOLS.forEach(t=>{const d=document.createElement('div');d.className='tool';d.id='t-'+t;d.textContent=t;$('tools').appendChild(d)});
+// right column order: 4,5,6 go top to bottom
+const clamp=(x,a=0,b=1)=>Math.min(b,Math.max(a,x));
+const ease=x=>x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2;
+const mix=(a,b,k)=>a+(b-a)*k;
+
+function stateAt(t){ // t in loop-local time with reset handled outside
+ return ROLES.map((r,i)=>{const s=START+i*STEP;const p=clamp((t-s)/RUN);return {s,p,run:t>=s&&t<s+RUN,done:t>=s+RUN};});
+}
+
+window.render=function(tt){
+ let t=((tt%T)+T)%T;
+ // reset: fade stage out 18.7-19.2 at final state, back in 19.2-19.7 at start state
+ let stageOp=1;
+ if(t>=18.7&&t<19.2){stageOp=1-ease((t-18.7)/.5);}
+ if(t>=19.2){stageOp=ease(clamp((t-19.2)/.5));t=0;}
+ $('stage').style.opacity=stageOp;
+ const st=stateAt(t);
+ let active=-1;st.forEach((s,i)=>{if(s.run)active=i});
+ let doneN=st.filter(s=>s.done).length;
+
+ ROLES.forEach((r,i)=>{
+  const s=st[i],c=$('c'+i),badge=c.querySelector('.badge'),chip=c.querySelector('.chip'),txt=chip.querySelector('.txt'),fill=chip.querySelector('.fill'),pct=chip.querySelector('.pct'),dot=chip.querySelector('.dot'),caret=chip.querySelector('.caret'),av=c.querySelector('.av'),stub=c.querySelector('.stub');
+  // pop in/out of active
+  const inK=clamp((t-s.s)/.25), outK=clamp((t-(s.s+RUN))/.3);
+  const lift=s.run?ease(inK):(s.done?1-ease(outK):0);
+  c.style.transform=`scale(${1+.035*lift})`;
+  c.style.zIndex=lift>0?2:1;
+  const coral=r.staff?'148,82,242':'246,86,99';
+  if(s.run||lift>0){
+   c.style.borderColor=`rgba(${coral},${.35+.55*lift})`;
+   c.style.background=`rgba(${coral},${.06+.08*lift})`;
+   c.style.boxShadow=`0 0 ${50*lift}px rgba(${coral},${.45*lift}), 0 18px 40px rgba(0,0,0,${.4*lift})`;
+  } else if(s.done){
+   c.style.borderColor=r.staff?'rgba(148,82,242,.5)':'rgba(92,230,166,.35)';c.style.background=r.staff?'rgba(148,82,242,.08)':'rgba(92,230,166,.045)';c.style.boxShadow='none';
+  } else {c.style.borderColor='rgba(255,255,255,.1)';c.style.background='rgba(255,255,255,.035)';c.style.boxShadow='none';}
+  av.style.filter=(s.run||s.done)?'none':'grayscale(1) brightness(.7)';
+  // badge
+  if(s.run){badge.textContent='● WORKING';badge.style.color=r.staff?'#C6A2FF':'#FF8A94';badge.style.borderColor=`rgba(${coral},.7)`;badge.style.background=`rgba(${coral},.12)`;}
+  else if(s.done){badge.textContent=r.staff?'✓ READY':'✓ DONE';badge.style.color=r.staff?'#C6A2FF':'#5CE6A6';badge.style.borderColor=r.staff?'rgba(148,82,242,.6)':'rgba(92,230,166,.55)';badge.style.background=r.staff?'rgba(148,82,242,.12)':'rgba(92,230,166,.1)';}
+  else {badge.textContent='QUEUED';badge.style.color='rgba(255,255,255,.5)';badge.style.borderColor='rgba(255,255,255,.22)';badge.style.background='transparent';}
+  // chip
+  const n=Math.round(r.out.length*clamp(s.p*1.25));
+  if(s.run){txt.textContent=r.out.slice(0,n);txt.style.color='#fff';fill.style.width=(ease(s.p)*100)+'%';pct.textContent=Math.round(s.p*100)+'%';dot.style.background=r.staff?'#B07CFF':'#F65663';caret.style.opacity=(Math.floor(t*4)%2===0)?1:0;caret.style.marginLeft='-8px';}
+  else if(s.done){txt.textContent=r.out;txt.style.color='#fff';fill.style.width='0';pct.textContent='100%';dot.style.background=r.staff?'#B07CFF':'#5CE6A6';caret.style.opacity=0;chip.style.background=r.staff?'rgba(148,82,242,.14)':'rgba(92,230,166,.1)';chip.style.borderColor=r.staff?'rgba(148,82,242,.35)':'rgba(92,230,166,.3)';}
+  else {txt.textContent=r.out;txt.style.color='rgba(255,255,255,.4)';fill.style.width='0';pct.textContent='';dot.style.background='rgba(255,255,255,.3)';caret.style.opacity=0;chip.style.background='rgba(255,255,255,.05)';chip.style.borderColor='rgba(255,255,255,.1)';}
+  if(s.run){chip.style.background='rgba(255,255,255,.07)';chip.style.borderColor=`rgba(${coral},.4)`;}
+  stub.style.borderTop=(s.run)?`2px solid rgba(${coral},1)`:(s.done?`2px solid ${r.staff?'rgba(148,82,242,.6)':'rgba(92,230,166,.5)'}`:'2px dashed rgba(255,255,255,.18)');
+  // hub list
+  const li=$('li'+i),dt=li.querySelector('i');
+  if(s.done){li.style.color='#fff';li.style.background='rgba(255,255,255,.09)';li.style.borderColor='rgba(255,255,255,.16)';dt.style.background=r.staff?'#B07CFF':'#5CE6A6';dt.style.boxShadow=`0 0 10px ${r.staff?'#B07CFF':'#5CE6A6'}`;}
+  else if(s.run){li.style.color='rgba(255,255,255,.85)';li.style.background=`rgba(${coral},.12)`;li.style.borderColor=`rgba(${coral},.4)`;dt.style.background=(Math.floor(t*4)%2?`rgb(${coral})`:'rgba(255,255,255,.3)');dt.style.boxShadow='none';}
+  else {li.style.color='rgba(255,255,255,.42)';li.style.background='rgba(255,255,255,.04)';li.style.borderColor='rgba(255,255,255,.08)';dt.style.background='rgba(255,255,255,.25)';dt.style.boxShadow='none';}
+ });
+
+ // incoming message: types during first 45% of each run
+ const msg=$('msg');
+ if(active>=0){const r=ROLES[active],k=clamp((t-st[active].s)/(RUN*.45));msg.innerHTML=r.inb.slice(0,Math.round(r.inb.length*k)).replace(/</g,'&lt;')+'<span class="cur"></span>';}
+ else if(doneN===ROLES.length){msg.innerHTML='<span style="color:#5CE6A6">All caught up</span>';}
+ else if(doneN>0){msg.innerHTML=ROLES[doneN-1].inb.replace(/</g,'&lt;');}
+ else {msg.innerHTML='Waiting'+'<span class="cur" style="opacity:'+((Math.floor(t*2)%2)?0:1)+'"></span>';}
+
+ // tools
+ TOOLS.forEach(tl=>{const el=$('t-'+tl);const on=active>=0&&ROLES[active].tools.includes(tl);const used=st.some((s,i)=>s.done&&ROLES[i].tools.includes(tl));
+  if(on){el.style.color='#fff';el.style.borderColor='rgba(246,86,99,.75)';el.style.background='rgba(246,86,99,.18)';el.style.boxShadow='0 0 18px rgba(246,86,99,.35)';}
+  else if(used){el.style.color='rgba(255,255,255,.82)';el.style.borderColor='rgba(255,255,255,.2)';el.style.background='rgba(255,255,255,.06)';el.style.boxShadow='none';}
+  else {el.style.color='rgba(255,255,255,.45)';el.style.borderColor='rgba(255,255,255,.1)';el.style.background='rgba(255,255,255,.03)';el.style.boxShadow='none';}});
+
+ // hub
+ $('cnt').textContent=doneN+'/6';
+ $('clock').textContent=clockTimes[Math.min(doneN+(active>=0?1:0),6)];
+ $('ring').style.transform=`rotate(${t*24}deg)`;
+ $('term').textContent=active>=0?`> ${ROLES[active].term} … working`:(doneN===6?'✓ done · day handled':(doneN?`✓ ${ROLES[doneN-1].term} done`:'> team ready'));
+ $('term').style.color=active>=0?'#FF8A94':'#5CE6A6';
+
+ // banner
+ const endT=START+5*STEP+RUN;
+ const bk=ease(clamp((t-(endT+.2))/.6));
+ $('bbg').style.opacity=bk;
+ $('banner').style.borderColor=`rgba(255,255,255,${.1+.1*bk})`;
+ $('banner').style.boxShadow=`0 20px ${60*bk}px rgba(246,86,99,${.35*bk})`;
+ $('banner').querySelector('.small').style.color=`rgba(255,255,255,${.7+.25*bk})`;
+};
+
+window.ready=document.fonts.ready.then(()=>Promise.all([...document.images].map(i=>i.complete?1:new Promise(r=>{i.onload=i.onerror=r}))));
+if(!location.search.includes('capture')){
+ const t0=performance.now();window.ready.then(()=>{const loop=()=>{render((performance.now()-t0)/1000);requestAnimationFrame(loop)};loop();});
+} else render(0);
+</script>
+</body></html>
