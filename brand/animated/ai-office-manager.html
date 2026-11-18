@@ -1,0 +1,144 @@
+<!doctype html><html><head><meta charset="utf-8">
+<title>AI Office Manager Inbox</title>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&family=DM+Sans:wght@400;500;600&family=JetBrains+Mono:wght@500;600&display=block" rel="stylesheet">
+<!-- Animated LinkedIn post, 1080x1350 (4:5), seamless loop of DURATION seconds.
+     Layout: inbox/queue that empties into two bins. Background: flat mist light. Motion: sliding conveyor.
+     Type: headline at the bottom. scripts/render-animation.mjs renders it to MP4. -->
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1350px;overflow:hidden;background:#F4F2F8}
+.b{position:relative;width:1080px;height:1350px;overflow:hidden;background:#F4F2F8;color:#09070F;font-family:'DM Sans',sans-serif}
+.head{position:absolute;left:44px;right:44px;top:44px;display:flex;align-items:center;justify-content:space-between}
+.head img{height:36px;display:block}
+.tag{font:600 15px 'JetBrains Mono',monospace;letter-spacing:.16em;color:#9452F2;border:1.5px solid rgba(148,82,242,.45);border-radius:999px;padding:10px 20px}
+
+.inlbl{position:absolute;left:44px;right:44px;top:128px;display:flex;justify-content:space-between;font:600 14px 'JetBrains Mono',monospace;letter-spacing:.18em;color:rgba(9,7,15,.5)}
+.inlbl b{color:#09070F}
+.slot{position:absolute;left:44px;right:44px;top:162px;height:196px;border-radius:26px;border:2px dashed rgba(9,7,15,.14);overflow:hidden}
+.belt{position:absolute;left:0;right:0;bottom:0;height:10px;background:repeating-linear-gradient(90deg,rgba(9,7,15,.10) 0 18px,transparent 18px 36px)}
+.clear{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;gap:16px;font:700 40px 'Sora';letter-spacing:-1.4px;color:#09070F;opacity:0}
+.clear i{display:block;width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,#F65663,#9452F2);color:#fff;font:700 26px/46px 'DM Sans';font-style:normal;text-align:center}
+
+.card{position:absolute;border-radius:22px;background:#fff;box-shadow:0 18px 40px -18px rgba(9,7,15,.35);overflow:hidden}
+.card .in{position:absolute;inset:0;padding:30px 36px}
+.card .k{font:600 14px 'JetBrains Mono',monospace;letter-spacing:.16em;color:rgba(9,7,15,.45)}
+.card .ttl{margin-top:12px;font:700 40px/1.1 'Sora';letter-spacing:-1.4px;white-space:nowrap}
+.card .chip{position:absolute;right:30px;top:26px;font:600 14px 'JetBrains Mono',monospace;letter-spacing:.12em;padding:9px 14px;border-radius:10px;color:#fff}
+
+.bin{position:absolute;top:404px;width:482px;height:622px;border-radius:28px;background:#fff;border:1.5px solid rgba(9,7,15,.08)}
+.bin.a{left:44px}.bin.p{right:44px}
+.bh{position:absolute;left:24px;right:24px;top:22px;height:64px;display:flex;align-items:center;justify-content:space-between;border-bottom:1.5px solid rgba(9,7,15,.08)}
+.bh .l{font:600 14px 'JetBrains Mono',monospace;letter-spacing:.14em;line-height:1.5}
+.bin.a .bh .l{color:#E8414F}.bin.p .bh .l{color:#7B3FE0}
+.bh .n{font:700 52px/1 'Sora';letter-spacing:-2px;margin-bottom:6px}
+.bin.a .bh .n{color:#F65663}.bin.p .bh .n{color:#9452F2}
+.row{position:absolute;left:18px;right:18px;height:90px;border-radius:16px;padding:15px 18px 0 22px;opacity:0}
+.bin.a .row{background:rgba(246,86,99,.08);border-left:5px solid #F65663}
+.bin.p .row{background:rgba(148,82,242,.08);border-left:5px solid #9452F2}
+.card .mini{position:absolute;left:0;top:0;width:446px;height:90px;padding:15px 18px 0 27px;opacity:0}
+.card .mini .t,.row .t{font:600 21px 'Sora';letter-spacing:-.6px;white-space:nowrap}
+.card .mini .o,.row .o{margin-top:7px;font:500 18px 'DM Sans';color:rgba(9,7,15,.62);white-space:nowrap}
+
+h1{position:absolute;left:44px;right:44px;top:1066px;font:700 70px/1.02 'Sora';letter-spacing:-3px}
+h1 span{background:linear-gradient(90deg,#F65663,#9452F2);-webkit-background-clip:text;color:transparent}
+.sub{position:absolute;left:44px;right:30px;top:1226px;font:400 22px/1.4 'DM Sans';color:rgba(9,7,15,.66)}
+.foot{position:absolute;left:44px;right:44px;bottom:26px;display:flex;justify-content:space-between;font:500 15px 'DM Sans';color:rgba(9,7,15,.45)}
+.foot .mono{font:500 15px 'JetBrains Mono',monospace;letter-spacing:.08em;color:rgba(9,7,15,.6)}
+</style></head><body><div class="b">
+<div class="head"><img src="../../public/unhired-logo.png" alt="Unhired"><div class="tag">OFFICE MANAGER · ONE WEDNESDAY</div></div>
+
+<div id="stage">
+ <div class="inlbl"><span>INCOMING REQUESTS</span><span><b id="left">8</b> IN THE INBOX</span></div>
+ <div class="slot"><div class="belt" id="belt"></div><div class="clear" id="clear"><i>✓</i>Inbox clear</div></div>
+ <div class="bin a" id="binA"><div class="bh"><div class="l">THE AI EMPLOYEE<br>HANDLES IT</div><div class="n" id="nA">0</div></div></div>
+ <div class="bin p" id="binP"><div class="bh"><div class="l">GOES TO<br>A PERSON</div><div class="n" id="nP">0</div></div></div>
+ <div id="cards"></div>
+</div>
+
+<h1>Sorting an office<br>manager's <span>to-do list</span></h1>
+<p class="sub">Follow-through goes to the AI Employee. Money, people and the building go to a person.</p>
+<div class="foot"><span>Example day at a 15-person office</span><span class="mono">unhired.io</span></div>
+</div>
+
+<script>
+window.DURATION=20;
+const IT=[
+ {k:'8:30 AM · FACILITIES',t:"HVAC tech didn't show",o:'Rebooked for 1 pm today',a:1},
+ {k:'9:45 AM · SUPPLIES',t:'Toner is running low',o:'$90 order placed',a:1},
+ {k:'10:20 AM · RENEWALS',t:'Unused tool renews soon',o:'Renew or cancel? You decide',a:0},
+ {k:'11:00 AM · NEW HIRE',t:'New hire starts Monday',o:'IT ticket and keycard ordered',a:1},
+ {k:'11:40 AM · SPENDING',t:'Quotes for new chairs',o:'3 quotes, side by side',a:0},
+ {k:'1:15 PM · STAFF',t:'"What\'s the guest Wi-Fi?"',o:'Answered from the handbook',a:1},
+ {k:'2:30 PM · STAFF',t:'Complaint about a coworker',o:'Passed on untouched',a:0},
+ {k:'3:50 PM · CALENDAR',t:'Boardroom double-booked',o:'One meeting moved, both told',a:1},
+];
+const T=window.DURATION, START=.6, STEP=1.95;
+const IN=.4, HOLD=1.0, FLY=.5;
+const BIN={a:{x:44,y:404},p:{x:554,y:404}}, ROW0=104, ROWH=100;
+const SLOT={x:72,y:184,w:936,h:150};
+const $=id=>document.getElementById(id);
+const clamp=(x,a=0,b=1)=>Math.min(b,Math.max(a,x));
+const ease=x=>x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2;
+const lerp=(a,b,k)=>a+(b-a)*k;
+
+let ai=0,pi=0;
+IT.forEach((e,i)=>{
+ e.idx=e.a?ai++:pi++;
+ const c=document.createElement('div');c.className='card';c.id='c'+i;
+ c.innerHTML=`<div class="in"><div class="k">${e.k}</div><div class="ttl">${e.t.replace(/</g,'&lt;')}</div></div><div class="chip" style="background:${e.a?'#F65663':'#9452F2'}">${e.a?'AI EMPLOYEE':'TO A PERSON'}</div><div class="mini"><div class="t">${e.t.replace(/</g,'&lt;')}</div><div class="o">${e.o}</div></div>`;
+ $('cards').appendChild(c);
+ const r=document.createElement('div');r.className='row';r.id='r'+i;r.style.top=(ROW0+e.idx*ROWH)+'px';
+ r.innerHTML=`<div class="t">${e.t.replace(/</g,'&lt;')}</div><div class="o">${e.o}</div>`;
+ $(e.a?'binA':'binP').appendChild(r);
+});
+
+window.render=function(tt){
+ let t=((tt%T)+T)%T, op=1;
+ const fo=T-1.2;
+ if(t>=fo&&t<fo+.5)op=1-ease((t-fo)/.5);
+ if(t>=fo+.5){op=ease(clamp((t-fo-.5)/.5));t=0;}
+ $('stage').style.opacity=op;
+
+ let doneA=0,doneP=0,gone=0;
+ IT.forEach((e,i)=>{
+  const s=START+i*STEP, c=$('c'+i), r=$('r'+i), chip=c.querySelector('.chip'), inner=c.querySelector('.in');
+  const pin=ease(clamp((t-s)/IN));
+  const pfly=ease(clamp((t-s-IN-HOLD)/FLY));
+  const landed=t>=s+IN+HOLD+FLY;
+  if(t<s||landed){c.style.display='none';}
+  else{
+   c.style.display='block';
+   const tx=BIN[e.a?'a':'p'].x+18, ty=BIN.a.y+ROW0+e.idx*ROWH, tw=446, th=90;
+   const x0=SLOT.x+(1-pin)*1100;
+   c.style.left=lerp(x0,tx,pfly)+'px';
+   c.style.top=lerp(SLOT.y,ty,pfly)+'px';
+   c.style.width=lerp(SLOT.w,tw,pfly)+'px';
+   c.style.height=lerp(SLOT.h,th,pfly)+'px';
+   inner.style.opacity=1-clamp(pfly*3);
+   const pc=ease(clamp((t-s-IN-.1)/.3));
+   chip.style.opacity=pc*(1-clamp(pfly*3));
+   chip.style.transform=`scale(${.7+.3*pc})`;
+   c.querySelector('.mini').style.opacity=clamp((pfly-.35)/.45);
+   const tint=e.a?[254,240,241]:[247,241,254];
+   c.style.background=`rgb(${tint.map(v=>Math.round(lerp(255,v,pfly))).join(',')})`;
+   c.style.boxShadow=`inset ${5*pfly}px 0 0 ${e.a?'#F65663':'#9452F2'}, 0 18px 40px -18px rgba(9,7,15,${.35*(1-pfly)})`;
+   c.style.borderRadius=lerp(22,16,pfly)+'px';
+  }
+  const rk=landed?1:0;
+  r.style.opacity=rk;
+  if(t>=s+IN) gone++;
+  if(rk>0){ if(e.a)doneA++; else doneP++; }
+ });
+ $('nA').textContent=doneA; $('nP').textContent=doneP;
+ $('left').textContent=IT.length-gone;
+ $('belt').style.backgroundPosition=`${-(t*120)%36}px 0`;
+ const endT=START+(IT.length-1)*STEP+IN+HOLD+FLY;
+ $('clear').style.opacity=ease(clamp((t-endT-.1)/.5));
+ $('clear').style.transform=`scale(${.9+.1*ease(clamp((t-endT-.1)/.5))})`;
+};
+
+window.ready=document.fonts.ready.then(()=>Promise.all([...document.images].map(i=>i.complete?1:new Promise(r=>{i.onload=i.onerror=r}))));
+if(!location.search.includes('capture')){const t0=performance.now();window.ready.then(()=>{const loop=()=>{render((performance.now()-t0)/1000);requestAnimationFrame(loop)};loop();});}
+else render(0);
+</script>
+</body></html>

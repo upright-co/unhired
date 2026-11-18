@@ -30,5 +30,6 @@ don't use the same **background** two days in a row.
 ## Log (newest first)
 | Date | Slug | Layout | Background | Motion | Type |
 |---|---|---|---|---|---|
+| 2026-11-18 | ai-office-manager | inbox/queue that empties into two bins (AI Employee vs person) | flat mist light | sliding conveyor + cards morphing into rows | headline at the bottom |
 | 2026-11-14 | ai-receptionist-day | day timeline / clock | ink dark with glows | typewriter + pop-in | huge headline top |
 | 2026-11-14 | ai-employee-team | card grid team around a core ring | ink dark with grid | pop-in cards + pulsing ring | huge headline top |

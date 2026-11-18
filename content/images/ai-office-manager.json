@@ -1,0 +1,83 @@
+{
+ "images": [
+  {
+   "type": "cover",
+   "name": "cover",
+   "eyebrow": "AI Employee roles · Office manager",
+   "title": "The *AI office* manager",
+   "sub": "Vendors, supplies, bills, calendars and new hires, and what still needs a person in the building.",
+   "avatar": "ai-executive-assistant",
+   "series": "The AI Employee · unhired.io"
+  },
+  {
+   "type": "breakdown",
+   "name": "duties",
+   "title": "An office manager's week, *duty by duty*",
+   "rows": [
+    ["Vendors and repairs", "Logs requests, books the visit, follows up the same day if nobody shows.", "alone"],
+    ["Supplies", "Reorders below the reorder point, up to a set dollar limit. Checks what arrives.", "alone"],
+    ["Bills and renewals", "Codes bills, leaves them at draft, flags renewals 60 days out.", "reports"],
+    ["Calendars and time off", "Books rooms, fixes double bookings, flags clashing vacation requests.", "alone"],
+    ["New hires and departures", "Opens IT tickets, orders equipment, runs the exit checklist.", "reports"],
+    ["Quotes and big spending", "Collects three quotes side by side. A person decides.", "asks"]
+   ]
+  },
+  {
+   "type": "table",
+   "name": "handoffs",
+   "title": "What it handles, and *what it hands off*",
+   "head": ["Area", "The AI Employee handles", "It hands to a person"],
+   "rows": [
+    ["Money", "Small supply orders, bill coding, renewal reminders", "Quotes, leases, anything over the limit"],
+    ["The building", "Booking repairs, deliveries, visitor reminders", "Letting people in, checking a leak"],
+    ["Staff", "Onboarding checklists, office questions, time off", "Complaints, conduct, pay"],
+    ["Emergencies", "Sends the alert and the contact list", "Everything after that"]
+   ],
+   "source": "Examples. Every office sets its own limits."
+  },
+  {
+   "type": "timeline",
+   "name": "wednesday",
+   "title": "A Wednesday at a *15-person law firm*",
+   "avatar": "ai-executive-assistant",
+   "role": "AI Employee, office manager",
+   "roleSub": "Reports to the managing partner",
+   "rows": [
+    ["7:10 am", "Answers two staff emails about holiday hours from the office handbook."],
+    ["8:30 am", "The HVAC tech didn't come Tuesday. It calls the company and rebooks for 1 pm."],
+    ["9:45 am", "Toner is below the reorder point. Places a $90 order with the supplier."],
+    ["11:00 am", "Three quotes for new boardroom chairs, side by side.", "you"],
+    ["1:20 pm", "New paralegal starts Monday. Opens the IT ticket and orders the keycard."],
+    ["2:40 pm", "A document tool renews in 60 days and nobody logged in since May.", "you"],
+    ["4:15 pm", "A staff member sends a complaint about a coworker. Passed on untouched.", "you"]
+   ],
+   "source": "Example day"
+  },
+  {
+   "type": "flow",
+   "name": "setup",
+   "title": "How an AI office manager *is set up*",
+   "steps": [
+    ["Write the recurring list", "Every weekly, monthly and yearly job, from copier service to holiday hours."],
+    ["List the vendors", "Who to call for what, and how each one likes to be contacted."],
+    ["Set spending limits", "What it can order alone, and what waits for approval."],
+    ["Connect with limited access", "Inbox, calendar, accounting tool, supplier accounts. Payments stay at draft."],
+    ["Write the handoff rules", "Money, the building, people issues and emergencies go to a named person."],
+    ["Shadow for a few weeks", "It drafts every order and email while a person approves each one."]
+   ]
+  },
+  {
+   "type": "cost",
+   "name": "cost",
+   "eyebrow": "The cost",
+   "title": "What an office manager seat *costs*",
+   "suffix": " / yr",
+   "highlight": null,
+   "rows": [
+    ["US median wage", 69500, "$33.41 an hour, May 2025."],
+    ["With benefits and payroll taxes", 99300, "Wages are about 70% of compensation."]
+   ],
+   "source": "Source: US Bureau of Labor Statistics, OEWS May 2025 (SOC 43-1011) and ECEC"
+  }
+ ]
+}
