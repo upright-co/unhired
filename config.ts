@@ -46,7 +46,7 @@ export const links = {
    * "Book a call with Brandon" in the About-the-author box at the end of articles (/news and /blog).
    * The only offer an article makes. Set to null to hide the button.
    */
-  articleCall: "https://cal.com/brandon-upright/demo-call" as string | null,
+  articleCall: "https://cal.com/brandon-upright/ai-business-diagnosis" as string | null,
 };
 
 export const assessmentConfig = {
