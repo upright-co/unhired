@@ -154,10 +154,11 @@
       "image": {
         "label": "ALBERTA AI UPDATE",
         "headline": "Waiting on an MRI in Alberta? AI is about to add *41,000 scans a year*",
-        "layout": "stat",
-        "stat": "41,000",
-        "statLabel": "more MRI scans a year",
-        "theme": "green"
+        "layout": "photo",
+        "theme": "green",
+        "photoFile": "/Users/user/Documents/Unhired/brand/personal-posts/2026-11-19/gen/alberta-mri-ai-more-scans.png",
+        "credit": "AI-generated image",
+        "pos": "50% 45%"
       },
       "article": {
         "title": "AI is adding 41,000 MRI scans a year in Alberta without buying a single machine",
@@ -205,10 +206,11 @@
       "image": {
         "label": "AI UPDATE",
         "headline": "The company behind Claude is now worth *$1.5 trillion*. What that means for your business",
-        "layout": "stat",
-        "stat": "$1.5T",
-        "statLabel": "value of the company behind Claude",
-        "theme": "black"
+        "layout": "photo",
+        "theme": "black",
+        "photoFile": "/Users/user/Documents/Unhired/brand/personal-posts/2026-11-19/gen/claude-ipo-what-it-means.png",
+        "credit": "AI-generated image",
+        "pos": "50% 45%"
       },
       "article": {
         "title": "The company behind Claude went public at $1.5 trillion. What it means if you run a business",
@@ -253,10 +255,11 @@
       "image": {
         "label": "ALBERTA AI UPDATE",
         "headline": "Fewer than *1 in 5* Alberta businesses use AI. Does yours?",
-        "layout": "stat",
+        "layout": "photo",
         "theme": "navy",
-        "stat": "18.4%",
-        "statLabel": "of Alberta businesses used AI"
+        "photoFile": "/Users/user/Documents/Unhired/brand/personal-posts/2026-11-19/gen/alberta-businesses-using-ai.png",
+        "credit": "AI-generated image",
+        "pos": "50% 45%"
       },
       "article": {
         "title": "Fewer than 1 in 5 Alberta businesses use AI. Where the other 4 could start",

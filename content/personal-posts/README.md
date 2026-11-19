@@ -113,9 +113,21 @@ number in yellow (`*600 metres*`). Labels: `ALBERTA AI UPDATE`, `AI UPDATE`, `AI
   or `list` (duties or rules).
 - AI Employee posts use the robot photos in `brand/ads/photos` (`"layout": "photo", "photo": "robot-desk-b.png"`),
   a different one for each post that day.
-- Generated photos (Fal.ai): not set up yet. When `FAL_KEY` exists in the portal's `.env.local`, this
-  section gets the command for generating a photo or editing a source photo. Until then, don't
-  generate images.
+- **Generated photos (Fal.ai, about $0.15 each):** when a news post has no usable source photo,
+  generate one instead of falling back to a `stat` or `list` card:
+  `node --env-file=/Users/user/Documents/unhired-portal/.env.local /Users/user/Documents/Unhired/scripts/fal-image.mjs --out /Users/user/Documents/Unhired/brand/personal-posts/<date>/gen/<slug>.png --prompt "<scene>"`
+  then set the spec to `"layout": "photo", "photoFile": "<that absolute path>", "credit": "AI-generated image"`.
+  Write the scene like a news photographer's shot list: a real place in Alberta, real people doing
+  something, season and light, camera position. Show ordinary life the story touches (a clinic, a
+  main street, a kitchen table, a farm), never robots or glowing brains for news posts. Never generate
+  a real, named person, a real company's logo, or anything that could pass as a photo of a specific
+  real event. Always credit it "AI-generated image".
+- **Editing a source photo:** add `--edit <photo url or file>` to change an existing photo, e.g. to put
+  an Edmonton or Calgary landmark in the background when the story is local. Credit it
+  "Photo: <source>, edited". Never edit a real person's face or what they are doing.
+- At most 5 generated or edited images a day. Open each one before using it: no garbled text, no
+  extra fingers, nothing that looks fake at phone size. Regenerate once if it fails, otherwise use a
+  `stat` card.
 - Rotate themes so neighbours differ. Open every PNG and look at it: nothing cut off, the number
   readable on a phone, the label matching the pillar.
 
