@@ -10,7 +10,7 @@ attention, start conversations and give the public useful information. The only 
 "About the author" box the site adds to the end of every article. Never write a pitch, a price, a
 guarantee, "we build" or "book a call" into a post, a caption or an article body.
 
-He pastes from the portal's Posts tab (app.unhired.io/posts) and ticks each platform.
+He pastes from the portal's Posts tab (portal.unhired.io/posts) and ticks each platform.
 
 These are personal posts, so the article rule about place names doesn't apply: Alberta, Edmonton and
 Calgary are the point. Everything else in `content/WRITING.md` applies (no AI tells, no em dashes,
