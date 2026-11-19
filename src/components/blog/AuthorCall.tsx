@@ -34,10 +34,10 @@ export function AuthorCall() {
       {links.articleCall && (
         <div className="mt-6 flex flex-wrap items-center justify-between gap-4 border-t border-ink/10 pt-5">
           <p className="max-w-md font-display text-lg font-semibold tracking-tight text-ink">
-            Your AI Game Plan: a free 20-minute call with Brandon to see where AI fits in your business.
+            Book a call with Brandon to see how AI fits into your business.
           </p>
           <a href={links.articleCall} target="_blank" rel="noopener" className="btn btn-primary px-6 py-3 text-sm">
-            Book your AI Game Plan
+            Book a call
           </a>
         </div>
       )}
