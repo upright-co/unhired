@@ -43,7 +43,7 @@ Every article must work for small and medium businesses across industries, never
 ## Added 2026-11-17 (backlog had run out)
 - [x] How to write a job description for an AI Employee (keyword: AI employee job description) → ai-employee-job-description
 - [x] AI Office Manager: the coordination work that holds a small office together (keyword: AI office manager) → ai-office-manager
-- [ ] AI Accounts Receivable clerk: invoices out, payments chased, accounts matched (keyword: AI accounts receivable)
+- [x] AI Accounts Receivable clerk: invoices out, payments chased, accounts matched (keyword: AI accounts receivable) → ai-accounts-receivable
 - [ ] AI Marketing Assistant: the scheduling, reporting and follow-up side of marketing (keyword: AI marketing assistant)
 - [ ] AI Order Processing: orders in, checked and moving without retyping (keyword: AI order processing)
 - [ ] AI Patient Intake: forms, insurance details and first appointments (keyword: AI patient intake)

@@ -1,0 +1,85 @@
+{
+ "images": [
+  {
+   "type": "cover",
+   "name": "cover",
+   "eyebrow": "AI Employee roles · Accounts receivable",
+   "title": "The *AI accounts receivable* clerk",
+   "sub": "Invoices out on time, reminders on a schedule, payments matched, and the decisions that stay with a person.",
+   "avatar": "ai-bookkeeper",
+   "series": "The AI Employee · unhired.io"
+  },
+  {
+   "type": "breakdown",
+   "name": "duties",
+   "title": "Accounts receivable, *duty by duty*",
+   "rows": [
+    ["Sending invoices", "Builds each invoice from the time tracker or order system and sends it the day it's billable.", "alone"],
+    ["Checking it arrived", "Confirms it was opened, uploads to the customer's portal, fixes a missing PO number.", "alone"],
+    ["Reminders", "Follows the written schedule. Checks the bank feed before every send.", "alone"],
+    ["Replies", "Resends copies, logs promised dates. Stops reminders on any dispute.", "reports"],
+    ["Matching payments", "Applies each payment to its invoices. Lists short payments with a question.", "reports"],
+    ["Plans, holds and write-offs", "Passes the request along with the payment history. A person decides.", "asks"]
+   ]
+  },
+  {
+   "type": "table",
+   "name": "schedule",
+   "title": "An example *reminder schedule*",
+   "head": ["When", "What goes out", "Who sends it"],
+   "rows": [
+    ["5 days before due", "A short note with the invoice and a payment link", "AI Employee"],
+    ["3 days late", "A check that it reached the right person", "AI Employee"],
+    ["15 days late", "A firmer note that asks for a payment date", "AI Employee"],
+    ["30 days late", "A statement of every open invoice, copied to the account owner", "AI Employee"],
+    ["45 days late", "Reminders stop. The account goes over with its full history", "A person"]
+   ],
+   "source": "Example. Every business sets its own timing and wording."
+  },
+  {
+   "type": "timeline",
+   "name": "tuesday",
+   "title": "A Tuesday at a *25-person IT services firm*",
+   "avatar": "ai-bookkeeper",
+   "role": "AI Employee, accounts receivable",
+   "roleSub": "Reports to the controller",
+   "rows": [
+    ["6:50 am", "Applies four overnight payments. One $18,240 transfer covers four invoices."],
+    ["8:15 am", "Sends 11 invoices for project tickets closed on Monday."],
+    ["9:30 am", "Last week's invoice bounced. Finds the new payables contact and resends."],
+    ["10:40 am", "A customer says the migration wasn't finished. Reminders stop.", "you"],
+    ["1:05 pm", "Uploads three invoices to a customer's payables portal with the PO numbers."],
+    ["2:30 pm", "A customer asks to split $9,600 over three months.", "you"],
+    ["4:00 pm", "One account reaches 45 days late. Handed over with its history.", "you"]
+   ],
+   "source": "Example day"
+  },
+  {
+   "type": "cost",
+   "name": "cost",
+   "eyebrow": "The cost",
+   "title": "What a receivables seat *costs*",
+   "suffix": " / yr",
+   "highlight": null,
+   "rows": [
+    ["Bill and account collectors, US median", 47030, "$22.61 an hour, May 2025."],
+    ["Bookkeeping and accounting clerks, US median", 50670, "$24.36 an hour, May 2025. Includes accounts receivable clerks."],
+    ["Clerk with benefits and payroll taxes", 72400, "Wages are about 70% of compensation."]
+   ],
+   "source": "Source: US Bureau of Labor Statistics, Occupational Outlook Handbook (May 2025) and ECEC (June 2026)"
+  },
+  {
+   "type": "flow",
+   "name": "setup",
+   "title": "How an AI accounts receivable clerk *is set up*",
+   "steps": [
+    ["Map where invoices come from", "Time tracker, timesheets, orders or contracts, and the rate each one bills at."],
+    ["Write the reminder schedule", "The timing, the wording, and the day it stops and hands over."],
+    ["List the customer exceptions", "Who always pays on day 44, who needs a portal upload, who gets a call instead."],
+    ["Connect with limited access", "Accounting software, bank feed, billing inbox. No access to move money."],
+    ["Write the handoff rules", "Disputes, payment plans, credit holds and write-offs go to a named person."],
+    ["Shadow for two or three weeks", "It drafts every invoice and reminder while a person approves each one."]
+   ]
+  }
+ ]
+}
