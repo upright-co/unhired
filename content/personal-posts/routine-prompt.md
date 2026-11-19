@@ -12,7 +12,7 @@ Today = the local date (America/Edmonton), YYYY-MM-DD. Run
 If `written` is 10 or more, reply "Already written today" and stop. Otherwise run `git -C /Users/user/Documents/Unhired pull --ff-only origin main`. Other sessions share this checkout: never `git add -A` or `git add .`.
 
 ## 1. Read the rules
-Read in full: `/Users/user/Documents/Unhired/content/personal-posts/README.md` (audience, the three priorities, the mix, caption and article format, fact rules, image rules, commands) and `/Users/user/Documents/Unhired/content/WRITING.md`. Read `/Users/user/Documents/Unhired/content/personal-posts/2026-11-19.json` as the model for hooks, captions and articles, plus the most recent day file. List the stories used in the last 7 days of files so you don't repeat one without a new fact. Read the comments at the top of `scripts/post-image.mjs` and `scripts/news-publish.mjs`.
+Read in full: `/Users/user/Documents/Unhired/content/personal-posts/README.md` (audience, the three priorities, the mix, caption and article format, fact rules, image rules, commands) and `/Users/user/Documents/Unhired/content/WRITING.md`, then `/Users/user/Documents/Unhired/content/personal-posts/LEARNINGS.md` (what the numbers say is working; follow the README's 7-and-3 rule). Read `/Users/user/Documents/Unhired/content/personal-posts/2026-11-19.json` as the model for hooks, captions and articles, plus the most recent day file. List the stories used in the last 7 days of files so you don't repeat one without a new fact. Read the comments at the top of `scripts/post-image.mjs` and `scripts/news-publish.mjs`.
 
 ## 2. Research (this decides whether the posts are any good)
 Search the web for news from the last 3 days and open the actual pages before using any fact:

@@ -41,6 +41,24 @@ opinion on: "Would you live 600 metres from an AI data centre?", "Waiting on an 
 "Fewer than 1 in 5 Alberta businesses use AI. Does yours?", "Fair?". It still carries the number.
 Never a clever line, never a teaser with no fact in it.
 
+## Learn from the numbers (read this before choosing anything)
+
+Every morning, before the posts are written, the `personal-posts-review` routine reads the likes,
+comments, shares and reach of the last week's posts from Brandon's Facebook, LinkedIn and X, and
+rewrites `content/personal-posts/LEARNINGS.md`. Read it first, and let it change the day:
+
+- **7 of the 10 posts follow what is working**: the topics, hook shapes, image kinds and themes
+  LEARNINGS.md lists under "Do more of". Drop what it lists under "Do less of".
+- **3 of the 10 are tests**: try something LEARNINGS.md lists under "Test next", or something new.
+  Add `"test"` to that post's `tags`, so the review can tell tests apart.
+- A finding needs at least 5 measured posts behind it. Until then, follow this README.
+- LEARNINGS.md can change the mix, hooks, topics and images. It never overrides the fact rules or
+  the no-selling rule. If the numbers say a pitch or a made-up claim would do better, ignore them.
+- Give every post 1-3 `tags` naming its topic, from this list where one fits: `health`, `power-bills`,
+  `data-centres`, `jobs`, `money`, `scams`, `schools`, `farming`, `small-business`, `government`,
+  `big-tech`, `how-to`, `events`, plus `test` when it is a test. Reuse the same words every day so
+  the review can compare them.
+
 ## The daily mix (10)
 
 | Pillar | Count | What it is |

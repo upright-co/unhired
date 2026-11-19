@@ -72,7 +72,11 @@
             "url": "https://www.cp24.com/news/canada/2026/11/19/province-says-new-data-centre-policies-will-address-albertans-concern-over-growing-industry/"
           }
         ]
-      }
+      },
+      "tags": [
+        "data-centres",
+        "power-bills"
+      ]
     },
     {
       "slug": "chatgpt-can-spend-your-money",
@@ -118,7 +122,11 @@
             "url": "https://www.cnbc.com/2026/11/13/openai-chatgpt-wallet-dot-purchases.html"
           }
         ]
-      }
+      },
+      "tags": [
+        "big-tech",
+        "money"
+      ]
     },
     {
       "slug": "customers-paying-late",
@@ -138,7 +146,11 @@
         "photo": "robot-desk-b.png",
         "pos": "50% 25%"
       },
-      "link": "AI Accounts Receivable Clerk https://unhired.io/blog/ai-accounts-receivable"
+      "link": "AI Accounts Receivable Clerk https://unhired.io/blog/ai-accounts-receivable",
+      "tags": [
+        "small-business",
+        "money"
+      ]
     },
     {
       "slug": "alberta-mri-ai-more-scans",
@@ -191,7 +203,11 @@
             "url": "https://www.canhealth.com/2026/11/18/alberta-increases-mri-capacity-through-ai/"
           }
         ]
-      }
+      },
+      "tags": [
+        "health",
+        "government"
+      ]
     },
     {
       "slug": "claude-ipo-what-it-means",
@@ -240,7 +256,11 @@
             "url": "https://www.cnbc.com/2026/11/18/anthropic-ipo-ai-offering-price.html"
           }
         ]
-      }
+      },
+      "tags": [
+        "big-tech",
+        "small-business"
+      ]
     },
     {
       "slug": "alberta-businesses-using-ai",
@@ -289,7 +309,10 @@
             "url": "https://www.atb.com/company/insights/the-twenty-four/use-of-artificial-intelligence-by-businesses-q2-2026/"
           }
         ]
-      }
+      },
+      "tags": [
+        "small-business"
+      ]
     },
     {
       "slug": "office-manager-two-weeks-off",
@@ -309,7 +332,11 @@
         "photo": "robot-interview-a.png",
         "pos": "50% 30%"
       },
-      "link": "AI Office Manager https://unhired.io/blog/ai-office-manager"
+      "link": "AI Office Manager https://unhired.io/blog/ai-office-manager",
+      "tags": [
+        "small-business",
+        "jobs"
+      ]
     },
     {
       "slug": "free-ai-course-for-canadians",
@@ -355,7 +382,11 @@
             "url": "https://betakit.com/minister-says-canadas-national-ai-literacy-training-will-go-live-next-month/"
           }
         ]
-      }
+      },
+      "tags": [
+        "government",
+        "how-to"
+      ]
     },
     {
       "slug": "manage-the-inbox",
@@ -375,7 +406,11 @@
         "photo": "robot-handshake-a.png",
         "pos": "50% 35%"
       },
-      "link": "How to Write a Job Description for an AI Employee https://unhired.io/blog/ai-employee-job-description"
+      "link": "How to Write a Job Description for an AI Employee https://unhired.io/blog/ai-employee-job-description",
+      "tags": [
+        "small-business",
+        "how-to"
+      ]
     },
     {
       "slug": "meta-data-centre-exempt-from-new-rules",
@@ -439,7 +474,11 @@
             "url": "https://globalnews.ca/news/12156969/alberta-bill-42-data-centres/"
           }
         ]
-      }
+      },
+      "tags": [
+        "data-centres",
+        "big-tech"
+      ]
     }
   ]
 }
