@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Logo } from "@/components/ui/Logo";
 
 /** Header for pages outside the one-page home (blog, posts). The home Nav uses in-page anchors. */
-export function SiteHeader() {
+export function SiteHeader({ plain = false }: { plain?: boolean }) {
   return (
     <header className="no-print px-4 pt-5 sm:px-6">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4">
@@ -16,9 +16,16 @@ export function SiteHeader() {
           >
             Blog
           </Link>
-          <Link href="/assessment" className="btn btn-primary px-4 py-2.5 text-sm sm:px-5">
-            Take Assessment
-          </Link>
+          {/* News articles never sell: their only offer is the author box at the end. */}
+          {plain ? (
+            <Link href="/news" className="rounded-full px-3 py-2 text-[0.94rem] font-medium text-muted transition-colors hover:bg-white/70 hover:text-ink">
+              AI Updates
+            </Link>
+          ) : (
+            <Link href="/assessment" className="btn btn-primary px-4 py-2.5 text-sm sm:px-5">
+              Take Assessment
+            </Link>
+          )}
         </nav>
       </div>
     </header>

@@ -6,6 +6,7 @@ import { siteConfig } from "@/config";
 import { formatDate, getAllPosts, getPost } from "@/lib/blog";
 import { SiteHeader } from "@/components/blog/SiteHeader";
 import { JsonLd } from "@/components/blog/JsonLd";
+import { AuthorCall } from "@/components/blog/AuthorCall";
 import { Footer } from "@/components/sections/Footer";
 import { Eyebrow } from "@/components/ui/Section";
 
@@ -217,29 +218,7 @@ export default async function BlogPost({ params }: { params: Promise<Params> }) 
               </section>
             )}
 
-            <section aria-label="About the author" className="mt-14 flex gap-4 rounded-3xl glass p-6">
-              <span
-                aria-hidden
-                className="bg-signal grid size-12 shrink-0 place-items-center rounded-full font-display font-semibold text-white"
-              >
-                {post.author.name.replace(/^The /, "").charAt(0)}
-              </span>
-              <div>
-                <p className="font-semibold text-ink">
-                  {post.author.name} <span className="font-normal text-muted">· {post.author.role}</span>
-                </p>
-                <p className="mt-1.5 leading-relaxed text-muted">{post.author.bio}</p>
-                {post.author.links.length > 0 && (
-                  <p className="mt-2 flex gap-4 text-sm">
-                    {post.author.links.map((l) => (
-                      <a key={l.href} href={l.href} rel="me noopener" className="font-medium text-violet-deep hover:underline">
-                        {l.label}
-                      </a>
-                    ))}
-                  </p>
-                )}
-              </div>
-            </section>
+            <AuthorCall />
           </article>
 
           {/* On this page */}

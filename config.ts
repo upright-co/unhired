@@ -42,6 +42,11 @@ export const links = {
   bookCall: null as string | null,
   /** Secondary CTA at the end of every report. Set to null to hide the button. */
   challenge: null as string | null,
+  /**
+   * "Book a call with Brandon" in the About-the-author box at the end of articles (/news and /blog).
+   * The only offer an article makes. Set to null to hide the button.
+   */
+  articleCall: "https://cal.com/brandon-upright/demo-call" as string | null,
 };
 
 export const assessmentConfig = {

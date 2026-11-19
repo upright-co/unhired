@@ -1,0 +1,442 @@
+{
+  "date": "2026-11-19",
+  "posts": [
+    {
+      "slug": "alberta-data-centre-600-metre-rule",
+      "pillar": "alberta",
+      "title": "Would you live 600 m from a data centre?",
+      "body": "Would you live 600 metres from an AI data centre? Alberta just proposed that as the minimum distance.\n\nThe province tabled Bill 42 on November 18. It covers data centres of 10 megawatts or more.\n\nThey would have to sit at least 600 metres from the nearest home.\n\nThey would be barred from irrigated land and from about 14 million acres of Alberta's best farmland.\n\nThey would have to use close to zero water for cooling.\n\nAnd the companies would pay for their own power lines, so the cost doesn't land on your power bill.\n\nThis follows four town halls in August and September where residents pushed back. One community group says 600 metres is nowhere near enough and wants 2 to 5 kilometres.\n\nThe bill has not passed yet.\n\nIs 600 metres enough? What distance would you be comfortable with?\n\nFollow Brandon Upright for AI updates like this every day.\n\nThe full story is in the first comment.",
+      "x": "Would you live 600 metres from an AI data centre? Alberta's Bill 42 proposes that as the minimum, plus no building on irrigated land and companies paying for their own power lines. One community group wants 2 to 5 km instead. Is 600 metres enough?",
+      "first_comment": "Full story: https://unhired.io/news/alberta-data-centre-600-metre-rule",
+      "sources": [
+        "https://www.alberta.ca/protecting-land-and-communities",
+        "https://www.alberta.ca/announcements.cfm?xID=981575A97E76E-B93C-5D78-1B86AFC4364E2200",
+        "https://globalnews.ca/news/12156969/alberta-bill-42-data-centres/",
+        "https://www.theglobeandmail.com/business/technology/article-alberta-limits-where-ai-data-centres-can-be-built-amid-backlash/",
+        "https://ca.news.yahoo.com/alberta-tables-bill-restricting-where-210413110.html",
+        "https://www.cp24.com/news/canada/2026/11/19/province-says-new-data-centre-policies-will-address-albertans-concern-over-growing-industry/"
+      ],
+      "image": {
+        "label": "ALBERTA AI UPDATE",
+        "headline": "Would you live *600 metres* from an AI data centre? Alberta just set that as the limit",
+        "theme": "navy",
+        "photoUrl": "https://www.theglobeandmail.com/resizer/v2/2PVAWJ53QJDBXDAPWUCWCPKJJU.JPG?auth=29fd5d6e417f47122a01200b2b75fa31e62232a0a379e2558121ac16be0ca3b7&width=1200&height=800&quality=80&smart=true",
+        "credit": "Photo: The Globe and Mail"
+      },
+      "article": {
+        "title": "Alberta wants AI data centres 600 metres from homes. Here is what Bill 42 does",
+        "description": "The province tabled new rules for large data centres on November 18. What changes, who is exempt, and what it means if one is proposed near you.",
+        "body": [
+          "Alberta has spent two years inviting AI data centres to build here. On November 18 the province tabled a bill that says where they can't go.",
+          "It is called Bill 42, the Energy, Environment and Utilities Statutes Amendment Act, 2026. Technology and Innovation Minister Nate Glubish introduced it. It has not passed yet, and the detailed rules will be written later in regulation.",
+          "## What the bill would do",
+          "The rules apply to data centres that draw 10 megawatts of power or more. For scale, the largest proposals in Alberta are measured in gigawatts, which is a thousand megawatts.",
+          "- A large data centre could not be built within 600 metres of the nearest home.\n- None could go on irrigated land, or on about 14 million acres of Class 1 and Class 2 farmland.\n- Cooling water use has to be close to zero.\n- Waste heat has to be recoverable, so it can warm greenhouses, industry or homes.\n- Companies pay for their own power infrastructure. The province says none of that cost can be passed on to ratepayers.",
+          "The Alberta Utilities Commission becomes the main regulator for these projects.",
+          "## Who is exempt",
+          "Industrial zones, brownfield sites and existing power plant sites are exempt from the 600 metre setback, according to the Edmonton Journal. Municipalities can also ask for a different distance. Projects that are already approved are not affected.",
+          "## Why now",
+          "The province held four town halls in August and September and ran a survey. Global News reported that hundreds of people attended, and many were angry.",
+          "The flashpoint was Olds. In August the Alberta Utilities Commission rejected a 1.4 gigawatt gas power plant planned for a data centre there. According to the Globe and Mail, it sat 30 metres from the nearest properties and within 800 metres of more than 700 homes.",
+          "Glubish put the new position plainly: \"We don't need every data centre to get built in Alberta.\"",
+          "## What critics say",
+          "Bek MacIntosh of the group Little Town Big Data told Global News the buffer should be 2 to 5 kilometres. NDP MLA Nathan Ip said the bill doesn't require environmental impact assessments.",
+          "## What it means for you",
+          "If you live in a town or on an acreage, the practical change is that a project next to homes becomes much harder to approve. If you farm irrigated land, it is off the table for these projects.",
+          "If you pay a power bill, and everyone does, the part to watch is the cost rule. Data centres use enormous amounts of electricity, and the worry has been that households would help pay for the lines and substations that serve them. The bill says they won't. Whether that holds depends on the regulations that come next, so that is the part I'd keep an eye on.",
+          "About 70 data centre projects are in the province's pipeline. The government says roughly 30% of them could be affected."
+        ],
+        "sources": [
+          {
+            "label": "Government of Alberta: Protecting land and communities",
+            "url": "https://www.alberta.ca/protecting-land-and-communities"
+          },
+          {
+            "label": "Government of Alberta news release",
+            "url": "https://www.alberta.ca/announcements.cfm?xID=981575A97E76E-B93C-5D78-1B86AFC4364E2200"
+          },
+          {
+            "label": "Global News: Alberta Bill 42 and data centres",
+            "url": "https://globalnews.ca/news/12156969/alberta-bill-42-data-centres/"
+          },
+          {
+            "label": "The Globe and Mail: Alberta limits where AI data centres can be built",
+            "url": "https://www.theglobeandmail.com/business/technology/article-alberta-limits-where-ai-data-centres-can-be-built-amid-backlash/"
+          },
+          {
+            "label": "Edmonton Journal: Alberta tables bill restricting where data centres can be built",
+            "url": "https://ca.news.yahoo.com/alberta-tables-bill-restricting-where-210413110.html"
+          },
+          {
+            "label": "The Canadian Press via CP24",
+            "url": "https://www.cp24.com/news/canada/2026/11/19/province-says-new-data-centre-policies-will-address-albertans-concern-over-growing-industry/"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "chatgpt-can-spend-your-money",
+      "pillar": "ai_news",
+      "title": "Would you let ChatGPT spend your money?",
+      "body": "Would you let ChatGPT spend your money? As of November 13, it can.\n\nOpenAI launched something called ChatGPT Wallet. You tell the AI what to buy, and it buys it.\n\nIt never sees your card number. Visa, Mastercard and American Express issue a one-time code for each purchase, and you approve every one.\n\nRight now it only works for paying ChatGPT Pro subscribers in the United States. There is no date for Canada.\n\nNot every store is on board. United Airlines says it will block AI shoppers, and Amazon doesn't allow them.\n\nIf you own a shop or sell anything online in Alberta, some of your future customers will be software doing the shopping for a person.\n\nWould you trust an AI to buy your groceries or book your flights? Or is that a step too far?\n\nFollow Brandon Upright for AI updates like this every day.\n\nThe full story is in the first comment.",
+      "x": "Would you let ChatGPT spend your money? As of Nov 13 it can. ChatGPT Wallet buys things for you without seeing your card number, and you approve each purchase. US only for now. United and Amazon are blocking AI shoppers. Would you trust it?",
+      "first_comment": "Full story: https://unhired.io/news/chatgpt-can-spend-your-money",
+      "sources": [
+        "https://www.cnbc.com/2026/11/13/openai-chatgpt-wallet-dot-purchases.html"
+      ],
+      "image": {
+        "label": "AI UPDATE",
+        "headline": "Would you let ChatGPT *spend your money*? As of this month, it can",
+        "theme": "red",
+        "photoUrl": "https://image.cnbcfm.com/api/v1/image/108469835-1793120540409-Screenshot_2026-10-27_at_10008_PM.png?v=1793474850&w=1920&h=1080",
+        "credit": "Image: CNBC"
+      },
+      "article": {
+        "title": "ChatGPT can now buy things for you. How it works, and when it reaches Canada",
+        "description": "OpenAI launched ChatGPT Wallet on November 13. What it does, how your card is protected, who is blocking it, and what Alberta shop owners should know.",
+        "body": [
+          "Until this month, an AI could find you a flight, compare three hotels and fill a shopping cart. Then it stopped and handed you the checkout page, because it had no way to pay.",
+          "On November 13, OpenAI launched ChatGPT Wallet, and that last step is gone. CNBC reported the details.",
+          "## How it works",
+          "You ask ChatGPT to buy something. Its shopping agent finds the item and goes to pay. It never gets your card number. The card network issues a payment token that works for that single transaction and nothing else.",
+          "You approve each purchase with a security check before any money moves. OpenAI built it with American Express, Mastercard and Visa, and says it is not taking a cut of purchases at launch.",
+          "## Who can use it",
+          "For now it is limited to ChatGPT Pro subscribers in the United States who are 18 or older. No date has been given for Canada, so nobody in Alberta can use it today.",
+          "## Who is saying no",
+          "Some large sellers don't want software doing the shopping. United Airlines says it will block AI agents, and Amazon prevents agent purchases.",
+          "That fight matters more than the launch. If big retailers shut AI shoppers out, the feature stays a novelty. If they let them in, a lot of routine buying moves to software.",
+          "## What it means if you shop",
+          "Nothing changes for you this week. When it does arrive in Canada, the questions I'd ask are simple. Do I approve every purchase, or can it buy on its own? What happens when it buys the wrong thing? Who handles the refund? At launch, the answer to the first one is that you approve every purchase.",
+          "## What it means if you sell",
+          "This is the part I'd think about if I owned a store, a clinic with online booking, or any business that takes orders on a website.",
+          "A person shopping looks at photos and reads your story. Software shopping for a person reads your prices, your stock, your delivery times and your return policy. If those aren't clearly written on your site, an AI shopper can't tell its owner why to pick you.",
+          "You don't need to rebuild anything. Check that your prices, hours, service area and policies are on your website in plain text, and not only inside images or PDFs. That helps the customers you already have today, and it is what AI shoppers will read when they show up."
+        ],
+        "sources": [
+          {
+            "label": "CNBC: OpenAI launches ChatGPT Wallet",
+            "url": "https://www.cnbc.com/2026/11/13/openai-chatgpt-wallet-dot-purchases.html"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "customers-paying-late",
+      "pillar": "ai_employee",
+      "title": "Customers paying you late?",
+      "body": "Customers paying you late? It is usually one of three boring reasons.\n\nThe invoice went to the wrong person.\n\nThe PO number was missing, so their accounting team set it aside.\n\nOr nobody followed up.\n\nNone of those are about a customer who can't pay. They are small admin steps that get skipped when everyone is busy.\n\nThis is work AI is good at. It sends the invoice the day it is due, checks it reached the right person, sends reminders on a schedule and matches payments as they land.\n\nThe judgment calls stay with a person: payment plans, disputes, write-offs.\n\nWhat's the longest you've waited to get paid, and what finally got them to pay?\n\nFollow Brandon Upright for AI updates like this every day.\n\nThe full story is in the first comment.",
+      "x": "Customers paying you late? It's usually one of three boring reasons: the invoice went to the wrong person, the PO number was missing, or nobody followed up. What's the longest you've waited to get paid?",
+      "first_comment": "Full article: AI Accounts Receivable Clerk https://unhired.io/blog/ai-accounts-receivable",
+      "sources": [
+        "AI Accounts Receivable Clerk https://unhired.io/blog/ai-accounts-receivable"
+      ],
+      "image": {
+        "label": "AI EMPLOYEE",
+        "headline": "Customers paying you late? It's usually one of these *3 boring reasons*",
+        "layout": "photo",
+        "theme": "violet",
+        "photo": "robot-desk-b.png",
+        "pos": "50% 25%"
+      },
+      "link": "AI Accounts Receivable Clerk https://unhired.io/blog/ai-accounts-receivable"
+    },
+    {
+      "slug": "alberta-mri-ai-more-scans",
+      "pillar": "alberta",
+      "title": "Waiting on an MRI? AI adds 41,000 scans",
+      "body": "Waiting on an MRI in Alberta? AI is about to add room for more than 41,000 extra scans a year.\n\nThe province announced nearly $14 million on November 12 to put AI software on its MRI machines.\n\nThe software shortens each scan, so every machine fits more patients into a day. The province says capacity goes up 20%.\n\nIt has been tested since April 2025 on 10 scanners, and those 10 have already done nearly 12,000 extra scans.\n\nNo new machines are being bought. The software is approved by Health Canada, runs on the scanners Alberta already owns, and no patient data leaves the machine.\n\nThe full rollout across the province is expected in 2028.\n\nHow long did you or someone in your family wait for an MRI?\n\nFollow Brandon Upright for AI updates like this every day.\n\nThe full story is in the first comment.",
+      "x": "Waiting on an MRI in Alberta? The province is spending nearly $14 million on AI software for its MRI machines. Expected: 20% more capacity and 41,000+ extra scans a year, with no new machines. How long did you wait for yours?",
+      "first_comment": "Full story: https://unhired.io/news/alberta-mri-ai-more-scans",
+      "sources": [
+        "https://www.alberta.ca/announcements.cfm?xID=98116250CD787-92AD-11AA-068959F42249C176",
+        "https://www.canhealth.com/2026/11/18/alberta-increases-mri-capacity-through-ai/"
+      ],
+      "image": {
+        "label": "ALBERTA AI UPDATE",
+        "headline": "Waiting on an MRI in Alberta? AI is about to add *41,000 scans a year*",
+        "layout": "stat",
+        "stat": "41,000",
+        "statLabel": "more MRI scans a year",
+        "theme": "green"
+      },
+      "article": {
+        "title": "AI is adding 41,000 MRI scans a year in Alberta without buying a single machine",
+        "description": "Alberta is spending nearly $14 million to put AI software on its MRI scanners. How it works, what the pilot showed, and when it reaches every hospital.",
+        "body": [
+          "If you have waited for an MRI in Alberta, you know the scan is quick and the wait to get one is long. The province's new plan goes after the scan time.",
+          "On November 12, the Government of Alberta announced nearly $14 million to install AI software on MRI scanners across the province. It expects capacity to rise by 20%, which works out to more than 41,000 additional scans a year.",
+          "## How software makes room for more patients",
+          "An MRI machine can only see so many people in a day, because each scan takes a set amount of time. This software shortens the scan while keeping the image quality doctors need. Shorter scans mean more appointments on the same machine with the same staff.",
+          "The province has not said how many minutes each scan saves, so I won't guess. What it has published is the result.",
+          "## What the pilot showed",
+          "The pilot began in April 2025 on 10 scanners. Since then, those 10 machines have produced nearly 12,000 scans that would not otherwise have happened.",
+          "For context, Alberta did more than 280,000 MRIs in 2025-26, up 4% from the year before.",
+          "## Is it safe, and where does my data go?",
+          "Two details from the announcement answer the questions most people ask first. The software is approved by Health Canada. And it runs on the scanner itself, so no patient data is sent outside.",
+          "It is delivered through Acute Care Alberta's Diagnostic Imaging Alberta program. Health Minister Adriana LaGrange said: \"We are committed to helping Albertans get the diagnostic scans they need sooner.\"",
+          "## When it reaches your hospital",
+          "The full provincewide rollout is expected in 2028. The province has not published which hospitals come next or in what order.",
+          "## Why I think this one matters",
+          "Most AI headlines are about chatbots or billion-dollar companies. This story is about a piece of software that was added to equipment Alberta already owns, and that let the same people help thousands more patients.",
+          "That is the pattern I'd look for in any workplace, including a small business. Nobody here was replaced, and nothing new was built. The slowest step in the process got faster, and everything after it moved up. If you run a business, it is worth asking where your version of the scan time is."
+        ],
+        "sources": [
+          {
+            "label": "Government of Alberta news release, November 12, 2026",
+            "url": "https://www.alberta.ca/announcements.cfm?xID=98116250CD787-92AD-11AA-068959F42249C176"
+          },
+          {
+            "label": "Canadian Healthcare Technology: Alberta increases MRI capacity through AI",
+            "url": "https://www.canhealth.com/2026/11/18/alberta-increases-mri-capacity-through-ai/"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "claude-ipo-what-it-means",
+      "pillar": "ai_news",
+      "title": "Claude's maker is worth $1.5 trillion",
+      "body": "One of the biggest stock market launches in history happened this week, and most Albertans have never heard of the company.\n\nIt is called Anthropic. It makes Claude, the AI assistant that competes with ChatGPT.\n\nIt raised $81.3 billion and investors valued the company at about $1.5 trillion.\n\nHere is what that means if you run a business in Alberta.\n\nAI is not a fad that fades next year. Investors just bet $81 billion that software will do a large share of office work.\n\nThe tools will keep getting better and they'll show up inside the software you already use.\n\nAnd your competitors can buy the same tools you can. The gap will come from who learns to use them first.\n\nHave you used ChatGPT or Claude for work yet? What for?\n\nFollow Brandon Upright for AI updates like this every day.\n\nThe full story is in the first comment.",
+      "x": "An AI company most people have never heard of just raised $81.3 billion and is valued at about $1.5 trillion. It's Anthropic, maker of Claude. What it means for your business: AI isn't a fad, and your competitors can buy the same tools. Used one for work yet?",
+      "first_comment": "Full story: https://unhired.io/news/claude-ipo-what-it-means",
+      "sources": [
+        "https://www.cnbc.com/2026/11/18/anthropic-ipo-ai-offering-price.html"
+      ],
+      "image": {
+        "label": "AI UPDATE",
+        "headline": "The company behind Claude is now worth *$1.5 trillion*. What that means for your business",
+        "layout": "stat",
+        "stat": "$1.5T",
+        "statLabel": "value of the company behind Claude",
+        "theme": "black"
+      },
+      "article": {
+        "title": "The company behind Claude went public at $1.5 trillion. What it means if you run a business",
+        "description": "Anthropic raised $81.3 billion in its IPO on November 18. A plain-English look at what happened and why a business owner in Alberta should care.",
+        "body": [
+          "Most people in Alberta have heard of ChatGPT. Fewer have heard of Claude, and almost nobody outside the tech world could name the company that makes it. This week that company had one of the largest stock market launches ever.",
+          "## What happened",
+          "The company is Anthropic. On November 18 it priced its initial public offering at $83 a share, above the $70 to $78 range it had expected, according to CNBC. It sold about 980 million shares and raised $81.3 billion. That values the whole company at roughly $1.5 trillion.",
+          "Google, Microsoft, Nvidia and AMD are investing a further $26 billion at the same price. The shares began trading on the Nasdaq on November 19 under the ticker ANT.",
+          "## What an IPO is, in one paragraph",
+          "An IPO is the first time a company sells its shares to the public. Before it, only private investors could own a piece. After it, anyone with a brokerage account can. The company gets the money raised, and from then on it has to publish its results every three months.",
+          "## What Anthropic sells",
+          "Claude is an AI assistant. You type or talk to it, and it writes, summarizes, answers questions, reads documents and works through tasks on a computer. Businesses pay for it by the month or by how much they use it.",
+          "So the $1.5 trillion figure is a bet about office work. Investors are saying they expect software like this to do a large share of the writing, sorting, answering and scheduling that people do at desks today.",
+          "## What it means if you run a business here",
+          "I would take three things from it.",
+          "First, this is not a fad. A bet that size can turn out to be wrong, but companies and investors don't put $81 billion behind something they expect to fade in a year or two. If you have been waiting to see whether AI sticks around, I'd stop waiting.",
+          "Second, the tools will keep improving, and you won't have to go looking for them. They are being built into email, accounting software, phone systems and booking tools you already pay for.",
+          "Third, everyone gets the same tools. A two-person shop in Red Deer can buy the same AI as a national chain. The advantage goes to whoever learns to use it well, and that's a matter of practice more than budget.",
+          "## What it does not mean",
+          "It is not a reason to buy the stock, and nothing here is investment advice. A high valuation tells you what investors hope for. It doesn't tell you whether AI is ready for a particular job in your business. You find that out by trying it on one small, real task.",
+          "A good first test is an hour of your own week. Pick one thing you do every week that is mostly typing, and see how far an AI assistant gets with it."
+        ],
+        "sources": [
+          {
+            "label": "CNBC: Anthropic prices IPO at $83 a share",
+            "url": "https://www.cnbc.com/2026/11/18/anthropic-ipo-ai-offering-price.html"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "alberta-businesses-using-ai",
+      "pillar": "alberta",
+      "title": "Fewer than 1 in 5 Alberta businesses use AI",
+      "body": "Fewer than 1 in 5 Alberta businesses use AI. Does yours?\n\nThe number comes from a Statistics Canada survey, reported by ATB Economics in June.\n\n18.4% of Alberta businesses said they used AI in the past 12 months.\n\nThe national figure is 19.2%, so Alberta is slightly behind the rest of the country.\n\nThat means more than 8 in 10 businesses here haven't touched it.\n\nI read that as good news if you're curious. You are not late. If you start this year, you're ahead of most of the businesses around you.\n\nBusiness owners: are you in the 18% or the 82%? And if you're not using it, what's holding you back?\n\nFollow Brandon Upright for AI updates like this every day.\n\nThe full story is in the first comment.",
+      "x": "Fewer than 1 in 5 Alberta businesses use AI: 18.4%, against 19.2% across Canada (Statistics Canada, via ATB). More than 8 in 10 haven't touched it. Business owners, are you in the 18% or the 82%? What's holding you back?",
+      "first_comment": "Full story: https://unhired.io/news/alberta-businesses-using-ai",
+      "sources": [
+        "https://www.atb.com/company/insights/the-twenty-four/use-of-artificial-intelligence-by-businesses-q2-2026/"
+      ],
+      "image": {
+        "label": "ALBERTA AI UPDATE",
+        "headline": "Fewer than *1 in 5* Alberta businesses use AI. Does yours?",
+        "layout": "stat",
+        "theme": "navy",
+        "stat": "18.4%",
+        "statLabel": "of Alberta businesses used AI"
+      },
+      "article": {
+        "title": "Fewer than 1 in 5 Alberta businesses use AI. Where the other 4 could start",
+        "description": "Statistics Canada figures reported by ATB put AI use at 18.4% of Alberta businesses. What the number says, and three low-risk places to begin.",
+        "body": [
+          "If you run a business in Alberta and you haven't used AI for anything yet, you are in the majority by a wide margin.",
+          "## The number",
+          "ATB Economics reported the figure on June 2, 2026, using a Statistics Canada survey. 18.4% of Alberta businesses said they had used AI in the previous 12 months. Across Canada it was 19.2%.",
+          "So Alberta sits a little under the national rate, and more than 8 in 10 businesses here have not started.",
+          "The survey covers businesses of every size and doesn't break out small ones separately. In a small business the owner is usually the one who would have to find the time to try it, which is a big part of why many haven't.",
+          "## Why most haven't",
+          "The reasons owners give are usually the same few. They don't know where it would fit. They worry about putting customer information into it. They tried a chatbot once, got a bland answer, and moved on. Or they are simply too busy running the business to test anything new.",
+          "Those are fair reasons, and none of them means AI can't help. They mostly mean nobody has shown them a first step small enough to try on a Tuesday afternoon.",
+          "## Three places to start that cost almost nothing",
+          "**The email you dread writing.** A late-payment reminder, a reply to an unhappy customer, a quote follow-up. Paste in the situation, ask for a draft, then edit it in your own voice. It takes about five minutes.",
+          "**The document nobody reads.** A lease, a supplier contract, a long government form. Ask an AI assistant to summarize it and list the dates and dollar amounts. Then check those against the document yourself.",
+          "**The job you do the same way every week.** Scheduling posts, turning notes into an invoice, answering the same five customer questions. Write down the steps once, and ask the AI to do the first draft each week.",
+          "## Two rules while you try it",
+          "Don't paste in anything you wouldn't email to a stranger, such as health information, banking details or a customer's personal records, unless you have checked how the tool handles data.",
+          "And check its work. AI assistants are fast and usually right, and they are sometimes confidently wrong. Treat the output like a draft from a new hire.",
+          "## What I take from the number",
+          "A year or two from now that 18.4% will be much higher. Today it means the business down the street probably hasn't started either. An owner who spends a few hours this month learning what AI is good and bad at will be ahead of most of their market, and it costs very little to find out."
+        ],
+        "sources": [
+          {
+            "label": "ATB Economics: Use of artificial intelligence by businesses, Q2 2026",
+            "url": "https://www.atb.com/company/insights/the-twenty-four/use-of-artificial-intelligence-by-businesses-q2-2026/"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "office-manager-two-weeks-off",
+      "pillar": "ai_employee",
+      "title": "Office manager away for 2 weeks?",
+      "body": "What happens at your office when the office manager is away for two weeks?\n\nIn most small offices, a lot of work just stops.\n\nSupplies run out, vendor emails sit and bills don't get coded. The new hire shows up and nobody set up their laptop.\n\nMost of that job is follow-through, and it lives in one person's head.\n\nAI can now own a big part of that list: vendor requests, supply orders, calendars, new-hire setup, the shared inbox.\n\nSome things should stay with a person, like anything about someone's pay or conduct, and spending above a set limit.\n\nWhether or not you ever use AI, write that weekly list down. It is the most fragile thing in a small office.\n\nWhat's the one job at your workplace that only one person knows how to do?\n\nFollow Brandon Upright for AI updates like this every day.\n\nThe full story is in the first comment.",
+      "x": "What happens at your office when the office manager is away for 2 weeks? Supplies run out, vendor emails sit, bills don't get coded. Most of that job lives in one person's head. What's the one job at your work that only one person knows how to do?",
+      "first_comment": "Full article: AI Office Manager https://unhired.io/blog/ai-office-manager",
+      "sources": [
+        "AI Office Manager https://unhired.io/blog/ai-office-manager"
+      ],
+      "image": {
+        "label": "AI EMPLOYEE",
+        "headline": "What happens at your office when the office manager is *away for 2 weeks*?",
+        "layout": "photo",
+        "theme": "navy",
+        "photo": "robot-interview-a.png",
+        "pos": "50% 30%"
+      },
+      "link": "AI Office Manager https://unhired.io/blog/ai-office-manager"
+    },
+    {
+      "slug": "free-ai-course-for-canadians",
+      "pillar": "alberta",
+      "title": "Free AI course for every Albertan",
+      "body": "Every Albertan will be able to take a free AI course next month. Will you?\n\nFederal AI Minister Evan Solomon said on November 16 that it goes live in December \"for every single Canadian\".\n\nIt takes about 90 minutes and costs nothing.\n\nIt is being led from Edmonton, by Amii, the Alberta Machine Intelligence Institute.\n\nIt is part of a $13 million national program to teach Canadians the basics of AI.\n\nThe exact date hasn't been announced. I'll post the link the day it opens.\n\nIf you have never used ChatGPT, this is the easiest start you'll get. If you run a business, put your whole team through it.\n\nWould you spend 90 minutes on a free AI course? Tell me why or why not.\n\nFollow Brandon Upright for AI updates like this every day.\n\nThe full story is in the first comment.",
+      "x": "Every Albertan can take a free AI course next month. About 90 minutes, free, live in December, says federal AI Minister Evan Solomon. It's led from Edmonton by Amii. Would you spend 90 minutes on it? Why or why not?",
+      "first_comment": "Full story: https://unhired.io/news/free-ai-course-for-canadians",
+      "sources": [
+        "https://betakit.com/minister-says-canadas-national-ai-literacy-training-will-go-live-next-month/"
+      ],
+      "image": {
+        "label": "CANADA AI UPDATE",
+        "headline": "Every Albertan can take a *free AI course* next month. Will you?",
+        "theme": "violet",
+        "photoUrl": "https://cdn.betakit.com/wp-content/uploads/2026/06/BetakitMostAmbitiousTownHall2026-99.jpg",
+        "credit": "Photo: BetaKit"
+      },
+      "article": {
+        "title": "A free 90-minute AI course for every Canadian is coming in December, led from Edmonton",
+        "description": "The federal AI minister says national AI training goes live next month. What we know, who is building it, and why it is worth 90 minutes.",
+        "body": [
+          "If you have been meaning to figure out what AI is and never found the time, the federal government is about to make it hard to keep putting off.",
+          "## What was announced",
+          "On November 16, federal AI Minister Evan Solomon said a national AI training program will go live in December \"for every single Canadian\", as reported by BetaKit.",
+          "It is free and takes about 90 minutes to complete. It is part of the $13 million National AI Literacy Initiative.",
+          "## The Edmonton connection",
+          "The initiative is led by Amii, the Alberta Machine Intelligence Institute, which is based in Edmonton. Amii is one of Canada's three national AI institutes and has been part of the University of Alberta's AI research community for more than two decades.",
+          "A program meant for every Canadian is being built here, and most Albertans have no idea.",
+          "## What we don't know yet",
+          "No exact launch date has been given, and the program doesn't have a public name or a sign-up page yet. I'll share the link when it opens.",
+          "## Who it is for",
+          "From the way it has been described, it is for people who are not technical: a parent wondering what their kids are using for homework, someone worried about their job, a retiree who keeps getting AI-written scam emails, or an owner who hears about AI every day and doesn't know where to begin.",
+          "## Why I'd take it, and have a whole team take it",
+          "I have built AI systems for businesses for four years. The biggest thing that holds a team back is rarely the technology. Usually half the staff think AI is magic and the other half think it is useless, and both are wrong in ways that cost money.",
+          "Ninety minutes of shared basics fixes a lot of that. People learn what these tools are good at, where they make things up, and what should never be typed into one. After that, conversations about using AI at work get more practical, because everyone is starting from the same facts.",
+          "If you run a business in Alberta, here is what I'd do. When the course opens, block 90 minutes on the calendar and have everyone take it in the same week, yourself included. Then spend 20 minutes together on one question: what is one task here we should try this on?",
+          "The course is free, and the only cost is an hour and a half of everyone's time."
+        ],
+        "sources": [
+          {
+            "label": "BetaKit: Minister says Canada's national AI literacy training will go live next month",
+            "url": "https://betakit.com/minister-says-canadas-national-ai-literacy-training-will-go-live-next-month/"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "manage-the-inbox",
+      "pillar": "ai_employee",
+      "title": "Would you hire with 'manage the inbox'?",
+      "body": "Would you hire someone and only tell them to \"manage the inbox\"?\n\nA good employee would work it out. They'd ask questions, watch how you do it, and learn.\n\nAI doesn't work that way. It does what the instructions say, so vague instructions get vague work.\n\nThis is why a lot of people try AI once and decide it's useless.\n\nThe fix is to write the task the way you'd write it for a brand new temp.\n\n\"When an email arrives at info@, sort it into one of six types.\" That can be followed.\n\nSay what starts the task, what to do, and where to do it. Then say whether to do it alone or check with you first.\n\nWhat's the vaguest instruction a boss ever gave you?\n\nFollow Brandon Upright for AI updates like this every day.\n\nThe full story is in the first comment.",
+      "x": "Would you hire someone and only tell them to \"manage the inbox\"? A person would figure it out. AI won't, which is why many people try it once and call it useless. Say what starts the task, what to do and where. What's the vaguest instruction a boss ever gave you?",
+      "first_comment": "Full article: How to Write a Job Description for an AI Employee https://unhired.io/blog/ai-employee-job-description",
+      "sources": [
+        "How to Write a Job Description for an AI Employee https://unhired.io/blog/ai-employee-job-description"
+      ],
+      "image": {
+        "label": "AI EMPLOYEE",
+        "headline": "Would you hire someone and only tell them to *\"manage the inbox\"*?",
+        "layout": "photo",
+        "theme": "green",
+        "photo": "robot-handshake-a.png",
+        "pos": "50% 35%"
+      },
+      "link": "How to Write a Job Description for an AI Employee https://unhired.io/blog/ai-employee-job-description"
+    },
+    {
+      "slug": "meta-data-centre-exempt-from-new-rules",
+      "pillar": "alberta",
+      "title": "Meta's $13B data centre skips the new rules",
+      "body": "Meta's $13 billion data centre near Edmonton won't have to follow Alberta's new data centre rules. Is that fair?\n\nThe province tabled Bill 42 on November 18. New large data centres would have to sit 600 metres from homes and stay off prime farmland.\n\nMeta's campus in Sturgeon County was approved before the bill, so it is grandfathered.\n\nIt is planned at 1 gigawatt, with 970 megawatts of grid power already approved.\n\nAbout 70 data centre projects are in the province's pipeline. The government says roughly 30% of them could be affected by the new rules.\n\nThe other side of the argument is that changing the rules on a project that's already approved makes companies nervous about building here at all.\n\nShould the new rules apply to projects that were already approved? Yes or no, and why?\n\nFollow Brandon Upright for AI updates like this every day.\n\nThe full story is in the first comment.",
+      "x": "Meta's $13 billion data centre in Sturgeon County, near Edmonton, is grandfathered under Alberta's Bill 42, so the new 600 metre rule won't apply to it. About 70 projects are in the pipeline. Should new rules apply to projects already approved?",
+      "first_comment": "Full story: https://unhired.io/news/meta-data-centre-exempt-from-new-rules",
+      "sources": [
+        "https://www.cp24.com/news/canada/2026/11/19/province-says-new-data-centre-policies-will-address-albertans-concern-over-growing-industry/",
+        "https://ca.news.yahoo.com/alberta-tables-bill-restricting-where-210413110.html",
+        "https://www.alberta.ca/protecting-land-and-communities",
+        "https://globalnews.ca/news/12156969/alberta-bill-42-data-centres/"
+      ],
+      "image": {
+        "label": "ALBERTA AI UPDATE",
+        "headline": "Meta's *$13 billion* data centre near Edmonton skips Alberta's new rules. Fair?",
+        "theme": "red",
+        "photoUrl": "https://s.yimg.com/lo/mysterio/api/eabb03abb09a13039e0265306f1ddd84d42a04c66faafd0b63f47206b2cce914/lightyear_networkapi/resizefill_w1200%3Bquality_80%3Bformat_jpg/https%3A%2F%2Fmedia.zenfs.com%2Fen%2Fedmonton_journal_articles_165%2F8c6fd2f598f423a844f807b120c96fb9.jpg",
+        "credit": "Photo: Edmonton Journal"
+      },
+      "article": {
+        "title": "Meta's $13 billion Alberta data centre is exempt from the province's new rules. Here is why",
+        "description": "Bill 42 sets new limits on where large data centres can go, but Meta's Sturgeon County campus is grandfathered. What that means and how many other projects are affected.",
+        "body": [
+          "Alberta tabled new rules for AI data centres on November 18. The biggest one already approved in the province will not have to follow them.",
+          "## The project",
+          "Meta, the company that owns Facebook and Instagram, is building a data centre campus in Sturgeon County, just north of Edmonton. It is a $13 billion project planned at 1 gigawatt, and 970 megawatts of grid power have already been approved for it, according to The Canadian Press and the Edmonton Journal.",
+          "To give that some scale, a gigawatt is a thousand megawatts. The new rules apply to anything that draws 10 megawatts or more, so this campus is about a hundred times the size where the rules begin.",
+          "## The new rules",
+          "Bill 42 would keep large data centres at least 600 metres from the nearest home and off irrigated land and prime farmland. It would require close to zero water use for cooling, and it would make companies pay for their own power infrastructure.",
+          "The bill has not passed yet, and its details will be set later in regulation.",
+          "## Why Meta is exempt",
+          "The project was approved before the bill was introduced, so it is grandfathered. That is the normal way new rules work. A government that changes the terms on a project after approving it makes every other investor wonder whether their approval is safe.",
+          "It is also why some residents are frustrated. The rules arrived after the largest project was already through the door.",
+          "## How many projects are affected",
+          "About 70 data centre projects are in the province's concierge program, which helps companies through the process. The government says roughly 30% of them could be affected by Bill 42.",
+          "Projects in industrial zones, on brownfield sites or on existing power plant sites are exempt from the 600 metre setback.",
+          "## The two sides",
+          "People who support the exemption say Alberta asked these companies to come, and that a deal has to stay a deal. Billions of dollars and a lot of construction work depend on companies trusting that.",
+          "People who oppose it point out that the concerns behind the bill, which are power, water, noise and farmland, apply to a 1 gigawatt campus more than to anything else on the list.",
+          "## What I'd watch",
+          "The power rule matters most for anyone who pays a utility bill. The bill says data centre companies cover their own grid costs and that nothing is passed on to ratepayers. How that is written into regulation, and whether it reaches projects already underway, will decide who pays for the lines. I'll keep following it.",
+          "Technology Minister Nate Glubish summed up the government's position this way: \"We don't need every data centre to get built in Alberta.\""
+        ],
+        "sources": [
+          {
+            "label": "The Canadian Press via CP24: Province says new data centre policies will address Albertans' concern",
+            "url": "https://www.cp24.com/news/canada/2026/11/19/province-says-new-data-centre-policies-will-address-albertans-concern-over-growing-industry/"
+          },
+          {
+            "label": "Edmonton Journal: Alberta tables bill restricting where data centres can be built",
+            "url": "https://ca.news.yahoo.com/alberta-tables-bill-restricting-where-210413110.html"
+          },
+          {
+            "label": "Government of Alberta: Protecting land and communities",
+            "url": "https://www.alberta.ca/protecting-land-and-communities"
+          },
+          {
+            "label": "Global News: Alberta Bill 42 and data centres",
+            "url": "https://globalnews.ca/news/12156969/alberta-bill-42-data-centres/"
+          }
+        ]
+      }
+    }
+  ]
+}

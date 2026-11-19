@@ -78,7 +78,9 @@ const sentences = (t) => t.split(/(?<=[.!?])\s+(?=[A-Z"“(])/).map((s) => s.tri
 const wc = (t) => (t.match(/\b[\w'’$%.,-]+\b/g) ?? []).length;
 
 let failed = false;
-for (const file of process.argv.slice(2)) {
+// --places-ok: Brandon's personal posts (scripts/post-image.mjs flow) are local on purpose.
+const placesOk = process.argv.includes("--places-ok");
+for (const file of process.argv.slice(2).filter((a) => !a.startsWith("--"))) {
   const raw = readFileSync(file, "utf8");
   const { data, content } = matter(raw);
   const bodyStart = raw.split("\n").findIndex((l, i) => i > 0 && l.trim() === "---") + 1;
@@ -109,7 +111,7 @@ for (const file of process.argv.slice(2)) {
     if ((m = plain.match(phrases))) errs.push([n, `AI phrase "${m[0]}"`, plain]);
     for (const [re, why] of SHAPES) if (re.test(plain)) errs.push([n, why, plain]);
     for (const [re, why] of SOFT) if ((m = plain.match(re))) warns.push([n, `${why} "${m[0]}"`, plain]);
-    if ((m = plain.match(PLACES))) errs.push([n, `names a place "${m[0]}": articles are for businesses everywhere`, plain]);
+    if (!placesOk && (m = plain.match(PLACES))) errs.push([n, `names a place "${m[0]}": articles are for businesses everywhere`, plain]);
     // The one allowed assessment pointer may name Unhired ("such as the one offered by Unhired").
     const pointer = /\]\((https:\/\/unhired\.io)?\/assessment\)/.test(raw ?? "");
     for (const [re, why] of [...(n === "fm.syndication.page_caption" ? [] : SELL), ...SALES]) {
