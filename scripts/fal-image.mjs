@@ -24,7 +24,7 @@ if (!out || !prompt) throw new Error('usage: fal-image.mjs --out <file.png> --pr
 if (!process.env.FAL_KEY) throw new Error("FAL_KEY is not set (it lives in unhired-portal/.env.local)");
 
 const STYLE = " Photorealistic, shot on a full-frame camera, natural light, documentary news-photo look. No text, no captions, no logos, no watermarks.";
-const body = { prompt: prompt + STYLE, aspect_ratio: "3:2", resolution: "1K", num_images: 1, output_format: "png" };
+const body = { prompt: prompt + STYLE, aspect_ratio: arg("aspect") ?? "3:2", resolution: arg("resolution") ?? "1K", num_images: 1, output_format: "png" };
 let model = "fal-ai/nano-banana-pro";
 if (edit) {
   model += "/edit";
