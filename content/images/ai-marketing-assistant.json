@@ -1,0 +1,73 @@
+{
+ "images": [
+  {
+   "type": "cover",
+   "name": "cover",
+   "eyebrow": "AI Employee roles · Marketing",
+   "title": "The *AI marketing* assistant",
+   "sub": "Posts scheduled, reports built, leads followed up, and the marketing decisions that stay with a person.",
+   "avatar": "ai-sales-rep",
+   "series": "The AI Employee · unhired.io"
+  },
+  {
+   "type": "breakdown",
+   "name": "duties",
+   "title": "Marketing operations, *duty by duty*",
+   "rows": [
+    ["Content calendar", "Drafts approved posts, schedules them and checks the next morning that each one published.", "alone"],
+    ["Weekly report", "Pulls numbers from every account onto one page and notes what moved. Read-only on ads.", "alone"],
+    ["Lead follow-up", "Adds each lead to the CRM within minutes, sends the follow-up and books calls.", "alone"],
+    ["Reviews", "Sends review requests and thanks happy customers. Complaints go to a person.", "reports"],
+    ["Email campaigns", "Builds each campaign from an approved brief and sends a test for approval.", "asks"],
+    ["New claims and ad spend", "Recommends. A person approves prices, offers, results and budget changes.", "asks"]
+   ]
+  },
+  {
+   "type": "quote",
+   "name": "quote",
+   "text": "The AI marketing assistant takes the plan a person makes and *runs it every day* without dropping pieces.",
+   "by": "Brandon Upright"
+  },
+  {
+   "type": "table",
+   "name": "week",
+   "title": "An example week at a *20-person physio clinic*",
+   "head": ["Day", "What the AI Employee does", "Who decides"],
+   "rows": [
+    ["Monday 7 am", "Weekly report on the manager's desk: bookings by source, email clicks, ad cost per booking", "AI Employee"],
+    ["Monday 10 am", "One ad's cost per booking has doubled. Flags it with the numbers", "The manager"],
+    ["Tuesday", "Schedules four approved posts and the monthly newsletter test", "AI Employee"],
+    ["Wednesday", "A one-star review comes in. Sends it over with the patient's visit history", "The manager"],
+    ["Thursday", "Nine form fills added to the CRM, follow-ups sent, three calls booked", "AI Employee"],
+    ["Friday", "Front desk wants to promote a new offer. Drafts the post and waits", "The manager"]
+   ],
+   "source": "Example week"
+  },
+  {
+   "type": "cost",
+   "name": "cost",
+   "eyebrow": "The cost",
+   "title": "What a marketing specialist *costs*",
+   "suffix": " / yr",
+   "highlight": null,
+   "rows": [
+    ["Marketing specialists, US median wage", 78760, "$37.87 an hour, May 2025."],
+    ["With benefits and payroll taxes", 112500, "Wages are about 70% of compensation."]
+   ],
+   "source": "Source: US Bureau of Labor Statistics, Occupational Outlook Handbook (May 2025) and ECEC (June 2026)"
+  },
+  {
+   "type": "flow",
+   "name": "setup",
+   "title": "How an AI marketing assistant *is set up*",
+   "steps": [
+    ["List the recurring work", "Every post, report, email and follow-up done last month, and how often."],
+    ["Write the voice guide", "Twenty pieces the owner liked, five they didn't, and why."],
+    ["Write the approval rules", "What it publishes alone, what waits for a person, and who that person is."],
+    ["Connect with limited access", "Scheduler, email platform, CRM, analytics. Read-only on ad accounts."],
+    ["Set the report format", "The same numbers in the same order every Monday."],
+    ["Shadow for two or three weeks", "It drafts everything while a person approves each piece."]
+   ]
+  }
+ ]
+}

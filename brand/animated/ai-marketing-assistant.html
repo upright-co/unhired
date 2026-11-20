@@ -1,0 +1,110 @@
+<!doctype html><html><head><meta charset="utf-8">
+<title>AI Marketing Assistant Week</title>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&family=DM+Sans:wght@400;500;600&family=JetBrains+Mono:wght@500;600&display=block" rel="stylesheet">
+<!-- Animated LinkedIn post, 1080x1350 (4:5), seamless loop of DURATION seconds.
+     Layout: calendar week filling in (days as rows). Background: light paper with ink lines.
+     Motion: draw-on lines + pop-in cards + counting totals. Type: huge headline top.
+     scripts/render-animation.mjs renders it to MP4. -->
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1350px;overflow:hidden;background:#F8F7FB}
+.b{position:relative;width:1080px;height:1350px;overflow:hidden;background:#F8F7FB;color:#09070F;font-family:'DM Sans',sans-serif}
+.rule{position:absolute;left:0;height:1.5px;background:rgba(9,7,15,.07)}
+.margin{position:absolute;top:330px;left:186px;width:2px;background:rgba(246,86,99,.35)}
+.head{position:absolute;left:44px;right:44px;top:44px;display:flex;align-items:center;justify-content:space-between}
+.head img{height:24px;opacity:.7;display:block}
+.tag{font:600 15px 'JetBrains Mono',monospace;letter-spacing:.16em;color:#9452F2;border:1.5px solid rgba(148,82,242,.45);border-radius:999px;padding:10px 20px;background:#F8F7FB}
+h1{position:absolute;left:44px;right:44px;top:112px;font:700 74px/1.02 'Sora';letter-spacing:-3px}
+h1 span{background:linear-gradient(90deg,#F65663,#9452F2);-webkit-background-clip:text;color:transparent}
+.kick{position:absolute;left:44px;top:288px;font:600 15px 'JetBrains Mono',monospace;letter-spacing:.16em;color:rgba(9,7,15,.5)}
+.legend{position:absolute;right:44px;top:282px;display:flex;gap:22px;font:600 15px 'DM Sans';color:rgba(9,7,15,.7)}
+.legend span{display:flex;align-items:center;gap:8px}
+.legend i{display:block;width:18px;height:18px;border-radius:5px}
+.legend .la i{background:#F65663}.legend .lp i{border:2px dashed #9452F2}
+.day{position:absolute;left:44px;width:130px}
+.day .d{font:700 38px/1 'Sora';letter-spacing:-1.2px;color:rgba(9,7,15,.28)}
+.day .u{margin-top:12px;height:5px;border-radius:3px;background:linear-gradient(90deg,#F65663,#9452F2);width:0}
+.card{position:absolute;width:404px;height:118px;border-radius:18px;padding:16px 22px 0 26px;opacity:0}
+.card.a{background:#fff;box-shadow:inset 6px 0 0 #F65663,0 14px 30px -18px rgba(9,7,15,.35)}
+.card.p{background:rgba(148,82,242,.07);border:2px dashed #9452F2}
+.card .k{font:600 13px 'JetBrains Mono',monospace;letter-spacing:.14em}
+.card.a .k{color:#E8414F}.card.p .k{color:#7B3FE0}
+.card .t{margin-top:8px;font:700 25px 'Sora';letter-spacing:-.7px;white-space:nowrap}
+.card .o{margin-top:5px;font:500 19px 'DM Sans';color:rgba(9,7,15,.62);white-space:nowrap}
+.tot{position:absolute;top:1146px;display:flex;align-items:baseline;gap:16px}
+.tot.a{left:44px}.tot.p{left:560px}
+.tot .n{font:700 92px/1 'JetBrains Mono',monospace;letter-spacing:-4px}
+.tot.a .n{color:#F65663}.tot.p .n{color:#9452F2}
+.tot .l{font:600 22px/1.3 'DM Sans';color:rgba(9,7,15,.72)}
+.foot{position:absolute;left:44px;right:44px;bottom:30px;display:flex;justify-content:space-between;font:500 16px 'DM Sans';color:rgba(9,7,15,.45)}
+.foot .mono{font:500 16px 'JetBrains Mono',monospace;letter-spacing:.08em;color:rgba(9,7,15,.6)}
+</style></head><body><div class="b">
+<div id="rules"></div>
+<div class="margin" id="margin"></div>
+<div class="head"><img src="../../public/unhired-logo.png" alt="Unhired"><div class="tag">MARKETING · ONE WEEK</div></div>
+<h1>Who runs each part<br>of a <span>marketing week</span></h1>
+<div class="kick">EXAMPLE: 20-PERSON PHYSIO CLINIC</div>
+<div class="legend"><span class="la"><i></i>AI Employee</span><span class="lp"><i></i>The manager</span></div>
+<div id="stage"></div>
+<div class="tot a"><div class="n" id="nA">0</div><div class="l">done by the<br>AI Employee</div></div>
+<div class="tot p"><div class="n" id="nP">0</div><div class="l">decided by<br>the manager</div></div>
+<div class="foot"><span>Strategy, ad budgets and complaints stay with a person.</span><span class="mono">unhired.io</span></div>
+</div>
+<script>
+window.DURATION=20;
+const DAYS=[
+ ['MON',[['a','Weekly report sent','Bookings by source, email clicks'],['p',"One ad's cost doubled",'Flagged with the numbers']]],
+ ['TUE',[['a','4 posts scheduled','All approved last week'],['a','Failed post fixed','Rescheduled the same day']]],
+ ['WED',[['a','Review requests sent',"To Tuesday's patients"],['p','One-star review','Sent with the visit history']]],
+ ['THU',[['a','9 form fills followed up','Added to the CRM in minutes'],['a','3 calls booked','On the right calendar']]],
+ ['FRI',[['a','Tracking links checked','Every campaign tagged'],['p','New offer post drafted',"Waits for the manager's OK"]]],
+];
+const T=window.DURATION, ROW0=346, ROWH=156, D0=1.2, DSTEP=2.9;
+const $=id=>document.getElementById(id);
+const clamp=(x,a=0,b=1)=>Math.min(b,Math.max(a,x));
+const ease=x=>x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2;
+const back=x=>{const c=1.6;return 1+(c+1)*Math.pow(x-1,3)+c*Math.pow(x-1,2)};
+// ruled paper lines
+const RL=[];for(let y=330;y<1130;y+=ROWH/2){const r=document.createElement('div');r.className='rule';r.style.top=y+'px';$('rules').appendChild(r);RL.push(r);}
+const cards=[];
+DAYS.forEach(([d,items],i)=>{
+ const y=ROW0+i*ROWH;
+ const dl=document.createElement('div');dl.className='day';dl.id='d'+i;dl.style.top=(y+18)+'px';
+ dl.innerHTML=`<div class="d">${d}</div><div class="u"></div>`;$('stage').appendChild(dl);
+ items.forEach(([k,t,o],j)=>{
+  const c=document.createElement('div');c.className='card '+k;
+  c.style.left=(208+j*428)+'px';c.style.top=(y+14)+'px';
+  c.innerHTML=`<div class="k">${k==='a'?'AI EMPLOYEE':'TO THE MANAGER'}</div><div class="t">${t}</div><div class="o">${o}</div>`;
+  $('stage').appendChild(c);cards.push({c,k,s:D0+i*DSTEP+.35+j*1.0,day:i});
+ });
+});
+window.render=function(tt){
+ let t=((tt%T)+T)%T, op=1;
+ const fo=T-1.2;
+ if(t>=fo&&t<fo+.5)op=1-ease((t-fo)/.5);
+ if(t>=fo+.5){op=ease(clamp((t-fo-.5)/.5));t=0;}
+ // draw-on paper lines
+ RL.forEach((r,i)=>{const p=ease(clamp((t-.1-i*.06)/.7));r.style.width=(1080*p)+'px';});
+ $('margin').style.height=(780*ease(clamp(t/1.1)))+'px';
+ let a=0,p=0;
+ DAYS.forEach((_,i)=>{
+  const s=D0+i*DSTEP, el=$('d'+i), k=ease(clamp((t-s)/.5));
+  const active=t>=s&&t<s+DSTEP;
+  el.querySelector('.d').style.color=`rgba(9,7,15,${.28+.72*k})`;
+  el.querySelector('.u').style.width=(active?100*k:(t>=s?36:0))+'px';
+ });
+ cards.forEach(o=>{
+  const k=clamp((t-o.s)/.45);
+  o.c.style.opacity=clamp(k*2.5);
+  o.c.style.transform=`translateY(${(1-ease(k))*24}px) scale(${.86+.14*back(k)})`;
+  if(t>=o.s+.2){if(o.k==='a')a++;else p++;}
+ });
+ $('nA').textContent=a;$('nP').textContent=p;
+ $('stage').style.opacity=op;
+ document.querySelectorAll('.tot').forEach(e=>e.style.opacity=op);
+};
+window.ready=document.fonts.ready.then(()=>Promise.all([...document.images].map(i=>i.complete?1:new Promise(r=>{i.onload=i.onerror=r}))));
+if(!location.search.includes('capture')){const t0=performance.now();window.ready.then(()=>{const loop=()=>{render((performance.now()-t0)/1000);requestAnimationFrame(loop)};loop();});}
+else render(0);
+</script>
+</body></html>

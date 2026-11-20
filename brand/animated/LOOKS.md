@@ -32,6 +32,7 @@ don't use the same **background** two days in a row.
 ## Log (newest first)
 | Date | Slug | Layout | Background | Motion | Type |
 |---|---|---|---|---|---|
+| 2026-11-20 | ai-marketing-assistant | calendar week filling in (days as rows, 10 tasks, AI Employee vs manager cards, running totals) | light paper with ink lines and a coral margin rule | draw-on ruled lines + pop-in cards + counting totals | huge headline top |
 | 2026-11-19 | ai-accounts-receivable | step ladder climbing bottom-left to top-right (5 reminders, last one to a person) | ink with a big coral/violet duotone circle | counting day number + cards sliding in with draw-on risers | big mono number as the hero |
 | 2026-11-18 | ai-office-manager | inbox/queue that empties into two bins (AI Employee vs person) | flat mist light | sliding conveyor + cards morphing into rows | headline at the bottom |
 | 2026-11-14 | ai-receptionist-day | day timeline / clock | ink dark with glows | typewriter + pop-in | huge headline top |
