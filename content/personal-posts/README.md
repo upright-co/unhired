@@ -10,7 +10,10 @@ attention, start conversations and give the public useful information. The only 
 AI Business Diagnosis call box the site adds to the end of every article. Never write a pitch, a price, a
 guarantee, "we build" or "book a call" into a post, a caption or an article body.
 
-He pastes from the portal's Posts tab (portal.unhired.io/posts) and ticks each platform.
+The `personal-posts-publish` routine posts them for him, one an hour from 7 am, in his Chrome
+(`content/personal-posts/publish-prompt.md`), and ticks each platform on the Posts tab
+(portal.unhired.io/posts). It posts the text and image exactly as written here, so get them right.
+It also posts the day's animated infographic on his LinkedIn and X (not Facebook).
 
 These are personal posts, so the article rule about place names doesn't apply: Alberta, Edmonton and
 Calgary are the point. Everything else in `content/WRITING.md` applies (no AI tells, no em dashes,

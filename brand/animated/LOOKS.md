@@ -8,7 +8,9 @@ below, while staying on brand.
 - Fonts: Sora (headlines), DM Sans (body), JetBrains Mono (labels, numbers, tags).
 - Colours: ink #09070F, coral #F65663 / #FF8A94, violet #9452F2 / #B07CFF, white, mist #F4F2F8.
   Accents come only from coral and violet; any other colour is a tint of these.
-- Unhired logo once, small (`../facebook/logo-ondark.png` on dark, the dark logo on light).
+- Unhired logo once, small and quiet so the video never reads as an ad: `height:24px; opacity:.7`
+  in a corner (`../facebook/logo-ondark.png` on dark, the dark logo on light). Never bigger, never
+  centred, never animated (Brandon, 2026-11-19).
 - Wording follows content/WRITING.md: plain, specific, no selling, no pricing, no guarantee, no place names.
 - render(t) is a pure function of time; the loop is seamless (last frame flows into the first).
 
