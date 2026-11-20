@@ -3,11 +3,11 @@
 Goal: when people in Alberta think "AI", they think of Brandon Upright. Ten posts a day, every day,
 each one posted on his personal Facebook, LinkedIn and X. It is a high-volume content funnel:
 
-    image + headline  →  caption  →  article on unhired.io (linked in the first comment)  →  author box: book a call
+    image + headline  →  caption  →  article on unhired.io (linked in the first comment)  →  call box: book a call
 
 **The content never sells Brandon, Unhired or the service.** Posts, captions and articles exist to earn
 attention, start conversations and give the public useful information. The only offer anywhere is the
-"About the author" box the site adds to the end of every article. Never write a pitch, a price, a
+AI Business Diagnosis call box the site adds to the end of every article. Never write a pitch, a price, a
 guarantee, "we build" or "book a call" into a post, a caption or an article body.
 
 He pastes from the portal's Posts tab (portal.unhired.io/posts) and ticks each platform.
