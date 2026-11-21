@@ -1,0 +1,176 @@
+<!doctype html><html><head><meta charset="utf-8">
+<title>AI Order Processing: six checks</title>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&family=DM+Sans:wght@400;500;600&family=JetBrains+Mono:wght@500;600&display=block" rel="stylesheet">
+<!-- Animated post, 1080x1350 (4:5), seamless loop of DURATION seconds.
+     Layout: stacked checklist that ticks off. Background: solid violet. Headline at the bottom.
+     Open in a browser to watch it live. scripts/render-animation.mjs renders it to MP4. -->
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1350px;overflow:hidden;background:#9452F2}
+.b{position:relative;width:1080px;height:1350px;overflow:hidden;background:#9452F2;color:#fff;font-family:'DM Sans',sans-serif}
+.head{position:absolute;left:48px;right:48px;top:40px;display:flex;align-items:center;justify-content:space-between}
+.head img{height:24px;opacity:.7;display:block}
+.tag{font:600 15px 'JetBrains Mono',monospace;letter-spacing:.16em;color:#fff;border:1.5px solid rgba(255,255,255,.55);border-radius:999px;padding:9px 18px}
+.stage{position:absolute;inset:0}
+
+/* the order ticket */
+.ticket{position:absolute;left:48px;right:48px;top:100px;height:176px;border-radius:26px;background:#09070F;overflow:hidden}
+.ticket .lay{position:absolute;inset:0;padding:26px 34px;display:flex;align-items:center;gap:30px}
+.doc{width:92px;height:118px;border-radius:12px;background:#F4F2F8;position:relative;flex:none}
+.doc i{position:absolute;left:14px;right:14px;height:6px;border-radius:3px;background:rgba(9,7,15,.22)}
+.doc i:nth-child(1){top:18px;right:40px;background:#9452F2}
+.doc i:nth-child(2){top:40px}.doc i:nth-child(3){top:56px}.doc i:nth-child(4){top:72px;right:30px}.doc i:nth-child(5){top:88px}
+.tk .l{flex:1}
+.tk .k{font:500 15px 'JetBrains Mono',monospace;letter-spacing:.16em;color:rgba(255,255,255,.55)}
+.tk .n{margin-top:8px;font:700 44px/1 'Sora';letter-spacing:-1.8px}
+.tk .m{margin-top:10px;font:400 21px 'DM Sans';color:rgba(255,255,255,.72)}
+.pill{flex:none;font:600 15px 'JetBrains Mono',monospace;letter-spacing:.12em;padding:12px 18px;border-radius:999px;border:1.5px solid rgba(255,255,255,.3);color:#fff;white-space:nowrap}
+.sum .n{font:700 44px/1 'Sora';letter-spacing:-1.8px}
+.sum .m{margin-top:10px;font:400 21px 'DM Sans';color:rgba(255,255,255,.72)}
+
+/* the checklist */
+.list{position:absolute;left:48px;right:48px;top:296px}
+.row{position:relative;height:92px;margin-bottom:10px;border-radius:20px;background:rgba(9,7,15,.2);border:1.5px solid rgba(255,255,255,.22);display:flex;align-items:center;padding:0 26px;transform-origin:center}
+.row .no{width:54px;font:600 17px 'JetBrains Mono',monospace;color:rgba(255,255,255,.7)}
+.row .tx{flex:1;min-width:0}
+.row .nm{font:600 27px/1.1 'Sora';letter-spacing:-.9px}
+.row .ds{margin-top:6px;font:400 19px/1.2 'DM Sans';color:rgba(255,255,255,.82);white-space:nowrap}
+.mark{flex:none;width:52px;height:52px;border-radius:50%;border:2px solid rgba(255,255,255,.4);position:relative}
+.mark svg{position:absolute;inset:0;width:100%;height:100%}
+.mark path{fill:none;stroke-width:4.5;stroke-linecap:round;stroke-linejoin:round}
+
+/* result strip */
+.res{position:absolute;left:48px;right:48px;top:916px;height:92px;border-radius:20px;background:#09070F;overflow:hidden}
+.res .lay{position:absolute;inset:0;display:flex;align-items:center;padding:0 30px;gap:18px}
+.res .dot{width:16px;height:16px;border-radius:50%;flex:none}
+.res .rt{font:600 28px 'Sora';letter-spacing:-.9px}
+.tal{justify-content:space-between}
+.tal div{display:flex;align-items:baseline;gap:10px}
+.tal b{font:700 38px 'Sora';letter-spacing:-1.4px}
+.tal span{font:500 19px 'DM Sans';color:rgba(255,255,255,.8)}
+
+h1{position:absolute;left:48px;right:48px;top:1046px;font:700 74px/1.02 'Sora',sans-serif;letter-spacing:-3.2px}
+h1 span{color:#09070F}
+.foot{position:absolute;left:48px;right:48px;bottom:34px;display:flex;justify-content:space-between;align-items:center;font:500 17px 'DM Sans';color:rgba(255,255,255,.8)}
+.foot .mono{font:500 16px 'JetBrains Mono',monospace;letter-spacing:.08em}
+</style></head><body><div class="b">
+<div class="head"><img src="../personal-banner/logo-white.png" alt="Unhired"><div class="tag">AI ORDER PROCESSING</div></div>
+
+<div class="stage" id="stage">
+ <div class="ticket" id="ticket">
+  <div class="lay tk" id="tk">
+   <div class="doc"><i></i><i></i><i></i><i></i><i></i></div>
+   <div class="l"><div class="k" id="tkk"></div><div class="n" id="tkn"></div><div class="m" id="tkm"></div></div>
+   <div class="pill" id="pill"></div>
+  </div>
+  <div class="lay sum" id="sum"><div><div class="n">Three orders, three outcomes</div><div class="m">Each one ran the same checks before anything was saved.</div></div></div>
+ </div>
+
+ <div class="list" id="list"></div>
+
+ <div class="res">
+  <div class="lay" id="resA"><div class="dot" id="rdot"></div><div class="rt" id="rt"></div></div>
+  <div class="lay tal" id="resB">
+   <div><b>1</b><span>entered</span></div>
+   <div><b>1</b><span>question to the buyer</span></div>
+   <div><b>1</b><span>to a person</span></div>
+  </div>
+ </div>
+</div>
+
+<h1>Six checks before<br>an order <span>is entered</span></h1>
+<div class="foot"><span>Example checks. Every business writes its own.</span><span class="mono">unhired.io</span></div>
+</div>
+
+<script>
+window.DURATION=22;
+const CHECKS=[
+ ['Product','The customer\'s part number against your product list'],
+ ['Price','The price on the order against that customer\'s price list'],
+ ['Quantity and unit','This order against what the customer usually buys'],
+ ['Ship-to','The address against the addresses on the account'],
+ ['Stock and date','Stock on hand against the requested date'],
+ ['Account and duplicates','Credit status, and the PO number against recent orders'],
+];
+const STEP=.7;
+const ORDERS=[
+ {s:.6,end:6.8,fail:-1,k:'ARRIVED BY EMAIL, PDF',n:'PO 4471',m:'14 lines, ship Friday',res:'Entered and confirmed the same hour',tone:'ok'},
+ {s:7.2,end:12.2,fail:2,k:'ARRIVED BY PLAIN EMAIL',n:'PO 4472',m:'3 lines, a regular customer',why:'144 ordered. This customer usually buys 12.',res:'Asks the buyer: cases or units?',tone:'ask'},
+ {s:12.6,end:16.6,fail:1,k:'ARRIVED BY CUSTOMER PORTAL',n:'PO 4473',m:'8 lines, ship next week',why:'Three lines show last year\'s price.',res:'Goes to a person with the reason',tone:'stop'},
+];
+const SUM=16.9, T=window.DURATION;
+const $=id=>document.getElementById(id);
+const TICK='M15 27 L23 35 L38 18', BANG='M26 14 L26 29 M26 37 L26 38';
+CHECKS.forEach((c,i)=>{const el=document.createElement('div');el.className='row';el.id='r'+i;
+ el.innerHTML=`<div class="no">0${i+1}</div><div class="tx"><div class="nm">${c[0]}</div><div class="ds">${c[1]}</div></div><div class="mark"><svg viewBox="0 0 52 52"><path/></svg></div>`;
+ $('list').appendChild(el);});
+const clamp=(x,a=0,b=1)=>Math.min(b,Math.max(a,x));
+const ease=x=>x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2;
+
+window.render=function(tt){
+ let t=((tt%T)+T)%T, op=1;
+ const fo=T-1.0;
+ if(t>=fo&&t<fo+.5)op=1-ease((t-fo)/.5);
+ if(t>=fo+.5){op=ease(clamp((t-fo-.5)/.5));t=0;}
+ $('stage').style.opacity=op;
+
+ const sumK=ease(clamp((t-SUM)/.5));
+ // which order is on the desk
+ let oi=0;ORDERS.forEach((o,i)=>{if(t>=o.s-.4)oi=i;});
+ const o=ORDERS[oi];
+ // ticket slides in from the right, out to the left
+ const inK=oi===0?1:ease(clamp((t-(o.s-.4))/.4));
+ const prev=ORDERS[oi+1], outK=prev?0:0;
+ const leaving=ORDERS[oi+1]&&t>=o.end?ease(clamp((t-o.end)/.4)):0;
+ $('tk').style.transform=`translateX(${(1-inK)*120-leaving*120}px)`;
+ $('tk').style.opacity=(1-sumK)*Math.min(inK,1-leaving);
+ $('sum').style.opacity=sumK;
+ $('tkk').textContent=o.k;$('tkn').textContent=o.n;$('tkm').textContent=o.m;
+
+ const nChecks=o.fail<0?CHECKS.length:o.fail+1;
+ const doneAt=o.s+nChecks*STEP, resolved=t>=doneAt;
+ const cur=Math.floor((t-o.s)/STEP);
+ const pill=$('pill');
+ if(t<o.s){pill.textContent='NEW ORDER';pill.style.background='transparent';pill.style.color='#fff';pill.style.borderColor='rgba(255,255,255,.3)';}
+ else if(!resolved){pill.textContent=`CHECK ${Math.min(cur+1,6)} OF 6`;pill.style.background='transparent';pill.style.color='#fff';pill.style.borderColor='rgba(255,255,255,.3)';}
+ else if(o.tone==='ok'){pill.textContent='ENTERED';pill.style.background='#F4F2F8';pill.style.color='#09070F';pill.style.borderColor='#F4F2F8';}
+ else{pill.textContent=o.tone==='ask'?'ON HOLD':'STOPPED';pill.style.background='#F65663';pill.style.color='#fff';pill.style.borderColor='#F65663';}
+
+ CHECKS.forEach((c,i)=>{
+  const el=$('r'+i),mark=el.querySelector('.mark'),path=el.querySelector('path'),ds=el.querySelector('.ds'),nm=el.querySelector('.nm');
+  const a=o.s+i*STEP,b=a+STEP;
+  const running=t>=a&&t<b&&i<nChecks, done=t>=b&&i<nChecks, failed=done&&i===o.fail, skipped=o.fail>=0&&i>o.fail&&t>=doneAt;
+  const before=t<a||i>=nChecks;
+  let state=running?'run':failed?'fail':done?'pass':skipped?'skip':'wait';
+  if(sumK>0.5)state='sum';
+  const pk=running?ease(clamp((t-a)/.2)):0;
+  el.style.transform=`scale(${1+.02*pk})`;
+  el.style.opacity=state==='skip'?.4:(state==='wait'?.72:1);
+  el.style.background=state==='run'?'rgba(9,7,15,.55)':state==='fail'?'#09070F':state==='pass'?'rgba(9,7,15,.38)':'rgba(9,7,15,.2)';
+  el.style.borderColor=state==='run'?'#fff':state==='fail'?'#F65663':'rgba(255,255,255,.22)';
+  ds.textContent=state==='fail'?o.why:c[1];
+  ds.style.color=state==='fail'?'#FF8A94':'rgba(255,255,255,.82)';
+  nm.style.color='#fff';
+  // mark
+  if(state==='pass'||state==='sum'){const k=state==='sum'?1:ease(clamp((t-b)/.25));mark.style.background='#F4F2F8';mark.style.borderColor='#F4F2F8';path.setAttribute('d',TICK);path.style.stroke='#09070F';path.style.strokeDasharray=40;path.style.strokeDashoffset=40*(1-k);}
+  else if(state==='fail'){const k=ease(clamp((t-b)/.25));mark.style.background='#F65663';mark.style.borderColor='#F65663';path.setAttribute('d',BANG);path.style.stroke='#fff';path.style.strokeDasharray=20;path.style.strokeDashoffset=20*(1-k);mark.style.transform=`scale(${1+.12*Math.sin(clamp((t-b)/.4)*Math.PI)})`;}
+  else{mark.style.background='transparent';mark.style.borderColor=state==='run'?'#fff':'rgba(255,255,255,.4)';path.setAttribute('d','');mark.style.transform='none';}
+  if(state!=='fail')mark.style.transform='none';
+  if(state==='run'){mark.style.boxShadow=`0 0 0 ${5+3*Math.sin(t*10)}px rgba(255,255,255,.18)`;}else mark.style.boxShadow='none';
+ });
+
+ // result strip
+ const rk=resolved?ease(clamp((t-doneAt-.1)/.35)):0;
+ const gone=ORDERS[oi+1]&&t>=o.end?1-leaving:1;
+ $('resA').style.opacity=(1-sumK)*rk*gone;
+ $('resA').style.transform=`translateY(${(1-rk)*16}px)`;
+ $('rt').textContent=o.res;
+ $('rdot').style.background=o.tone==='ok'?'#F4F2F8':'#F65663';
+ $('resB').style.opacity=sumK;
+};
+
+window.ready=document.fonts.ready.then(()=>Promise.all([...document.images].map(i=>i.complete?1:new Promise(r=>{i.onload=i.onerror=r}))));
+if(!location.search.includes('capture')){const t0=performance.now();window.ready.then(()=>{const loop=()=>{render((performance.now()-t0)/1000);requestAnimationFrame(loop)};loop();});}
+else render(0);
+</script>
+</body></html>

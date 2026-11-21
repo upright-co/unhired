@@ -1,0 +1,86 @@
+{
+ "images": [
+  {
+   "type": "cover",
+   "name": "cover",
+   "eyebrow": "AI Employee roles · Order desk",
+   "title": "*AI order processing*, start to finish",
+   "sub": "Orders read wherever they arrive, checked before they're entered, and the decisions that stay with a person.",
+   "avatar": "ai-customer-support",
+   "series": "The AI Employee · unhired.io"
+  },
+  {
+   "type": "breakdown",
+   "name": "duties",
+   "title": "The order desk, *duty by duty*",
+   "rows": [
+    ["Reading orders", "Picks up each order from email, the web store, portals and voicemail within minutes.", "alone"],
+    ["Checking", "Runs six checks against the price list, stock and the customer's account.", "alone"],
+    ["Entering and confirming", "Saves orders that pass and sends the confirmation with a ship date the same hour.", "alone"],
+    ["Order updates", "Sends tracking numbers and answers questions about where an order is.", "alone"],
+    ["Changes", "Edits an order before picking starts. After that, a person decides.", "reports"],
+    ["Price, credit and short stock", "Stops the order and passes it on with the reason and a suggested fix.", "asks"]
+   ]
+  },
+  {
+   "type": "table",
+   "name": "checks",
+   "title": "Six checks *before an order is entered*",
+   "head": ["Check", "What it compares", "If it fails"],
+   "rows": [
+    ["Product", "The customer's part number against your product list", "Asks the buyer which item they meant"],
+    ["Price", "The price on the order against that customer's price list", "Goes to a person"],
+    ["Quantity and unit", "This order against what the customer usually buys", "Asks the buyer: cases or units?"],
+    ["Ship-to", "The address against the addresses on the account", "Asks the buyer to confirm"],
+    ["Stock and date", "Stock on hand against the requested date", "Confirms with a backorder date"],
+    ["Account and duplicates", "Credit status, and the PO number against recent orders", "Goes to a person"]
+   ],
+   "source": "Example. Every business writes its own checks."
+  },
+  {
+   "type": "timeline",
+   "name": "thursday",
+   "title": "A Thursday at a *30-person wholesale distributor*",
+   "avatar": "ai-customer-support",
+   "role": "AI Employee, order desk",
+   "roleSub": "Reports to the operations manager",
+   "rows": [
+    ["6:10 am", "Enters 19 orders that arrived overnight. All confirmed before picking starts at 7."],
+    ["8:25 am", "A regular who buys 12 cases ordered 144. Asks the buyer: cases or units?"],
+    ["9:40 am", "A PO shows last year's price on three lines.", "you"],
+    ["11:15 am", "The same PO arrives twice, from the buyer and from payables. Enters it once."],
+    ["1:30 pm", "An order comes in from an account on credit hold.", "you"],
+    ["2:50 pm", "Sends 31 tracking numbers and answers four questions about deliveries."],
+    ["4:20 pm", "Two customers want 50 units each. There are 60 in stock.", "you"]
+   ],
+   "source": "Example day"
+  },
+  {
+   "type": "cost",
+   "name": "cost",
+   "eyebrow": "The cost",
+   "title": "What an order desk seat *costs*",
+   "suffix": " / yr",
+   "highlight": null,
+   "rows": [
+    ["Information clerks, US median", 45430, "$21.84 an hour, May 2025."],
+    ["Order clerks, US median", 46170, "May 2025. About $22.20 an hour over 2,080 hours."],
+    ["Order clerk with benefits and payroll taxes", 66000, "Wages are 70% of compensation."]
+   ],
+   "source": "Source: US Bureau of Labor Statistics, Occupational Outlook Handbook (May 2025) and ECEC (June 2026)"
+  },
+  {
+   "type": "flow",
+   "name": "setup",
+   "title": "How AI order processing *is set up*",
+   "steps": [
+    ["List every way an order arrives", "Email, web store, customer portals, voicemail and standing orders."],
+    ["Build the part number cross-reference", "Each customer's names for your products, taken from past orders."],
+    ["Write the checks", "Product, price, quantity, ship-to, stock, and account status."],
+    ["Connect with limited access", "It can create orders. It can't change prices or credit limits."],
+    ["Write the handoff rules", "Price overrides, credit holds, substitutions and short stock go to a named person."],
+    ["Shadow for two or three weeks", "It drafts every order while a person approves each one."]
+   ]
+  }
+ ]
+}

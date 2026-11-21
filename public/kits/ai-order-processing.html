@@ -1,0 +1,251 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow">
+<title>Publish kit · AI Order Processing: Orders In, Checked and Moving Without Retyping</title>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f4f2f7;color:#1d1b22;font:16px/1.6 'DM Sans',-apple-system,sans-serif}
+.w{max-width:860px;margin:0 auto;padding:36px 16px 120px}
+.back{display:inline-block;margin:0 0 14px;padding:8px 16px;border-radius:999px;background:#fff;border:1px solid #ddd6e8;color:#1d1b22;font:600 14px inherit;text-decoration:none}.back:hover{background:#faf8fc}
+.top{background:#09070F;color:#fff;border-radius:22px;padding:28px;background-image:radial-gradient(circle at 90% 0,rgba(148,82,242,.45),transparent 55%),radial-gradient(circle at 0 100%,rgba(246,86,99,.3),transparent 50%)}
+.top small{font:500 12px monospace;letter-spacing:.14em;text-transform:uppercase;opacity:.6}
+.top h1{font:700 26px/1.2 'Sora';margin:8px 0 12px;letter-spacing:-.5px}
+.top a{color:#D4BBFF}.when{margin-top:12px;font-weight:600;color:#86EFAC}
+nav{display:flex;gap:8px;margin:22px 0 18px;flex-wrap:wrap;position:sticky;top:0;padding:10px 0;background:#f4f2f7;z-index:2}
+nav button{border:1px solid #ddd6e8;background:#fff;border-radius:999px;padding:9px 18px;font:600 14px inherit;cursor:pointer}
+nav button.on{background:#1d1b22;color:#fff;border-color:#1d1b22}
+.tab{display:none}.tab.on{display:block}
+.how{background:#fff;border:1px solid #e4e0ea;border-radius:16px;padding:18px 20px 18px 40px;margin:0 0 18px}
+.how li{margin:4px 0}
+.blk{background:#fff;border:1px solid #e4e0ea;border-radius:16px;margin:0 0 14px;overflow:hidden}
+.bar{display:flex;align-items:center;gap:10px;padding:10px 14px;background:#faf8fc;border-bottom:1px solid #eee9f3;font-weight:600;font-size:14px}
+.n{display:grid;place-items:center;min-width:24px;height:24px;border-radius:50%;background:linear-gradient(135deg,#F65663,#9452F2);color:#fff;font-size:12px}
+.bar button,.bar .dl,.big{margin-left:auto;border:0;border-radius:8px;padding:7px 14px;background:#1d1b22;color:#fff;font:600 13px inherit;cursor:pointer;text-decoration:none}
+.bar button.ok,.big.ok{background:#16a34a}
+.body{padding:4px 20px 12px}.body.pre{white-space:pre-wrap;padding:14px 20px}
+.blk img{display:block;width:100%}.alt{margin:0;padding:8px 14px;font-size:13px;color:#6b6676}
+.big{display:inline-block;margin:0 8px 8px 0;padding:11px 18px;font-size:14px}
+.warn{background:#fff7e6;border:1px solid #f5d48a;border-radius:12px;padding:12px 16px;margin:0 0 16px;font-size:14px}
+h2,h3{line-height:1.25}a{color:#5b21b6}
+</style></head><body><div class="w">
+<a class="back" href="https://portal.unhired.io/content">← Back to Content</a>
+<div class="top"><small>Publish kit</small><h1>AI Order Processing: Orders In, Checked and Moving Without Retyping</h1>
+Original: <a href="https://unhired.io/blog/ai-order-processing">unhired.io/blog/ai-order-processing</a>
+<div class="when">Republish on or after Tuesday, November 24, so Google indexes unhired.io first.</div></div>
+<nav><button data-tab="medium" class="on">Medium</button><button data-tab="linkedin">LinkedIn article</button><button data-tab="substack">Substack</button><button data-tab="pages">Company page + Facebook</button></nav>
+
+<section class="tab on" id="medium">
+<ol class="how">
+<li>Open <a href="https://medium.com/p/import" target="_blank">medium.com/p/import</a> (signed in to Medium).</li>
+<li>Paste the article link and click <b>Import</b>. Medium copies the text and images and marks unhired.io as the original, so Google credits our site.</li>
+<li>Check the draft, add the tags below, then <b>Publish</b>.</li>
+</ol>
+<button class="big" data-text="https://unhired.io/blog/ai-order-processing">Copy article link</button>
+<button class="big" data-text="Artificial Intelligence, Small Business, Operations, Supply Chain, Automation">Copy tags</button>
+<p>Tags: Artificial Intelligence · Small Business · Operations · Supply Chain · Automation</p>
+</section>
+
+<section class="tab" id="linkedin">
+<ol class="how">
+<li>On LinkedIn: <b>Write article</b>, and choose the <b>The AI Employee</b> newsletter.</li>
+<li>Download the cover and upload it, then paste the title.</li>
+<li>Work down the page: <b>Copy</b> each text block and paste it, and for each image click <b>Download</b> and add it with the image button.</li>
+<li>Click <b>Next</b>, paste the share text at the bottom of this tab, and publish.</li>
+</ol>
+
+<div class="blk"><div class="bar"><span class="n">1</span>Cover image<a class="dl" href="https://unhired.io/blog/ai-order-processing/01-cover.jpg" download>Download</a></div><img src="https://unhired.io/blog/ai-order-processing/01-cover.jpg" alt="AI Order Processing: Orders In, Checked and Moving Without Retyping"><p class="alt">Alt text: AI Order Processing: Orders In, Checked and Moving Without Retyping</p></div>
+<div class="blk"><div class="bar"><span class="n">2</span>Title<button data-copy>Copy</button></div><div class="body"><p>What AI Order Processing Does Between the Purchase Order and the Warehouse</p></div></div>
+<div class="blk"><div class="bar"><span class="n">3</span>Paste text<button data-copy>Copy</button></div><div class="body"><p>A purchase order lands in the shared inbox at 4:52 pm. It&#39;s a PDF with 14 lines on it, sent by a customer&#39;s buyer who uses their own part numbers. Somebody opens it on one screen and the order system on the other, and types all 14 lines in again.</p>
+<p>That retyping is where most order mistakes I see come from. A case gets entered as an each. Last year&#39;s price goes on this year&#39;s order. The ship-to address is the head office and the goods were meant for the second warehouse. None of it is hard work, and all of it is expensive once the truck has left.</p>
+<p>This post covers how AI order processing works from the moment an order arrives to the moment it&#39;s handed to the warehouse, the checks I&#39;d have it run, what it should pass to a person, how it&#39;s set up and what it costs next to an order clerk.</p>
+<h2>What AI order processing is</h2>
+<p>It&#39;s an <a href="https://unhired.io/blog/what-is-an-ai-employee?utm_source=linkedin&utm_medium=syndication&utm_campaign=ai-order-processing">AI Employee</a> that holds the order desk. It has a manager, usually the operations manager, the customer service lead or the owner. It has a login to the order system and the inbox orders come into, it can read stock levels and customer accounts, and it works from written rules about what it enters alone and what needs a person. Every order it touches goes into a log with the checks it ran.</p>
+<p>The difference from plain <a href="https://unhired.io/blog/ai-data-entry?utm_source=linkedin&utm_medium=syndication&utm_campaign=ai-order-processing">AI data entry</a> is the judgment in the middle. Copying 14 lines from a PDF into a form is the easy half. An order desk also has to know that this customer&#39;s &quot;BX-40&quot; is your &quot;40-count box, blue&quot;, that their contract price changed in September, and that they are over their credit limit this week.</p>
+<p>It also differs from EDI and online order forms. Those work well for customers who send orders in exactly the format you set. Most small and medium businesses also have the other kind of customer: the one who replies to a six-month-old email thread with &quot;same as last time but double the gloves.&quot;</p>
+<h2>Where the orders come from</h2>
+<p>When I map an order desk, I start by counting the ways an order can arrive. At a typical distributor or manufacturer the list is longer than the owner expects:</p>
+<ul>
+<li>Email with a PDF or spreadsheet purchase order attached</li>
+<li>A plain email or text with no form at all</li>
+<li>The web store or a wholesale ordering portal</li>
+<li>A large customer&#39;s own purchasing portal, where you log in and download the order</li>
+<li>Voicemail and phone calls</li>
+<li>Standing orders that repeat every week or month</li>
+</ul>
+<p>An e-commerce brand might only have the web store and a wholesale inbox. A food distributor takes voicemails from restaurant kitchens at midnight. A print shop gets an order that is half specification and half artwork. The AI Employee reads all of them and turns each into the same thing: a draft order with a customer, lines, quantities, prices, a ship-to address and a requested date.</p>
+<h2>The checks before an order is entered</h2>
+<p>This is the part I&#39;d spend the most setup time on. Reading the order is easy for current AI. The value is in what it compares the order against before anything is saved.</p>
+</div></div>
+<div class="blk"><div class="bar"><span class="n">4</span>Add image<a class="dl" href="https://unhired.io/blog/ai-order-processing/03-checks.jpg" download>Download</a></div><img src="https://unhired.io/blog/ai-order-processing/03-checks.jpg" alt="Six checks an AI Employee runs before entering an order, and what happens when one fails"><p class="alt">Alt text: Six checks an AI Employee runs before entering an order, and what happens when one fails</p></div>
+<div class="blk"><div class="bar"><span class="n">5</span>Paste text<button data-copy>Copy</button></div><div class="body"><p>Two of these deserve a note. The unit check catches the most expensive small mistake on an order desk: a customer who has ordered 12 of something for two years and suddenly orders 144 has probably switched from cases to units, or the reverse. The AI Employee asks before it enters. The duplicate check matters because buyers send the same purchase order twice, once from the buyer and once from their payables team, and a second shipment is a return you pay freight on.</p>
+<p>An order that passes every check is entered and confirmed without anyone touching it. An order that fails one waits, and the person who owns it sees the order, the check it failed and a suggested fix.</p>
+<h2>The order desk, duty by duty</h2>
+<p>I&#39;d split the job into six duties, each with the authority level I&#39;d give it.</p>
+</div></div>
+<div class="blk"><div class="bar"><span class="n">6</span>Add image<a class="dl" href="https://unhired.io/blog/ai-order-processing/02-duties.jpg" download>Download</a></div><img src="https://unhired.io/blog/ai-order-processing/02-duties.jpg" alt="Each order processing duty mapped to what the AI Employee does and its authority level"><p class="alt">Alt text: Each order processing duty mapped to what the AI Employee does and its authority level</p></div>
+<div class="blk"><div class="bar"><span class="n">7</span>Paste text<button data-copy>Copy</button></div><div class="body"><h3>Reading and entering</h3>
+<p>The AI Employee picks up each order within minutes of it arriving, matches the customer&#39;s part numbers to yours using a cross-reference it keeps current, and builds the order. If a line is unclear, it replies to the buyer with a specific question (&quot;Line 6 says 40 units of BX-40. Is that 40 boxes or 40 cases of 12?&quot;) and holds only that order.</p>
+<h3>Confirming</h3>
+<p>Every entered order gets an acknowledgment the same hour: what was ordered, the price, the expected ship date and anything on backorder. I&#39;d treat this as a duty of its own. A buyer who gets a clear confirmation at 5:10 pm doesn&#39;t call at 9 am to ask whether the order went through.</p>
+<h3>Passing it on and keeping the customer posted</h3>
+<p>Once confirmed, the order goes to the warehouse pick list, the production schedule or the supplier, depending on the business. When the shipping tool produces a tracking number, the AI Employee sends it. &quot;Where is my order?&quot; emails get answered from the order record, and a late shipment gets a note to the customer before they ask.</p>
+<h3>Changes and cancellations</h3>
+<p>A change before picking starts is routine: the AI Employee edits the order, re-runs the checks and sends a new confirmation. A change after picking has started costs the warehouse time, so it goes to a person with the current status attached.</p>
+<h2>What it should hand to a person</h2>
+<p>An order desk makes small commercial decisions all day, and those are the ones I&#39;d keep with people.</p>
+<ul>
+<li>Price overrides and discounts. If the order shows a price that isn&#39;t on the customer&#39;s price list, a salesperson or the owner decides whether to honour it.</li>
+<li>Credit holds. The AI Employee flags the account and stops. Releasing an order to a customer who is past due is a relationship call.</li>
+<li>Substitutions. Offering the 50-count box when the 40-count is out of stock sounds simple, and it&#39;s wrong often enough that a person should approve it or write the rule.</li>
+<li>Short stock. When there are 60 units and two customers want 50 each, somebody who knows both accounts decides who gets what.</li>
+<li>Rush promises. Anything that commits the warehouse or the shop floor to a date tighter than the standard lead time.</li>
+</ul>
+<p>I&#39;d add new customers to that list. Setting up an account means agreeing terms, tax status and a credit limit, and that belongs to whoever handles <a href="https://unhired.io/blog/ai-accounts-receivable?utm_source=linkedin&utm_medium=syndication&utm_campaign=ai-order-processing">receivables</a> and the owner.</p>
+<p>Regulated products need a second look as well. If you sell anything with licence, age or prescription checks, such as medical supplies or alcohol, the verification rules should be written by the person responsible for compliance, and the AI Employee follows them without exceptions.</p>
+<h2>A Thursday on the order desk</h2>
+<p>Here&#39;s an example day at a 30-person wholesale distributor. Three items go to a person.</p>
+</div></div>
+<div class="blk"><div class="bar"><span class="n">8</span>Add image<a class="dl" href="https://unhired.io/blog/ai-order-processing/04-thursday.jpg" download>Download</a></div><img src="https://unhired.io/blog/ai-order-processing/04-thursday.jpg" alt="An example Thursday for an AI Employee on the order desk at a wholesale distributor"><p class="alt">Alt text: An example Thursday for an AI Employee on the order desk at a wholesale distributor</p></div>
+<div class="blk"><div class="bar"><span class="n">9</span>Paste text<button data-copy>Copy</button></div><div class="body"><p>The overnight orders are in the system before the warehouse starts picking at 7. The buyer who mixed up cases and units gets a question, not a pallet. The price that doesn&#39;t match, the account on hold and the two customers wanting the same stock each land with a person who has what they need to decide.</p>
+<h2>What an order processing hire costs</h2>
+<p>The US Bureau of Labor Statistics lists order clerks within <a href="https://www.bls.gov/ooh/office-and-administrative-support/information-clerks.htm">information clerks</a>. The median wage for order clerks was $46,170 a year in May 2025, which works out to about $22.20 an hour over a 2,080-hour year.</p>
+<p>Wages were 70% of what private employers spent on compensation in June 2026, according to the BLS <a href="https://www.bls.gov/news.release/ecec.nr0.htm">Employer Costs for Employee Compensation</a> report. At the order clerk median, that puts the full cost of the seat near $66,000 a year before recruiting and training.</p>
+</div></div>
+<div class="blk"><div class="bar"><span class="n">10</span>Add image<a class="dl" href="https://unhired.io/blog/ai-order-processing/05-cost.jpg" download>Download</a></div><img src="https://unhired.io/blog/ai-order-processing/05-cost.jpg" alt="What an order desk seat costs a business each year"><p class="alt">Alt text: What an order desk seat costs a business each year</p></div>
+<div class="blk"><div class="bar"><span class="n">11</span>Paste text<button data-copy>Copy</button></div><div class="body"><p>The same BLS page projects order clerk employment to fall 17 percent from 2025 to 2035, from 78,900 jobs to 65,100, and names online ordering and self-service systems as the reason. That matches what I see. The typing is going away, and the work that remains on an order desk is the exceptions.</p>
+<p>Many businesses have no order clerk at all. Orders are entered by customer service between phone calls, or by a salesperson at 8 pm. The cost there shows up as errors and slow confirmations more than as a wage.</p>
+<h2>How much you&#39;d pay for AI order processing</h2>
+<p>There are two ways to get it.</p>
+<p><strong>Building it yourself.</strong> Some order and ERP systems now include document-reading features, and there are order automation tools and AI agent platforms sold by monthly subscription. Someone on staff still has to connect the inbox and the order system, build the part number cross-reference, write the checks and keep them current as prices and products change.</p>
+<p><strong>Having it built and maintained.</strong> A provider connects your systems, learns your customers and their habits, and keeps the rules updated, usually for a monthly fee.</p>
+<p>The price depends on how many orders arrive in a month, how many different ways they arrive, how many products and customer-specific prices there are, and how many systems the order touches after entry. A print shop taking 80 orders a month through one inbox needs much less than a distributor taking 2,000 across email, a portal and voicemail.</p>
+<p>When you compare quotes, ask what happens to an order that fails a check, who updates the cross-reference when a customer changes their part numbers, and what the log shows you. Then set the number against the full cost of the seat, about $66,000 a year at the US median, or against the hours your customer service and sales people spend entering orders now.</p>
+<h2>How AI order processing is set up</h2>
+<p>Most of the setup is collecting rules that live in one experienced person&#39;s head.</p>
+</div></div>
+<div class="blk"><div class="bar"><span class="n">12</span>Add image<a class="dl" href="https://unhired.io/blog/ai-order-processing/06-setup.jpg" download>Download</a></div><img src="https://unhired.io/blog/ai-order-processing/06-setup.jpg" alt="How AI order processing is set up, in six steps"><p class="alt">Alt text: How AI order processing is set up, in six steps</p></div>
+<div class="blk"><div class="bar"><span class="n">13</span>Paste text<button data-copy>Copy</button></div><div class="body"><p>The cross-reference takes the longest, and it&#39;s the step I&#39;d never rush. Every long-standing customer has their own names for your products, and the person who has entered their orders for years knows them all. I&#39;d sit with that person and a few months of past orders and write the list down.</p>
+<p>Then I&#39;d run it in shadow mode for two or three weeks. It drafts every order, a person approves each one before it&#39;s saved, and every correction becomes a new rule. It starts entering alone once the drafts stop needing edits, and I&#39;d begin with the customers whose orders are the most regular.</p>
+<h2>When a person should own the order desk</h2>
+<p>If every order is a quote, with custom specifications and a negotiated price, a person should own it. A custom manufacturer building one-off machines is selling through the order. An AI Employee can still prepare the paperwork underneath.</p>
+<p>If most of your orders are repeat products at agreed prices, the desk is mostly reading, checking and confirming, and an AI Employee can hold it. Some websites offer <a href="https://unhired.io/assessment?utm_source=linkedin&utm_medium=syndication&utm_campaign=ai-order-processing">free assessments</a> that check whether a role can be filled by an AI Employee.</p>
+<p>Before you decide, pull your last 50 orders and mark two things on each: whether somebody retyped it from another document, and whether it needed a decision on price, credit, stock or timing. The orders with a yes in the first column and a no in the second are the ones AI order processing would enter alone. Then look at your last ten credit notes and count how many trace back to an entry mistake. Those two counts tell you more than any vendor demo.</p>
+<p><em>Wage data: US Bureau of Labor Statistics, Occupational Outlook Handbook (May 2025 wages, 2025 to 2035 projections) and Employer Costs for Employee Compensation (June 2026). The Thursday schedule and the checks are examples.</em></p>
+</div></div>
+<div class="blk"><div class="bar"><span class="n">14</span>Last block<button data-copy>Copy</button></div><div class="body"><p><em>This article was first published on <a href="https://unhired.io/blog/ai-order-processing?utm_source=linkedin&utm_medium=syndication&utm_campaign=ai-order-processing">unhired.io</a>.</em></p></div></div>
+<div class="blk"><div class="bar">Share text (shown in the feed with the article)<button data-copy>Copy</button></div><div class="body pre">A purchase order lands in the inbox at 4:52 pm as a PDF with 14 lines on it.
+
+Somebody opens it beside the order system and types all 14 lines in again. That retyping is where a case becomes an each and last year's price ends up on this year's order.
+
+I wrote up how an AI Employee runs the order desk instead: where it reads orders from, the six checks I'd have it run before anything is entered, and the decisions on price, credit and short stock I'd keep with a person.
+
+Full article below 👇
+</div></div>
+</section>
+
+<section class="tab" id="substack">
+<ol class="how">
+<li>In Substack: <b>New post</b>.</li>
+<li>Paste the title and subtitle.</li>
+<li>Click <b>Copy whole post</b> and paste it into the body. Images come with it; if any don't, download them from the LinkedIn tab and drag them in.</li>
+<li>Publish (and send it by email if you want subscribers to get it).</li>
+</ol>
+
+<div class="blk"><div class="bar">Title<button data-copy>Copy</button></div><div class="body pre">AI Order Processing: Orders In, Checked and Moving Without Retyping</div></div>
+<div class="blk"><div class="bar">Subtitle<button data-copy>Copy</button></div><div class="body pre">Orders read wherever they arrive, checked six ways before they're entered, and the calls on price, credit and short stock that stay with a person.</div></div>
+<div class="blk"><div class="bar">Body<button data-copy>Copy whole post</button></div><div class="body"><h2>Key takeaways</h2><ul><li>AI order processing reads each order wherever it arrives, checks it against the price list, stock and the customer's account, enters it and sends the confirmation.</li><li>Price overrides, credit holds, substitutions and deciding who gets short stock stay with a person.</li><li>The US median wage for order clerks was $46,170 in May 2025, and the Bureau of Labor Statistics projects employment in the role to fall 17 percent by 2035.</li><li>The value is in the checks. An order entered wrong costs more to fix after it ships than it would have cost to catch at the keyboard.</li></ul><p><em>This article was first published on <a href="https://unhired.io/blog/ai-order-processing?utm_source=substack&utm_medium=syndication&utm_campaign=ai-order-processing">unhired.io</a>.</em></p><p>A purchase order lands in the shared inbox at 4:52 pm. It&#39;s a PDF with 14 lines on it, sent by a customer&#39;s buyer who uses their own part numbers. Somebody opens it on one screen and the order system on the other, and types all 14 lines in again.</p>
+<p>That retyping is where most order mistakes I see come from. A case gets entered as an each. Last year&#39;s price goes on this year&#39;s order. The ship-to address is the head office and the goods were meant for the second warehouse. None of it is hard work, and all of it is expensive once the truck has left.</p>
+<p>This post covers how AI order processing works from the moment an order arrives to the moment it&#39;s handed to the warehouse, the checks I&#39;d have it run, what it should pass to a person, how it&#39;s set up and what it costs next to an order clerk.</p>
+<h2>What AI order processing is</h2>
+<p>It&#39;s an <a href="https://unhired.io/blog/what-is-an-ai-employee?utm_source=substack&utm_medium=syndication&utm_campaign=ai-order-processing">AI Employee</a> that holds the order desk. It has a manager, usually the operations manager, the customer service lead or the owner. It has a login to the order system and the inbox orders come into, it can read stock levels and customer accounts, and it works from written rules about what it enters alone and what needs a person. Every order it touches goes into a log with the checks it ran.</p>
+<p>The difference from plain <a href="https://unhired.io/blog/ai-data-entry?utm_source=substack&utm_medium=syndication&utm_campaign=ai-order-processing">AI data entry</a> is the judgment in the middle. Copying 14 lines from a PDF into a form is the easy half. An order desk also has to know that this customer&#39;s &quot;BX-40&quot; is your &quot;40-count box, blue&quot;, that their contract price changed in September, and that they are over their credit limit this week.</p>
+<p>It also differs from EDI and online order forms. Those work well for customers who send orders in exactly the format you set. Most small and medium businesses also have the other kind of customer: the one who replies to a six-month-old email thread with &quot;same as last time but double the gloves.&quot;</p>
+<h2>Where the orders come from</h2>
+<p>When I map an order desk, I start by counting the ways an order can arrive. At a typical distributor or manufacturer the list is longer than the owner expects:</p>
+<ul>
+<li>Email with a PDF or spreadsheet purchase order attached</li>
+<li>A plain email or text with no form at all</li>
+<li>The web store or a wholesale ordering portal</li>
+<li>A large customer&#39;s own purchasing portal, where you log in and download the order</li>
+<li>Voicemail and phone calls</li>
+<li>Standing orders that repeat every week or month</li>
+</ul>
+<p>An e-commerce brand might only have the web store and a wholesale inbox. A food distributor takes voicemails from restaurant kitchens at midnight. A print shop gets an order that is half specification and half artwork. The AI Employee reads all of them and turns each into the same thing: a draft order with a customer, lines, quantities, prices, a ship-to address and a requested date.</p>
+<h2>The checks before an order is entered</h2>
+<p>This is the part I&#39;d spend the most setup time on. Reading the order is easy for current AI. The value is in what it compares the order against before anything is saved.</p>
+<p><img src="https://unhired.io/blog/ai-order-processing/03-checks.jpg" alt="Six checks an AI Employee runs before entering an order, and what happens when one fails"></p>
+<p>Two of these deserve a note. The unit check catches the most expensive small mistake on an order desk: a customer who has ordered 12 of something for two years and suddenly orders 144 has probably switched from cases to units, or the reverse. The AI Employee asks before it enters. The duplicate check matters because buyers send the same purchase order twice, once from the buyer and once from their payables team, and a second shipment is a return you pay freight on.</p>
+<p>An order that passes every check is entered and confirmed without anyone touching it. An order that fails one waits, and the person who owns it sees the order, the check it failed and a suggested fix.</p>
+<h2>The order desk, duty by duty</h2>
+<p>I&#39;d split the job into six duties, each with the authority level I&#39;d give it.</p>
+<p><img src="https://unhired.io/blog/ai-order-processing/02-duties.jpg" alt="Each order processing duty mapped to what the AI Employee does and its authority level"></p>
+<h3>Reading and entering</h3>
+<p>The AI Employee picks up each order within minutes of it arriving, matches the customer&#39;s part numbers to yours using a cross-reference it keeps current, and builds the order. If a line is unclear, it replies to the buyer with a specific question (&quot;Line 6 says 40 units of BX-40. Is that 40 boxes or 40 cases of 12?&quot;) and holds only that order.</p>
+<h3>Confirming</h3>
+<p>Every entered order gets an acknowledgment the same hour: what was ordered, the price, the expected ship date and anything on backorder. I&#39;d treat this as a duty of its own. A buyer who gets a clear confirmation at 5:10 pm doesn&#39;t call at 9 am to ask whether the order went through.</p>
+<h3>Passing it on and keeping the customer posted</h3>
+<p>Once confirmed, the order goes to the warehouse pick list, the production schedule or the supplier, depending on the business. When the shipping tool produces a tracking number, the AI Employee sends it. &quot;Where is my order?&quot; emails get answered from the order record, and a late shipment gets a note to the customer before they ask.</p>
+<h3>Changes and cancellations</h3>
+<p>A change before picking starts is routine: the AI Employee edits the order, re-runs the checks and sends a new confirmation. A change after picking has started costs the warehouse time, so it goes to a person with the current status attached.</p>
+<h2>What it should hand to a person</h2>
+<p>An order desk makes small commercial decisions all day, and those are the ones I&#39;d keep with people.</p>
+<ul>
+<li>Price overrides and discounts. If the order shows a price that isn&#39;t on the customer&#39;s price list, a salesperson or the owner decides whether to honour it.</li>
+<li>Credit holds. The AI Employee flags the account and stops. Releasing an order to a customer who is past due is a relationship call.</li>
+<li>Substitutions. Offering the 50-count box when the 40-count is out of stock sounds simple, and it&#39;s wrong often enough that a person should approve it or write the rule.</li>
+<li>Short stock. When there are 60 units and two customers want 50 each, somebody who knows both accounts decides who gets what.</li>
+<li>Rush promises. Anything that commits the warehouse or the shop floor to a date tighter than the standard lead time.</li>
+</ul>
+<p>I&#39;d add new customers to that list. Setting up an account means agreeing terms, tax status and a credit limit, and that belongs to whoever handles <a href="https://unhired.io/blog/ai-accounts-receivable?utm_source=substack&utm_medium=syndication&utm_campaign=ai-order-processing">receivables</a> and the owner.</p>
+<p>Regulated products need a second look as well. If you sell anything with licence, age or prescription checks, such as medical supplies or alcohol, the verification rules should be written by the person responsible for compliance, and the AI Employee follows them without exceptions.</p>
+<h2>A Thursday on the order desk</h2>
+<p>Here&#39;s an example day at a 30-person wholesale distributor. Three items go to a person.</p>
+<p><img src="https://unhired.io/blog/ai-order-processing/04-thursday.jpg" alt="An example Thursday for an AI Employee on the order desk at a wholesale distributor"></p>
+<p>The overnight orders are in the system before the warehouse starts picking at 7. The buyer who mixed up cases and units gets a question, not a pallet. The price that doesn&#39;t match, the account on hold and the two customers wanting the same stock each land with a person who has what they need to decide.</p>
+<h2>What an order processing hire costs</h2>
+<p>The US Bureau of Labor Statistics lists order clerks within <a href="https://www.bls.gov/ooh/office-and-administrative-support/information-clerks.htm">information clerks</a>. The median wage for order clerks was $46,170 a year in May 2025, which works out to about $22.20 an hour over a 2,080-hour year.</p>
+<p>Wages were 70% of what private employers spent on compensation in June 2026, according to the BLS <a href="https://www.bls.gov/news.release/ecec.nr0.htm">Employer Costs for Employee Compensation</a> report. At the order clerk median, that puts the full cost of the seat near $66,000 a year before recruiting and training.</p>
+<p><img src="https://unhired.io/blog/ai-order-processing/05-cost.jpg" alt="What an order desk seat costs a business each year"></p>
+<p>The same BLS page projects order clerk employment to fall 17 percent from 2025 to 2035, from 78,900 jobs to 65,100, and names online ordering and self-service systems as the reason. That matches what I see. The typing is going away, and the work that remains on an order desk is the exceptions.</p>
+<p>Many businesses have no order clerk at all. Orders are entered by customer service between phone calls, or by a salesperson at 8 pm. The cost there shows up as errors and slow confirmations more than as a wage.</p>
+<h2>How much you&#39;d pay for AI order processing</h2>
+<p>There are two ways to get it.</p>
+<p><strong>Building it yourself.</strong> Some order and ERP systems now include document-reading features, and there are order automation tools and AI agent platforms sold by monthly subscription. Someone on staff still has to connect the inbox and the order system, build the part number cross-reference, write the checks and keep them current as prices and products change.</p>
+<p><strong>Having it built and maintained.</strong> A provider connects your systems, learns your customers and their habits, and keeps the rules updated, usually for a monthly fee.</p>
+<p>The price depends on how many orders arrive in a month, how many different ways they arrive, how many products and customer-specific prices there are, and how many systems the order touches after entry. A print shop taking 80 orders a month through one inbox needs much less than a distributor taking 2,000 across email, a portal and voicemail.</p>
+<p>When you compare quotes, ask what happens to an order that fails a check, who updates the cross-reference when a customer changes their part numbers, and what the log shows you. Then set the number against the full cost of the seat, about $66,000 a year at the US median, or against the hours your customer service and sales people spend entering orders now.</p>
+<h2>How AI order processing is set up</h2>
+<p>Most of the setup is collecting rules that live in one experienced person&#39;s head.</p>
+<p><img src="https://unhired.io/blog/ai-order-processing/06-setup.jpg" alt="How AI order processing is set up, in six steps"></p>
+<p>The cross-reference takes the longest, and it&#39;s the step I&#39;d never rush. Every long-standing customer has their own names for your products, and the person who has entered their orders for years knows them all. I&#39;d sit with that person and a few months of past orders and write the list down.</p>
+<p>Then I&#39;d run it in shadow mode for two or three weeks. It drafts every order, a person approves each one before it&#39;s saved, and every correction becomes a new rule. It starts entering alone once the drafts stop needing edits, and I&#39;d begin with the customers whose orders are the most regular.</p>
+<h2>When a person should own the order desk</h2>
+<p>If every order is a quote, with custom specifications and a negotiated price, a person should own it. A custom manufacturer building one-off machines is selling through the order. An AI Employee can still prepare the paperwork underneath.</p>
+<p>If most of your orders are repeat products at agreed prices, the desk is mostly reading, checking and confirming, and an AI Employee can hold it. Some websites offer <a href="https://unhired.io/assessment?utm_source=substack&utm_medium=syndication&utm_campaign=ai-order-processing">free assessments</a> that check whether a role can be filled by an AI Employee.</p>
+<p>Before you decide, pull your last 50 orders and mark two things on each: whether somebody retyped it from another document, and whether it needed a decision on price, credit, stock or timing. The orders with a yes in the first column and a no in the second are the ones AI order processing would enter alone. Then look at your last ten credit notes and count how many trace back to an entry mistake. Those two counts tell you more than any vendor demo.</p>
+<p><em>Wage data: US Bureau of Labor Statistics, Occupational Outlook Handbook (May 2025 wages, 2025 to 2035 projections) and Employer Costs for Employee Compensation (June 2026). The Thursday schedule and the checks are examples.</em></p>
+</div></div>
+</section>
+
+<section class="tab" id="pages">
+<ol class="how">
+<li>After your LinkedIn article is live, mark it as posted on the portal's Content tab and use <b>Copy page post</b> there. It adds the article link for you.</li>
+<li>Post the same caption on the <b>Unhired LinkedIn page</b> and the <b>Facebook page</b>. Both link to your newsletter article, which builds your following.</li>
+</ol>
+<div class="blk"><div class="bar">Page caption (LinkedIn page and Facebook; add your LinkedIn article link at the end)<button data-copy>Copy</button></div><div class="body pre">AI order processing reads each order wherever it arrives, runs it through six checks, enters it and sends the confirmation. We wrote up the checks, the decisions that stay with a person, and how the cost compares to the $46,170 US median wage for an order clerk.
+</div></div>
+</section>
+</div>
+<script>
+document.querySelectorAll("nav button").forEach(b=>b.onclick=()=>{
+  document.querySelectorAll("nav button,.tab").forEach(x=>x.classList.remove("on"));
+  b.classList.add("on");document.getElementById(b.dataset.tab).classList.add("on");
+});
+const done=b=>{const t=b.textContent;b.textContent="Copied";b.classList.add("ok");setTimeout(()=>{b.textContent=t;b.classList.remove("ok")},1500)};
+document.querySelectorAll("[data-copy]").forEach(b=>b.onclick=async()=>{
+  const el=b.closest(".blk").querySelector(".body");
+  try{await navigator.clipboard.write([new ClipboardItem({"text/html":new Blob([el.innerHTML],{type:"text/html"}),"text/plain":new Blob([el.innerText],{type:"text/plain"})})])}
+  catch{const r=document.createRange();r.selectNodeContents(el);const s=getSelection();s.removeAllRanges();s.addRange(r);document.execCommand("copy");s.removeAllRanges()}
+  done(b);
+});
+document.querySelectorAll("[data-text]").forEach(b=>b.onclick=async()=>{await navigator.clipboard.writeText(b.dataset.text);done(b)});
+</script></body></html>

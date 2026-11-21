@@ -45,7 +45,7 @@ Every article must work for small and medium businesses across industries, never
 - [x] AI Office Manager: the coordination work that holds a small office together (keyword: AI office manager) → ai-office-manager
 - [x] AI Accounts Receivable clerk: invoices out, payments chased, accounts matched (keyword: AI accounts receivable) → ai-accounts-receivable
 - [x] AI Marketing Assistant: the scheduling, reporting and follow-up side of marketing (keyword: AI marketing assistant) → ai-marketing-assistant
-- [ ] AI Order Processing: orders in, checked and moving without retyping (keyword: AI order processing)
+- [x] AI Order Processing: orders in, checked and moving without retyping (keyword: AI order processing) → ai-order-processing
 - [ ] AI Patient Intake: forms, insurance details and first appointments (keyword: AI patient intake)
 - [ ] What happens when an AI Employee makes a mistake (keyword: AI employee mistakes)
 - [ ] Who manages an AI Employee, and how much of their week it takes (keyword: managing AI employees)
