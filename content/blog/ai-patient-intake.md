@@ -1,0 +1,169 @@
+---
+title: "AI Patient Intake: Forms, Insurance Details and First Appointments"
+seoTitle: "AI Patient Intake: What It Does and What It Costs"
+description: "How AI patient intake works from the first call to the first appointment: forms, insurance checks, the hand-offs to staff, the privacy rules and the cost."
+keyword: "AI patient intake"
+category: "AI Employee roles"
+author: brandon
+published: 2026-11-22
+takeaways:
+  - "AI patient intake books the right first visit, sends the forms, reads the insurance card, runs the eligibility check and enters a complete file before the patient arrives."
+  - "Most of the job is follow-up: the form left half done, the member ID one digit short, the subscriber whose date of birth is missing."
+  - "Clinical answers on the clinic's flag list, insurance that comes back inactive and any question about consent go to a person the same day."
+  - "The US median wage for medical secretaries and administrative assistants was $45,930 in May 2025, about $65,600 once benefits and payroll taxes are counted."
+related:
+  - what-is-an-ai-employee
+  - ai-receptionist-for-dental-office
+  - ai-employee-data-security
+faq:
+  - q: "What is AI patient intake?"
+    a: "It's an AI Employee that holds the intake job at a clinic. It books the right first appointment, sends the forms, follows up until they're complete, reads the insurance card, runs the eligibility check and enters the file into the practice system. Anything clinical, anything about cost and anything about consent goes to a person."
+  - q: "How is AI patient intake different from online intake forms?"
+    a: "A form collects whatever the patient types and waits. AI patient intake follows up: it notices the form that stopped on page three, asks about a member ID it can't read, checks that the date of birth matches the booking and tells the front desk what is still missing before the visit."
+  - q: "Can AI patient intake verify insurance?"
+    a: "It can run the eligibility check through a clearinghouse or the insurer's portal and report what comes back: active or inactive, the plan and the subscriber. When the result is inactive, out of network or unclear, a person takes over and has the cost conversation with the patient."
+  - q: "Is AI patient intake HIPAA compliant?"
+    a: "The setup has to be. In the US, a vendor that handles patient information for a clinic is a business associate and needs a signed business associate agreement before any patient data is connected. Ask where form answers and insurance card photos are stored, and limit the AI Employee to the fields the intake job needs."
+  - q: "How much does AI patient intake cost?"
+    a: "Assembling it yourself means software subscriptions plus your own time to set it up and keep it current. A provider that builds and maintains it usually charges a monthly fee. Compare either with the $45,930 US median wage for a medical secretary, plus benefits and payroll taxes."
+syndication:
+  cover: /blog/ai-patient-intake/01-cover.jpg
+  linkedin_title: "What AI Patient Intake Does Between the First Call and the First Appointment"
+  substack_subtitle: "Forms sent and chased, insurance cards read and checked, a complete file before the visit, and the answers that should go straight to a person."
+  tags: ["Artificial Intelligence", "Healthcare", "Small Business", "Patient Experience", "Automation"]
+  share_text: |
+    A new patient arrives at 8:50 for a 9:00 appointment and gets a clipboard with six pages on it.
+
+    By the time the forms are typed in and the insurance check comes back, a 40-minute appointment has 20 minutes left.
+
+    I wrote up how an AI Employee runs patient intake so the file is complete before the patient walks in: the forms, the insurance card, the five checks I'd have it run, and the answers I'd send straight to a person.
+
+    Full article below 👇
+  page_caption: |
+    AI patient intake books the right first visit, sends the forms, reads the insurance card, runs the eligibility check and enters a complete file before the patient arrives. We wrote up each step, the answers that go straight to a person, the privacy work that comes first, and how the cost compares to the $45,930 US median wage for a medical secretary.
+---
+
+A new patient arrives at 8:50 for a 9:00 appointment and gets a clipboard. Six pages: contact details, medical history, medications, a consent form, the privacy notice, and a line for the insurance member ID, copied off the card in their wallet. At 9:05 someone at the front desk is typing those pages into the practice system while the phone rings. The insurance check comes back at 9:20, and an appointment booked for 40 minutes starts with 20 left.
+
+I've spent the last four years building AI systems and agents for businesses, and intake is one of the jobs I'd move first at any clinic. Nearly all of it can happen before the patient walks in. It is collecting, checking and entering information under rules the clinic already has.
+
+This post covers what AI patient intake does between the first call and the first appointment, the points where it should stop and hand over to your staff, the privacy work that comes first, and what it costs next to the person who does intake today.
+
+## What AI patient intake is
+
+AI patient intake is an [AI Employee](/blog/what-is-an-ai-employee) that holds the intake job at a clinic. It reports to someone, usually the office manager or the front-desk lead. It has logins to the phone and text tools, the forms, the scheduling system and the insurance eligibility tool, plus written rules about what it does on its own and what goes to a person. Everything it does goes into a log that person can read.
+
+Most clinics already have online forms, so it's fair to ask what an AI Employee adds. A form waits. It can't tell that the patient stopped on page three, that the member ID is one digit short, or that the subscriber is a spouse whose date of birth is missing. Intake is mostly that follow-up, and the follow-up is what the AI Employee takes on.
+
+The job overlaps with the front desk. The post on an [AI Receptionist for a dental office](/blog/ai-receptionist-for-dental-office) covers phones, recalls and confirmations. This one stays with the new patient, from "I'd like to book" to a complete file on the morning of the visit.
+
+## The intake, step by step
+
+![AI patient intake from the first call to a complete file](/blog/ai-patient-intake/02-steps.jpg)
+
+### First contact and the right appointment
+
+The new patient calls, texts or sends a booking request. The AI Employee collects their name, date of birth, contact details, the reason for the visit and who referred them, then books the visit type your rules call for.
+
+Those rules differ at every clinic. A new patient exam at a dental office might only go in the morning with one dentist. A physiotherapy assessment might need 60 minutes. A counselling practice might want a 15-minute phone consult before any first session. Whoever sets up the AI Employee writes these down once, and it follows them on every booking.
+
+### Forms, sent as a link
+
+Right after booking, the patient gets a link to a secure form: demographics, medical history, medications and allergies, consent to treat, the financial policy and the privacy notice acknowledgement. If the forms aren't back two days before the visit, the AI Employee sends a reminder. Patients who would rather talk than type can go through the questions with it by phone.
+
+### Insurance details
+
+The patient uploads a photo of the front and back of their insurance card. The AI Employee reads the carrier, member ID, group number and subscriber name off the photo. When a digit is blurred it asks the patient, because a guessed member ID is worse than a missing one.
+
+Then it runs an eligibility check through the clearinghouse or the insurer's portal. In the US this is one of the [standard electronic transactions](https://www.cms.gov/priorities/key-initiatives/burden-reduction/administrative-simplification/transactions) set under HIPAA, so the request and the answer look the same from one insurer to the next. The result is in the file days before the visit.
+
+### Five checks before anything is entered
+
+I'd have it run these on every file:
+
+- The date of birth on the forms matches the one given at booking.
+- When the patient isn't the subscriber, the subscriber's name and date of birth are both there.
+- Every required signature is present, including a parent or guardian for a minor.
+- The medication and allergy sections have an answer. A blank and a "none" mean different things, so it asks which one the patient meant.
+- The eligibility result names the same person and plan as the card.
+
+### Into the practice system
+
+A file that passes gets entered into the practice management or health record system, with the signed forms and card images attached. The front desk gets a short summary: what's complete, what the eligibility check returned and what is still outstanding. If you want it to, it also requests records or X-rays from the previous provider, with the patient's signed release attached.
+
+That typing step is the same work covered in the post on [AI data entry](/blog/ai-data-entry), and the same rule applies: check against the source before saving.
+
+## Where it should stop and hand over
+
+Intake forms carry health information, and some answers can't wait for the visit. These are the hand-offs I'd write into the rules at any clinic.
+
+![Each intake duty and how much authority the AI Employee has](/blog/ai-patient-intake/03-authority.jpg)
+
+Clinical answers come first. The AI Employee records what the patient wrote, word for word, and never interprets it. The clinic writes a flag list, for example blood thinners before an extraction, a possible pregnancy before X-rays, or chest pain on a physiotherapy history, and any answer on that list goes to a clinician the day the form comes in. If an answer suggests the patient is in danger right now, it gives the instructions the clinic has written and alerts the on-call person.
+
+Insurance results that aren't a clean "active" go to whoever handles billing. The AI Employee reports what the check returned. The conversation about what the visit will cost belongs to a person.
+
+Consent questions also go to staff: a minor arriving with someone other than a parent, a guardianship arrangement, a patient who needs an interpreter or can't complete forms on their own.
+
+An identity mismatch stops the file. If the name on the card, the forms and the booking don't agree, a person sorts it out before anything is entered.
+
+Upset patients, and anyone who asks for a person, get one on the first request.
+
+## Privacy comes before the first form
+
+In the US, a vendor that creates, receives, keeps or sends patient information for a clinic is a business associate under HIPAA, and the clinic needs a signed business associate agreement first. The HHS Office for Civil Rights lists the [required contract provisions](https://www.hhs.gov/ocr/privacy/hipaa/understanding/coveredentities/contractprov.html). Other countries have their own health privacy laws built on similar ideas.
+
+The questions I'd ask a provider, or answer yourself if you build it:
+
+- Where are form answers and insurance card photos stored, and for how long?
+- Who on the provider's side can read them?
+- Can the AI Employee be limited to the intake fields, with no access to clinical notes or past charts?
+- What happens to the data if the clinic stops using the service?
+
+The mistake I'd watch for is health details collected over plain text message. The text should carry a link to the secure form and nothing else. The post on [AI Employee data security](/blog/ai-employee-data-security) goes further into access limits and logs.
+
+## One new patient, first call to first visit
+
+Here's an example of one new patient at a family clinic. Two items go to a person.
+
+![An example new patient from first call to first visit](/blog/ai-patient-intake/04-one-patient.jpg)
+
+By Monday morning the front desk has a complete file and a one-paragraph summary. The clinician already knows about the blood thinner, and the billing lead has already spoken to the patient about the plan that came back inactive.
+
+<!-- cta -->
+
+## What the intake seat costs a person
+
+At most clinics, intake belongs to a medical secretary or a front-desk receptionist. The US Bureau of Labor Statistics puts the median wage for [medical secretaries and administrative assistants](https://www.bls.gov/ooh/office-and-administrative-support/secretaries-and-administrative-assistants.htm) at $45,930 a year as of May 2025, and for [receptionists](https://www.bls.gov/ooh/office-and-administrative-support/receptionists.htm) at $38,010.
+
+Wages are about 70% of what US private employers spend on compensation, according to the [BLS Employer Costs for Employee Compensation](https://www.bls.gov/news.release/ecec.nr0.htm) report. Benefits and payroll taxes are the rest. At that ratio the medical secretary's seat costs about $65,600 a year and the receptionist's about $54,300, before the job ad, the training on the practice software and the cover for sick days.
+
+![What the intake seat costs a person](/blog/ai-patient-intake/05-cost.jpg)
+
+Intake is rarely the whole job, so the fair comparison is the share of the week it takes. A clinic bringing in ten new patients a week has a different problem from one bringing in sixty.
+
+## How much you'd pay for AI patient intake
+
+There are two ways to get it.
+
+You can assemble it from software: a form tool, an AI agent platform, a texting service, an eligibility service and a connection to your practice system. The subscriptions are the smaller cost. The larger one is the time someone spends writing the booking rules and the flag list, testing with real forms, handling the privacy paperwork and keeping it all current.
+
+Or a provider builds and maintains it, usually for a monthly fee. You pay more than the bare software, and someone else does the setup, the updates and the log reviews.
+
+The price moves with new patient volume, the number of visit types and form sets, whether your practice system allows outside connections, how many insurers the eligibility checks cover, the channels and languages it works in, and how much maintenance is included. When you compare quotes, check that each one covers the same list.
+
+## How AI patient intake is set up
+
+Setup follows the order a careful clinic would use to train a new intake hire. The privacy agreement is signed first. Then someone maps every visit type to its booking rule and its forms, and a clinician writes the flag list. Access is limited to the schedule, demographics, insurance fields and the forms.
+
+![What intake collects, by type of practice](/blog/ai-patient-intake/06-by-practice.jpg)
+
+For the first two weeks I'd have it prepare files while a person checks each one against the forms before it's saved. It takes on more once those files come back clean. After that, someone reads the log weekly and updates the rules when a provider joins, a form changes or the clinic adds an insurance network.
+
+## Is your intake a good fit?
+
+Pull the last 20 new patient files and count three things: how many had every form complete before the patient arrived, how many had insurance checked before the visit, and how many minutes of the first appointment went to paperwork. If most files were finished at the counter, the work is there to hand over.
+
+A clinic where new patients mostly walk in off the street, or where many patients need help in person to fill in forms, still needs a person at the desk for intake. An AI Employee can prepare whatever it can ahead of time and leave the rest to them. Some websites offer [free assessments](/assessment) that check whether a role like this can be filled by an AI Employee, and the 20-file count is the right thing to bring to one.
+
+*Wage data: US Bureau of Labor Statistics, May 2025. The new patient timeline is an example, not a real patient.*

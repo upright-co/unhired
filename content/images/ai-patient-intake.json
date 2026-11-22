@@ -1,0 +1,90 @@
+{
+ "images": [
+  {
+   "type": "cover",
+   "name": "cover",
+   "eyebrow": "AI Employee roles · Clinics",
+   "title": "*AI Patient Intake*, step by step",
+   "sub": "Forms, insurance details and first appointments, and the answers that go straight to a person.",
+   "avatar": "ai-receptionist",
+   "series": "The AI Employee · unhired.io"
+  },
+  {
+   "type": "flow",
+   "name": "steps",
+   "eyebrow": "First call to complete file",
+   "title": "AI patient intake, *step by step*",
+   "steps": [
+    ["Book the right first visit", "Name, date of birth, reason for the visit and referral, then the visit type the clinic's rules call for."],
+    ["Send the forms as a link", "History, medications, consent and privacy notice. A reminder two days out if they aren't back."],
+    ["Read the insurance card", "Carrier, member ID, group number and subscriber from a photo. It asks about anything it can't read."],
+    ["Run the eligibility check", "Through the clearinghouse or the insurer's portal, days before the visit."],
+    ["Check the file five ways", "Dates of birth, subscriber details, signatures, blank answers, and card against result."],
+    ["Enter it and brief the desk", "Forms and card images attached, with a summary of what's complete and what's outstanding."]
+   ]
+  },
+  {
+   "type": "breakdown",
+   "name": "authority",
+   "title": "Patient intake, *duty by duty*",
+   "rows": [
+    ["Booking the first visit", "Collects the basics and books the visit type and provider the clinic's rules call for.", "alone"],
+    ["Forms and reminders", "Sends the link, follows up on a schedule and offers the questions by phone.", "alone"],
+    ["Insurance card and eligibility", "Reads the card, runs the check and files a clean active result.", "alone"],
+    ["Entering the file", "Enters a file that passed all five checks and sends the desk a summary.", "reports"],
+    ["Inactive or unclear insurance", "Reports what the check returned. Billing has the cost conversation.", "asks"],
+    ["Answers on the flag list", "Records the answer as written and sends it to a clinician the same day.", "asks"],
+    ["Consent and identity questions", "Stops the file until a person has sorted it out.", "asks"]
+   ]
+  },
+  {
+   "type": "timeline",
+   "name": "one-patient",
+   "eyebrow": "One new patient",
+   "title": "First call to *first visit*",
+   "avatar": "ai-receptionist",
+   "role": "AI Patient Intake",
+   "roleSub": "Reports to the office manager",
+   "rows": [
+    ["Thu 4:10pm", "A new patient calls. It takes the basics and books a new patient visit for Monday at 9:00."],
+    ["Thu 4:14pm", "Texts the link to the forms and the insurance card upload."],
+    ["Fri 8:30am", "Card photo arrives. One digit of the member ID is blurred, so it asks the patient."],
+    ["Fri 9:05am", "The eligibility check comes back inactive. It sends the result to the billing lead.", "you"],
+    ["Sat 9:30am", "Forms are half done. It sends a reminder and the patient finishes that evening."],
+    ["Sat 7:40pm", "The medication list includes a blood thinner, which is on the flag list. The clinician is told.", "you"],
+    ["Sun 6:00pm", "All five checks pass. It enters the file and attaches the forms."],
+    ["Mon 8:00am", "The front desk gets the summary. The visit starts at 9:00 with nothing to fill in."]
+   ],
+   "source": "Example patient"
+  },
+  {
+   "type": "cost",
+   "name": "cost",
+   "eyebrow": "The cost",
+   "title": "What the intake seat *costs a person*",
+   "suffix": " / yr",
+   "highlight": null,
+   "rows": [
+    ["Receptionist, US median wage", 38010, "Often holds intake at a smaller clinic."],
+    ["Receptionist, with benefits and payroll taxes", 54300, "Wages are about 70% of compensation."],
+    ["Medical secretary, US median wage", 45930, "Intake is one part of the job."],
+    ["Medical secretary, with benefits and payroll taxes", 65600, "Same 70% ratio."]
+   ],
+   "source": "Source: US Bureau of Labor Statistics, May 2025 wages and ECEC"
+  },
+  {
+   "type": "table",
+   "name": "by-practice",
+   "title": "What intake collects, *by type of practice*",
+   "head": ["Practice", "Intake collects", "Goes to a person"],
+   "rows": [
+    ["Dental office", "Dental history, insurance card, X-rays from the last office", "Blood thinners, heart conditions"],
+    ["Family clinic", "Medications, allergies, family history, prior records", "Symptoms that can't wait for the visit"],
+    ["Physiotherapy clinic", "Injury details, referral, insurer or claim number", "Chest pain, numbness, recent surgery"],
+    ["Counselling practice", "Reason for the visit, consent, preferred contact method", "Any answer about safety"],
+    ["Eye clinic", "Current prescription, eye history, vision plan", "Sudden vision changes"]
+   ],
+   "source": "Examples. Every clinic writes its own flag list."
+  }
+ ]
+}

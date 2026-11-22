@@ -1,0 +1,151 @@
+<!doctype html><html><head><meta charset="utf-8">
+<title>AI Patient Intake: the file is done before the visit</title>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&family=DM+Sans:wght@400;500;600&family=JetBrains+Mono:wght@500;600&display=block" rel="stylesheet">
+<!-- Animated post, 1080x1350 (4:5), seamless loop of DURATION seconds.
+     Layout: chat transcript. Background: solid coral. Headline on the left, content right.
+     Open in a browser to watch it live. scripts/render-animation.mjs renders it to MP4. -->
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1350px;overflow:hidden;background:#F65663}
+.b{position:relative;width:1080px;height:1350px;overflow:hidden;background:#F65663;color:#fff;font-family:'DM Sans',sans-serif}
+.head{position:absolute;left:48px;right:48px;top:40px;display:flex;align-items:center;justify-content:space-between}
+.head img{height:24px;opacity:.7;display:block}
+.tag{font:600 15px 'JetBrains Mono',monospace;letter-spacing:.16em;color:#fff;border:1.5px solid rgba(255,255,255,.6);border-radius:999px;padding:9px 18px}
+h1{position:absolute;left:48px;width:360px;top:122px;font:700 58px/1.03 'Sora',sans-serif;letter-spacing:-2.6px}
+h1 span{color:#09070F}
+.sub{position:absolute;left:48px;width:340px;top:330px;font:500 22px/1.4 'DM Sans';color:rgba(255,255,255,.92)}
+.stage{position:absolute;inset:0}
+
+/* left: the file */
+.file{position:absolute;left:48px;width:350px;bottom:96px;border-radius:26px;background:#09070F;padding:26px 26px 22px}
+.file .lbl{font:500 13px 'JetBrains Mono',monospace;letter-spacing:.18em;color:rgba(255,255,255,.55)}
+.pct{margin-top:10px;font:600 84px/1 'JetBrains Mono',monospace;letter-spacing:-4px}
+.pct small{font-size:44px;letter-spacing:0;color:rgba(255,255,255,.6)}
+.bar{margin-top:16px;height:10px;border-radius:5px;background:rgba(255,255,255,.12);overflow:hidden}
+.bar i{display:block;height:100%;width:0;border-radius:5px;background:linear-gradient(90deg,#F65663,#B07CFF)}
+.rows{margin-top:18px}
+.rw{display:flex;align-items:center;gap:14px;height:66px;border-bottom:1px solid rgba(255,255,255,.08)}
+.rw i{width:14px;height:14px;border-radius:50%;border:2px solid rgba(255,255,255,.3);flex:none}
+.rw span{font:500 20px 'DM Sans';color:rgba(255,255,255,.45)}
+.per{display:flex;align-items:center;justify-content:space-between;padding-top:18px}
+.per span{font:500 19px 'DM Sans';color:rgba(255,255,255,.75)}
+.per b{font:700 40px/1 'Sora';letter-spacing:-1.4px;color:#C6A2FF}
+
+/* right: the conversation */
+.phone{position:absolute;left:430px;right:48px;top:104px;bottom:96px;border-radius:36px;background:#09070F;overflow:hidden}
+.ph{position:absolute;left:0;right:0;top:0;height:92px;display:flex;align-items:center;gap:16px;padding:0 28px;border-bottom:1px solid rgba(255,255,255,.1);background:#09070F;z-index:2}
+.ph .av{width:50px;height:50px;border-radius:50%;overflow:hidden;background:linear-gradient(135deg,#F65663,#9452F2);flex:none}
+.ph .av img{width:100%;height:100%;object-fit:cover;object-position:50% 10%}
+.ph b{display:block;font:600 22px 'Sora';letter-spacing:-.6px}
+.ph span{display:block;margin-top:3px;font:500 15px 'DM Sans';color:rgba(255,255,255,.55)}
+.ph .clk{margin-left:auto;font:600 14px 'JetBrains Mono',monospace;letter-spacing:.1em;color:#FF8A94;white-space:nowrap}
+.view{position:absolute;left:0;right:0;top:92px;bottom:0;overflow:hidden}
+.list{position:absolute;left:26px;right:26px;top:0;padding-top:22px}
+.m{display:flex;margin-bottom:14px;transform-origin:left bottom}
+.m.p{justify-content:flex-end;transform-origin:right bottom}
+.bub{max-width:440px;padding:14px 18px;border-radius:22px;font:400 23px/1.32 'DM Sans'}
+.m.a .bub{background:#9452F2;color:#fff;border-bottom-left-radius:6px}
+.m.p .bub{background:#F4F2F8;color:#09070F;border-bottom-right-radius:6px}
+.sep{text-align:center;margin:10px 0 16px;font:500 13px 'JetBrains Mono',monospace;letter-spacing:.18em;color:rgba(255,255,255,.5)}
+.note{margin:4px 0 18px;padding:14px 18px;border-radius:18px;border:1.5px solid rgba(246,86,99,.75);background:rgba(246,86,99,.14)}
+.note u{display:block;text-decoration:none;font:600 13px 'JetBrains Mono',monospace;letter-spacing:.16em;color:#FF8A94}
+.note span{display:block;margin-top:6px;font:500 21px/1.3 'DM Sans';color:#fff}
+.card{width:168px;height:104px;border-radius:12px;background:linear-gradient(135deg,#9452F2,#F65663);position:relative;margin-bottom:10px}
+.card i{position:absolute;left:14px;height:7px;border-radius:4px;background:rgba(255,255,255,.75)}
+.card i:nth-child(1){top:16px;width:70px}.card i:nth-child(2){top:54px;width:120px}.card i:nth-child(3){top:72px;width:86px}
+.foot{position:absolute;left:48px;right:48px;bottom:36px;display:flex;justify-content:space-between;align-items:center;font:500 17px 'DM Sans';color:rgba(255,255,255,.9)}
+.foot .mono{font:500 16px 'JetBrains Mono',monospace;letter-spacing:.08em}
+</style></head><body><div class="b">
+<div class="head"><img src="../personal-banner/logo-white.png" alt="Unhired"><div class="tag">AI PATIENT INTAKE</div></div>
+<h1>The file is done <span>before the visit</span></h1>
+<p class="sub">One new patient, from Thursday's call to Monday's appointment.</p>
+
+<div class="stage" id="stage">
+ <div class="file">
+  <div class="lbl">NEW PATIENT FILE</div>
+  <div class="pct"><span id="pct">0</span><small>%</small></div>
+  <div class="bar"><i id="bar"></i></div>
+  <div class="rows" id="rows"></div>
+  <div class="per"><span>Sent to a person</span><b id="per">0</b></div>
+ </div>
+ <div class="phone">
+  <div class="ph"><div class="av"><img src="../avatars/ai-receptionist.png"></div><div><b>Clinic intake</b><span>AI assistant</span></div><div class="clk" id="clk">THU 4:10 PM</div></div>
+  <div class="view"><div class="list" id="list"></div></div>
+ </div>
+</div>
+<div class="foot"><span>Example new patient</span><span class="mono">unhired.io</span></div>
+</div>
+
+<script>
+window.DURATION=23;
+const MSG=[
+ {k:'sep',t:'THU 4:10 PM'},
+ {k:'p',t:"Hi, I'd like to book as a new patient."},
+ {k:'a',t:"I'm the clinic's AI assistant. You're booked for Monday at 9:00.",done:0},
+ {k:'a',t:"Here's the secure link for your forms and insurance card."},
+ {k:'sep',t:'FRI 8:30 AM'},
+ {k:'card',t:'Insurance card, front and back'},
+ {k:'a',t:'Thanks. One digit of the member ID is blurred. Is it a 3 or an 8?'},
+ {k:'p',t:"It's an 8.",done:1},
+ {k:'note',t:'Eligibility check came back inactive. The billing lead will call the patient.',done:2,per:1},
+ {k:'sep',t:'SAT 9:30 AM'},
+ {k:'a',t:'Your forms are half done. Two pages left before Monday.'},
+ {k:'p',t:'Finished them tonight.',done:3},
+ {k:'note',t:'Blood thinner on the medication list. The clinician has been told.',per:1},
+ {k:'sep',t:'MON 8:00 AM'},
+ {k:'a',t:"You're all set for 9:00. Nothing to fill in when you arrive.",done:4},
+];
+const ROWS=['Visit booked','Insurance card read','Eligibility checked','Forms complete','File entered'];
+const T=window.DURATION, START=.7, STEP=1.28, VIEW=1058, PAD=26;
+const $=id=>document.getElementById(id);
+const esc=s=>s.replace(/&/g,'&amp;').replace(/</g,'&lt;');
+MSG.forEach((m,i)=>{const el=document.createElement('div');el.id='m'+i;
+ if(m.k==='sep'){el.className='sep';el.textContent=m.t;}
+ else if(m.k==='note'){el.className='note';el.innerHTML='<u>TO A PERSON</u><span>'+esc(m.t)+'</span>';}
+ else if(m.k==='card'){el.className='m p';el.innerHTML='<div class="bub"><div class="card"><i></i><i></i><i></i></div>'+esc(m.t)+'</div>';}
+ else {el.className='m '+m.k;el.innerHTML='<div class="bub">'+esc(m.t)+'</div>';}
+ $('list').appendChild(el);});
+ROWS.forEach((r,i)=>{const el=document.createElement('div');el.className='rw';el.id='r'+i;el.innerHTML='<i></i><span>'+r+'</span>';$('rows').appendChild(el);});
+const clamp=(x,a=0,b=1)=>Math.min(b,Math.max(a,x));
+const ease=x=>x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2;
+let NEED=MSG.map(()=>0);
+const measure=()=>{NEED=MSG.map((m,i)=>{const el=$('m'+i);return Math.max(0,el.offsetTop+el.offsetHeight+PAD-VIEW);});};
+
+window.render=function(tt){
+ let t=((tt%T)+T)%T, op=1;
+ const fo=T-1.3;
+ if(t>=fo&&t<fo+.5)op=1-ease((t-fo)/.5);
+ if(t>=fo+.5){op=ease(clamp((t-fo-.5)/.5));t=0;}
+ $('stage').style.opacity=op;
+
+ let scroll=0,clk=MSG[0].t,pct=0,per=0;
+ MSG.forEach((m,i)=>{
+  const s=START+i*STEP,p=ease(clamp((t-s)/.38)),el=$('m'+i);
+  el.style.opacity=p;
+  el.style.transform=m.k==='sep'?'none':`translateY(${(1-p)*18}px) scale(${.94+.06*p})`;
+  if(m.k==='a'){const n=Math.round(m.t.length*clamp((t-s-.12)/.75));
+   el.firstChild.innerHTML=esc(m.t.slice(0,n))+'<span style="opacity:0">'+esc(m.t.slice(n))+'</span>';}
+  if(m.k==='note'){const g=clamp((t-s)/.9);el.style.boxShadow=`0 0 ${34*Math.sin(g*Math.PI)}px rgba(246,86,99,.6)`;}
+  const prev=i>0?NEED[i-1]:0;
+  if(t>=s)scroll=prev+(NEED[i]-prev)*ease(clamp((t-s)/.45));
+  if(m.k==='sep'&&t>=s)clk=m.t;
+  const k=ease(clamp((t-s-.55)/.5));
+  if(m.done!==undefined){pct+=20*k;
+   const r=$('r'+m.done),on=k>0;
+   r.querySelector('i').style.background=on?`rgba(92,230,166,${k})`:'transparent';
+   r.querySelector('i').style.borderColor=on?'#5CE6A6':'rgba(255,255,255,.3)';
+   r.querySelector('span').style.color=on?'#fff':'rgba(255,255,255,.45)';}
+  if(m.per&&t>=s+.4)per+=1;
+ });
+ $('list').style.transform=`translateY(${-scroll}px)`;
+ $('clk').textContent=clk;
+ $('pct').textContent=Math.round(pct);
+ $('bar').style.width=pct+'%';
+ $('per').textContent=per;
+};
+
+window.ready=document.fonts.ready.then(()=>Promise.all([...document.images].map(i=>i.complete?1:new Promise(r=>{i.onload=i.onerror=r})))).then(measure);
+if(!location.search.includes('capture')){const t0=performance.now();window.ready.then(()=>{const loop=()=>{render((performance.now()-t0)/1000);requestAnimationFrame(loop)};loop();});}
+else render(0);
+</script>
+</body></html>
