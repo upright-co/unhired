@@ -47,7 +47,7 @@ Every article must work for small and medium businesses across industries, never
 - [x] AI Marketing Assistant: the scheduling, reporting and follow-up side of marketing (keyword: AI marketing assistant) → ai-marketing-assistant
 - [x] AI Order Processing: orders in, checked and moving without retyping (keyword: AI order processing) → ai-order-processing
 - [x] AI Patient Intake: forms, insurance details and first appointments (keyword: AI patient intake) → ai-patient-intake
-- [ ] What happens when an AI Employee makes a mistake (keyword: AI employee mistakes)
+- [x] What happens when an AI Employee makes a mistake (keyword: AI employee mistakes) → ai-employee-mistakes
 - [ ] Who manages an AI Employee, and how much of their week it takes (keyword: managing AI employees)
 - [ ] How to work out the return on an AI Employee (keyword: AI employee ROI)
 - [ ] AI Employees for marketing agencies (keyword: AI for marketing agencies)

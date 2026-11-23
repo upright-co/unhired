@@ -1,0 +1,71 @@
+{
+ "images": [
+  {
+   "type": "cover",
+   "name": "cover",
+   "eyebrow": "AI Employee 101 · Mistakes",
+   "title": "When an *AI Employee* gets it wrong",
+   "sub": "The four kinds of mistakes, how they get caught, and how to make sure each one only happens once.",
+   "avatar": "ai-customer-support",
+   "series": "The AI Employee · unhired.io"
+  },
+  {
+   "type": "table",
+   "name": "four-kinds",
+   "title": "The *four kinds* of mistakes",
+   "head": ["Mistake", "Example", "The fix"],
+   "rows": [
+    ["Stale source", "Quotes last month's inspection date from an old PDF", "Update the document and name who owns it"],
+    ["Misread request", "Moves the wrong one of two Thursday appointments", "Add a rule: ask when a request is unclear"],
+    ["Made-up answer", "States a return window that isn't in its documents", "Add the missing facts, or hand the topic to a person"],
+    ["Outside its authority", "Issues a refund above the limit", "Remove the access, or move the duty to asks first"]
+   ],
+   "source": "Every mistake found in the log lands in one of these four"
+  },
+  {
+   "type": "flow",
+   "name": "how-caught",
+   "title": "How a mistake *gets caught*",
+   "steps": [
+    ["Checks before saving", "Compares the invoice to the purchase order, reads the calendar back after booking."],
+    ["Approval", "Anything on the asks-first list is seen by a person before it goes out."],
+    ["The log", "Every message and change, with its reason. Skimmed daily at first, weekly later."],
+    ["The customer", "Any reply saying \"that's wrong\" goes straight to a person."]
+   ]
+  },
+  {
+   "type": "timeline",
+   "name": "first-hour",
+   "eyebrow": "After a mistake",
+   "title": "The *first hour* after a mistake is found",
+   "avatar": "ai-customer-support",
+   "role": "AI Employee",
+   "roleSub": "Tenant inbox, property manager",
+   "rows": [
+    ["9:02", "Tenant replies: the inspection date is wrong. Sent to the office manager.", "you"],
+    ["9:05", "Answers about inspection dates now wait for approval"],
+    ["9:10", "Log search finds 11 other tenants who were given the 14th"],
+    ["9:25", "Office manager sends each one a short correction, by name", "you"],
+    ["9:40", "Inspection schedule PDF replaced, owner named for future updates", "you"],
+    ["9:55", "Wrong date added to the test set, answers back to normal"]
+   ]
+  },
+  {
+   "type": "quote",
+   "name": "quote",
+   "text": "A person's mistake is usually a one-off. An AI Employee repeats it until you fix the cause, and then *the fix applies everywhere at once.*",
+   "by": "Brandon Upright"
+  },
+  {
+   "type": "stats",
+   "name": "the-numbers",
+   "title": "The full cost of a *front-desk seat*",
+   "items": [
+    ["$38,010", "US median receptionist wage, May 2025"],
+    ["~70%", "Share of private employer compensation paid as wages"],
+    ["~$54,300", "Full yearly cost of the seat"]
+   ],
+   "source": "US Bureau of Labor Statistics: Occupational Outlook Handbook; Employer Costs for Employee Compensation"
+  }
+ ]
+}

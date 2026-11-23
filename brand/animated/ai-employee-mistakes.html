@@ -1,0 +1,165 @@
+<!doctype html><html><head><meta charset="utf-8">
+<title>Where AI Employee mistakes get caught</title>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&family=DM+Sans:wght@400;500;600&family=JetBrains+Mono:wght@500;600&display=block" rel="stylesheet">
+<!-- Animated LinkedIn post, 1080x1350 (4:5), seamless loop of DURATION seconds.
+     Flow with moving tokens: four mistakes drop down a rail and each is caught by a different layer.
+     scripts/render-animation.mjs calls window.render(t) frame by frame (?capture). render(t) is pure. -->
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1350px;overflow:hidden;background:#F4F2F8}
+.b{position:relative;width:1080px;height:1350px;overflow:hidden;background:#F4F2F8;color:#09070F;font-family:'DM Sans',sans-serif}
+.mono{font-family:'JetBrains Mono',monospace}
+.head{position:absolute;left:48px;right:48px;top:46px;display:flex;align-items:center;justify-content:space-between}
+.head img{height:24px;opacity:.7;display:block}
+.tag{font:600 15px 'JetBrains Mono',monospace;letter-spacing:.16em;color:#9452F2;border:1.5px solid rgba(148,82,242,.45);border-radius:999px;padding:10px 20px}
+h1{position:absolute;left:48px;right:48px;top:112px;font:700 76px/1.02 'Sora',sans-serif;letter-spacing:-3.2px}
+h1 span{color:#F65663}
+.sub{position:absolute;left:48px;right:160px;top:280px;font:400 25px/1.4 'DM Sans';color:rgba(9,7,15,.66)}
+
+/* incoming action */
+.inc{position:absolute;left:48px;right:48px;top:372px;height:76px;border-radius:18px;background:#fff;border:1.5px solid rgba(9,7,15,.1);display:flex;align-items:center;padding:0 24px;gap:18px}
+.inc .lbl{font:600 13px 'JetBrains Mono',monospace;letter-spacing:.14em;color:rgba(9,7,15,.45);white-space:nowrap}
+.inc .msg{flex:1;font:600 24px 'DM Sans';white-space:nowrap;overflow:hidden}
+.inc .cur{display:inline-block;width:2px;height:24px;background:#F65663;vertical-align:-4px;margin-left:2px}
+.inc .kind{font:600 13px 'JetBrains Mono',monospace;letter-spacing:.12em;color:#F65663;background:rgba(246,86,99,.1);border-radius:8px;padding:7px 11px;white-space:nowrap}
+
+/* layers */
+.layer{position:absolute;left:48px;width:902px;height:132px;border-radius:22px;background:#fff;border:1.5px solid rgba(9,7,15,.09);display:flex;align-items:center;padding:0 22px 0 26px;gap:22px}
+.layer .n{width:58px;height:58px;border-radius:16px;background:rgba(9,7,15,.05);display:flex;align-items:center;justify-content:center;font:600 20px 'JetBrains Mono',monospace;color:rgba(9,7,15,.55);flex:none}
+.layer .t{width:330px;flex:none}
+.layer .nm{font:700 27px/1.1 'Sora';letter-spacing:-.8px}
+.layer .dt{margin-top:7px;font:400 18px/1.3 'DM Sans';color:rgba(9,7,15,.6)}
+.slot{position:relative;flex:1;height:96px;border-radius:16px;border:2px dashed rgba(9,7,15,.14);display:flex;align-items:center;padding:0 18px;overflow:hidden}
+.slot .ph{font:500 14px 'JetBrains Mono',monospace;letter-spacing:.12em;color:rgba(9,7,15,.3)}
+.caught{position:absolute;inset:-2px;border-radius:16px;background:#09070F;color:#fff;display:flex;flex-direction:column;justify-content:center;padding:0 18px;opacity:0}
+.caught .ck{font:600 12.5px 'JetBrains Mono',monospace;letter-spacing:.14em;color:#FF8A94}
+.caught .tx{margin-top:6px;font:600 21px/1.2 'DM Sans';white-space:nowrap}
+
+/* rail */
+.rail{position:absolute;left:1000px;top:448px;width:3px;height:612px;background:rgba(9,7,15,.1);border-radius:2px}
+.railfill{position:absolute;left:0;top:0;width:3px;height:0;background:linear-gradient(#F65663,#9452F2);border-radius:2px}
+.node{position:absolute;left:991px;width:21px;height:21px;border-radius:50%;background:#F4F2F8;border:3px solid rgba(9,7,15,.18)}
+.dot{position:absolute;left:986px;width:31px;height:31px;border-radius:50%;background:#F65663;box-shadow:0 0 0 8px rgba(246,86,99,.18);opacity:0}
+
+/* fix banner */
+.fix{position:absolute;left:48px;right:48px;top:1092px;height:150px;border-radius:24px;background:#09070F;color:#fff;display:flex;align-items:center;padding:0 34px;gap:28px;overflow:hidden}
+.fix .bg{position:absolute;inset:0;background:linear-gradient(90deg,#F65663,#9452F2);opacity:0}
+.fix .l{position:relative;flex:1}
+.fix .big{font:700 40px/1.05 'Sora';letter-spacing:-1.6px}
+.fix .small{margin-top:10px;font:400 20px/1.35 'DM Sans';color:rgba(255,255,255,.78)}
+.fix .cnt{position:relative;text-align:right}
+.fix .cnt b{display:block;font:600 52px/1 'JetBrains Mono',monospace}
+.fix .cnt span{display:block;margin-top:6px;font:500 14px 'JetBrains Mono',monospace;letter-spacing:.1em;color:rgba(255,255,255,.7)}
+.foot{position:absolute;left:48px;right:48px;bottom:34px;display:flex;justify-content:space-between;align-items:center;font:500 17px 'DM Sans';color:rgba(9,7,15,.5)}
+.foot .mono{font-size:16px;letter-spacing:.08em;color:rgba(9,7,15,.6)}
+</style></head><body><div class="b">
+
+<div class="head"><img src="../../public/unhired-logo.png" alt="Unhired"><div class="tag">4 MISTAKES · 4 LAYERS</div></div>
+<h1>Where AI Employee<br>mistakes <span>get caught</span></h1>
+<p class="sub">Every AI Employee gets something wrong eventually. A good setup has four layers a mistake must get past.</p>
+
+<div class="inc"><span class="lbl">AI EMPLOYEE</span><span class="msg" id="msg"></span><span class="kind" id="kind">READY</span></div>
+
+<div id="layers"></div>
+<div class="rail"><div class="railfill" id="rf"></div></div>
+<div id="nodes"></div>
+<div class="dot" id="dot"></div>
+
+<div class="fix" id="fix"><div class="bg" id="fbg"></div>
+ <div class="l"><div class="big">Then fix the cause</div><div class="small">Update the document or rule, then add the case to its test set.</div></div>
+ <div class="cnt"><b id="cnt">0/4</b><span>CAUGHT</span></div>
+</div>
+<div class="foot"><span>What happens when an AI Employee makes a mistake</span><span class="mono">unhired.io</span></div>
+</div>
+
+<script>
+window.DURATION=20;
+const LAYERS=[
+ {nm:'Checks before saving',dt:'Total compared to the purchase order'},
+ {nm:'Approval',dt:'Asks-first items seen by a person'},
+ {nm:'The log',dt:'Every action and its reason, reviewed'},
+ {nm:'The customer',dt:'"That\'s wrong" goes to a person'},
+];
+const MIST=[
+ {act:'Bills at last month\'s price',kind:'STALE SOURCE',caught:'Old price on an invoice'},
+ {act:'Refunds $400 on a $250 limit',kind:'OUTSIDE AUTHORITY',caught:'Refund above the limit'},
+ {act:'Moves the wrong Thursday visit',kind:'MISREAD REQUEST',caught:'Wrong appointment moved'},
+ {act:'Quotes a 60-day return window',kind:'MADE-UP ANSWER',caught:'Return window it made up'},
+];
+const TOP0=470, H=132, GAP=20, rowY=i=>TOP0+i*(H+GAP), midY=i=>rowY(i)+H/2;
+const T=window.DURATION, START=.8, STEP=3.2, TYPE=1.0, FALL=.9;
+const $=id=>document.getElementById(id);
+LAYERS.forEach((l,i)=>{
+ const d=document.createElement('div');d.className='layer';d.id='l'+i;d.style.top=rowY(i)+'px';
+ d.innerHTML=`<div class="n">0${i+1}</div><div class="t"><div class="nm">${l.nm}</div><div class="dt">${l.dt}</div></div>
+ <div class="slot"><span class="ph">NOTHING CAUGHT YET</span><div class="caught"><div class="ck">✓ CAUGHT · ${MIST[i].kind}</div><div class="tx">${MIST[i].caught}</div></div></div>`;
+ $('layers').appendChild(d);
+ const n=document.createElement('div');n.className='node';n.id='n'+i;n.style.top=(midY(i)-10.5)+'px';$('nodes').appendChild(n);
+});
+const clamp=(x,a=0,b=1)=>Math.min(b,Math.max(a,x));
+const ease=x=>x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2;
+const esc=s=>s.replace(/&/g,'&amp;').replace(/</g,'&lt;');
+
+window.render=function(tt){
+ let t=((tt%T)+T)%T, op=1;
+ if(t>=18.9&&t<19.4){op=1-ease((t-18.9)/.5);}
+ if(t>=19.4){op=ease(clamp((t-19.4)/.6));t=0;}
+ ['layers','nodes','dot','fix','msg','kind','rf'].forEach(id=>$(id).style.opacity=op);
+
+ let caughtN=0, active=-1, railTo=0;
+ MIST.forEach((m,i)=>{
+  const s=START+i*STEP, fallS=s+TYPE, land=fallS+FALL;
+  if(t>=s&&t<land+1.2)active=i;
+  const L=$('l'+i), C=L.querySelector('.caught'), ph=L.querySelector('.ph'), N=$('n'+i);
+  const k=clamp((t-land)/.35);
+  if(t>=land){caughtN++;}
+  C.style.opacity=ease(k);C.style.transform=`scale(${.9+.1*ease(k)})`;ph.style.opacity=1-k;
+  L.querySelector('.slot').style.borderColor=`rgba(9,7,15,${.14*(1-k)})`;
+  const glow=t>=land?Math.max(0,1-(t-land)/1.6):0;
+  L.style.borderColor=t>=land?`rgba(148,82,242,${.3+.5*glow})`:'rgba(9,7,15,.09)';
+  L.style.boxShadow=t>=land?`0 0 0 ${6*glow}px rgba(148,82,242,.14), 0 14px 34px rgba(9,7,15,${.06+.06*glow})`:'none';
+  L.querySelector('.n').style.background=t>=land?'#9452F2':'rgba(9,7,15,.05)';
+  L.querySelector('.n').style.color=t>=land?'#fff':'rgba(9,7,15,.55)';
+  N.style.background=t>=land?'#9452F2':'#F4F2F8';N.style.borderColor=t>=land?'#9452F2':'rgba(9,7,15,.18)';
+  N.style.transform=`scale(${1+.5*glow})`;
+ });
+
+ // incoming text + kind
+ const msg=$('msg'),kind=$('kind');
+ if(active>=0){
+  const m=MIST[active], s=START+active*STEP, k=clamp((t-s)/(TYPE*.85));
+  msg.innerHTML=esc(m.act.slice(0,Math.round(m.act.length*k)))+(k<1?'<span class="cur"></span>':'');
+  kind.textContent=m.kind;kind.style.opacity=clamp((t-s-TYPE*.8)/.2);
+  kind.style.color='#F65663';kind.style.background='rgba(246,86,99,.1)';
+ } else if(caughtN===4){
+  msg.innerHTML='<span style="color:#9452F2">All four caught before they spread</span>';kind.textContent='DONE';kind.style.opacity=1;kind.style.color='#9452F2';kind.style.background='rgba(148,82,242,.1)';
+ } else {
+  msg.innerHTML='Working through the inbox'+'<span class="cur" style="opacity:'+((Math.floor(t*2)%2)?0:1)+'"></span>';kind.textContent='READY';kind.style.opacity=.6;kind.style.color='rgba(9,7,15,.45)';kind.style.background='rgba(9,7,15,.05)';
+ }
+
+ // dot falling along the rail
+ const dot=$('dot');let dOp=0,dY=440;
+ if(active>=0){
+  const s=START+active*STEP, fallS=s+TYPE, land=fallS+FALL;
+  const k=ease(clamp((t-fallS)/FALL));
+  dY=440+(midY(active)-440)*k;
+  dOp=t<fallS?clamp((t-s-TYPE*.6)/.3):(t<land+.3?1:1-clamp((t-land-.3)/.3));
+ }
+ dot.style.top=(dY-15.5)+'px';dot.style.opacity=dOp*op;
+ let fillTo=0;
+ MIST.forEach((m,i)=>{const s=START+i*STEP+TYPE;if(t>=s){fillTo=Math.max(fillTo,(midY(i)-448)*ease(clamp((t-s)/FALL)));}});
+ $('rf').style.height=fillTo+'px';
+
+ // banner
+ $('cnt').textContent=caughtN+'/4';
+ const endT=START+3*STEP+TYPE+FALL;
+ const bk=ease(clamp((t-(endT+.6))/.7));
+ $('fbg').style.opacity=bk;
+ $('fix').style.boxShadow=`0 24px ${60*bk}px rgba(148,82,242,${.35*bk})`;
+};
+
+window.ready=document.fonts.ready.then(()=>Promise.all([...document.images].map(i=>i.complete?1:new Promise(r=>{i.onload=i.onerror=r}))));
+if(!location.search.includes('capture')){const t0=performance.now();window.ready.then(()=>{const loop=()=>{render((performance.now()-t0)/1000);requestAnimationFrame(loop)};loop();});}
+else render(0);
+</script>
+</body></html>
