@@ -4,7 +4,7 @@ Rewritten every morning by the `personal-posts-review` routine from the numbers 
 and X (`scripts/posts-report.mjs` in the portal repo). The daily writer reads this before it picks
 stories, hooks and images. Score = 5 × comments + 3 × shares + reactions, because comments are the goal.
 
-Last updated: 2026-11-23 (3 measured posts, last 7 days)
+Last updated: 2026-11-24 (3 measured posts, last 7 days)
 
 ## Do more of
 - Nothing proven yet (3 measured posts; a finding needs 5). Follow the README.
@@ -14,12 +14,13 @@ Last updated: 2026-11-23 (3 measured posts, last 7 days)
 
 ## Test next
 - Alberta stories where locals are already arguing (protests, town halls, a rule that hasn't passed).
-  The 600 m data centre post scored 394 against 16 and 15 for the other two: 55 Facebook comments,
-  14 shares, 67 reactions, 3,710 views after four days (1 post). Write 2 or 3 of these a day.
+  The 600 m data centre post scored 395 against 16 and 15 for the other two: 55 Facebook comments,
+  14 shares, 68 reactions, 3,756 views after five days (1 post). Write 2 or 3 of these a day.
 - End with a question that has a number for an answer ("Is 600 metres enough? What distance would
   you be comfortable with?"). Anyone can reply in two words, and people argue with each other's number.
-- Real photo of real people reacting to the story (protesters holding signs, score 394) vs. a famous
-  face (ChatGPT post, Sam Altman, score 15) vs. a generated robot scene (late-payers post, score 16).
+- Real photo of real people reacting to the story (protester holding a "Stop the AI data center"
+  sign, score 395) vs. a famous face (ChatGPT post, Sam Altman, score 15) vs. a generated robot
+  scene (late-payers post, score 16).
 - A yes/no question about the reader's own home or family plus a concrete number in the hook
   ("Would you live 600 metres from...?") vs. a general business question ("Customers paying you late?").
 - Question hooks vs. statement hooks: keep most hooks as questions (the README default), but write
@@ -27,21 +28,22 @@ Last updated: 2026-11-23 (3 measured posts, last 7 days)
 - Health, power bills and jobs vs. business-owner topics.
 
 ## Notes from the numbers
-- Facebook is doing all the work: 3,710, 607 and 292 views vs. 30 to 39 impressions on LinkedIn
-  and 13 to 20 views on X. No post has a reaction, share or outside comment on LinkedIn or X.
-- The data centre post has stopped: Facebook comments 6, 51, 55, 55 over four days; shares 5, 14,
-  14, 14; reactions 16, 60, 67, 67; views 1,453, 3,355, about 3,700, 3,710. All of the talk came
-  in the first two days, so a post that is quiet after 48 hours will stay quiet.
+- Facebook is doing all the work: 3,756, 635 and 324 views vs. 31 to 41 impressions on LinkedIn
+  and 15 to 21 views on X. No post has a reaction, share or outside comment on LinkedIn or X.
+- The data centre post has stopped: Facebook comments 6, 51, 55, 55, 55 over five days; reactions
+  16, 60, 67, 67, 68; views 1,453, 3,355, about 3,700, 3,710, 3,756. All of the talk came in the
+  first two days, so a post that is quiet after 48 hours will stay quiet.
 - Every post shows exactly 1 comment on each platform, which is most likely Brandon's own
   "full story in the first comment" link (on X it is his own "Full story:" reply). That adds 15 to
-  every score, so the two posts at 15 and 16 drew nothing from other people. Up to 54 of the data
-  centre post's 55 Facebook comments are from others (Brandon's own replies were not counted apart).
-- More views did not mean more talk: the late-payers post got 607 Facebook views, 1 reaction and
-  no replies; the ChatGPT post got 292 views and nothing.
+  every score, so the two posts at 15 and 16 drew nothing from other people.
+- More views did not mean more talk: the late-payers post got 635 Facebook views, 1 reaction and
+  no replies; the ChatGPT post got 324 views and nothing.
 - First line with the most comments, word for word: "Would you live 600 metres from an AI data
   centre? Alberta just proposed that as the minimum distance." Shape: "Would you [personal choice]
   [specific number] from [thing in the news]? Alberta just [did X]."
 - Its closing question, word for word: "Is 600 metres enough? What distance would you be
   comfortable with?"
 - Still only 3 of the 10 posts from 2026-11-19 are marked posted, and nothing from 2026-11-20
-  through 2026-11-23 is in the list. Two more measured posts unlock the first proven finding.
+  through 2026-11-24 is in the list. On LinkedIn, Brandon's recent posts are the long AI Employee
+  role write-ups (article links, 19 to 83 impressions), not the daily personal posts. Two more
+  measured posts unlock the first proven finding.
