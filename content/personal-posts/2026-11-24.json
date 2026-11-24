@@ -1,0 +1,469 @@
+{
+  "date": "2026-11-24",
+  "posts": [
+    {
+      "slug": "wonder-valley-first-nation-court-challenges",
+      "pillar": "alberta",
+      "title": "First Nation takes Alberta to court over $70B data centre",
+      "body": "Would you want a $70 billion AI data centre built where your family holds traplines? Sturgeon Lake Cree Nation says no, and it is taking Alberta to court.\n\nThe project is called Wonder Valley, planned south of Grande Prairie and backed by Kevin O'Leary.\n\nIt would draw 7.5 gigawatts of power. CTV News says that is more than five times what all of Edmonton uses.\n\nThe Nation has filed three court challenges: one against its water licence, one against the province's decision to skip a full environmental impact assessment, and one saying it got only 15 working days to respond to the plans.\n\nO'Leary Digital says it respects the Nation's right to go to court and that the project still needs many approvals. The first case is expected in court next month.\n\nShould a project this size need a full environmental review? Yes or no?\n\nFollow Brandon Upright for AI updates like this every day.\n\nThe full story is in the first comment.",
+      "x": "A First Nation near Grande Prairie has filed 3 court challenges against Alberta over Wonder Valley, a $70B AI data centre that would use 7.5 gigawatts, more than 5x Edmonton's power use. The province skipped a full environmental review. Should it need one?",
+      "first_comment": "Full story: https://unhired.io/news/wonder-valley-first-nation-court-challenges",
+      "sources": [
+        "https://www.ctvnews.ca/edmonton/article/kevin-oleary-backed-data-centre-campus-facing-three-judicial-reviews-by-first-nation/",
+        "https://www.bnnbloomberg.ca/business/technology/2026/11/03/kevin-oleary-backed-data-centre-campus-facing-3-judicial-reviews-by-first-nation/"
+      ],
+      "image": {
+        "label": "ALBERTA AI UPDATE",
+        "headline": "A First Nation is taking Alberta to court over a *$70 billion* AI data centre",
+        "layout": "photo",
+        "theme": "navy",
+        "photoUrl": "https://www.ctvnews.ca/resizer/v2/4IASNQDBRBQS2AHWVJCW26PFRQ.png?smart=true&auth=d407dedf8a05305f6214a3a4c61a728fb3459d613d436ef869dc031099e1def0&width=1200&height=630",
+        "credit": "Rendering: O'Leary Ventures via CTV News",
+        "pos": "50% 50%"
+      },
+      "article": {
+        "title": "A First Nation is taking Alberta to court three times over the $70 billion Wonder Valley data centre",
+        "description": "Sturgeon Lake Cree Nation has filed three judicial reviews over Kevin O'Leary's proposed AI data centre south of Grande Prairie. What each one challenges, what the developer says, and what comes next.",
+        "body": [
+          "Most data centre talk in Alberta this month is about Bill 42. Meanwhile Wonder Valley, the $70 billion campus Kevin O'Leary wants to build south of Grande Prairie, is now facing three court challenges from the First Nation whose territory it sits in.",
+          "## The project",
+          "Wonder Valley was first announced in December 2024. It is planned to draw 7.5 gigawatts of power. CTV News, using figures from Alberta's grid operator, says that is more than five times Edmonton's electricity demand. The developer is O'Leary Digital.",
+          "## The three challenges",
+          "Sturgeon Lake Cree Nation, which has about 4,000 members, has filed three judicial reviews. A judicial review asks a court to decide whether a government decision was made properly.",
+          "- The first, filed last year, challenges the water licence granted for the project. CTV reported on November 3 that it is set to be heard next month.\n- The second, filed in September, challenges the province's decision to exempt Wonder Valley from an environmental impact assessment. The filing calls that decision \"irrational\" and says it breaches Alberta's constitutional obligations.\n- The third, filed in October, says the province consulted at the \"lowest possible level\" and gave the Nation 15 working days to respond to the project plans.",
+          "The filings say the Nation holds traplines and rights across the Treaty 8 territory where the campus would be built.",
+          "In August, a judge dismissed O'Leary Digital's attempt to have the water licence case thrown out on procedural grounds.",
+          "## What each side says",
+          "Chief Sheldon Sunshine told CTV News Edmonton the Nation has been kept in the dark and that going to court is the only way to get answers. He named water use in a region already dealing with drought, and the heat a 7.5 gigawatt facility gives off. \"It's going to have significant impacts on our way of life,\" he said.",
+          "O'Leary Digital CEO Paul Palandjian said in a statement that the reviews are aimed at the government and that the company respects the Nation's right to file them. The company says Wonder Valley is not exempt from environmental review or permits, and that it has committed to closed-loop cooling, which cuts water demand. It plans to file an application with the Alberta Utilities Commission by the end of 2026 and does not expect the court cases to change its timeline.",
+          "The province said it can't comment while the matter is before the courts.",
+          "## Why it matters to you",
+          "Bill 42, tabled on November 18, sets new rules on where big data centres can go. Projects that already have approvals are exempt. So the rules that decide how Wonder Valley gets built are the ones already in place, and the courts are now testing whether those rules were followed.",
+          "University of Calgary law professor David Wright told CTV that environmental assessments for data centres could prevent this kind of litigation. I think he's right. A full review takes longer up front, but it gives everyone, including the company, a clear answer on water and power before billions are spent. The water licence hearing next month is the date I'd watch."
+        ],
+        "sources": [
+          {
+            "label": "CTV News Edmonton: Kevin O'Leary-backed data centre campus facing three judicial reviews by First Nation",
+            "url": "https://www.ctvnews.ca/edmonton/article/kevin-oleary-backed-data-centre-campus-facing-three-judicial-reviews-by-first-nation/"
+          },
+          {
+            "label": "BNN Bloomberg: Kevin O'Leary-backed data centre campus facing 3 judicial reviews by First Nation",
+            "url": "https://www.bnnbloomberg.ca/business/technology/2026/11/03/kevin-oleary-backed-data-centre-campus-facing-3-judicial-reviews-by-first-nation/"
+          }
+        ]
+      },
+      "tags": [
+        "data-centres",
+        "government",
+        "test"
+      ]
+    },
+    {
+      "slug": "ai-gives-customer-wrong-answer",
+      "pillar": "ai_employee",
+      "title": "If AI gives a customer a wrong answer, who pays?",
+      "body": "If an AI gives your customer the wrong answer, who is responsible? A Canadian tribunal already decided.\n\nIn 2024, Air Canada's website chatbot gave a customer wrong information about a fare. The airline argued the chatbot was responsible for its own answers. The tribunal said no, the airline was.\n\nSo if your business uses AI to answer customers, what it says is on you, the same as anything your staff says.\n\nMost AI mistakes come from four places: an out-of-date document, a misread request, an answer it made up, or a step it was never supposed to take.\n\nThe fix is boring. Keep the documents current, tell it to say \"let me check\" when it doesn't know, and have a person read what it sent.\n\nWould you trust a business more or less if you knew an AI answered your email?\n\nFollow Brandon Upright for AI updates like this every day.\n\nThe full story is in the first comment.",
+      "x": "If an AI gives your customer a wrong answer, who's responsible? A Canadian tribunal decided in 2024: Air Canada argued its chatbot was responsible for its own answers and lost. What the AI says is on the business. Would you trust a business more or less if AI answered your email?",
+      "first_comment": "Full article: What Happens When an AI Employee Makes a Mistake https://unhired.io/blog/ai-employee-mistakes",
+      "sources": [
+        "What Happens When an AI Employee Makes a Mistake https://unhired.io/blog/ai-employee-mistakes"
+      ],
+      "image": {
+        "label": "AI EMPLOYEE",
+        "headline": "If an AI gives your customer *the wrong answer*, who's responsible?",
+        "layout": "photo",
+        "theme": "violet",
+        "photo": "robot-desk-a.png",
+        "pos": "50% 30%"
+      },
+      "link": "What Happens When an AI Employee Makes a Mistake https://unhired.io/blog/ai-employee-mistakes",
+      "tags": [
+        "small-business",
+        "how-to"
+      ]
+    },
+    {
+      "slug": "promise-robotics-robot-built-homes",
+      "pillar": "alberta",
+      "title": "Would you live in a house built by robots?",
+      "body": "Would you live in a house whose walls were built by robots? A factory in Nisku, near Edmonton, already makes them.\n\nThe company is Promise Robotics. Its software takes a builder's house plans, breaks them into pieces, and AI-controlled robots build those parts in a factory. Human crews put them together on site.\n\nIt has factories in Nisku and Calgary.\n\nThis month it raised $40 million to expand.\n\nIt signed a deal with D.R. Horton, the largest homebuilder in the United States, covering more than 1,250 homes. A factory in Phoenix is planned for 2027.\n\nThe pitch is that there aren't enough tradespeople to build the homes we need. Its CEO says homebuilding \"can't scale on trade labour alone.\"\n\nWould you buy a home built this way? What would you want to know first?\n\nFollow Brandon Upright for AI updates like this every day.\n\nThe full story is in the first comment.",
+      "x": "Would you live in a house whose walls were built by robots? Promise Robotics makes them in Nisku and Calgary, raised $40M this month, and signed a deal with the biggest US homebuilder for 1,250+ homes. Would you buy one? What would you want to know first?",
+      "first_comment": "Full story: https://unhired.io/news/promise-robotics-robot-built-homes",
+      "sources": [
+        "https://betakit.com/physical-ai-company-promise-robotics-announces-40-million-series-b-round/",
+        "https://calgarytechjournal.com/p/promise-robotics-raises-40-million-to-deliver-on-its-name"
+      ],
+      "image": {
+        "label": "ALBERTA AI UPDATE",
+        "headline": "Would you live in a house *built by robots*? A factory near Edmonton already makes them",
+        "layout": "photo",
+        "theme": "green",
+        "photoUrl": "https://cdn.betakit.com/wp-content/uploads/2023/10/promise-robotics.jpg",
+        "credit": "Photo: Promise Robotics",
+        "pos": "50% 40%"
+      },
+      "article": {
+        "title": "Robots are building parts of homes near Edmonton. A $40 million raise means more of them",
+        "description": "Promise Robotics, with factories in Nisku and Calgary, raised $40 million this month and signed a deal for more than 1,250 US homes. How it works and what it could mean for housing here.",
+        "body": [
+          "If you have tried to get a house built in Alberta lately, you know the wait usually comes down to people: framers, carpenters and crews who are booked months out. A company with factories in Nisku and Calgary is betting that robots can take some of that load.",
+          "## What Promise Robotics does",
+          "Promise Robotics uses AI software and robots to build structural parts of homes in a factory. A builder sends in the house plans it already uses. The software breaks the design into pieces and turns them into instructions for the robots, which build the components. Those are trucked to the site, where human crews assemble them.",
+          "Builders don't buy a factory or learn to run one. They pay for what gets produced. The company calls this \"factory-as-a-service.\"",
+          "## The news",
+          "BetaKit reported on November 17 that the company closed a $40 million Series B round, meaning a later-stage investment from venture investors. It was led by White Star Capital, with Horizons Ventures, Radical Ventures and PSP Investments, which manages pensions for federal public servants.",
+          "According to Calgary Tech Journal, Promise signed a multi-year deal in October with D.R. Horton, the largest homebuilder in the United States by volume, covering more than 1,250 homes. It has more than 2,500 housing units under contract across three markets, and its first US factory, in Phoenix, is scheduled to open in 2027.",
+          "BetaKit, citing The Globe and Mail, says the company plans to grow from 85 to more than 100 employees. Its co-founders include CEO Ramtin Attar and chief innovation officer Reza Nasseri of Landmark Homes.",
+          "## Why it matters here",
+          "Canada has pledged to build 500,000 homes a year. BetaKit notes the Canadian Housing Research Network puts the real pace closer to 200,000. The gap is not only money and permits. There aren't enough skilled tradespeople to build that many homes the old way.",
+          "\"Homebuilding can't scale on trade labour alone,\" Attar said in the company's announcement.",
+          "## What I'd keep in mind",
+          "The company has not published a figure for how much faster or cheaper its homes are, so I wouldn't assume your next house costs less because of it. What it is selling builders is capacity: more homes from the same crew.",
+          "I also don't read this as robots replacing tradespeople. The parts still get assembled, wired, plumbed and finished by people on site. The factory takes the repetitive cutting and nailing, which is the work that is hardest to hire for.",
+          "Most AI news is about software on a screen. This is one of the clearest Alberta examples of AI running machines that build physical things, and it is happening just outside Edmonton."
+        ],
+        "sources": [
+          {
+            "label": "BetaKit: Physical AI company Promise Robotics announces $40 million Series B round",
+            "url": "https://betakit.com/physical-ai-company-promise-robotics-announces-40-million-series-b-round/"
+          },
+          {
+            "label": "Calgary Tech Journal: Promise Robotics raises $40 million",
+            "url": "https://calgarytechjournal.com/p/promise-robotics-raises-40-million-to-deliver-on-its-name"
+          }
+        ]
+      },
+      "tags": [
+        "jobs",
+        "money"
+      ]
+    },
+    {
+      "slug": "black-friday-ai-fake-stores",
+      "pillar": "ai_news",
+      "title": "AI is making fake Black Friday stores hard to spot",
+      "body": "Black Friday is this Friday, and AI is making fake online stores almost impossible to spot by looking at them.\n\nCanada's Centre for Cyber Security says scammers now use AI to build convincing websites, ads, product reviews and even customer service chats.\n\nThe old warning signs, like bad spelling and sloppy design, don't work the way they used to.\n\nCanadians reported $535 million in fraud losses from January to September this year. Fewer than 1 in 10 cases get reported, so the real number is higher.\n\nWhat still works: slow down, look up the website name with the word \"scam\", and never pay a store by e-transfer, gift card or crypto.\n\nIf you get caught, call your card company first, then report it to the Canadian Anti-Fraud Centre at 1-888-495-8501.\n\nHave you or someone you know bought from a fake store? What gave it away?\n\nFollow Brandon Upright for AI updates like this every day.\n\nThe full story is in the first comment.",
+      "x": "Black Friday is this Friday. Scammers now use AI to build fake stores, reviews and support chats that look real. Canadians reported $535M in fraud losses Jan to Sept, and fewer than 1 in 10 cases get reported. Ever bought from a fake store? What gave it away?",
+      "first_comment": "Full story: https://unhired.io/news/black-friday-ai-fake-stores",
+      "sources": [
+        "https://cyber.gc.ca/en/guidance/shopping-online-safely-itsap00071",
+        "https://www.cp24.com/news/canada/2026/11/14/scams-and-black-friday-deals-how-to-tell-the-difference/",
+        "https://mobilesyrup.com/2026/10/15/canadian-centre-for-cyber-security-warns-of-ai-scams-ahead-of-holiday-shopping-season/"
+      ],
+      "image": {
+        "label": "CANADA AI UPDATE",
+        "headline": "Black Friday warning: AI makes fake stores *almost impossible to spot*",
+        "layout": "list",
+        "theme": "red",
+        "rows": [
+          "Fake sites copy real brands *to the letter*",
+          "AI writes the reviews and the support chat",
+          "Never pay by *e-transfer, gift card or crypto*",
+          "Report it: *1-888-495-8501*"
+        ]
+      },
+      "article": {
+        "title": "AI is making fake Black Friday stores look real. How to check before you pay",
+        "description": "Canada's Centre for Cyber Security says AI now builds convincing fake shops, reviews and support chats. What still gives them away, and what to do if you get caught.",
+        "body": [
+          "Black Friday is November 27. If you're shopping online this week, the fake stores you'll run into look better than they did a year ago, and AI is the reason.",
+          "## What has changed",
+          "In October, the Canadian Centre for Cyber Security updated its guide to shopping online safely. It says scammers can use AI to create convincing websites, ads, product descriptions, reviews and customer service conversations, and that this makes scams harder to detect.",
+          "Benoit Dupont, who directs the Research Chair in Cybercrime Prevention at the University of Montreal, told The Canadian Press that fraudsters often start by building sites that copy a real brand's look exactly. \"AI makes their site more credible,\" he said. He added that the deals are pushed through social media ads and influencers, real or generated by AI.",
+          "The Cyber Centre also says a professional look, a padlock icon and a familiar brand name do not prove a site is real. Spelling mistakes and clumsy design used to give fakes away. You can't count on that now.",
+          "## The numbers",
+          "The Canadian Press reported that Canadians had reported $535 million in fraud losses from the start of the year to September 30. Last year's total was $705 million. Fewer than 10% of fraud cases are reported to the Canadian Anti-Fraud Centre, so the real losses are higher.",
+          "A Leger survey done in February found about 35% of Canadians have been victims of an online scam, such as phishing or a fake website.",
+          "## What still gives a fake away",
+          "- A price that is far below everywhere else, with a countdown clock telling you to hurry.\n- No phone number or real address, and vague return or refund policies.\n- A request to pay by e-transfer, gift card or cryptocurrency.\n- A follow-up text or email about a delivery problem, a customs fee or a refund you didn't ask for.\n- A web address that is one character off, like a zero in place of the letter o.",
+          "Dupont's advice is simple: take your time, double-check, and talk it over with someone before you hand over a card number. Searching the store's name with the word \"scam\" takes ten seconds.",
+          "## AI shopping assistants",
+          "If you use a chatbot to find deals, the Cyber Centre makes a point worth remembering. It says AI tools cannot reliably tell whether a seller or an offer is trustworthy the way a person can. A recommendation from a chatbot is not a safety check.",
+          "## If you get caught",
+          "Call your credit card company right away and ask to reverse the charge. Dupont said refunds are more common for this kind of fraud than for investment or romance scams. Change your passwords if you made an account. Then report it to the Canadian Anti-Fraud Centre at reportcyberandfraud.canada.ca or 1-888-495-8501, even if you didn't lose money. Reports are how fake sites get taken down."
+        ],
+        "sources": [
+          {
+            "label": "Canadian Centre for Cyber Security: Shopping online safely (ITSAP.00.071)",
+            "url": "https://cyber.gc.ca/en/guidance/shopping-online-safely-itsap00071"
+          },
+          {
+            "label": "The Canadian Press via CP24: How to tell if that Black Friday deal is a scam",
+            "url": "https://www.cp24.com/news/canada/2026/11/14/scams-and-black-friday-deals-how-to-tell-the-difference/"
+          },
+          {
+            "label": "MobileSyrup: Canadian Centre for Cyber Security warns of AI scams ahead of holiday shopping season",
+            "url": "https://mobilesyrup.com/2026/10/15/canadian-centre-for-cyber-security-warns-of-ai-scams-ahead-of-holiday-shopping-season/"
+          }
+        ]
+      },
+      "tags": [
+        "scams",
+        "money",
+        "test"
+      ]
+    },
+    {
+      "slug": "edmonton-ai-tech-jobs-pay",
+      "pillar": "alberta",
+      "title": "Edmonton AI and tech jobs pay $94,480",
+      "body": "Edmonton-area jobs in AI and tech, defence and life sciences pay $94,480 on average. The average across all jobs in the region is $67,784.\n\nThat comes from the Edmonton Chamber of Commerce's State of the Economy report, released last week.\n\nJobs in those three fields grew 21% from 2019 to 2025, about triple the pace of the rest of the region.\n\nBut they are still small: about 1 in every 50 jobs here.\n\nAnd the report says Edmonton is behind. Job growth in each of these fields trailed both Alberta and Canada, and AI pays less here than in Calgary.\n\nThe Chamber's advice included one line I liked: \"Brag more about Edmonton's strengths.\"\n\nWould you retrain for a job that paid $27,000 more a year? What would stop you?\n\nFollow Brandon Upright for AI updates like this every day.\n\nThe full story is in the first comment.",
+      "x": "Edmonton-area jobs in AI/tech, defence and life sciences pay $94,480 on average, vs $67,784 for all jobs. They grew 21% since 2019, but they're only 1 in 50 jobs and growth trails Calgary and Canada. Would you retrain for $27,000 more a year?",
+      "first_comment": "Full story: https://unhired.io/news/edmonton-ai-tech-jobs-pay",
+      "sources": [
+        "https://edmonton.taproot.news/news/2026/11/19/ai-defence-and-life-sciences-growing-fast-in-edmonton-region",
+        "https://betakit.com/tech-defence-and-life-sciences-are-driving-edmontons-economy-report/"
+      ],
+      "image": {
+        "label": "ALBERTA AI UPDATE",
+        "headline": "Edmonton's AI and tech jobs pay *$94,480*. The regional average is $67,784",
+        "layout": "photo",
+        "theme": "navy",
+        "photoUrl": "https://cdn.betakit.com/wp-content/uploads/2026/10/Edmonton.webp",
+        "credit": "Photo: Redd Francisco / Unsplash",
+        "pos": "50% 50%"
+      },
+      "article": {
+        "title": "Edmonton's AI and tech jobs pay $27,000 more than average. Why the region still lags",
+        "description": "The Edmonton Chamber of Commerce's State of the Economy report found AI, defence and life sciences jobs grew 21% since 2019 and pay $94,480 on average. It also found Edmonton trailing Calgary and Canada.",
+        "body": [
+          "If you have ever wondered whether a tech job is worth retraining for in Edmonton, the Edmonton Chamber of Commerce just put a number on it.",
+          "## What the report found",
+          "The Chamber presented its State of the Economy report at a luncheon at the Westin Edmonton on November 18, as Taproot Edmonton reported. It looks at three newer parts of the regional economy together: AI and technology, defence and aerospace, and life sciences.",
+          "- Jobs in those three grew 21% from 2019 to 2025.\n- Their contribution to the region's real GDP grew nearly 37%.\n- Both are about triple the pace of the region's other main industries.\n- The average wage in them is $94,480, about $27,000 above the regional average of $67,784.",
+          "The report describes these as high-skill, high-earning jobs, not entry-level ones.",
+          "## The catch",
+          "They are still small. Together they make up about 2% of jobs and 2% of the region's economy, or roughly 1 in every 50 jobs.",
+          "And the report is blunt about how Edmonton compares. In each of the three, job growth trailed both Alberta and Canada. It says the region has been \"a passenger on a national trend rather than its driver.\" Edmonton wages in AI and in defence are lower than Calgary's. BetaKit reported that the region has less than half the concentration of these industries that the rest of Canada has, and that senior roles and head offices are still mostly elsewhere.",
+          "For contrast, oil and gas is 14.4% of the region's economy from about 3% of its jobs.",
+          "## What the Chamber wants",
+          "The report lists five asks: one long-term economic development strategy, predictable policy, land and infrastructure ready before companies need it, keep hiring new graduates, and \"brag more about Edmonton's strengths.\"",
+          "Heather Thomson, the Chamber's vice-president of economy and engagement, said the region has the core institutions already, such as Amii and the University of Alberta. \"This is what we can't fumble,\" she said.",
+          "## What it means if you're thinking about it",
+          "Not every job in these fields is a coding job. AI and tech companies hire salespeople, project managers, trainers and support staff, and the pay gap tends to follow them. If you work in an office today and you are good with the software you already use, learning how AI tools fit into that work is the most practical first step I know of. It costs a few evenings, and the report puts the pay gap at about $27,000 a year."
+        ],
+        "sources": [
+          {
+            "label": "Taproot Edmonton: AI, defence and life sciences growing fast in Edmonton region",
+            "url": "https://edmonton.taproot.news/news/2026/11/19/ai-defence-and-life-sciences-growing-fast-in-edmonton-region"
+          },
+          {
+            "label": "BetaKit: Tech, defence and life sciences are driving Edmonton's economy, report says",
+            "url": "https://betakit.com/tech-defence-and-life-sciences-are-driving-edmontons-economy-report/"
+          }
+        ]
+      },
+      "tags": [
+        "jobs",
+        "money",
+        "test"
+      ]
+    },
+    {
+      "slug": "who-would-manage-the-ai",
+      "pillar": "ai_employee",
+      "title": "Who at your work would be in charge of the AI?",
+      "body": "If your workplace got an AI assistant tomorrow, who would be in charge of it?\n\nMost people say IT. I'd say the person who would have managed a human doing the same job.\n\nAt a clinic, that's the office manager. At a law firm, the senior paralegal. At an online store, whoever runs operations.\n\nThe job is mostly judgment, not tech: approving the things it has to ask about first, reading what it did, and fixing its instructions when it gets something wrong.\n\nIt takes time at the start. Expect one to two hours a day for the first two weeks.\n\nOnce it settles, it's more like one to two hours a week.\n\nAnd pick one boss. When three people give it instructions, nobody knows which one caused the problem on Thursday.\n\nWho at your work would end up babysitting the AI?\n\nFollow Brandon Upright for AI updates like this every day.\n\nThe full story is in the first comment.",
+      "x": "If your workplace got an AI assistant tomorrow, who'd be in charge of it? Not IT. The person who'd manage a human in that seat. Expect 1-2 hours a day the first two weeks, then 1-2 hours a week. Who at your work would end up babysitting the AI?",
+      "first_comment": "Full article: Who Manages an AI Employee, and How Much of Their Week It Takes https://unhired.io/blog/managing-ai-employees",
+      "sources": [
+        "Who Manages an AI Employee, and How Much of Their Week It Takes https://unhired.io/blog/managing-ai-employees"
+      ],
+      "image": {
+        "label": "AI EMPLOYEE",
+        "headline": "If your work got an AI assistant tomorrow, *who would be in charge of it*?",
+        "layout": "photo",
+        "theme": "black",
+        "photo": "robot-interview-b.png",
+        "pos": "50% 30%"
+      },
+      "link": "Who Manages an AI Employee, and How Much of Their Week It Takes https://unhired.io/blog/managing-ai-employees",
+      "tags": [
+        "small-business",
+        "jobs"
+      ]
+    },
+    {
+      "slug": "alberta-ai-trading-bot-scam-warning",
+      "pillar": "alberta",
+      "title": "AI trading bot that can't lose? It's a scam",
+      "body": "Has anyone pitched you an AI trading bot that can't lose? Alberta's securities regulator says that's the scam.\n\nThe Alberta Securities Commission put out a warning this month about investment fraud that uses AI as the hook.\n\nThe pitch says a secret AI system can predict the market, trade faster than people and earn high returns with little or no risk.\n\nIt usually arrives through social media ads, WhatsApp or Telegram, or a friend who says it worked for them.\n\nYou see a slick dashboard showing your profits. Those numbers can be faked.\n\nThey often let you take out a small amount first. Then a bigger withdrawal gets blocked until you pay \"fees\" or \"taxes\". That money is gone too.\n\nCheck anyone selling investments at CheckFirst.ca, or call the ASC at 1-877-355-4488.\n\nHas someone tried to sell you on an AI trading app? What did they promise?\n\nFollow Brandon Upright for AI updates like this every day.\n\nThe full story is in the first comment.",
+      "x": "Someone pitching you an AI trading bot with high returns and no risk? Alberta's securities regulator says that's the scam. Fake profit dashboards, a small early payout, then fees to get the rest out. Check sellers at CheckFirst.ca. Has anyone pitched you one?",
+      "first_comment": "Full story: https://unhired.io/news/alberta-ai-trading-bot-scam-warning",
+      "sources": [
+        "https://www.cantechletter.com/newswires/investor-alert-asc-warns-investors-about-ai-trading-scams/"
+      ],
+      "image": {
+        "label": "ALBERTA AI UPDATE",
+        "headline": "An AI trading bot that *can't lose*? Alberta's regulator says that's the scam",
+        "layout": "photo",
+        "theme": "green",
+        "photoFile": "/Users/user/Documents/Unhired/brand/personal-posts/2026-11-24/gen/alberta-ai-trading-bot-scam-warning.png",
+        "credit": "AI-generated image",
+        "pos": "50% 45%"
+      },
+      "article": {
+        "title": "Alberta's securities regulator warns about AI trading bot scams. The signs to watch for",
+        "description": "The Alberta Securities Commission says fraudsters are using AI, algorithms and trading bots as a hook. How the scam works, the warning signs, and where to check before you invest.",
+        "body": [
+          "Ads for AI trading apps that promise steady returns with no risk are all over social media. On November 3, the Alberta Securities Commission put out an investor alert about exactly that.",
+          "## What the ASC says is happening",
+          "The ASC is the province's regulator for investments. Its alert says fraudsters are using AI, algorithms and trading bots as a marketing hook to make investment scams look believable. They exaggerate or invent AI's role in their results, sell access to a so-called AI trading platform, or offer to trade for you. Some impersonate a real company or a real investment professional.",
+          "Victims are found through social media, online ads, messaging apps such as WhatsApp and Telegram, and personal relationships.",
+          "## How it plays out",
+          "The pitch says a private AI system can predict markets, trade faster than people, remove human error and earn high returns with little or no risk. There is a polished website, a dashboard, screenshots and testimonials.",
+          "The ASC says those dashboards can be created or manipulated to show deposits, trades and profits that never happened. You are asked to send money or crypto, buy access, or give them control of a trading account.",
+          "Then comes the part that hooks people. A small early withdrawal goes through, which builds trust. When you try to take out more, it gets delayed or blocked until you pay a fee or a \"tax.\" The ASC says those payments are part of the scam and the money doesn't come back.",
+          "## The warning signs",
+          "- The person, firm or platform is not registered.\n- Phrases like \"AI-powered\" or \"algorithmic trading\" paired with \"no risk,\" \"high success rates\" or \"24/7 automated trading.\"\n- Secret or vague explanations of how the technology works.\n- Promised or unusually steady returns.\n- Bronze, silver and gold packages.\n- Countdown timers, limited spots, or pop-ups saying someone just invested.",
+          "## What to do",
+          "Look up anyone selling you an investment on the National Registration Search, and check CheckFirst.ca and the ASC's Investment Caution List. Don't trust a registration number or certificate they send you, because those can be faked too. Don't install software they say is required, and never share banking, crypto or account passwords.",
+          "A friend who swears it worked is not proof. Often they are early in the same scam and haven't hit the blocked withdrawal yet.",
+          "You don't need to be sure it is a scam to report it. The ASC takes reports online at asc.ca and at 1-877-355-4488.",
+          "## My take",
+          "I build AI systems for a living. AI is useful for a lot of work, and none of it involves a secret bot that beats the stock market with no risk. If such a thing existed, the people who built it would not be selling it to strangers on Telegram."
+        ],
+        "sources": [
+          {
+            "label": "Alberta Securities Commission investor alert via CNW: ASC warns investors about AI trading scams (November 3, 2026)",
+            "url": "https://www.cantechletter.com/newswires/investor-alert-asc-warns-investors-about-ai-trading-scams/"
+          }
+        ]
+      },
+      "tags": [
+        "scams",
+        "money"
+      ]
+    },
+    {
+      "slug": "goldman-ai-layoffs-delayed",
+      "pillar": "ai_news",
+      "title": "Goldman: AI layoff wave is delayed, not cancelled",
+      "body": "The AI layoff wave everyone expected this year didn't happen. Goldman Sachs says it's delayed, not cancelled.\n\nIn its 2027 outlook, the bank says layoffs stayed historically low in 2026.\n\nIt expects about one more year like this before AI starts having \"a larger impact\" on jobs.\n\nA Goldman economist estimated last month that up to 9% of workers could be displaced during the switch to AI. That is about 1 in 11.\n\nThe first group already feeling it is young people. Stanford researchers found employment for 22- to 25-year-olds in the most AI-exposed jobs is about 19% below where it would have been.\n\nThose are US numbers, but our job market usually follows theirs.\n\nHow many years before AI changes your job? Give me a number.\n\nFollow Brandon Upright for AI updates like this every day.\n\nThe full story is in the first comment.",
+      "x": "The AI layoff wave didn't come in 2026. Goldman Sachs says it's delayed: about one more year, then AI starts to hit jobs harder. Up to 9% of workers could be displaced, about 1 in 11. Young workers are already feeling it. How many years before AI changes your job?",
+      "first_comment": "Full story: https://unhired.io/news/goldman-ai-layoffs-delayed",
+      "sources": [
+        "https://fortune.com/2026/11/16/why-no-ai-layoff-wave-goldman-sachs-outlook-recession-jobs/"
+      ],
+      "image": {
+        "label": "AI UPDATE",
+        "headline": "Goldman Sachs: the AI layoff wave is *delayed, not cancelled*",
+        "layout": "stat",
+        "theme": "violet",
+        "stat": "1 in 11",
+        "statLabel": "workers could be displaced by AI"
+      },
+      "article": {
+        "title": "Goldman Sachs says the AI layoff wave is delayed, not cancelled. What that means for your job",
+        "description": "Layoffs stayed low in 2026 despite fears about AI. Goldman's 2027 outlook expects one more quiet year before AI displacement grows. Who is already feeling it, and what to do with the time.",
+        "body": [
+          "At the start of this year, plenty of people expected AI to set off a wave of layoffs. It didn't happen. Goldman Sachs now says the wave is late, not gone.",
+          "## What Goldman said",
+          "Fortune reported on November 16 that Goldman's 2027 US economic outlook found the layoff rate \"remained historically low\" this year. The bank expects that pattern, which it describes as low hiring and low firing, to last about one more year, \"before AI displacement begins to have a larger impact in subsequent years.\"",
+          "Goldman isn't forecasting a recession. It sees US economic growth of 2.4% in 2027.",
+          "In October, Goldman economist Joseph Briggs estimated that up to 9% of workers could be displaced during the move to AI, roughly 1 in 11. He also said job losses from automation tend to stay limited while the economy is healthy and speed up during a slowdown.",
+          "## Who is already feeling it",
+          "The people feeling it first aren't being laid off. They're not being hired.",
+          "Researchers at the Stanford Digital Economy Lab found that employment of 22- to 25-year-olds in the jobs most exposed to AI was about 19% below where it would otherwise be, up from 15% a year earlier. They wrote that they don't see widespread job losses across the economy, and that the change is coming mainly through companies hiring fewer young workers.",
+          "Fortune's article names routine jobs such as clerks, secretaries and machine operators as the kind that have historically shrunk in steps during recessions.",
+          "## The other side",
+          "Not everyone agrees the wave is coming. Princeton's Arvind Narayanan, co-author of the book AI Snake Oil, has pushed back on predictions that most white-collar work disappears, while still calling AI \"very useful for every knowledge worker.\" Some predictions have been far more extreme than Goldman's. Fortune notes that Anthropic CEO Dario Amodei said in May 2025 that AI could wipe out half of entry-level office jobs.",
+          "## What it means here",
+          "These are US numbers. Canada doesn't move in lockstep with the US, but our job market tends to follow theirs, and the same software is sold on both sides of the border.",
+          "The way I read it, most people have a window. If Goldman is right, the next year looks a lot like this one. That is a good time to learn which parts of your own job AI does well and which parts it doesn't, while nobody is forcing the question.",
+          "If you're a parent of someone in their early twenties, the Stanford finding is the one I'd pay attention to. The entry-level roles that used to teach people a trade or an office are where hiring is slowing first. Skills that pair a field with the ability to use AI tools well are the safer bet."
+        ],
+        "sources": [
+          {
+            "label": "Fortune: The AI layoff wave never arrived in 2026. Goldman says it's just delayed",
+            "url": "https://fortune.com/2026/11/16/why-no-ai-layoff-wave-goldman-sachs-outlook-recession-jobs/"
+          }
+        ]
+      },
+      "tags": [
+        "jobs"
+      ]
+    },
+    {
+      "slug": "edmonton-edge-fund-renewal",
+      "pillar": "alberta",
+      "title": "Should Edmonton give companies up to $750K?",
+      "body": "Should the City of Edmonton give local companies up to $750,000 each to grow? Council will soon weigh it.\n\nIt's called the Edmonton Edge Fund. City council's executive committee will consider bringing it back.\n\nThe first round gave $4.75 million in grants to 17 Edmonton companies. Those companies reported 340 jobs and $15.4 million in revenue growth.\n\nThe new version would only fund established companies that already make money, in fields like AI and tech, food processing, manufacturing, tourism and health.\n\nGrants would be $200,000 to $750,000 and cover up to half of a project's cost.\n\nIt depends on council approving $1 million for it in the 2027 to 2030 budget.\n\nIs this a good use of city money, or should companies fund their own growth?\n\nFollow Brandon Upright for AI updates like this every day.\n\nThe full story is in the first comment.",
+      "x": "Should Edmonton give local companies up to $750,000 each to grow? Council will consider bringing back the Edge Fund. Round one: $4.75M to 17 companies, 340 jobs reported. The new version funds only established, revenue-making firms. Good use of city money?",
+      "first_comment": "Full story: https://unhired.io/news/edmonton-edge-fund-renewal",
+      "sources": [
+        "https://edmonton.taproot.news/roundups/tech/2026/11/24",
+        "https://edmonton.taproot.news/briefs/2026/11/24/edmonton-edge-fund-could-return-with-narrower-focus"
+      ],
+      "image": {
+        "label": "ALBERTA AI UPDATE",
+        "headline": "Should Edmonton give local companies up to *$750,000* each to grow?",
+        "layout": "stat",
+        "theme": "navy",
+        "stat": "$750K",
+        "statLabel": "city grant per company"
+      },
+      "article": {
+        "title": "Edmonton may bring back the Edge Fund with grants up to $750,000. What changes",
+        "description": "City council's executive committee will consider renewing the Edmonton Edge Fund for established companies. What the first round paid for, who would qualify now, and the budget vote it depends on.",
+        "body": [
+          "Edmonton city council is about to weigh a question that splits people at every dinner table: should a city hand out grant money to private companies so they grow here?",
+          "## What is on the table",
+          "Taproot Edmonton reported on November 24 that council's executive committee will consider renewing the Edmonton Edge Fund. The first version funded early-stage startups and growing companies. The renewed one would change focus to established companies trying to scale up.",
+          "It depends on money. The fund only comes back if council approves a package called Edmonton Advantage in its 2027 to 2030 budget, and that package includes $1 million for the Edge Fund. City administration would look for other funding to add to it.",
+          "## What the first round paid for",
+          "The first phase gave $4.75 million in non-repayable grants to 17 Edmonton companies. Recipients included Future Fields, Zero Point Cryogenics, 48Hour Discovery, Dark Matter Materials, UpRow and Swift Charge.",
+          "According to the city's report, as Taproot summarized it, the companies reported:",
+          "- $15.4 million in revenue growth, including $5.9 million from exports\n- 340 jobs\n- $6.79 million spent locally on capital\n- 53 products or services brought to market",
+          "Nine projects are finished, and the rest are expected to wrap up by the end of 2026. Those numbers are what the companies reported. They don't tell you how many of those jobs would have happened without the grant, which is the hard question with any program like this.",
+          "## Who would qualify now",
+          "The two old streams become one, for companies that already make revenue or profit. Grants would run from $200,000 to $750,000, cover up to half of a project's cost, and last up to two years.",
+          "Eligible fields include advanced manufacturing, AI and technology, tourism, defence, energy and clean tech, food processing and agriculture, health and life sciences, and transportation and logistics.",
+          "The first round drew 632 expressions of interest. The city says it wants fewer, bigger grants and fewer applications to sort through.",
+          "## The two sides",
+          "Supporters say a city competes with every other city for companies that are ready to grow, and matching grants keep that growth here. Critics say businesses should fund their own expansion, and that city money is better spent on roads, transit and policing that every business uses.",
+          "## My view",
+          "The change to established, revenue-making companies is the right one if the fund comes back. A grant that covers half of a real project, at a company that already has customers, is easier to measure than a bet on an idea. I'd want the city to publish, for each grant, what the company promised and what it delivered."
+        ],
+        "sources": [
+          {
+            "label": "Taproot Edmonton: Edmonton Edge Fund could return with narrower focus",
+            "url": "https://edmonton.taproot.news/briefs/2026/11/24/edmonton-edge-fund-could-return-with-narrower-focus"
+          },
+          {
+            "label": "Taproot Edmonton: Tech Roundup, Nov. 24, 2026",
+            "url": "https://edmonton.taproot.news/roundups/tech/2026/11/24"
+          }
+        ]
+      },
+      "tags": [
+        "government",
+        "small-business"
+      ]
+    },
+    {
+      "slug": "stopped-going-to-physio",
+      "pillar": "ai_employee",
+      "title": "Ever quit physio halfway through?",
+      "body": "Ever been told you need eight physio visits, gone twice, felt a bit better, and never booked again?\n\nYou're not alone, and the clinic usually never calls.\n\nThe front desk is checking in the next patient, answering the phone and chasing a claim number from an insurer.\n\nThat's the gap AI fills well at a physio, chiro or massage clinic. It checks the schedule every day for patients with visits left and nothing booked, texts them open times, and flags the ones who don't answer for the practitioner.\n\nIt also handles reminders and filling no-show gaps.\n\nWhat it shouldn't touch: new symptoms, clinical questions, coverage decisions, or a patient who's upset. Those go to a person.\n\nHave you ever stopped going partway through? What made you stop?\n\nFollow Brandon Upright for AI updates like this every day.\n\nThe full story is in the first comment.",
+      "x": "Ever been told you need 8 physio visits, gone twice, felt better and never booked again? The clinic usually never calls, because the front desk is swamped. AI can catch every patient with visits left and nothing booked. Ever stopped partway? Why?",
+      "first_comment": "Full article: AI Receptionist for Clinics https://unhired.io/blog/ai-receptionist-for-clinics",
+      "sources": [
+        "AI Receptionist for Clinics https://unhired.io/blog/ai-receptionist-for-clinics"
+      ],
+      "image": {
+        "label": "AI EMPLOYEE",
+        "headline": "Told you need *8 physio visits*, went twice, and never booked again?",
+        "layout": "photo",
+        "theme": "violet",
+        "photo": "robot-handshake-a.png",
+        "pos": "50% 35%"
+      },
+      "link": "AI Receptionist for Clinics https://unhired.io/blog/ai-receptionist-for-clinics",
+      "tags": [
+        "health",
+        "small-business"
+      ]
+    }
+  ]
+}
