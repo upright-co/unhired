@@ -1,0 +1,86 @@
+{
+ "images": [
+  {
+   "type": "cover",
+   "name": "cover",
+   "eyebrow": "AI Employee 101 · Management",
+   "title": "Who manages an *AI Employee*?",
+   "sub": "The person who should own it, what the job involves, and how many hours of their week it really takes.",
+   "avatar": "ai-executive-assistant",
+   "series": "The AI Employee · unhired.io"
+  },
+  {
+   "type": "table",
+   "name": "who-manages",
+   "title": "Who *manages it* in different businesses",
+   "head": ["Business", "AI Employee's job", "Its manager"],
+   "rows": [
+    ["Dental or medical clinic", "Front desk inbox and scheduling", "Office manager"],
+    ["Law firm", "New client intake", "Senior paralegal"],
+    ["Online store", "Order and returns questions", "Operations lead"],
+    ["Marketing agency", "Client reporting and follow-ups", "Account director"],
+    ["Property management", "Tenant inbox and maintenance requests", "Property manager"]
+   ],
+   "source": "Rule of thumb: whoever would have managed a person in the same seat"
+  },
+  {
+   "type": "flow",
+   "name": "the-work",
+   "title": "The *five parts* of the job",
+   "steps": [
+    ["Approve the asks-first list", "Refunds, pay changes, replies to upset customers. Approve, edit or reject each one."],
+    ["Read the log", "Everything early on. A sample plus anything flagged once it's settled."],
+    ["Answer what it escalates", "Requests outside its instructions. A slow answer is a customer waiting."],
+    ["Keep its documents current", "A named owner for the price list, policies and booking rules."],
+    ["Change its rules", "Write the new instruction in plain English, test it on past requests, then let it go live."]
+   ]
+  },
+  {
+   "type": "table",
+   "name": "hours-by-phase",
+   "title": "How much of the *manager's week* it takes",
+   "head": ["Phase", "Manager's time", "What fills it"],
+   "rows": [
+    ["Weeks 1 and 2", "1 to 2 hours a day", "Approving almost everything, reading the whole log"],
+    ["Week 3 to month 2", "About 30 minutes a day", "Shorter approval list, sampling the log"],
+    ["Month 3 and after", "1 to 2 hours a week", "Weekly review and the approvals that always stay"],
+    ["Business changes", "An afternoon each", "New software or policies: update documents, retest"]
+   ],
+   "source": "Estimates from Brandon's own work setting up AI Employees"
+  },
+  {
+   "type": "timeline",
+   "name": "settled-week",
+   "eyebrow": "Month three",
+   "title": "A settled week for the *manager*",
+   "avatar": "ai-executive-assistant",
+   "role": "AI Employee",
+   "roleSub": "Tenant inbox and scheduling, property management",
+   "rows": [
+    ["Mon 8:40", "Clears the approval queue: two lease questions, one refund", "you"],
+    ["Mon-Thu", "Answers 140 tenant emails and books 22 maintenance visits"],
+    ["Tue 10:15", "Escalates a question about pets the policy doesn't cover"],
+    ["Tue 11:00", "Manager answers it and adds the rule to the policy document", "you"],
+    ["Wed-Thu", "Approval queue takes under 10 minutes each morning", "you"],
+    ["Fri 2:00", "Weekly review: reads a sample, moves one duty off asks-first", "you"]
+   ]
+  },
+  {
+   "type": "quote",
+   "name": "quote",
+   "text": "The right manager is whoever would have managed a person in the same seat. *Judgment about the work belongs with whoever owns the work.*",
+   "by": "Brandon Upright"
+  },
+  {
+   "type": "stats",
+   "name": "the-numbers",
+   "title": "The full cost of an *administrative seat*",
+   "items": [
+    ["$48,310", "US median wage, secretaries and administrative assistants, May 2025"],
+    ["~70%", "Share of private employer compensation paid as wages"],
+    ["~$69,000", "Full yearly cost of the seat"]
+   ],
+   "source": "US Bureau of Labor Statistics: Occupational Outlook Handbook; Employer Costs for Employee Compensation"
+  }
+ ]
+}
