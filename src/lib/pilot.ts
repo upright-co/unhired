@@ -26,12 +26,12 @@ const oneOf = (options: readonly string[]) => z.string().refine((v) => options.i
 export const PilotApplicationSchema = z.object({
   business: short(),
   website: optional(),
-  industry: short(),
+  industry: short(2000),
   team_size: oneOf(o.teamSize),
   revenue: oneOf(o.revenue),
   area: oneOf(o.area),
   hiring: oneOf(o.hiring),
-  role: short(),
+  role: short(2000),
   why_choose: short(4000),
   budget: oneOf(o.budget),
   time_drain: optional(2000),
@@ -154,7 +154,12 @@ export async function alertPilotApplication(r: PilotRow) {
     landing_path: r.landing_path ?? null,
   });
   const lines = [...answerLines(r), ["Came from", source] as [string, string]];
-  const subject = `AI Transformation Audit application (fit ${r.fit_score}/10): ${r.business}, ${r.role}`;
+  // Email subjects can't hold line breaks (a multi-line answer got the alert rejected), and role can now be long.
+  const oneLine = (s: string, max: number) => {
+    const flat = s.replace(/\s+/g, " ").trim();
+    return flat.length > max ? `${flat.slice(0, max - 1)}…` : flat;
+  };
+  const subject = `AI Transformation Audit application (fit ${r.fit_score}/10): ${oneLine(r.business, 80)}, ${oneLine(r.role, 80)}`;
   const text = [
     `${r.first_name} ${r.last_name} at ${r.business} applied for a Free AI Transformation Audit. Fit score ${r.fit_score}/10.`,
     "",
