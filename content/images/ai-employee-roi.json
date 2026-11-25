@@ -1,0 +1,71 @@
+{
+ "images": [
+  {
+   "type": "cover",
+   "name": "cover",
+   "eyebrow": "AI Employee 101 · ROI",
+   "title": "The return on an *AI Employee*",
+   "sub": "Where the value comes from, every cost to count, and a break-even number you can work out yourself.",
+   "avatar": "ai-bookkeeper",
+   "series": "The AI Employee · unhired.io"
+  },
+  {
+   "type": "table",
+   "name": "three-returns",
+   "title": "Where the return *comes from*",
+   "head": ["Source", "Example", "How to price it"],
+   "rows": [
+    ["Hours moved off people", "Routine calls, booking, reminders", "Hours a week x full hourly cost"],
+    ["Work going undone", "Calls after 5 pm, late quote replies", "Only with your own call and close numbers"],
+    ["Fewer slow or wrong hand-offs", "Wrong pay rate, double booking", "Only if you already track the mistakes"]
+   ],
+   "source": "Count the first in your break-even. Treat the other two as upside."
+  },
+  {
+   "type": "flow",
+   "name": "first-year-costs",
+   "title": "Every cost to count in *year one*",
+   "steps": [
+    ["Setup", "Build fee, connecting your systems, writing down how the job is done."],
+    ["Monthly fee or software", "A provider's fee per role, or the subscriptions you assemble yourself."],
+    ["Usage", "Call minutes and AI model calls, priced at your busiest month."],
+    ["Changes", "New services, new price lists, new software after launch."],
+    ["Your manager's hours", "About 95 hours in year one: approvals, the log and keeping documents current."]
+   ]
+  },
+  {
+   "type": "table",
+   "name": "formula",
+   "title": "The four numbers *to work out*",
+   "head": ["Number", "How to work it out"],
+   "rows": [
+    ["Yearly value", "Hours moved x full hourly cost, plus undone work you can price"],
+    ["First-year cost", "Setup + fees or software + usage + changes + manager's hours"],
+    ["ROI", "(Yearly value - first-year cost) / first-year cost"],
+    ["Payback", "Setup cost / (monthly value - monthly costs)"]
+   ],
+   "source": "The first two months return less than later ones"
+  },
+  {
+   "type": "cost",
+   "name": "break-even",
+   "eyebrow": "Worked example",
+   "title": "Break-even for *60% of a receptionist seat*",
+   "suffix": " / yr",
+   "highlight": 3,
+   "rows": [
+    ["Full cost of the seat", 54300, "Median wage $38,010, plus benefits and payroll taxes."],
+    ["Value of 60% of the job", 32600, "Routine calls, booking, rescheduling and reminders."],
+    ["Manager's time, year one", 3200, "About 95 hours at roughly $33 an hour."],
+    ["Break-even first-year cost", 29400, "Value of the work minus the manager's time."]
+   ],
+   "source": "Source: BLS, May 2025 median; ECEC. The 60% share is an example."
+  },
+  {
+   "type": "quote",
+   "name": "quote",
+   "text": "Write down a break-even number *before you ask anyone for a price.*",
+   "by": "Brandon Upright"
+  }
+ ]
+}

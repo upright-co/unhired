@@ -49,6 +49,6 @@ Every article must work for small and medium businesses across industries, never
 - [x] AI Patient Intake: forms, insurance details and first appointments (keyword: AI patient intake) → ai-patient-intake
 - [x] What happens when an AI Employee makes a mistake (keyword: AI employee mistakes) → ai-employee-mistakes
 - [x] Who manages an AI Employee, and how much of their week it takes (keyword: managing AI employees) → managing-ai-employees
-- [ ] How to work out the return on an AI Employee (keyword: AI employee ROI)
+- [x] How to work out the return on an AI Employee (keyword: AI employee ROI) → ai-employee-roi
 - [ ] AI Employees for marketing agencies (keyword: AI for marketing agencies)
 - [ ] AI Employees for veterinary clinics (keyword: AI receptionist for veterinary clinic)
