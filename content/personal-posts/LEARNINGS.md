@@ -4,7 +4,7 @@ Rewritten every morning by the `personal-posts-review` routine from the numbers 
 and X (`scripts/posts-report.mjs` in the portal repo). The daily writer reads this before it picks
 stories, hooks and images. Score = 5 × comments + 3 × shares + reactions, because comments are the goal.
 
-Last updated: 2026-11-24 (3 measured posts, last 7 days)
+Last updated: 2026-11-25 (3 measured posts, last 7 days)
 
 ## Do more of
 - Nothing proven yet (3 measured posts; a finding needs 5). Follow the README.
@@ -43,7 +43,9 @@ Last updated: 2026-11-24 (3 measured posts, last 7 days)
   [specific number] from [thing in the news]? Alberta just [did X]."
 - Its closing question, word for word: "Is 600 metres enough? What distance would you be
   comfortable with?"
-- Still only 3 of the 10 posts from 2026-11-19 are marked posted, and nothing from 2026-11-20
-  through 2026-11-24 is in the list. On LinkedIn, Brandon's recent posts are the long AI Employee
-  role write-ups (article links, 19 to 83 impressions), not the daily personal posts. Two more
-  measured posts unlock the first proven finding.
+- All 10 posts from 2026-11-24 are now marked posted on all three platforms, but the 2026-11-25
+  review could not read them (Chrome disconnected), so they have no numbers yet. Nothing from
+  2026-11-20 to 2026-11-23 is in the list. Their numbers, read tomorrow, will be the first real
+  test: same day, 10 posts, mixed pillars and hooks.
+- Worth watching in that batch: the Wonder Valley court challenge and the 600 m post share a shape
+  (Alberta, a fight over a data centre, "Would you want... where your family...?").
