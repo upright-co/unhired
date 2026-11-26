@@ -5,6 +5,7 @@ import { animate, motion, useInView } from "framer-motion";
 import { Check, RotateCcw } from "lucide-react";
 import { contractCost, contractSpeed } from "@/content/contract";
 import { Eyebrow, Reveal } from "@/components/ui/Section";
+import { GlowOrbs, GridBackground } from "@/components/ui/Decor";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 const money = (n: number) => "$" + Math.round(n).toLocaleString("en-US");
@@ -33,12 +34,13 @@ function useTween(value: number, run: boolean, duration = 1.1) {
 /**
  * The hire's yearly cost stacked to scale beside the retainer, as in the video's cost scene: the salary rises, the costs on
  * top of it drop in one by one, then the retainer rises next to it. Both columns share one scale, which follows the hire's
- * total, so moving the slider resizes the retainer against it.
+ * total, so moving the slider resizes the retainer against it. Visual only: no line-by-line breakdown (Brandon, 2026-11-26).
  */
 export function CostCompare() {
   const c = contractCost;
   const ref = useRef<HTMLDivElement>(null);
-  const inView = useInView(ref, { once: true, amount: 0.2 });
+  // Starts when the chart itself is on screen, so on a phone it plays where the visitor is looking.
+  const inView = useInView(ref, { once: true, amount: 0.4 });
   const [salary, setSalary] = useState(c.defaultSalary);
   const [intro, setIntro] = useState(true);
   useEffect(() => {
@@ -48,171 +50,171 @@ export function CostCompare() {
   }, [inView]);
 
   const lines = c.extras.map((x) => ({ ...x, amount: salary * x.share }));
-  const hire = salary + lines.reduce((s, l) => s + l.amount, 0);
+  const extrasTotal = lines.reduce((s, l) => s + l.amount, 0);
+  const hire = salary + extrasTotal;
   // One scale for both columns, sized so the hire's column fills the chart with room for its label above it.
-  const domain = hire / 0.8;
+  const domain = hire / 0.82;
   const pct = (n: number) => `${(n / domain) * 100}%`;
   const saved = hire - c.retainerYear;
+  const leave = salary * c.paidLeaveShare;
 
   const hireShown = useTween(hire, inView, 1.4);
+  const extrasShown = useTween(extrasTotal, inView, 1.4);
   const savedShown = useTween(saved, inView && !intro, 1);
-  const leave = salary * c.paidLeaveShare;
 
   /** Intro timings run once; after that every change animates straight away. */
   const t = (delay: number, duration = 0.8) => (intro ? { delay, duration, ease } : { duration: 0.45, ease });
+  const fade = (delay: number) => ({ initial: { opacity: 0, y: 8 }, animate: inView ? { opacity: 1, y: 0 } : {}, transition: { delay: intro ? delay : 0, duration: 0.5, ease } });
   const go = inView;
+  const salaryTop = salary / domain;
 
   return (
-    <section aria-labelledby="cost-title" className="px-4 py-14 sm:px-6 sm:py-20">
-      <div ref={ref} className="mx-auto grid max-w-5xl gap-10 md:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] md:gap-14">
-        <div>
-          <Reveal>
-            <Eyebrow>{c.eyebrow}</Eyebrow>
-            <h2 id="cost-title" className="mt-3 font-display text-3xl font-semibold tracking-tight sm:text-[2.4rem] sm:leading-[1.1]">
-              {c.title}
-            </h2>
-            <p className="mt-5 text-lg leading-relaxed text-muted">{c.body}</p>
-          </Reveal>
+    <section aria-labelledby="cost-title" className="px-3 py-10 sm:px-5">
+      <div className="relative isolate mx-auto max-w-6xl overflow-hidden rounded-[36px] bg-ink px-6 py-14 text-white sm:px-12 sm:py-16">
+        <GridBackground dark />
+        <GlowOrbs
+          orbs={[
+            { color: "coral", className: "-top-24 right-[30%] size-[380px]" },
+            { color: "violet", className: "-bottom-28 -right-20 size-[460px]", slow: true },
+          ]}
+          intensity={1.3}
+        />
+        <div className="relative mx-auto grid max-w-5xl gap-10 md:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] md:grid-rows-[auto_1fr] md:gap-x-14 md:gap-y-0">
+          <div className="md:col-start-1 md:row-start-1">
+            <Reveal>
+              <Eyebrow dark>{c.eyebrow}</Eyebrow>
+              <h2 id="cost-title" className="mt-4 text-[1.9rem] leading-[1.1] font-bold tracking-[-0.03em] sm:text-[2.4rem]">
+                {c.title}
+              </h2>
+              <p className="mt-5 leading-relaxed text-white/70">{c.body}</p>
+            </Reveal>
 
-          <Reveal className="mt-8 rounded-[22px] border border-ink/[0.08] bg-white p-5 shadow-[0_24px_50px_-40px_rgba(40,14,90,0.45)]">
-            <label htmlFor="salary" className="flex items-baseline justify-between gap-4">
-              <span className="label-mono text-muted">{c.sliderLabel}</span>
-              <span className="font-display text-2xl font-bold tracking-tight">{money(salary)}</span>
-            </label>
-            <input
-              id="salary"
-              type="range"
-              min={c.min}
-              max={c.max}
-              step={c.step}
-              value={salary}
-              onChange={(e) => {
-                setIntro(false);
-                setSalary(Number(e.target.value));
-              }}
-              className="mt-4 w-full cursor-pointer accent-[#9452F2]"
-            />
-            <div className="mt-1 flex justify-between text-xs text-muted">
-              <span>{money(c.min)}</span>
-              <span>{money(c.max)}</span>
+            <div className="mt-8">
+              <label htmlFor="salary" className="flex items-baseline justify-between gap-4">
+                <span className="label-mono text-white/55">{c.sliderLabel}</span>
+                <span className="font-display text-2xl font-bold tracking-tight">{money(salary)}</span>
+              </label>
+              <input
+                id="salary"
+                type="range"
+                min={c.min}
+                max={c.max}
+                step={c.step}
+                value={salary}
+                onChange={(e) => {
+                  setIntro(false);
+                  setSalary(Number(e.target.value));
+                }}
+                className="mt-4 w-full cursor-pointer accent-[#C7A6FF]"
+              />
+              <div className="mt-1 flex justify-between text-xs text-white/45">
+                <span>{money(c.min)}</span>
+                <span>{money(c.max)}</span>
+              </div>
             </div>
-          </Reveal>
 
-          <motion.div
-            initial={{ opacity: 0, y: 16 }}
-            animate={go ? { opacity: 1, y: 0 } : {}}
-            transition={{ delay: intro ? 3.1 : 0, duration: 0.6, ease }}
-            className="relative mt-6 overflow-hidden rounded-[22px] bg-ink p-6 text-white"
-          >
-            <span aria-hidden className="absolute -top-16 -right-10 size-48 rounded-full bg-violet/40 blur-3xl" />
-            <p className="label-mono relative text-white/60">What you keep each year</p>
-            <p className="relative mt-2 font-display text-5xl leading-none font-bold tracking-[-0.03em]">
+          </div>
+
+          <div ref={ref} className="flex min-h-[420px] flex-col sm:min-h-[480px] md:col-start-2 md:row-span-2 md:row-start-1">
+            <div className="relative grid flex-1 grid-cols-2 gap-6 sm:gap-12">
+              {/* The retainer's height carried across, so the gap is plain to see. */}
+              <motion.span
+                aria-hidden
+                className="absolute right-0 left-0 z-10 border-t-2 border-dashed border-white/35"
+                style={{ transformOrigin: "right" }}
+                initial={{ scaleX: 0, bottom: pct(c.retainerYear) }}
+                animate={go ? { scaleX: 1, bottom: pct(c.retainerYear) } : {}}
+                transition={{ delay: intro ? 2.9 : 0, duration: 0.7, ease }}
+              />
+
+              {/* Full-time hire */}
+              <div className="relative flex h-full flex-col justify-end">
+                <motion.p {...fade(0.5)} className="mb-3 text-center font-display text-xl font-bold tracking-tight sm:text-2xl">
+                  {money(hireShown)}
+                  <span className="block text-xs font-medium text-white/50">a year</span>
+                </motion.p>
+
+                {/* What the employer pays on top of the salary, bracketed and labelled beside the column. */}
+                <motion.div
+                  aria-hidden
+                  className="pointer-events-none absolute left-full z-10 ml-2 flex items-center gap-2 sm:ml-3"
+                  initial={{ opacity: 0, x: -8, bottom: pct(salary), height: pct(extrasTotal) }}
+                  animate={go ? { opacity: 1, x: 0, bottom: pct(salary), height: pct(extrasTotal) } : {}}
+                  transition={{ delay: intro ? 2.3 : 0, duration: 0.5, ease }}
+                >
+                  <span className="h-full w-2 shrink-0 rounded-r-md border-y-2 border-r-2 border-[#F87A84]" />
+                  <span className="w-max max-w-[120px] text-[11px] leading-tight text-white/70 sm:max-w-[170px] sm:text-xs">
+                    <span className="block font-display text-sm font-bold text-[#FCC0C4] sm:text-base">+{money(extrasShown)}</span>
+                    benefits, insurance and taxes
+                  </span>
+                </motion.div>
+
+                {[...lines].reverse().map((l, i) => (
+                  <motion.div
+                    key={l.key}
+                    title={l.label}
+                    className="mb-[3px] rounded-[7px]"
+                    style={{ backgroundColor: l.color, boxShadow: `0 0 24px -6px ${l.color}` }}
+                    initial={{ height: 0, opacity: 0, y: -60 }}
+                    animate={go ? { height: pct(l.amount), opacity: 1, y: 0 } : {}}
+                    transition={intro ? { delay: 1.1 + (lines.length - 1 - i) * 0.3, duration: 0.6, ease: [0.3, 1.35, 0.6, 1] } : { duration: 0.45, ease }}
+                  />
+                ))}
+                <motion.div
+                  className="relative overflow-hidden rounded-t-[16px] rounded-b-[6px] border border-white/15 bg-white/[0.12]"
+                  initial={{ height: 0 }}
+                  animate={go ? { height: pct(salary) } : {}}
+                  transition={t(0.2, 0.9)}
+                >
+                  <motion.div
+                    className="absolute inset-x-0 top-0 flex items-center justify-center border-b border-white/15 bg-[repeating-linear-gradient(135deg,rgba(255,255,255,0.13)_0_6px,transparent_6px_12px)]"
+                    animate={{ height: `${(leave / salary) * 100}%` }}
+                    transition={{ duration: 0.45 }}
+                  >
+                    <span className="px-2 text-center text-[10px] leading-tight font-semibold text-white/70 sm:text-xs">Paid while on vacation</span>
+                  </motion.div>
+                  <div className="absolute inset-x-0 bottom-5 text-center">
+                    <p className="font-display text-sm font-semibold text-white/80 sm:text-base">Salary</p>
+                    <p className="text-xs text-white/50 sm:text-sm">{money(salary)}</p>
+                  </div>
+                </motion.div>
+              </div>
+
+              {/* Unhired */}
+              <div className="relative flex h-full flex-col justify-end">
+                <motion.div
+                  className="bg-signal relative grid place-items-center overflow-hidden rounded-t-[16px] rounded-b-[6px] shadow-[0_0_60px_-10px_rgba(148,82,242,0.9)]"
+                  initial={{ height: 0 }}
+                  animate={go ? { height: pct(c.retainerYear) } : {}}
+                  transition={t(2.3, 0.8)}
+                >
+                  <motion.span {...fade(2.9)} className="text-center font-display text-xl font-bold tracking-tight sm:text-2xl">
+                    {money(c.retainerYear)}
+                    <span className="block text-xs font-medium text-white/80">a year</span>
+                  </motion.span>
+                </motion.div>
+              </div>
+            </div>
+
+            <div className="mt-4 grid grid-cols-2 gap-6 border-t border-white/15 pt-4 text-center sm:gap-12">
+              <p className="font-display font-semibold text-white/80">{c.hireLabel}</p>
+              <p className="font-display font-semibold">
+                {c.usLabel}
+                <span className="block text-xs font-normal text-white/55">{c.usNote}</span>
+              </p>
+            </div>
+          </div>
+          <motion.div {...fade(3.1)} className="border-t border-white/10 pt-7 md:col-start-1 md:row-start-2 md:mt-10 md:self-end">
+            <p className="label-mono text-white/55">What you keep each year</p>
+            <p className="mt-3 font-display text-6xl leading-none font-bold tracking-[-0.04em] sm:text-7xl">
               <span className="text-shimmer-light">{money(savedShown)}</span>
             </p>
-            <p className="relative mt-3 text-sm text-white/70">
-              The hire costs {(hire / c.retainerYear).toFixed(1)} times as much as our retainer.
+            <p className="mt-4 text-white/70">
+              The hire costs <span className="font-semibold text-white">{(hire / c.retainerYear).toFixed(1)}x</span> as much as our retainer.
             </p>
           </motion.div>
         </div>
-
-        <Reveal className="rounded-[28px] border border-ink/[0.08] bg-white p-5 shadow-[0_30px_60px_-40px_rgba(40,14,90,0.45)] sm:p-8">
-          <div className="relative grid h-[360px] grid-cols-2 gap-5 sm:h-[440px] sm:gap-8">
-            {/* The retainer's height carried across, so the gap is plain to see. */}
-            <motion.span
-              aria-hidden
-              className="absolute right-0 left-0 z-10 border-t-2 border-dashed border-violet/50"
-              style={{ transformOrigin: "right" }}
-              initial={{ scaleX: 0, bottom: pct(c.retainerYear) }}
-              animate={go ? { scaleX: 1, bottom: pct(c.retainerYear) } : {}}
-              transition={{ delay: intro ? 2.9 : 0, duration: 0.7, ease }}
-            />
-
-            {/* Full-time hire */}
-            <div className="relative flex h-full flex-col justify-end">
-              <motion.p
-                className="mb-2 text-center font-display text-lg font-bold tracking-tight sm:text-xl"
-                initial={{ opacity: 0 }}
-                animate={go ? { opacity: 1 } : {}}
-                transition={{ delay: intro ? 0.5 : 0, duration: 0.5 }}
-              >
-                {money(hireShown)}
-                <span className="block text-xs font-medium text-muted">a year</span>
-              </motion.p>
-              {[...lines].reverse().map((l, i) => (
-                <motion.div
-                  key={l.key}
-                  title={`${l.label}: ${money(l.amount)}`}
-                  className="mb-[2px] rounded-[6px]"
-                  style={{ backgroundColor: l.color }}
-                  initial={{ height: 0, opacity: 0, y: -40 }}
-                  animate={go ? { height: pct(l.amount), opacity: 1, y: 0 } : {}}
-                  transition={t(1.1 + (lines.length - 1 - i) * 0.32, 0.55)}
-                />
-              ))}
-              <motion.div
-                className="relative overflow-hidden rounded-t-[14px] rounded-b-[4px] bg-ink/[0.12]"
-                initial={{ height: 0 }}
-                animate={go ? { height: pct(salary) } : {}}
-                transition={t(0.2, 0.9)}
-              >
-                <motion.div
-                  className="absolute inset-x-0 top-0 border-b border-ink/10 bg-[repeating-linear-gradient(135deg,rgba(14,11,31,0.10)_0_6px,transparent_6px_12px)]"
-                  animate={{ height: `${(leave / salary) * 100}%` }}
-                  transition={{ duration: 0.45 }}
-                />
-                <div className="absolute inset-x-0 bottom-4 text-center font-display text-sm font-semibold text-ink/70 sm:text-base">Salary</div>
-              </motion.div>
-            </div>
-
-            {/* Unhired */}
-            <div className="relative flex h-full flex-col justify-end">
-              <motion.p
-                className="mb-2 text-center font-display text-lg font-bold tracking-tight text-violet-deep sm:text-xl"
-                initial={{ opacity: 0 }}
-                animate={go ? { opacity: 1 } : {}}
-                transition={{ delay: intro ? 2.6 : 0, duration: 0.5 }}
-              >
-                {money(c.retainerYear)}
-                <span className="block text-xs font-medium text-muted">a year</span>
-              </motion.p>
-              <motion.div
-                className="bg-signal rounded-t-[14px] rounded-b-[4px] shadow-[var(--shadow-glow)]"
-                initial={{ height: 0 }}
-                animate={go ? { height: pct(c.retainerYear) } : {}}
-                transition={t(2.3, 0.8)}
-              />
-            </div>
-          </div>
-
-          <div className="mt-3 grid grid-cols-2 gap-5 border-t border-ink/[0.08] pt-3 text-center sm:gap-8">
-            <p className="font-display font-semibold">{c.hireLabel}</p>
-            <p className="font-display font-semibold text-violet-deep">
-              {c.usLabel}
-              <span className="block text-xs font-normal text-muted">{c.usNote}</span>
-            </p>
-          </div>
-
-          <ul className="mt-6 space-y-2 border-t border-ink/[0.08] pt-5 text-sm">
-            <li className="flex items-center gap-3">
-              <span aria-hidden className="size-3 shrink-0 rounded-[3px] bg-ink/[0.12]" />
-              <span className="flex-1 text-ink/80">Salary</span>
-              <span className="font-semibold tabular-nums">{money(salary)}</span>
-            </li>
-            <li className="flex items-center gap-3 pl-6 text-muted">
-              <span aria-hidden className="size-3 shrink-0 rounded-[3px] bg-[repeating-linear-gradient(135deg,rgba(14,11,31,0.25)_0_2px,transparent_2px_4px)]" />
-              <span className="flex-1">of which paid while on vacation and leave</span>
-              <span className="tabular-nums">{money(leave)}</span>
-            </li>
-            {lines.map((l) => (
-              <li key={l.key} className="flex items-center gap-3">
-                <span aria-hidden className="size-3 shrink-0 rounded-[3px]" style={{ backgroundColor: l.color }} />
-                <span className="flex-1 text-ink/80">{l.label}</span>
-                <span className="font-semibold tabular-nums">+{money(l.amount)}</span>
-              </li>
-            ))}
-          </ul>
-          <p className="mt-5 text-[11px] leading-relaxed text-muted">{c.sources}</p>
-        </Reveal>
+        <p className="relative mx-auto mt-12 max-w-5xl border-t border-white/10 pt-5 text-[11px] leading-relaxed text-white/40">{c.sources}</p>
       </div>
     </section>
   );
