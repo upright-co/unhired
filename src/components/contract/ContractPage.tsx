@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import {
   Activity,
@@ -53,6 +53,7 @@ import { VideoFrame } from "@/components/pilot/VideoFrame";
 import { trackEvent } from "@/lib/analytics";
 import { TOOL_LOGOS } from "./toolLogos";
 import { CostCompare, SpeedRace } from "./Animated";
+import { ProcessMap } from "./ProcessMap";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
@@ -360,26 +361,57 @@ function Speed() {
 
 function Steps() {
   const s = contractSteps;
+  const list = useRef<HTMLOListElement>(null);
+  const [active, setActive] = useState(0);
+
+  // The step crossing the middle of the screen drives the process map beside the list.
+  useEffect(() => {
+    const items = list.current?.querySelectorAll<HTMLElement>("[data-step]");
+    if (!items?.length) return;
+    const io = new IntersectionObserver(
+      (entries) => {
+        for (const e of entries) if (e.isIntersecting) setActive(Number((e.target as HTMLElement).dataset.step));
+      },
+      { rootMargin: "-45% 0px -45% 0px" },
+    );
+    items.forEach((el) => io.observe(el));
+    return () => io.disconnect();
+  }, []);
+
   return (
     <section aria-labelledby="steps-title" className="px-4 py-14 sm:px-6 sm:py-20">
       <div className="mx-auto max-w-5xl">
         <SectionTitle id="steps-title" eyebrow={s.eyebrow}>
           {s.title}
         </SectionTitle>
-        <ol className="relative mt-12 space-y-0">
-          <span aria-hidden className="bg-signal absolute top-4 bottom-4 left-[19px] w-0.5 opacity-40" />
-          {s.steps.map((st, i) => (
-            <Reveal as="li" key={st.t} delay={0.04 * i} className="relative pb-10 pl-16 last:pb-0">
-              <span className="bg-signal absolute top-0 left-0 grid size-10 place-items-center rounded-full font-display text-sm font-bold text-white shadow-[var(--shadow-glow)]">
-                {i + 1}
-              </span>
-              <div>
-                <h3 className="font-display text-xl font-semibold tracking-tight">{st.t}</h3>
-                <p className="mt-1.5 max-w-2xl leading-relaxed text-muted">{st.b}</p>
-              </div>
-            </Reveal>
-          ))}
-        </ol>
+        <div className="mt-10 md:hidden">
+          <ProcessMap />
+        </div>
+        <div className="mt-12 grid gap-12 md:grid-cols-[minmax(0,1fr)_400px] md:gap-14">
+          <ol ref={list} className="relative space-y-0">
+            <span aria-hidden className="bg-signal absolute top-4 bottom-4 left-[19px] w-0.5 opacity-40" />
+            {s.steps.map((st, i) => (
+              <Reveal as="li" key={st.t} delay={0.04 * i} className="relative pb-12 pl-16 last:pb-0 md:pb-16">
+                <div data-step={i} className={`transition-opacity duration-300 ${i === active ? "" : "md:opacity-50"}`}>
+                  <span
+                    className={`bg-signal absolute top-0 left-0 grid size-10 place-items-center rounded-full font-display text-sm font-bold text-white transition-transform duration-300 ${
+                      i === active ? "shadow-[var(--shadow-glow)] md:scale-110" : ""
+                    }`}
+                  >
+                    {i + 1}
+                  </span>
+                  <h3 className="font-display text-xl font-semibold tracking-tight">{st.t}</h3>
+                  <p className="mt-1.5 max-w-xl leading-relaxed text-muted">{st.b}</p>
+                </div>
+              </Reveal>
+            ))}
+          </ol>
+          <div className="hidden md:block">
+            <div className="sticky top-24">
+              <ProcessMap stage={active} />
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );

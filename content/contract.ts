@@ -94,6 +94,29 @@ export const contractSteps = {
   ],
 };
 
+/** The example process map beside the six steps (Brandon, 2026-11-26): an illustration, one stage per step. */
+export const contractMap = {
+  title: "Quoting a new customer",
+  tasks: [
+    { t: "Read the new inquiry", ai: true, slow: true },
+    { t: "Look up the customer in the CRM", ai: true, slow: true },
+    { t: "Check stock and pricing", ai: true, slow: false },
+    { t: "Write the quote", ai: true, slow: true },
+    { t: "Manager approves the quote", ai: false, slow: false },
+    { t: "Send it to the customer", ai: true, slow: false },
+    { t: "Log it in the CRM", ai: true, slow: false },
+    { t: "Follow up in three days", ai: true, slow: true },
+  ],
+  stages: [
+    { step: "Audit", badge: "Today", caption: "Every task in the process, listed." },
+    { step: "Map", badge: "Mapped", caption: "Linked up, with the slow steps marked." },
+    { step: "Build", badge: "Building", caption: "AI takes the routine steps. Your team keeps the decisions." },
+    { step: "Train", badge: "Training", caption: "Each AI task learns your rules from real examples." },
+    { step: "Launch", badge: "Live", caption: "Real work flows through it." },
+    { step: "Maintain", badge: "Live · monitored", caption: "Watched around the clock and reviewed every week." },
+  ],
+};
+
 /** Replaced the probation/approvals section (Brandon, 2026-11-26). Every line here must stay true of how we work. */
 export const contractPrivacy = {
   eyebrow: "Your data",
