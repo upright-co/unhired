@@ -44,6 +44,7 @@ import {
   contractPrivacy,
   contractSpeed,
   contractSteps,
+  contractTestimonials,
   contractTools,
 } from "@/content/contract";
 import { GlowOrbs, GridBackground } from "@/components/ui/Decor";
@@ -128,6 +129,7 @@ export function ContractPage() {
       <Steps />
       <Privacy />
       <Benefits />
+      <Testimonials />
       <Price />
       <Faq />
       <Book />
@@ -507,6 +509,54 @@ function Benefits() {
             <p className="mt-4 leading-relaxed text-ink/80">{t.people}</p>
           </Reveal>
         </div>
+      </div>
+    </section>
+  );
+}
+
+/* ----------------------------------------------------------- testimonials -- */
+
+function initials(name: string) {
+  return name
+    .split(/\s+/)
+    .map((w) => w[0])
+    .join("")
+    .slice(0, 2)
+    .toUpperCase();
+}
+
+function Testimonials() {
+  const t = contractTestimonials;
+  return (
+    <section aria-labelledby="testimonials-title" className="px-4 pt-6 pb-14 sm:px-6 sm:pb-20">
+      <div className="mx-auto max-w-5xl">
+        <SectionTitle id="testimonials-title" eyebrow={t.eyebrow}>
+          {t.title}
+        </SectionTitle>
+        <ul className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+          {t.items.map((it, i) => (
+            <Reveal
+              as="li"
+              key={it.name}
+              delay={0.05 * (i % 3)}
+              className="relative flex flex-col overflow-hidden rounded-[26px] border border-ink/[0.08] bg-white p-7 shadow-[0_30px_60px_-44px_rgba(40,14,90,0.45)]"
+            >
+              <span aria-hidden className="bg-signal absolute inset-x-0 top-0 h-1 opacity-80" />
+              <p className="font-display text-4xl leading-none font-bold tracking-[-0.03em]">
+                <span className="text-signal">{it.stat}</span>
+              </p>
+              <p className="label-mono mt-2 text-[10px] text-muted">{it.label}</p>
+              <blockquote className="mt-5 flex-1 border-t border-ink/[0.08] pt-5 leading-relaxed text-ink/85">&ldquo;{it.quote}&rdquo;</blockquote>
+              <div className="mt-6 flex items-center gap-3">
+                <span className="bg-signal grid size-10 shrink-0 place-items-center rounded-full font-display text-sm font-bold text-white">{initials(it.name)}</span>
+                <span className="leading-tight">
+                  <span className="block font-display font-semibold">{it.name}</span>
+                  {it.company && <span className="block text-sm text-muted">{it.company}</span>}
+                </span>
+              </div>
+            </Reveal>
+          ))}
+        </ul>
       </div>
     </section>
   );

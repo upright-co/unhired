@@ -142,6 +142,24 @@ export const contractTools = {
   people: "We work with clients in the United Kingdom, Australia, the United States and Canada. Our founder, Brandon Upright, has also taught more than 5,000 people to use AI through an online community, courses and short-form video.",
 };
 
+/**
+ * Client testimonials. The first three come from the pilot intro PDF (brand/proposals/pilot-overview), with town names
+ * dropped because this page goes to companies across the US and Canada; the last three Brandon supplied 2026-11-26.
+ * Quotes are the clients' own words: don't edit them beyond punctuation.
+ */
+export const contractTestimonials = {
+  eyebrow: "In our clients' words",
+  title: "What our clients say",
+  items: [
+    { stat: "$15M", label: "in pipeline found", quote: "The AI lead-generation system that they built for us has identified $15 million in pipeline opportunity that we otherwise wouldn't have known about.", name: "Jarome L", company: "" },
+    { stat: "2-3", label: "hires avoided", quote: "Working with Brandon and his team has been the biggest kickstart in productivity that our team has ever experienced. His team was able to quickly identify where we need to add AI into our day-to-day systems, and what specific parts of the processes could be automated. Their implementations saved us from having to hire an additional 2-3 people to keep up with the workload.", name: "Camilla R", company: "" },
+    { stat: "15 hrs", label: "saved every week", quote: "I would estimate that our team saves about 15 hours per week across our different roles, thanks to AI and automations that Unhired implemented in our business.", name: "Charlie F", company: "" },
+    { stat: "10+ hrs", label: "saved every week", quote: "Brandon and his team built us our own AI employee to assist our marketing team with our day-to-day operations, as well as a custom dashboard to go with it. Our team now saves at least 10 hours per week across our marketing and sales department, thanks to the AI.", name: "Anthony M", company: "Premier Built Garages" },
+    { stat: "2x", label: "sales conversions", quote: "Our AI Employee helps monitor all of our conversations with our leads to spot opportunities and potential gaps. It helps us prioritize who to focus on and what action steps to take next. Now nothing slips through the cracks. Our sales conversions have doubled in the last 60 days thanks to our AI.", name: "Ana U", company: "" },
+    { stat: "2", label: "AI employees, team kept small", quote: "Working with Brandon and his team has been a dream come true for our business. We now have 2 different AI employees that allowed us to keep our team small, and also relieve the pressure off of many of our staff members. AI employees are the future of work, and Brandon makes it very simple to get them up and running in your business.", name: "Keller P", company: "" },
+  ],
+};
+
 /** Price set by Brandon 2026-11-25: $3,000 a month flat for full support, month to month, running costs included, AI media output extra. */
 export const contractPrice = {
   price: "$3,000",
