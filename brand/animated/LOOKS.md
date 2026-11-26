@@ -32,6 +32,7 @@ don't use the same **background** two days in a row.
 ## Log (newest first)
 | Date | Slug | Layout | Background | Motion | Type |
 |---|---|---|---|---|---|
+| 2026-11-26 | ai-for-marketing-agencies | map of hand-offs (AI Employee hub in the middle, five agency role cards around it, each showing what it prepares and what the person decides) | solid violet with ink cards and an ink hub | typewriter "prepares" line + coral token travelling on draw-on lines + pop-in "decides" line + rotating dashed ring | huge headline top (second line in ink) |
 | 2026-11-25 | ai-employee-roi | donut/ring breakdown (receptionist seat cost, 60% coral share, violet manager-time slice, break-even in the centre, legend rows below) | ink dark with grid (no glows) | draw-on arcs + counting centre number + typewriter final line + pulsing ring | headline at the bottom |
 | 2026-11-24 | managing-ai-employees | big-number counter with bar race (manager's hours per week for weeks 1-12, three phases, phase card below) | ink with a big coral/violet duotone diagonal band | counting numbers + bars growing in sequence + pulsing active bar + cross-fading phase card | big mono number as the hero |
 | 2026-11-23 | ai-employee-mistakes | flow chart with moving tokens (4 mistakes drop down a rail, each caught by a different layer, then a "fix the cause" banner) | flat mist light with white cards and ink catch slots | typewriter action line + falling dot on a draw-on rail + pop-in caught cards + pulsing nodes | huge headline top |

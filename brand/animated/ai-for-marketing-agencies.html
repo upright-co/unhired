@@ -1,0 +1,152 @@
+<!doctype html><html><head><meta charset="utf-8">
+<title>Who decides what at a marketing agency</title>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&family=DM+Sans:wght@400;500;600&family=JetBrains+Mono:wght@500;600&display=block" rel="stylesheet">
+<!-- Animated LinkedIn post, 1080x1350 (4:5), seamless loop of DURATION seconds.
+     Map of hand-offs: the AI Employee sits in the middle, five agency roles around it. A token carries
+     what it prepared to each person, and the card shows what that person decides.
+     scripts/render-animation.mjs calls window.render(t) frame by frame (?capture). render(t) is pure. -->
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1350px;overflow:hidden;background:#9452F2}
+.b{position:relative;width:1080px;height:1350px;overflow:hidden;background:#9452F2;color:#fff;font-family:'DM Sans',sans-serif}
+.head{position:absolute;left:44px;right:44px;top:44px;display:flex;align-items:center;justify-content:space-between}
+.head img{height:24px;opacity:.7;display:block}
+.tag{font:600 15px 'JetBrains Mono',monospace;letter-spacing:.16em;color:#fff;border:1.5px solid rgba(255,255,255,.5);border-radius:999px;padding:10px 20px}
+h1{position:absolute;left:44px;right:44px;top:104px;font:700 74px/1.02 'Sora',sans-serif;letter-spacing:-3.2px}
+h1 span{color:#09070F}
+.sub{position:absolute;left:44px;right:120px;top:270px;font:400 25px/1.4 'DM Sans';color:rgba(255,255,255,.88)}
+
+svg.lines{position:absolute;left:0;top:0;width:1080px;height:1350px}
+.ln{fill:none;stroke:rgba(255,255,255,.34);stroke-width:3;stroke-dasharray:3 9;stroke-linecap:round}
+.lf{fill:none;stroke:#fff;stroke-width:3;stroke-linecap:round}
+
+/* role cards */
+.card{position:absolute;width:340px;height:196px;border-radius:22px;background:#09070F;padding:18px 20px;transform-origin:center}
+.card .top{display:flex;align-items:center;gap:12px}
+.ic{width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;flex:none}
+.card .nm{font:700 25px/1 'Sora';letter-spacing:-.8px;white-space:nowrap}
+.lb{margin-top:13px;font:600 13.5px 'JetBrains Mono',monospace;letter-spacing:.12em}
+.lb.p{color:#FF8A94}.lb.d{color:#B07CFF;margin-top:11px}
+.tx{margin-top:4px;height:29px;font:600 23px/29px 'DM Sans';white-space:nowrap;overflow:hidden}
+.tx .cur{display:inline-block;width:2px;height:20px;background:#F65663;vertical-align:-3px;margin-left:2px}
+.tx.d{opacity:0}
+.wait{color:rgba(255,255,255,.28);font-weight:500}
+
+/* hub */
+.hublbl{position:absolute;left:390px;width:300px;top:582px;text-align:center;font:600 14px 'JetBrains Mono',monospace;letter-spacing:.18em;color:#fff}
+.ring{position:absolute;left:448px;top:618px;width:184px;height:184px;border-radius:50%;border:2.5px dashed rgba(255,255,255,.7)}
+.hub{position:absolute;left:464px;top:634px;width:152px;height:152px;border-radius:50%;background:#09070F;display:flex;align-items:center;justify-content:center}
+.core{width:100px;height:100px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center}
+.core img{width:54px;height:54px}
+.tok{position:absolute;width:26px;height:26px;border-radius:50%;background:#F65663;border:4px solid #fff;opacity:0}
+
+/* banner */
+.ban{position:absolute;left:44px;right:44px;top:1084px;height:134px;border-radius:24px;background:#09070F;display:flex;align-items:center;padding:0 32px;gap:26px;overflow:hidden}
+.ban .bg{position:absolute;inset:0;background:linear-gradient(90deg,#F65663,#B23F8C);opacity:0}
+.ban .l{position:relative;flex:1}
+.ban .big{font:700 36px/1.08 'Sora';letter-spacing:-1.4px}
+.ban .small{margin-top:9px;font:400 20px/1.3 'DM Sans';color:rgba(255,255,255,.82)}
+.ban .cnt{position:relative;text-align:right}
+.ban .cnt b{display:block;font:600 50px/1 'JetBrains Mono',monospace}
+.ban .cnt span{display:block;margin-top:6px;font:500 13.5px 'JetBrains Mono',monospace;letter-spacing:.1em;color:rgba(255,255,255,.75)}
+.foot{position:absolute;left:44px;right:44px;bottom:34px;display:flex;justify-content:space-between;align-items:center;font:500 17px 'DM Sans';color:rgba(255,255,255,.72)}
+.foot .mono{font:500 16px 'JetBrains Mono',monospace;letter-spacing:.08em;color:rgba(255,255,255,.85)}
+</style></head><body><div class="b">
+
+<div class="head"><img src="../personal-banner/logo-white.png" alt="Unhired"><div class="tag">5 ROLES · 5 HAND-OFFS</div></div>
+<h1>Who decides what<br><span>at a marketing agency</span></h1>
+<p class="sub">An AI Employee in account operations prepares the file. A person on the team makes each call.</p>
+
+<svg class="lines" id="svg" viewBox="0 0 1080 1350"></svg>
+<div id="cards"></div>
+<div class="hublbl">AI EMPLOYEE</div>
+<div class="ring" id="ring"></div>
+<div class="hub"><div class="core"><img src="../facebook/mark.png" alt=""></div></div>
+<div class="tok" id="tok"></div>
+
+<div class="ban" id="ban"><div class="bg" id="bbg"></div>
+ <div class="l"><div class="big">It prepares. People decide.</div><div class="small">Reports, reminders and checks reach the right person with the file attached.</div></div>
+ <div class="cnt"><b id="cnt">0/5</b><span>HANDED OFF</span></div>
+</div>
+<div class="foot"><span>AI for marketing agencies</span><span class="mono">unhired.io</span></div>
+</div>
+
+<script>
+window.DURATION=20;
+// x,y = card top-left. a = line start (hub edge), b = line end (card edge).
+const ROLES=[
+ {nm:'Account manager', p:'Monthly report drafts',   d:'What the numbers mean', x:36,  y:384, a:[462,662], b:[330,580]},
+ {nm:'Media buyer',     p:'Overspend alerts',        d:'Budgets and launches',  x:704, y:384, a:[618,662], b:[750,580]},
+ {nm:'Designer',        p:'Feedback in one list',    d:'The concept',           x:36,  y:618, a:[448,710], b:[376,710]},
+ {nm:'Strategist',      p:'Past results in one file',d:'The plan',              x:704, y:618, a:[632,710], b:[704,710]},
+ {nm:'Account director',p:'Retainer hours used',     d:'Scope and pricing',     x:370, y:862, a:[540,802], b:[540,862]},
+];
+const T=window.DURATION, START=.9, STEP=3.25, TYPE=.95, MOVE=.75;
+const $=id=>document.getElementById(id);
+const NS='http://www.w3.org/2000/svg';
+const PERSON='<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="8" r="3.6"/><path d="M5 20c.8-3.8 3.6-6 7-6s6.2 2.2 7 6"/></svg>';
+ROLES.forEach((r,i)=>{
+ const c=document.createElement('div');c.className='card';c.id='c'+i;c.style.left=r.x+'px';c.style.top=r.y+'px';
+ c.innerHTML=`<div class="top"><div class="ic">${PERSON}</div><div class="nm">${r.nm}</div></div>
+ <div class="lb p">AI EMPLOYEE PREPARES</div><div class="tx p"></div>
+ <div class="lb d">THE PERSON DECIDES</div><div class="tx d">${r.d}</div>`;
+ $('cards').appendChild(c);
+ r.len=Math.hypot(r.b[0]-r.a[0],r.b[1]-r.a[1]);
+ const d=`M${r.a[0]} ${r.a[1]} L${r.b[0]} ${r.b[1]}`;
+ const l1=document.createElementNS(NS,'path');l1.setAttribute('d',d);l1.setAttribute('class','ln');$('svg').appendChild(l1);
+ const l2=document.createElementNS(NS,'path');l2.setAttribute('d',d);l2.setAttribute('class','lf');l2.id='f'+i;l2.setAttribute('stroke-dasharray',r.len);$('svg').appendChild(l2);
+});
+const clamp=(x,a=0,b=1)=>Math.min(b,Math.max(a,x));
+const ease=x=>x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2;
+
+window.render=function(tt){
+ let t=((tt%T)+T)%T, op=1;
+ // reset: fade the moving parts out at the final state, back in at the start state
+ if(t>=18.9&&t<19.4){op=1-ease((t-18.9)/.5);}
+ if(t>=19.4){op=ease(clamp((t-19.4)/.6));t=0;}
+ ['cards','svg','ban'].forEach(id=>$(id).style.opacity=op);
+
+ let doneN=0, tokOp=0, tx=540, ty=710;
+ ROLES.forEach((r,i)=>{
+  const s=START+i*STEP, mv=s+TYPE, land=mv+MOVE;
+  const c=$('c'+i), P=c.querySelector('.tx.p'), D=c.querySelector('.tx.d'), ic=c.querySelector('.ic'), lbd=c.querySelector('.lb.d');
+  const on=t>=s, landed=t>=land;
+  if(landed)doneN++;
+  // typed "prepares" line
+  if(!on){P.innerHTML='<span class="wait">Waiting</span>';}
+  else{const k=clamp((t-s)/(TYPE*.9));P.innerHTML=r.p.slice(0,Math.round(r.p.length*k))+(k<1?'<span class="cur"></span>':'');}
+  // token along the line
+  const mk=ease(clamp((t-mv)/MOVE));
+  $('f'+i).setAttribute('stroke-dashoffset',r.len*(1-mk));
+  if(t>=mv-.25&&t<land+.25){
+   tx=r.a[0]+(r.b[0]-r.a[0])*mk;ty=r.a[1]+(r.b[1]-r.a[1])*mk;
+   tokOp=t<mv?clamp((t-(mv-.25))/.25):(t<land?1:1-clamp((t-land)/.25));
+  }
+  // "decides" line pops in on landing
+  const dk=ease(clamp((t-land)/.35));
+  D.style.opacity=dk;D.style.transform=`translateY(${8*(1-dk)}px)`;
+  lbd.style.opacity=.35+.65*dk;
+  const glow=landed?Math.max(0,1-(t-land)/1.5):0;
+  const act=on&&!landed?ease(clamp((t-s)/.25)):0;
+  c.style.transform=`scale(${1+.03*act+.045*glow})`;
+  c.style.boxShadow=landed?`0 0 0 ${3+5*glow}px rgba(255,255,255,${.5+.5*glow}), 0 18px 40px rgba(9,7,15,.28)`
+   :(on?`0 0 0 3px rgba(246,86,99,${.9*act}), 0 18px 40px rgba(9,7,15,.28)`:'0 12px 30px rgba(9,7,15,.2)');
+  ic.style.background=landed?'#F65663':'rgba(255,255,255,.1)';
+  c.style.zIndex=(on&&!landed)||glow>0?2:1;
+ });
+ const tok=$('tok');tok.style.left=(tx-13)+'px';tok.style.top=(ty-13)+'px';tok.style.opacity=tokOp*op;
+ tok.style.boxShadow=`0 0 0 ${8+4*Math.sin(t*9)}px rgba(246,86,99,.3)`;
+
+ $('ring').style.transform=`rotate(${tt*18}deg)`; // 360 degrees over the 20s loop
+ $('cnt').textContent=doneN+'/5';
+ const endT=START+4*STEP+TYPE+MOVE;
+ const bk=ease(clamp((t-(endT+.5))/.7));
+ $('bbg').style.opacity=bk;
+ $('ban').style.boxShadow=`0 22px ${50*bk}px rgba(9,7,15,${.35*bk})`;
+};
+
+window.ready=document.fonts.ready.then(()=>Promise.all([...document.images].map(i=>i.complete?1:new Promise(r=>{i.onload=i.onerror=r}))));
+if(!location.search.includes('capture')){const t0=performance.now();window.ready.then(()=>{const loop=()=>{render((performance.now()-t0)/1000);requestAnimationFrame(loop)};loop();});}
+else render(0);
+</script>
+</body></html>

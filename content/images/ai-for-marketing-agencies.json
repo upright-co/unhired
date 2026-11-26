@@ -1,0 +1,87 @@
+{
+ "images": [
+  {
+   "type": "cover",
+   "name": "cover",
+   "eyebrow": "AI Employees by industry · Agencies",
+   "title": "*AI* for marketing agencies",
+   "sub": "Client reports, access requests, approvals and account checks, and what stays with your team.",
+   "avatar": "ai-executive-assistant",
+   "series": "The AI Employee · unhired.io"
+  },
+  {
+   "type": "breakdown",
+   "name": "duties",
+   "title": "A marketing agency, *duty by duty*",
+   "rows": [
+    ["Client reports", "Pulls the numbers, fills in the template and drafts the commentary. The account manager sends it.", "reports"],
+    ["Onboarding and access", "Sends the login list with instructions and follows up until every item arrives.", "alone"],
+    ["Approvals and feedback", "Sends reminders on schedule and combines scattered feedback into one list.", "alone"],
+    ["Scheduling approved work", "Schedules approved posts and checks each one published. Ads go up as paused drafts.", "alone"],
+    ["Daily account checks", "Reads every ad account for overspending, disapproved ads and broken tracking.", "reports"],
+    ["Retainers and invoices", "Tracks hours against each retainer and drafts invoices for finance to approve.", "asks"]
+   ]
+  },
+  {
+   "type": "table",
+   "name": "by-role",
+   "title": "Who decides what, *by role*",
+   "head": ["Role", "The AI Employee prepares", "The person decides"],
+   "rows": [
+    ["Account manager", "Report drafts, approval reminders, feedback lists", "What the numbers mean, every hard conversation"],
+    ["Strategist", "Past results and competitor notes in one file", "Positioning, channels and the plan"],
+    ["Designer or writer", "The brief, brand files and combined feedback", "The concept and the finished work"],
+    ["Media buyer", "Pacing alerts, disapproved ads, paused drafts", "Budgets, bids and every launch"],
+    ["Account director", "Hours against each retainer", "Scope, pricing and renewals"]
+   ],
+   "source": "Examples. Every agency sets its own rules."
+  },
+  {
+   "type": "timeline",
+   "name": "monday",
+   "title": "A Monday at a *marketing agency*",
+   "avatar": "ai-executive-assistant",
+   "role": "AI Employee, account operations",
+   "roleSub": "Reports to the operations lead",
+   "rows": [
+    ["6:45 am", "Checks every client ad account. One campaign has spent 80% of its monthly budget by the 9th.", "you"],
+    ["7:30 am", "Builds four monthly reports with draft commentary for the account managers to edit."],
+    ["8:15 am", "Sends a new client the third reminder for Meta partner access, with the steps attached."],
+    ["9:40 am", "A client replies to a report asking why leads dropped. It goes to the account manager with the numbers.", "you"],
+    ["11:00 am", "Schedules a week of approved posts for three clients and checks Friday's all published."],
+    ["1:30 pm", "Combines one client's feedback from five emails into a single list on the design task."],
+    ["3:15 pm", "One client has used 90% of the month's retainer hours. It tells the account director.", "you"]
+   ],
+   "source": "Example day"
+  },
+  {
+   "type": "cost",
+   "name": "cost",
+   "eyebrow": "The cost",
+   "title": "What an agency operations seat *costs*",
+   "suffix": " / yr",
+   "highlight": null,
+   "rows": [
+    ["Marketing specialist, US median wage", 78760, "$37.87 an hour, May 2025."],
+    ["Specialist, with benefits and payroll taxes", 112500, "Wages are about 70% of compensation."],
+    ["Project management specialist, US median wage", 102320, "$49.19 an hour, May 2025."],
+    ["Project manager, with benefits and payroll taxes", 146200, "Same 70% ratio."]
+   ],
+   "source": "Source: US Bureau of Labor Statistics, May 2025 wages and June 2026 ECEC"
+  },
+  {
+   "type": "flow",
+   "name": "setup",
+   "title": "How it *is set up* at an agency",
+   "steps": [
+    ["Read the client contracts", "Check each one for confidentiality terms and any clause about AI tools."],
+    ["Map a month of account work", "Tag last month's timesheets: reports, access, approvals, scheduling, checks, billing."],
+    ["Write the report template", "Per client: which numbers go in, in what order, and what the commentary covers."],
+    ["Connect with limited access", "Its own seat on each tool. Read-only on ad accounts, no billing access."],
+    ["Write the handoff rules", "Budgets, bad news, scope questions and upset clients go to a named person."],
+    ["Shadow for a few weeks", "It drafts every report and message while someone reads each one."],
+    ["Review the log every week", "Update it when platforms rename metrics or a client changes scope."]
+   ]
+  }
+ ]
+}
