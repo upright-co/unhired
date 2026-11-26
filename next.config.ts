@@ -20,7 +20,19 @@ const nextConfig: NextConfig = {
           { key: "X-Robots-Tag", value: "noindex" },
         ],
       },
+      {
+        source: "/proposals/:path*",
+        headers: [{ key: "X-Robots-Tag", value: "noindex, nofollow" }],
+      },
+      {
+        source: "/premier-garage",
+        headers: [{ key: "X-Robots-Tag", value: "noindex, nofollow" }],
+      },
     ];
+  },
+  // Client proposals are static pages in public/proposals/<client>/, served at a short URL.
+  async rewrites() {
+    return [{ source: "/premier-garage", destination: "/proposals/premier-garage/index.html" }];
   },
   // One canonical host for search: www.unhired.io permanently redirects to unhired.io.
   async redirects() {
