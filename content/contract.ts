@@ -19,9 +19,9 @@ export const contractApp = {
   video: `${MEDIA}/application-video.mp4`,
   poster: `${MEDIA}/poster.jpg`,
   email: "brandon@getunhired.com",
-  bookingUrl: "https://cal.com/brandon-upright/demo-call",
+  bookingUrl: "https://cal.com/brandon-upright/team-call",
   /** The same event type, embedded inline at the bottom of the page. */
-  calLink: "brandon-upright/demo-call",
+  calLink: "brandon-upright/team-call",
   photo: "/email/brandon-headshot.png",
 };
 
