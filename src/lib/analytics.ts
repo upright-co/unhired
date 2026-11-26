@@ -13,7 +13,8 @@ export type AnalyticsEvent =
   | "pilot_started"
   | "pilot_step_completed"
   | "pilot_applied"
-  | "pilot_skip_line_click";
+  | "pilot_skip_line_click"
+  | "call_booked";
 
 type Props = Record<string, string | number | boolean | null | undefined>;
 

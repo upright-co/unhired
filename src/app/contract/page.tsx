@@ -3,16 +3,16 @@ import { ContractPage } from "@/components/contract/ContractPage";
 import { Footer } from "@/components/sections/Footer";
 
 export const metadata: Metadata = {
-  title: { absolute: "Unhired · Your AI automation role, on a monthly retainer" },
+  title: { absolute: "Unhired · Your AI & automation team, at half the cost" },
   description:
-    "Why contracting Unhired for your AI and automation work gets it done sooner: a flat $3,000 a month, month to month, no contract.",
+    "Our whole AI and automation team working for you, for a flat $3,000 a month. Month to month, cancel anytime.",
   alternates: { canonical: "/contract" },
   // Linked from the QR code on Brandon's job applications only: keep it out of search results.
   robots: { index: false, follow: false },
   openGraph: {
     url: "/contract",
-    title: "Your AI automation role, on a monthly retainer",
-    description: "A team instead of one hire, for a flat $3,000 a month.",
+    title: "Your AI & automation team, at half the cost",
+    description: "Our whole team instead of one hire, for a flat $3,000 a month.",
   },
 };
 
