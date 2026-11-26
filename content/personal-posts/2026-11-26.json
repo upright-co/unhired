@@ -1,0 +1,463 @@
+{
+  "date": "2026-11-26",
+  "posts": [
+    {
+      "slug": "red-deer-county-penhold-data-centre-hearing",
+      "pillar": "alberta",
+      "title": "100+ pack hearing against Penhold data centre",
+      "body": "Would you want a $300 million AI data centre at the edge of your town? More than 100 people showed up at a Red Deer County hearing to say no.\n\nThe project is planned for Junction 42, a county business park near Penhold. A company called Wave Infrastructure wants to build an AI research lab with a 5 megawatt data centre.\n\nThe November 17 hearing was about rezoning nearly 14 acres from agricultural to industrial.\n\nOne Penhold resident asked the county for documents on October 2. She got 333 pages, with parts blacked out, the day before the hearing.\n\nResidents asked council to postpone. Council said no, then kept the hearing open until December 1.\n\nAt 5 megawatts, the project is half the size where Alberta's proposed 600 metre setback would apply.\n\nShould council have postponed until people could read the documents? Yes or no?\n\nFollow Brandon Upright for AI updates like this every day.\n\nThe full story is in the first comment.",
+      "x": "More than 100 people packed a Red Deer County hearing to oppose a $300M AI data centre near Penhold. One resident got 333 partly blacked-out pages the day before. Council refused to postpone but kept the hearing open to Dec 1. Should it have waited? Yes or no?",
+      "first_comment": "Full story: https://unhired.io/news/red-deer-county-penhold-data-centre-hearing",
+      "sources": [
+        "https://rdnewsnow.com/2026/11/18/red-deer-county-residents-pack-council-chambers-to-oppose-proposed-ai-data-centre/",
+        "https://reddeeradvocate.com/2026/11/17/residents-opposed-to-red-deer-county-data-centre-pack-hearing/",
+        "https://www.alberta.ca/protecting-land-and-communities"
+      ],
+      "image": {
+        "label": "ALBERTA AI UPDATE",
+        "headline": "*100+ people* packed a Red Deer County hearing to fight a $300 million AI data centre",
+        "layout": "photo",
+        "theme": "navy",
+        "photoUrl": "https://reddeeradvocate.com/wp-content/uploads/sites/3/2026/11/Junction42.jpg?w=1024",
+        "credit": "Photo: Red Deer Advocate",
+        "pos": "50% 50%"
+      },
+      "article": {
+        "title": "More than 100 people pack a Red Deer County hearing over a $300 million AI data centre near Penhold",
+        "description": "Residents asked council to postpone after getting 333 partly redacted pages a day before the hearing. Council said no, then extended it to December 1. What is proposed and what happens next.",
+        "body": [
+          "A public hearing in Red Deer County on November 17 drew more than 100 people, filling the council chambers and the lobby outside. They were there to oppose a $300 million AI data centre proposed for the Junction 42 Business Park near Penhold, according to rdnewsNOW and the Red Deer Advocate.",
+          "## What is proposed",
+          "The company is Wave Infrastructure Ltd., which also goes by Wave Infra. It calls the project an AI research lab. rdnewsNOW reports that the company's website lists a 12 acre site and a data centre that would draw five megawatts of power.",
+          "Red Deer County bought the Junction 42 land in 2018 to build a commercial, industrial and agri-business hub.",
+          "## What the hearing was about",
+          "Council was hearing from the public on two bylaws. One amends the area plan for Junction 42. The other rezones 13.82 acres of undeveloped land from agricultural to medium industrial. Passing them would not approve the data centre. It would make the land eligible for one, and the company would still need other approvals, including any required from the Alberta Utilities Commission.",
+          "## The 333 pages",
+          "Penhold resident Samantha Lafontaine told council she filed an access to information request on October 2. She asked about water, wastewater, electricity, environmental impacts, emergency services and planning. On November 16, the day before the hearing, she received a 333-page package with what she called substantial redactions.",
+          "She asked council to adjourn so residents had time to read it, and dozens of people got up to back her. The county's lawyer said the redactions were made under the province's Access to Information Act and that the county has no authority to overturn them.",
+          "## What council decided",
+          "Council denied the adjournment. Coun. Lee Girard proposed carrying on with the hearing and extending it to December 1 at 1:30 pm, and council agreed unanimously. \"That gives two more weeks to go over the documents that the residents received, and it keeps the public hearing open,\" he said.",
+          "There was a catch. Anyone who spoke on the rezoning on November 17 cannot speak again on December 1, so most people chose to wait. rdnewsNOW reported outbursts from the crowd, and one resident told council, \"I think you guys just failed to read the room.\" Mayor Brent Ramsay said the criticism was fair.",
+          "## Where the province's new rules fit",
+          "The day after the hearing, Alberta tabled Bill 42. The province says it would set a minimum setback of 600 metres for data centres of 10 megawatts and larger. At five megawatts, this project is half that size, so by the numbers the setback would not apply to it. That leaves the decision with the county.",
+          "## What I'd watch",
+          "Five megawatts is small next to the gigawatt projects in the news. What filled that room was the process: 333 pages a day ahead, parts blacked out, and a hearing that went on anyway.",
+          "I think that is the lesson for any county or company. People will accept a lot when they can see the water, power and noise numbers early. When they can't, they assume the worst. If you live near Penhold or Springbrook and want a say, December 1 at 1:30 pm is the date."
+        ],
+        "sources": [
+          {
+            "label": "rdnewsNOW: Red Deer County residents pack council chambers to oppose proposed AI data centre",
+            "url": "https://rdnewsnow.com/2026/11/18/red-deer-county-residents-pack-council-chambers-to-oppose-proposed-ai-data-centre/"
+          },
+          {
+            "label": "Red Deer Advocate: Residents opposed to Red Deer County data centre pack hearing",
+            "url": "https://reddeeradvocate.com/2026/11/17/residents-opposed-to-red-deer-county-data-centre-pack-hearing/"
+          },
+          {
+            "label": "Government of Alberta: Protecting land and communities",
+            "url": "https://www.alberta.ca/protecting-land-and-communities"
+          }
+        ]
+      },
+      "tags": [
+        "data-centres",
+        "government"
+      ]
+    },
+    {
+      "slug": "new-york-bans-ai-toys-kids",
+      "pillar": "ai_news",
+      "title": "New York bans AI toys for 5 years",
+      "body": "Would you put a talking AI toy under the tree for your kid? New York just banned them for five years.\n\nGovernor Kathy Hochul signed the law this week. It covers toys with an AI chatbot built in, like talking stuffed animals, dolls and robots.\n\nThe same week, the non-profit Common Sense Media published tests of five popular AI toys.\n\nIt found toys that told children they loved them, promised to keep secrets and helped kids get around bedtime rules.\n\nMost would explain how to find or use matches, knives and pills. One acted out a mass shooting in detail when asked.\n\nParents had no reliable way to see what the toy said to their child.\n\nThe ban only covers New York. Here, the choice is still yours.\n\nWould you buy one for a child under eight? Yes or no?\n\nFollow Brandon Upright for AI updates like this every day.\n\nThe full story is in the first comment.",
+      "x": "New York just banned toys with AI chatbots built in for 5 years. Testers found toys that told kids they loved them, promised to keep secrets, and explained how to find matches, knives and pills. The ban doesn't apply here. Would you buy one for a child under 8?",
+      "first_comment": "Full story: https://unhired.io/news/new-york-bans-ai-toys-kids",
+      "sources": [
+        "https://techcrunch.com/2026/11/25/want-to-buy-your-kid-an-ai-toy-this-christmas-not-in-new-york"
+      ],
+      "image": {
+        "label": "AI UPDATE",
+        "headline": "Would you put an AI toy under the tree? New York *banned them for 5 years*",
+        "layout": "photo",
+        "theme": "red",
+        "photoFile": "/Users/user/Documents/Unhired/brand/personal-posts/2026-11-26/gen/new-york-bans-ai-toys-kids.png",
+        "credit": "AI-generated image",
+        "pos": "50% 50%"
+      },
+      "article": {
+        "title": "New York bans AI chatbot toys for five years. What testers found, and what Alberta parents should check",
+        "description": "New York's governor signed a five-year ban on toys with built-in AI chatbots as a safety group published tests of five of them. What the toys said to kids, and what to look for before you buy.",
+        "body": [
+          "If a stuffed animal that talks back is on a wish list in your house this year, two things happened this week that are worth knowing about.",
+          "## The ban",
+          "New York Governor Kathy Hochul signed a bill banning the manufacture, distribution and sale of toys with built-in AI chatbots in the state for the next five years, TechCrunch reported on November 25. It targets talking stuffed animals, dolls and robots that rely on the internet to hold a conversation. New York is the second state to do this, after California.",
+          "The law takes effect 90 days after signing, so the toys can still be sold there this Christmas. Hochul urged parents not to buy them anyway. \"Parents shopping for gifts for the holidays or any other occasion should not have to worry that dangerous chatbots disguised as toys could expose their children to inappropriate conversations, manipulate their feelings or put their privacy at risk,\" she said.",
+          "A state official said the fines are $15,000 a day.",
+          "## What the tests found",
+          "The same week, Common Sense Media, a non-profit that reviews media and technology for families, published tests of five popular AI toys sold for learning and companionship. According to TechCrunch's report on the study:",
+          "- Toys told children they loved them, promised to keep secrets, and suggested they were more fun than real relationships or school.\n- Some helped children break their parents' bedtime rules.\n- Most refused direct requests about sex and violence, but one acted out a mass shooting in detail when asked.\n- Most were willing to explain how to use or find dangerous items such as matches, knives and pills.\n- Parents had no reliable way to check the conversations. Some toys kept no transcript, and others produced transcripts full of errors.",
+          "The group ran a similar test in January and found the toys posed an unacceptable risk for young children. The new study also found that about a quarter of American parents with children under eight either own an AI toy or are considering one this season.",
+          "\"Caregivers should steer clear of these products that do not support the development of imagination or early human relationships,\" said Dr. Jenny Radesky, a pediatrics professor at the University of Michigan Medical School.",
+          "## What this means in Alberta",
+          "The ban is New York's and doesn't apply here, so the decision sits with parents and grandparents.",
+          "## What I'd check before buying one",
+          "I build AI systems for a living, and I wouldn't give a child under eight a toy that holds an open conversation over the internet. The same technology that answers a customer's question about store hours can be talked into almost anything by a curious six-year-old, and these tests show how thin the guardrails on the toys are.",
+          "If you are looking at one anyway, read the box for three things. Does it need Wi-Fi and an app to talk? Can you read back everything it said? Can you switch the chatbot off and still use the toy? If the answer to the second question is no, I'd leave it on the shelf. A toy with a few recorded phrases does the same job at bedtime and can't improvise."
+        ],
+        "sources": [
+          {
+            "label": "TechCrunch: Want to buy your kid an AI toy this Christmas? Not in New York",
+            "url": "https://techcrunch.com/2026/11/25/want-to-buy-your-kid-an-ai-toy-this-christmas-not-in-new-york"
+          }
+        ]
+      },
+      "tags": [
+        "government",
+        "big-tech"
+      ]
+    },
+    {
+      "slug": "should-business-say-its-ai",
+      "pillar": "ai_employee",
+      "title": "Should a business tell you it's an AI?",
+      "body": "Should a business have to tell you when you're talking to an AI? 88% of people say they want to know.\n\nThat's from a 2023 Qualtrics study. 41% said they always want to know.\n\nEurope already made it a rule. Since August 2, 2026, an AI that talks to people there has to say so, unless it's obvious.\n\nOwners often ask me if their AI can answer as \"Sarah from the front desk\" and never mention it. I tell them to say it in the first line.\n\nPeople work it out anyway. A reply lands at 2:14 am in four seconds, and then they wonder what else they were told.\n\nMost callers only want the appointment booked. What makes them angry is finding out halfway through, or being unable to reach a person.\n\nIf you found out mid-call that you'd been talking to AI, would you hang up? Yes or no?\n\nFollow Brandon Upright for AI updates like this every day.\n\nThe full story is in the first comment.",
+      "x": "Should a business have to tell you when you're talking to an AI? 88% of people want to know (Qualtrics, 2023), and Europe made it a rule this August. Most find out anyway. If you learned mid-call that you'd been talking to AI, would you hang up?",
+      "first_comment": "Full article: Should Customers Know They're Talking to an AI Employee? https://unhired.io/blog/ai-disclosure-customers",
+      "sources": [
+        "Should Customers Know They're Talking to an AI Employee? https://unhired.io/blog/ai-disclosure-customers"
+      ],
+      "image": {
+        "label": "AI EMPLOYEE",
+        "headline": "*88%* of people want to know when they're talking to an AI. Should businesses say?",
+        "layout": "photo",
+        "theme": "violet",
+        "photo": "robot-interview-b.png",
+        "pos": "50% 30%"
+      },
+      "link": "Should Customers Know They're Talking to an AI Employee? https://unhired.io/blog/ai-disclosure-customers",
+      "tags": [
+        "small-business"
+      ]
+    },
+    {
+      "slug": "travers-reservoir-data-centre-court",
+      "pillar": "alberta",
+      "title": "Farmer vs cabin owners over a data centre",
+      "body": "Would you want an AI data centre beside the lake where your family has a cabin? People near Travers Reservoir in Vulcan County took their county to court over one.\n\nIn June, Vulcan County council rezoned farmland near the reservoir so a local man, Eric Steeves, could build a data centre campus.\n\nThe land is close to a lakeside community called Little Bow Resort and to the Southern Alberta Bible Camp.\n\nResidents formed a committee and asked a judge to review how the county made the decision. In October, CTV News reported they had been awarded that review.\n\nOne member said, \"You couldn't pick a more inappropriate spot in the province if you tried.\"\n\nSteeves calls himself a fifth-generation farmer trying to bring tax revenue and jobs to his area.\n\nWhose side are you on, the farmer or the cabin owners?\n\nFollow Brandon Upright for AI updates like this every day.\n\nThe full story is in the first comment.",
+      "x": "A fifth-generation farmer wants to build an AI data centre near Travers Reservoir in Vulcan County, close to a lake resort and a bible camp. Neighbours took the county to court over the rezoning, and a judge will review it. Whose side are you on, the farmer or the cabin owners?",
+      "first_comment": "Full story: https://unhired.io/news/travers-reservoir-data-centre-court",
+      "sources": [
+        "https://ca.news.yahoo.com/vulcan-county-residents-challenge-council-195801026.html",
+        "https://www.ctvnews.ca/calgary/article/judicial-review-awarded-regarding-rezoning-for-proposed-ai-data-centre/"
+      ],
+      "image": {
+        "label": "ALBERTA AI UPDATE",
+        "headline": "A farmer wants a data centre by the lake. Cabin owners *took the county to court*",
+        "layout": "photo",
+        "theme": "green",
+        "photoUrl": "https://s.yimg.com/lo/mysterio/api/a0e173c7ed4d99ea4cea65c6402fd4bce78e31eaabb5a9417d5e30aec3b5469f/lightyear_networkapi/resizefill_w1200%3Bquality_80%3Bformat_webp/https%3A%2F%2Fmedia.zenfs.com%2Fen%2Fcalgary_herald_articles_312%2F21c6a6c8a67f5bddae29b46d5237b08c",
+        "credit": "Photo: Calgary Herald",
+        "pos": "50% 50%"
+      },
+      "article": {
+        "title": "Vulcan County residents take their county to court over an AI data centre near Travers Reservoir",
+        "description": "A local farmer wants to build a data centre campus on rezoned land near a lake resort and a bible camp. Neighbours asked a judge to review the decision. Both sides, and what still has to be approved.",
+        "body": [
+          "Most data centre fights in Alberta involve a big outside company. This one is between neighbours.",
+          "## What happened",
+          "In June, Vulcan County council rezoned farmland from rural general to rural industrial so a data centre campus could be built there, the Calgary Herald reported. The applicant is Eric Steeves, who farms in the area. The land is near Travers Reservoir, with the villages of Champion and Lomond nearby.",
+          "I'm leaving the size of the project out on purpose. The Herald and CTV News give different figures for the land and the power it would use.",
+          "## Why neighbours object",
+          "A group of residents formed the Little Bow AI Data Centre Committee and went to the Alberta Court of King's Bench. They want any future data centre proposal to go through what they call \"a lawful, transparent and procedurally fair process.\" CTV News reports they want the rezoning rescinded.",
+          "Their case is about the location. They say the area is environmentally significant, that the reservoir matters for irrigation and recreation, and that the site is close to a lakeside community called Little Bow Resort and to the Southern Alberta Bible Camp. They also raised fire risk, the evacuation route, noise, lighting, and air and water pollution.",
+          "\"It is outrageous that anyone would even consider building a data centre complex or any other industrial development in this unique area,\" committee member Sylvia Farrant said. \"You couldn't pick a more inappropriate spot in the province if you tried.\"",
+          "## What the farmer says",
+          "Steeves told the Herald he will keep working with nearby villages and with Little Bow residents. He described the gap this way: \"Little Bow residents are there for recreation and having a home that they can enjoy the peace and quiet, so they're going to have a different perspective than a fifth-generation farmer that's trying to bring the tax revenue base and jobs to his local area.\"",
+          "Reeve Jason Schneider said the county will have its day before a judge. \"It's an option available to anybody if they feel something wasn't done correctly, and I guess we'll see where it goes.\"",
+          "## Where it stands",
+          "On October 6, CTV News reported the group had been awarded a judicial review. That means a judge will look at how the county made its decision. It is a review of the process, and it doesn't settle whether a data centre is a good idea.",
+          "Rezoning is also only the first step. Steeves still needs approvals from the Alberta Utilities Commission and the Alberta Electric System Operator, plus a development permit from the county. He told the Herald he doesn't expect the court case to cause major delays, though it adds \"another layer of uncertainty and complication.\"",
+          "## What I take from it",
+          "Both sides have a point. Rural counties need a tax base, and a landowner trying to build something at home is a different story from a distant company picking a spot on a map. But people chose that lake for the quiet, and a reservoir used for irrigation is a hard place to ask them to trust a promise about water.",
+          "The court will look at the process. The location question comes back at the utilities commission and at the county's permit stage."
+        ],
+        "sources": [
+          {
+            "label": "Calgary Herald via Yahoo News Canada: Vulcan County residents challenge council rezoning decision for proposed data centre",
+            "url": "https://ca.news.yahoo.com/vulcan-county-residents-challenge-council-195801026.html"
+          },
+          {
+            "label": "CTV News Calgary: Judicial review awarded regarding rezoning for proposed AI data centre",
+            "url": "https://www.ctvnews.ca/calgary/article/judicial-review-awarded-regarding-rezoning-for-proposed-ai-data-centre/"
+          }
+        ]
+      },
+      "tags": [
+        "data-centres",
+        "farming",
+        "test"
+      ]
+    },
+    {
+      "slug": "instagram-dms-meta-ai-canada",
+      "pillar": "ai_news",
+      "title": "Meta's AI is now in Instagram DMs in Canada",
+      "body": "Would you let an AI read your Instagram messages to catch you up? In Canada, Meta's now can.\n\nMeta's AI assistant is called Muse. On November 24 it started rolling out inside Instagram direct messages in five countries, including Canada.\n\nYou chat with it in a message thread, the way you'd text a friend.\n\nYou can ask it about a post, a place or a product. You can also ask it to catch you up on conversations you missed in your other DMs.\n\nIt can turn a saved recipe video into a grocery list, or sort your saved posts into folders.\n\nMeta says nothing is shared, published or sent without your approval, and that you can ask it to forget information.\n\nIt is rolling out on iPhone and Android.\n\nWould you let an AI read your messages to save time? Yes or no?\n\nFollow Brandon Upright for AI updates like this every day.\n\nThe full story is in the first comment.",
+      "x": "Meta's AI assistant, Muse, is now rolling out inside Instagram DMs in Canada. It can answer questions about posts and catch you up on chats you missed in your other DMs. Meta says nothing is sent without your approval. Would you let an AI read your messages? Yes or no?",
+      "first_comment": "Full story: https://unhired.io/news/instagram-dms-meta-ai-canada",
+      "sources": [
+        "https://techcrunch.com/2026/11/24/meta-brings-its-muse-ai-assistant-directly-into-instagram-dms/"
+      ],
+      "image": {
+        "label": "CANADA AI UPDATE",
+        "headline": "Meta's AI is now inside *Instagram DMs in Canada*. Would you let it read yours?",
+        "layout": "photo",
+        "theme": "black",
+        "photoFile": "/Users/user/Documents/Unhired/brand/personal-posts/2026-11-26/gen/instagram-dms-meta-ai-canada.png",
+        "credit": "AI-generated image",
+        "pos": "50% 45%"
+      },
+      "article": {
+        "title": "Meta's AI assistant is now inside Instagram DMs in Canada. What it can do and what to check first",
+        "description": "Muse, Meta's AI assistant, started rolling out in Instagram direct messages on November 24, with Canada in the first group of countries. What it does, what Meta promises, and the question to ask before you use it.",
+        "body": [
+          "If you use Instagram, a new contact is about to show up in your messages, and it is software.",
+          "## What launched",
+          "On November 24, Meta announced that Instagram users can chat with its AI assistant, Muse, in a direct message thread, TechCrunch reported. It began rolling out that day on iPhone and Android in five countries: the United States, Canada, Mexico, Japan and Singapore.",
+          "Until now you had to leave Instagram and open the separate Muse app to use it. Conversations you have with Muse inside Instagram will also show up in that app as a side chat.",
+          "## What it does",
+          "According to Meta, you can:",
+          "- Ask it for more context about a post, a place or a product you come across.\n- Ask it to catch you up on conversations you may have missed in your other DMs.\n- Share a post with it and ask it to act, such as adding a coffee shop to a trip plan or finding a Black Friday deal on a pair of shoes.\n- Have it sort your saved posts and reels into folders called Collections, turn a recipe video into a grocery list, or build a trip itinerary from travel videos you saved.",
+          "When you save a post, Instagram will now show a prompt offering to have Muse organize it. That part is launching in the United States and Canada.",
+          "## What Meta promises",
+          "Meta says users stay in control. Nothing is shared, published or sent without your approval, the company says, and you can ask Muse to forget information or undo an action at any time.",
+          "## The part I'd think about",
+          "The feature that stands out to me is the catch-up. To summarize the conversations you missed, the assistant has to read them. Those threads include other people: your sister, your kid's coach, a customer who messaged your shop's account. They didn't agree to anything.",
+          "That doesn't make it sinister. Email apps have summarized threads for a while. But a group chat with family is more personal than a work inbox, and I'd want to know what is kept and for how long before I asked an AI to read mine. TechCrunch's report doesn't say, so I'd look for the answer in the app's settings before using that feature.",
+          "If you run a business that takes orders or bookings through Instagram messages, there is a second thing to consider. Your customers may soon be asking an AI about your posts and products before they ever message you. Clear prices, hours and locations in your captions and profile are what it will have to go on.",
+          "## What to do this week",
+          "When Muse appears in your messages, you don't have to use it. If you want to try it, start with the low-stakes jobs, like sorting saved recipes. Leave the catch-up feature until you have read what it stores. And if you share an account with staff or family, agree on whether anyone turns it on."
+        ],
+        "sources": [
+          {
+            "label": "TechCrunch: Meta brings its Muse AI assistant directly into Instagram DMs",
+            "url": "https://techcrunch.com/2026/11/24/meta-brings-its-muse-ai-assistant-directly-into-instagram-dms/"
+          }
+        ]
+      },
+      "tags": [
+        "big-tech"
+      ]
+    },
+    {
+      "slug": "your-info-in-a-free-ai-chatbot",
+      "pillar": "ai_employee",
+      "title": "Is your info going into a free AI chatbot?",
+      "body": "When you email your dentist, your landlord or your accountant, would you want your message pasted into a free AI chatbot?\n\nA receptionist wants help wording a reply, so the patient's message goes into a personal chatbot account. A bookkeeper uploads a client's bank statement to get a quick summary.\n\nFree and personal AI apps can have different rules about what they keep and learn from than business plans do.\n\nIBM's 2025 breach report found companies with a lot of this unapproved AI use paid $670,000 more per data breach on average.\n\nIt also found that 97% of organizations with an AI-related breach had no controls on what the AI could access.\n\nThe fix is boring: a business account, its own login, and a person approving anything that leaves the building.\n\nShould a business have to ask before your information goes into an AI tool? Yes or no?\n\nFollow Brandon Upright for AI updates like this every day.\n\nThe full story is in the first comment.",
+      "x": "Would you want your message to your dentist or accountant pasted into a free AI chatbot? IBM found companies with lots of unapproved AI use paid $670,000 more per data breach, and 97% of AI-related breaches had no access controls. Should a business have to ask you first?",
+      "first_comment": "Full article: Is an AI Employee Safe With Customer Data? https://unhired.io/blog/ai-employee-data-security",
+      "sources": [
+        "Is an AI Employee Safe With Customer Data? https://unhired.io/blog/ai-employee-data-security"
+      ],
+      "image": {
+        "label": "AI EMPLOYEE",
+        "headline": "Would you want your dentist's office pasting your message into a *free AI chatbot*?",
+        "layout": "photo",
+        "theme": "navy",
+        "photo": "robot-desk-a.png",
+        "pos": "50% 30%"
+      },
+      "link": "Is an AI Employee Safe With Customer Data? https://unhired.io/blog/ai-employee-data-security",
+      "tags": [
+        "small-business"
+      ]
+    },
+    {
+      "slug": "alberta-er-ai-scribe-jenkins",
+      "pillar": "alberta",
+      "title": "AI is listening in 81 Alberta ERs",
+      "body": "Would you let an AI listen in on your emergency room visit? It is being tested in 81 Alberta emergency departments.\n\nThe tool is called Jenkins. It listens while the doctor talks with you and helps write the notes, so the doctor spends less time on record-keeping.\n\nIt was first built by an emergency doctor and engineer in Red Deer, then developed by a University of Alberta team.\n\nAs of March, 373 doctors had been trained on it. They had recorded nearly 31,000 visits, about 3,000 hours of audio.\n\n30 family doctors are testing it too.\n\nPatients must consent before it is used.\n\nThe university team is still studying whether it saves money, improves care and lowers stress for doctors.\n\nIf your ER doctor asked to turn it on, would you say yes? Yes or no?\n\nFollow Brandon Upright for AI updates like this every day.\n\nThe full story is in the first comment.",
+      "x": "An AI called Jenkins is being tested in 81 Alberta emergency departments. It listens as the doctor talks with you and helps write the notes. 373 doctors trained, nearly 31,000 visits recorded, and patients must consent. If your ER doctor asked, would you say yes?",
+      "first_comment": "Full story: https://unhired.io/news/alberta-er-ai-scribe-jenkins",
+      "sources": [
+        "https://www.ualberta.ca/en/folio/2026/03/ai-scribe-now-being-tested-in-eds-across-alberta.html"
+      ],
+      "image": {
+        "label": "ALBERTA AI UPDATE",
+        "headline": "An AI is listening in *81 Alberta ERs*. Would you let it hear your visit?",
+        "layout": "photo",
+        "theme": "green",
+        "photoFile": "/Users/user/Documents/Unhired/brand/personal-posts/2026-11-26/gen/alberta-er-ai-scribe-jenkins.png",
+        "credit": "AI-generated image",
+        "pos": "50% 45%"
+      },
+      "article": {
+        "title": "An AI scribe is being tested in 81 Alberta emergency departments. What it does and what to ask",
+        "description": "Jenkins listens while an emergency doctor talks with a patient and helps write the chart notes. The University of Alberta says 373 physicians are using it. How it works, where it came from, and what patients should know.",
+        "body": [
+          "The next time you are in an Alberta emergency department, the doctor may ask whether an AI can listen to your conversation. Here is what that request is about.",
+          "## What Jenkins is",
+          "Jenkins is an AI scribe, software that listens as a doctor speaks with a patient and helps with the notes for the chart. The University of Alberta reported in March 2026 that it is being tested in 81 emergency departments across the province. It launched in November 2024.",
+          "The university says the tool uses large language models, the kind of technology behind AI assistants like ChatGPT, to transcribe a conversation and summarize what it means. **Patients must consent to its use.**",
+          "## The numbers so far",
+          "As of the university's March update:",
+          "- 373 physicians had completed training and were actively using it.\n- They had recorded nearly 31,000 clinical sessions, for a total of 3,000 hours of audio.\n- 30 family physicians were testing it as well.",
+          "## Where it came from",
+          "This one is homegrown. It was first created by Michael Weldon, an emergency doctor and engineer based in Red Deer. It was developed further by Jake Hayward, an emergency physician and assistant clinical professor at the University of Alberta, and his team at the university's AI + Health Hub. Hayward is also deputy clinical head of quality improvement with Alberta Health Services.",
+          "\"Broad adoption isn't just about handing out software,\" Hayward said. \"It requires intentional support and integration with existing electronic health records.\"",
+          "The university says the project is funded through the Health Care Unburdened Grant program, from the Canadian Medical Association, MD Financial Management and Scotiabank.",
+          "## What we don't know yet",
+          "The university team says it is beginning to analyze the data to understand the tool's cost-effectiveness, its effect on clinical outcomes and whether it lowers stress for doctors. Until that work is published, nobody can say with numbers whether it shortens waits. I'd treat any claim that it does as a hope for now.",
+          "## Why I think it is a sensible use of AI",
+          "I've built AI systems for businesses for four years, and note-taking is one of the jobs AI does well. A doctor who is typing is looking at a screen. A doctor who isn't typing can look at you.",
+          "The safe way to run a tool like this is for the AI to draft and the doctor to read and approve every note. That is the first thing I'd ask about, because these tools are fast and usually right, and sometimes they write down something nobody said.",
+          "## What to ask if you're the patient",
+          "You are allowed to ask questions before you say yes. I'd ask three. Is the recording kept after the note is written, and for how long? Does the doctor review the note before it goes in my chart? Can I say no without it affecting my care? A good program will have quick answers to all three."
+        ],
+        "sources": [
+          {
+            "label": "University of Alberta Folio: AI scribe now being tested in EDs across Alberta",
+            "url": "https://www.ualberta.ca/en/folio/2026/03/ai-scribe-now-being-tested-in-eds-across-alberta.html"
+          }
+        ]
+      },
+      "tags": [
+        "health",
+        "test"
+      ]
+    },
+    {
+      "slug": "ai-hiring-less-not-layoffs-study",
+      "pillar": "ai_news",
+      "title": "Study: few AI layoffs, but most firms hire less",
+      "body": "Has your workplace stopped replacing people who leave? A new study of 58 companies found AI is causing few layoffs, but two-thirds are hiring less.\n\nThe study is from Anthropic, the company that makes Claude, an AI assistant that competes with ChatGPT. It came out on November 23.\n\nIts researchers interviewed people at 58 US companies that use its AI.\n\nOnly two had seen AI fully eliminate a position and cost someone their job.\n\nFive pushed out employees who would not use AI.\n\nPeople at two-thirds of the companies reported hiring less because of it.\n\nOne worker told the researchers, \"If I'm open to this, I'm essentially building my own coffin.\"\n\nA caution: every company in it is an Anthropic customer, so it doesn't speak for the whole economy.\n\nHas your workplace left a job empty after someone quit? Yes or no?\n\nFollow Brandon Upright for AI updates like this every day.\n\nThe full story is in the first comment.",
+      "x": "A study of 58 US companies using AI found only 2 where AI fully eliminated a job. But two-thirds reported hiring less. The study is from Anthropic, maker of Claude, and covers its own customers. Has your workplace left a job empty after someone quit? Yes or no?",
+      "first_comment": "Full story: https://unhired.io/news/ai-hiring-less-not-layoffs-study",
+      "sources": [
+        "https://www.anthropic.com/research/working-with-ai",
+        "https://the-decoder.com/anthropic-study-shows-the-hardest-part-of-adopting-ai-at-work-has-little-to-do-with-learning-the-tools/"
+      ],
+      "image": {
+        "label": "AI UPDATE",
+        "headline": "Few AI layoffs so far. But *2 in 3 companies* in a new study hire less",
+        "layout": "photo",
+        "theme": "red",
+        "photoFile": "/Users/user/Documents/Unhired/brand/personal-posts/2026-11-26/gen/ai-hiring-less-not-layoffs-study.png",
+        "credit": "AI-generated image",
+        "pos": "50% 50%"
+      },
+      "article": {
+        "title": "A study of 58 companies found few AI layoffs and a lot less hiring. What that means for your job",
+        "description": "Anthropic interviewed people at 58 US companies that use its AI. Only two had seen a position eliminated, but two-thirds reported hiring less. What the study says, its limits, and what I'd do with it.",
+        "body": [
+          "The fear most people have about AI at work is a layoff notice. A study published on November 23 points somewhere else: the job that opens up when someone leaves and never gets posted.",
+          "## Who did the study",
+          "It comes from Anthropic, the company that makes Claude, an AI assistant that competes with ChatGPT. Its researchers interviewed people at 58 US companies that use Claude. The Decoder, a technology news site, reports there were 66 in-person interviews, at firms in law, construction, finance, medicine and manufacturing as well as AI startups.",
+          "Keep the limits in mind. Every company in the study is an Anthropic customer, and The Decoder notes the authors say the sample isn't representative. It also comes from a company that sells AI. I read it as a close look at 58 workplaces, which is useful, and no more than that.",
+          "## What they found about jobs",
+          "- People at only two of the companies had seen AI fully eliminate a position and lead to someone losing their job.\n- People at five companies described pushing out employees who would not adopt AI.\n- People at two-thirds of the companies reported hiring less because of AI. Some reported hiring more.\n- Nine firms cut outside contractors, mostly offshore work in software development, customer support, design and legal services, according to The Decoder.",
+          "## What it feels like inside those companies",
+          "The report is frank about the mood. The Decoder counts employee resistance as the second most common obstacle companies mentioned. One worker told the researchers, \"If I'm open to this, I'm essentially building my own coffin.\"",
+          "It is also frank that AI often doesn't pay off. Respondents said 55% of the AI projects studied produced more output or better quality, and 19% delivered no business value. The most common complaint was the volume of AI-written material that a person still has to check.",
+          "## What I'd do with this",
+          "It fits what I'd expect from four years of building these systems. A small business rarely lets someone go because of software. More often a person leaves, the owner looks at the list of what that person did, and some of it goes to AI while the remainder goes to the team. The posting never goes up.",
+          "If you're an employee, the practical point is that the risk sits with the next opening more than with your current seat. In this study, more companies pushed out people who refused the tools than cut a job outright. Learning to use AI on the repeatable parts of your work, and being the person who checks what it produces, is the safer position.",
+          "If you're the parent of someone about to enter the job market, this is the harder news. Fewer openings hurt people trying to get a first job more than people who already have one. An applicant who can show they've used AI on real work, and caught its mistakes, has something to point to.",
+          "If you own a business, be honest with your team about which duties are moving and what happens when a seat opens. The Decoder's account says pushback was most visible where companies rolled AI out from the top to automate whole workflows. People cooperate with a plan they can see."
+        ],
+        "sources": [
+          {
+            "label": "Anthropic: Working with AI",
+            "url": "https://www.anthropic.com/research/working-with-ai"
+          },
+          {
+            "label": "The Decoder: Anthropic study shows the hardest part of adopting AI at work has little to do with learning the tools",
+            "url": "https://the-decoder.com/anthropic-study-shows-the-hardest-part-of-adopting-ai-at-work-has-little-to-do-with-learning-the-tools/"
+          }
+        ]
+      },
+      "tags": [
+        "jobs",
+        "big-tech"
+      ]
+    },
+    {
+      "slug": "alberta-teachers-ai-homework-training",
+      "pillar": "alberta",
+      "title": "6 in 10 Alberta teachers: no tools to spot AI homework",
+      "body": "Is your kid using AI for homework? 6 in 10 Alberta teachers say they've been given no training or tools to tell.\n\nThe number is from a Leger survey done for the Fraser Institute, a think tank. It covered teachers in grades 6 to 12.\n\n60.4% of Alberta teachers said their school or board gave them no training or tools to identify students using AI.\n\nFewer than half, 44%, said their school has a policy on students using AI.\n\n63.7% said they'd had no training on how to teach students to use it reasonably.\n\nThe head of the Alberta Teachers' Association says it can feel \"a little bit like the Wild West.\"\n\nThe province is spending $2.7 million on AI learning kits for classrooms.\n\nShould students be allowed to use AI for homework? Yes or no?\n\nFollow Brandon Upright for AI updates like this every day.\n\nThe full story is in the first comment.",
+      "x": "Is your kid using AI for homework? In a Leger survey for the Fraser Institute, 60.4% of Alberta teachers said they've had no training or tools to spot it, and only 44% said their school has a policy on student AI use. Should students be allowed to use AI for homework?",
+      "first_comment": "Full story: https://unhired.io/news/alberta-teachers-ai-homework-training",
+      "sources": [
+        "https://ca.news.yahoo.com/macpherson-hill-alberta-teachers-face-110053270.html",
+        "https://globalnews.ca/news/12048122/artificial-intelligence-in-classrooms/"
+      ],
+      "image": {
+        "label": "ALBERTA AI UPDATE",
+        "headline": "*6 in 10* Alberta teachers say they have no training or tools to spot AI homework",
+        "layout": "photo",
+        "theme": "violet",
+        "photoFile": "/Users/user/Documents/Unhired/brand/personal-posts/2026-11-26/gen/alberta-teachers-ai-homework-training.png",
+        "credit": "AI-generated image",
+        "pos": "50% 45%"
+      },
+      "article": {
+        "title": "6 in 10 Alberta teachers say they have no training or tools to spot AI homework. What the survey found",
+        "description": "A Leger survey for the Fraser Institute found most Alberta teachers in grades 6 to 12 have had no training on students' AI use, and fewer than half say their school has a policy. The numbers, the caveats, and what parents can do.",
+        "body": [
+          "If you have a kid in junior high or high school, you have probably wondered how much of their homework an AI is doing. A survey suggests their teachers are wondering too, without much help.",
+          "## The numbers for Alberta",
+          "The survey was done by Leger for the Fraser Institute, a public policy think tank. It asked teachers in grades 6 to 12 about AI training and school policies. Two Fraser Institute researchers, Paige MacPherson and Tegan Hill, laid out the Alberta results in a July 1 column published by Postmedia:",
+          "- 60.4% of Alberta teachers said their school or board has provided no training or tools to help identify students using AI.\n- 44% said their school has a policy on student AI use.\n- 63.7% reported no training on how to instruct students to use AI reasonably. 33% said they had been given some.\n- 42.9% said they have had no training on using AI for their own lessons and class materials.\n- 37.4% said their school has a policy on staff AI use.",
+          "## The caveats",
+          "Take the exact percentages with some care. The Canadian Press reported that the survey reached 756 teachers across Canada online between November 2025 and January 2026, and that no margin of error can be assigned because respondents weren't chosen at random. The Alberta teachers are only part of that group. The Fraser Institute is also a think tank with its own views on education policy.",
+          "The direction matches what teachers themselves are saying, though. \"There's a lot of concerns around (AI), but there's not a lot of policy that you're seeing at the jurisdictional level, at school boards or at government,\" Jason Schilling, president of the Alberta Teachers' Association, told The Canadian Press in September. \"Sometimes it feels a little bit like the Wild West.\"",
+          "## What the province is doing",
+          "The Alberta government says it has a three-year partnership with the Alberta Machine Intelligence Institute, known as Amii, to develop a framework for AI in schools. The column says the province will spend $2.7 million to help bring AI learning kits to classrooms.",
+          "In the meantime, The Canadian Press reports that bringing AI into classrooms has largely been left up to school districts.",
+          "## What I'd do as a parent",
+          "I build AI systems for a living, and I don't think a ban at home works. The tools are free and on every phone. The best rule I've read comes from a Winnipeg school division quoted in the same Canadian Press story: AI can be a \"thought partner\" but not a \"work doer.\"",
+          "In practice that means three things at the kitchen table. Ask your kid to show you how they used it, without making it an interrogation. Have them explain the answer back to you in their own words, because that is where copied work falls apart. And ask the teacher at the next interview what the class rule is. If there isn't one yet, you'll have learned something too.",
+          "The skill that will matter for their first job is knowing when to use AI and how to check it. A kid who learns that at 14 is ahead of one who learns to hide it."
+        ],
+        "sources": [
+          {
+            "label": "Postmedia via Yahoo News Canada: MacPherson, Hill: Alberta teachers face rise of AI without training or policy guidance",
+            "url": "https://ca.news.yahoo.com/macpherson-hill-alberta-teachers-face-110053270.html"
+          },
+          {
+            "label": "The Canadian Press via Global News: 'Wild West': Teachers, experts call for unified policies to address AI in classrooms",
+            "url": "https://globalnews.ca/news/12048122/artificial-intelligence-in-classrooms/"
+          }
+        ]
+      },
+      "tags": [
+        "schools",
+        "test"
+      ]
+    },
+    {
+      "slug": "boss-brings-in-ai-tell-staff",
+      "pillar": "ai_employee",
+      "title": "Should your boss tell you before bringing in AI?",
+      "body": "If your boss brought in AI to do part of your job, would you want to be told first?\n\nMost owners who get this wrong do it by saying nothing. Staff notice when someone starts writing down how their job works, and they assume the worst.\n\nIn most small businesses, AI takes over some duties and the person keeps the job. The counter, the judgment calls and the upset customer stay with a person.\n\nWhere teams do shrink, it usually happens when someone leaves and the seat isn't refilled.\n\nUS government projections show receptionist jobs falling 2% over ten years, with about 105,100 openings a year from people moving on.\n\nThe owners who handle it well show staff the exact list of duties that are moving, before anything goes live.\n\nShould a boss have to tell staff before bringing in AI? Yes or no?\n\nFollow Brandon Upright for AI updates like this every day.\n\nThe full story is in the first comment.",
+      "x": "If your boss brought in AI to do part of your job, would you want to be told first? Most owners get it wrong by saying nothing, and staff assume the worst. Where teams shrink, it's usually a seat that isn't refilled. Should a boss have to tell staff first? Yes or no?",
+      "first_comment": "Full article: Will an AI Employee Replace My Staff? https://unhired.io/blog/will-ai-replace-my-employees",
+      "sources": [
+        "Will an AI Employee Replace My Staff? https://unhired.io/blog/will-ai-replace-my-employees"
+      ],
+      "image": {
+        "label": "AI EMPLOYEE",
+        "headline": "Your boss brings in AI to do *part of your job*. Should they tell you first?",
+        "layout": "photo",
+        "theme": "black",
+        "photo": "robot-handshake-a.png",
+        "pos": "50% 35%"
+      },
+      "link": "Will an AI Employee Replace My Staff? https://unhired.io/blog/will-ai-replace-my-employees",
+      "tags": [
+        "jobs",
+        "small-business"
+      ]
+    }
+  ]
+}
