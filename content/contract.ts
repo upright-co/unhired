@@ -74,10 +74,11 @@ export const contractSpeed = {
     },
   ],
   tracks: [
-    { label: "New hire", steps: ["Recruit", "Onboard", "Learn your systems", "Pick tools", "First build"], tone: "muted" as const },
-    { label: "Unhired", steps: ["Audit call", "Your automation map", "Build", "Live"], tone: "signal" as const },
+    { label: "New hire", steps: ["Recruit", "Onboard", "Learn systems", "Pick tools", "First build"], tone: "muted" as const },
+    { label: "Unhired", steps: ["Audit call", "Automation map", "Build", "Live"], tone: "signal" as const },
   ],
-  trackNote: "Steps only, not a timeline. How long each one takes depends on the work.",
+  trackNote: "Illustration: steps, not a timeline. How long each one takes depends on the work.",
+  raceDone: "Your automations are live while a new hire is still learning your systems.",
 };
 
 export const contractSteps = {
@@ -175,6 +176,38 @@ export const contractPrice = {
     { t: "Invoiced your way", b: "Bi-weekly or monthly, whichever fits your labour budget." },
   ],
   smallPrint: "AI-generated media, such as images and videos, is not included in the retainer and is charged separately.",
+};
+
+/**
+ * Animated cost comparison under the price (Brandon, 2026-11-26), drawn to scale like the video's cost scene.
+ * Default salary: median posted pay for US AI automation roles, Indeed pull of 2026-11-20 (research/ai-automation-jobs-2026-11-20.csv,
+ * 455 postings with pay). Costs on top of the salary: BLS Employer Costs for Employee Compensation, June 2026 (released 2026-09-09),
+ * table 5, full-time private industry, professional and related occupations, per hour worked: wages $52.92, paid leave $7.52,
+ * supplemental pay $3.21, insurance $6.17, retirement $3.02, legally required $4.96. A posted salary already includes paid leave,
+ * so each share below is that cost divided by wages + paid leave ($60.44), and paid leave is shown inside the salary block.
+ */
+export const contractCost = {
+  eyebrow: "The real cost of a hire",
+  title: "A salary is only part of what a hire costs.",
+  body: "On top of the salary, an employer pays for bonuses, insurance, retirement and payroll taxes, and keeps paying while the person is on vacation. Move the slider to the salary in your posting.",
+  sliderLabel: "Salary in your posting",
+  defaultSalary: 130_000,
+  min: 50_000,
+  max: 200_000,
+  step: 5_000,
+  retainerYear: 36_000,
+  paidLeaveShare: 7.52 / 60.44,
+  extras: [
+    { key: "taxes", label: "Payroll taxes and required insurance", share: 4.96 / 60.44, color: "#F65663" },
+    { key: "insurance", label: "Health and other insurance", share: 6.17 / 60.44, color: "#F87A84" },
+    { key: "retirement", label: "Retirement contributions", share: 3.02 / 60.44, color: "#FA9DA4" },
+    { key: "bonus", label: "Bonuses and other extra pay", share: 3.21 / 60.44, color: "#FCC0C4" },
+  ],
+  hireLabel: "Full-time hire",
+  usLabel: "Unhired",
+  usNote: "$3,000 a month, running costs included",
+  sources:
+    "Costs on top of the salary: U.S. Bureau of Labor Statistics, Employer Costs for Employee Compensation, June 2026 (full-time private industry, professional occupations). Starting salary: median posted pay for AI automation roles in the US on Indeed, November 2026. Recruiting, training and equipment are not counted.",
 };
 
 export const contractFaq = {

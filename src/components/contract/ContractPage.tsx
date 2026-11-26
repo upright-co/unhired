@@ -52,6 +52,7 @@ import { Eyebrow, Reveal } from "@/components/ui/Section";
 import { VideoFrame } from "@/components/pilot/VideoFrame";
 import { trackEvent } from "@/lib/analytics";
 import { TOOL_LOGOS } from "./toolLogos";
+import { CostCompare, SpeedRace } from "./Animated";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
@@ -131,6 +132,7 @@ export function ContractPage() {
       <Benefits />
       <Testimonials />
       <Price />
+      <CostCompare />
       <Faq />
       <Book />
     </main>
@@ -350,28 +352,7 @@ function Speed() {
           })}
         </ol>
 
-        <Reveal className="mt-10 space-y-5 rounded-[28px] bg-ink p-6 text-white sm:p-10">
-          {s.tracks.map((t) => (
-            <div key={t.label} className="grid items-center gap-3 sm:grid-cols-[120px_1fr]">
-              <p className={`label-mono ${t.tone === "signal" ? "text-white" : "text-white/50"}`}>{t.label}</p>
-              <ol className="flex items-center gap-1.5 overflow-x-auto pb-1">
-                {t.steps.map((step, i) => (
-                  <li key={step} className="flex shrink-0 items-center gap-1.5">
-                    <span
-                      className={`rounded-xl px-4 py-2 text-sm font-medium whitespace-nowrap ${
-                        t.tone === "signal" ? "bg-signal text-white shadow-[var(--shadow-glow)]" : "border border-white/15 text-white/60"
-                      }`}
-                    >
-                      {step}
-                    </span>
-                    {i < t.steps.length - 1 && <ArrowRight className={`size-3.5 shrink-0 ${t.tone === "signal" ? "text-white/80" : "text-white/30"}`} aria-hidden />}
-                  </li>
-                ))}
-              </ol>
-            </div>
-          ))}
-          <p className="border-t border-white/10 pt-4 text-xs text-white/50">{s.trackNote}</p>
-        </Reveal>
+        <SpeedRace />
       </div>
     </section>
   );
