@@ -4,7 +4,8 @@
  * then everything a hiring manager would ask before taking a retainer instead of a hire.
  * Keep it in step with the video script.
  *
- * Term, ownership and data-access lines confirmed by Brandon 2026-11-25. Tool costs included, bi-weekly or monthly invoicing, custom code the
+ * Ownership and data-access lines confirmed by Brandon 2026-11-25. Term: the website says "cancel anytime"; the 30 days' notice
+ * lives in the client agreement, never on this page (Brandon, 2026-11-25). Tool costs included, bi-weekly or monthly invoicing, custom code the
  * client owns and the client dashboard come from what he says in the video (edit: ~/Documents/unhired-daily-video/filmed/application).
  */
 
@@ -126,7 +127,7 @@ export const contractPrice = {
   fine: "for full support",
   compare: "That's $36,000 a year. Compare it with the salary in your posting, before payroll taxes and benefits.",
   title: "One flat fee. No contract.",
-  body: "The retainer covers the full scope of the role you posted. It's month to month, and we pay the entire cost of running your AI Employees and automations.",
+  body: "The retainer covers the full scope of the role you posted. It's month to month, you can cancel anytime, and we pay the entire cost of running your AI Employees and automations.",
   included: [
     { t: "Everything in your posting", b: "Finding the work, building it, documenting it and training your staff." },
     { t: "Running costs covered", b: "The AI usage, tools and infrastructure behind what we build are on us." },
@@ -144,7 +145,7 @@ export const contractFaq = {
    
     { q: "Who owns what you build?", a: "You do. Most of what we build is custom code, and it's yours. Workflows, prompts, code and accounts are set up in your company's name, and if you ever end the retainer, everything stays with you, documented." },
    
-    { q: "Are we locked into a contract?", a: "No. There's no contract to sign. It's month to month, and you can cancel with 30 days' notice." },
+    { q: "Are we locked into a contract?", a: "No. It's month to month, and you can cancel anytime." },
     { q: "Is anything extra on top of the $3,000?", a: "We cover the entire cost of running your AI Employees and automations. The one exception is AI-generated media, such as images and videos, which is charged separately." },
     { q: "How do you invoice?", a: "Bi-weekly or monthly, whichever fits your labour budget." },
     { q: "Do you work on site?", a: "We work remotely and come on site when the work calls for it, like the audit or a training session with your team." },
