@@ -369,18 +369,14 @@ function Steps() {
         <ol className="relative mt-12 space-y-0">
           <span aria-hidden className="bg-signal absolute top-4 bottom-4 left-[19px] w-0.5 opacity-40" />
           {s.steps.map((st, i) => (
-            <Reveal as="li" key={st.t} delay={0.04 * i} className="relative grid gap-3 pb-10 pl-16 last:pb-0 md:grid-cols-[1fr_280px] md:gap-10">
+            <Reveal as="li" key={st.t} delay={0.04 * i} className="relative pb-10 pl-16 last:pb-0">
               <span className="bg-signal absolute top-0 left-0 grid size-10 place-items-center rounded-full font-display text-sm font-bold text-white shadow-[var(--shadow-glow)]">
                 {i + 1}
               </span>
               <div>
                 <h3 className="font-display text-xl font-semibold tracking-tight">{st.t}</h3>
-                <p className="mt-1.5 leading-relaxed text-muted">{st.b}</p>
+                <p className="mt-1.5 max-w-2xl leading-relaxed text-muted">{st.b}</p>
               </div>
-              <p className="self-start rounded-2xl border border-violet/20 bg-violet/[0.05] px-4 py-3 text-sm leading-snug">
-                <span className="label-mono block text-[10px] text-violet-deep">You get</span>
-                {st.get}
-              </p>
             </Reveal>
           ))}
         </ol>
