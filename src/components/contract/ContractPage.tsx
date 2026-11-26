@@ -529,7 +529,12 @@ function Testimonials() {
               <p className="label-mono mt-2 text-[10px] text-muted">{it.label}</p>
               <blockquote className="mt-5 flex-1 border-t border-ink/[0.08] pt-5 leading-relaxed text-ink/85">&ldquo;{it.quote}&rdquo;</blockquote>
               <div className="mt-6 flex items-center gap-3">
-                <span className="bg-signal grid size-10 shrink-0 place-items-center rounded-full font-display text-sm font-bold text-white">{initials(it.name)}</span>
+                {"photo" in it && it.photo ? (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img src={it.photo} alt={it.name} width={40} height={40} loading="lazy" className="size-10 shrink-0 rounded-full object-cover" />
+                ) : (
+                  <span className="bg-signal grid size-10 shrink-0 place-items-center rounded-full font-display text-sm font-bold text-white">{initials(it.name)}</span>
+                )}
                 <span className="leading-tight">
                   <span className="block font-display font-semibold">{it.name}</span>
                   {it.company && <span className="block text-sm text-muted">{it.company}</span>}

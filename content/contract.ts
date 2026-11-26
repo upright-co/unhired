@@ -152,7 +152,7 @@ export const contractTestimonials = {
   eyebrow: "In our clients' words",
   title: "What our clients say",
   items: [
-    { stat: "$15M", label: "in pipeline found", quote: "The AI lead-generation system that they built for us has identified $15 million in pipeline opportunity that we otherwise wouldn't have known about.", name: "Jarome L", company: "" },
+    { stat: "$15M", label: "in pipeline found", quote: "The AI lead-generation system that they built for us has identified $15 million in pipeline opportunity that we otherwise wouldn't have known about.", name: "Jarome L", company: "", photo: "/contract/testimonials/jarome-l.jpg" },
     { stat: "2-3", label: "hires avoided", quote: "Working with Brandon and his team has been the biggest kickstart in productivity that our team has ever experienced. His team was able to quickly identify where we need to add AI into our day-to-day systems, and what specific parts of the processes could be automated. Their implementations saved us from having to hire an additional 2-3 people to keep up with the workload.", name: "Camilla R", company: "" },
     { stat: "15 hrs", label: "saved every week", quote: "I would estimate that our team saves about 15 hours per week across our different roles, thanks to AI and automations that Unhired implemented in our business.", name: "Charlie F", company: "" },
     { stat: "10+ hrs", label: "saved every week", quote: "Brandon and his team built us our own AI employee to assist our marketing team with our day-to-day operations, as well as a custom dashboard to go with it. Our team now saves at least 10 hours per week across our marketing and sales department, thanks to the AI.", name: "Anthony M", company: "Premier Built Garages" },
