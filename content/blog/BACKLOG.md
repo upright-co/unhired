@@ -51,4 +51,4 @@ Every article must work for small and medium businesses across industries, never
 - [x] Who manages an AI Employee, and how much of their week it takes (keyword: managing AI employees) → managing-ai-employees
 - [x] How to work out the return on an AI Employee (keyword: AI employee ROI) → ai-employee-roi
 - [x] AI Employees for marketing agencies (keyword: AI for marketing agencies) → ai-for-marketing-agencies
-- [ ] AI Employees for veterinary clinics (keyword: AI receptionist for veterinary clinic)
+- [x] AI Employees for veterinary clinics (keyword: AI receptionist for veterinary clinic) → ai-receptionist-for-veterinary-clinic

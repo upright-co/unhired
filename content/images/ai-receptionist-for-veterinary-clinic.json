@@ -1,0 +1,85 @@
+{
+ "images": [
+  {
+   "type": "cover",
+   "name": "cover",
+   "eyebrow": "AI Employees by industry · Vet clinics",
+   "title": "An *AI Receptionist* for a veterinary clinic",
+   "sub": "Reminders, surgery prep, records requests and after-hours calls, and the calls that stay with your team.",
+   "avatar": "ai-receptionist",
+   "series": "The AI Employee · unhired.io"
+  },
+  {
+   "type": "breakdown",
+   "name": "duties",
+   "title": "The vet clinic front desk, *duty by duty*",
+   "rows": [
+    ["Reminders and confirmations", "Works the due list for vaccines and exams, books replies and fills cancelled slots. Never messages about a deceased pet.", "alone"],
+    ["Surgery and procedure prep", "Sends fasting and drop-off instructions, confirms the night before, flags a pet that already ate.", "reports"],
+    ["Records requests", "Checks the owner's okay, then sends vaccine certificates to kennels, groomers and other clinics.", "alone"],
+    ["Refill requests", "Takes the request, checks the last exam date and queues it for the vet. Never approves it.", "asks"],
+    ["After-hours and overflow", "Answers when the desk is busy or closed, from the clinic's own information.", "reports"],
+    ["Possible emergencies", "Gives the clinic's written instructions and alerts staff right away.", "asks"]
+   ]
+  },
+  {
+   "type": "table",
+   "name": "handoffs",
+   "title": "Calls it *always hands to a person*",
+   "head": ["The caller says", "What the AI Receptionist does", "Who gets it"],
+   "rows": [
+    ["\"He ate a pack of sugar-free gum\"", "Gives the poison instructions, alerts staff now", "Technician or vet"],
+    ["\"She's breathing fast and won't lie down\"", "Tells them to come in now, alerts staff", "Technician or vet"],
+    ["\"Is this limp normal?\"", "Books the earliest visit or a callback", "Technician"],
+    ["\"We think it's time\"", "Connects a person on the first sentence", "Practice manager or vet"],
+    ["\"Why is the estimate so high?\"", "Shares published prices, books a call", "Whoever handles billing"]
+   ],
+   "source": "Examples. Each clinic writes its own emergency list."
+  },
+  {
+   "type": "timeline",
+   "name": "day-on-shift",
+   "title": "A day at a *two-vet clinic*",
+   "avatar": "ai-receptionist",
+   "role": "AI Receptionist",
+   "roleSub": "Reports to the practice manager",
+   "rows": [
+    ["7:15 am", "Sends a boarding kennel the rabies certificate it asked for overnight."],
+    ["7:40 am", "A dental patient's owner says the dog ate breakfast. It flags the surgery for the tech.", "you"],
+    ["7:55 am", "A Lab ate sugar-free gum. It gives the instructions and alerts a technician within a minute.", "you"],
+    ["9:30 am", "Queues a thyroid refill for the vet with the last exam date attached."],
+    ["11:00 am", "Texts 30 clients whose pets are due for vaccines and books the ones who reply."],
+    ["1:20 pm", "A family asks about euthanasia for their old cat. A person takes the call.", "you"],
+    ["3:30 pm", "Sends tomorrow's surgery instructions and confirmations, fills a cancelled slot."],
+    ["8:10 pm", "After hours, a cat is straining in the litter box. It sends them to the emergency hospital and logs it.", "you"]
+   ],
+   "source": "Example day"
+  },
+  {
+   "type": "cost",
+   "name": "cost",
+   "eyebrow": "The cost",
+   "title": "What a vet clinic front-desk seat *costs*",
+   "suffix": " / yr",
+   "highlight": null,
+   "rows": [
+    ["Receptionist, US median wage", 38010, "$18.27 an hour, May 2025."],
+    ["Receptionist, with benefits and payroll taxes", 54300, "Wages are about 70% of compensation."]
+   ],
+   "source": "Source: US Bureau of Labor Statistics, May 2025 wages and ECEC"
+  },
+  {
+   "type": "flow",
+   "name": "setup",
+   "title": "How an AI Receptionist *is set up* at a vet clinic",
+   "steps": [
+    ["Write the emergency list first", "With the medical director: the words that send a call straight to staff, and the after-hours instructions."],
+    ["Map the calls", "Tally a week of calls by type and write the booking rules for each visit, doctor and surgery day."],
+    ["Connect the systems", "Practice management, phone, texting and the reminder tool, with only the access the job needs."],
+    ["Write the handoff rules", "Symptoms, refills, end of life, estimates and upset clients go to a named person."],
+    ["Shadow, then go live", "It drafts while the practice manager reads the log, then takes on more."],
+    ["Review the log every week", "Update it when doctors, surgery days, prices or tools change."]
+   ]
+  }
+ ]
+}
