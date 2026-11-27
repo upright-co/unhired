@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Partner Program · Unhired</title>
+<meta name="robots" content="noindex,nofollow">
+<meta name="description" content="The Unhired Partner Program for staffing, recruiting and virtual assistant firms: refer the roles AI can fill and earn a share of every month the client stays.">
+<link rel="icon" href="/unhired-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap">
+<style>
+:root {
+  --ink: #0E0B1F; --ink-2: #4A4560; --mist: #F6F4FB; --line: #E7E3F0; --white: #fff;
+  --coral: #F65663; --violet: #9452F2; --violet-deep: #6D2FD0;
+  --grad: linear-gradient(90deg, #F65663, #9452F2);
+  --display: "Sora", system-ui, sans-serif; --body: "DM Sans", system-ui, sans-serif;
+}
+* { box-sizing: border-box; }
+html { color-scheme: light; }
+body { margin: 0; background: var(--white); color: var(--ink); font: 17px/1.6 var(--body); -webkit-font-smoothing: antialiased; }
+img { max-width: 100%; display: block; }
+a { color: inherit; }
+h1, h2, h3 { font-family: var(--display); margin: 0; line-height: 1.12; letter-spacing: -0.02em; text-wrap: balance; }
+p { margin: 0; }
+.wrap { max-width: 1080px; margin: 0 auto; padding: 0 max(20px, env(safe-area-inset-left)); }
+.eyebrow { font: 600 12.5px/1 var(--display); letter-spacing: .16em; text-transform: uppercase; color: var(--violet-deep); }
+.grad-text { background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.btn { display: inline-flex; align-items: center; gap: 8px; font: 600 15px var(--display); text-decoration: none; padding: 14px 22px; border-radius: 999px; background: var(--grad); color: #fff; }
+.btn.ghost { background: transparent; border: 1px solid rgba(255,255,255,.28); }
+
+/* ---------- hero ---------- */
+.hero { position: relative; overflow: hidden; background: #0B0818; color: #fff; }
+.hero::before { content: ""; position: absolute; inset: -30% -10% auto auto; width: 820px; height: 820px; border-radius: 50%;
+  background: radial-gradient(closest-side, rgba(148,82,242,.55), rgba(246,86,99,.25) 55%, transparent 75%); filter: blur(10px); }
+.hero::after { content: ""; position: absolute; left: -200px; bottom: -320px; width: 640px; height: 640px; border-radius: 50%;
+  background: radial-gradient(closest-side, rgba(246,86,99,.30), transparent 70%); }
+.hero .wrap { position: relative; z-index: 1; }
+.top { display: flex; justify-content: space-between; align-items: center; padding: 26px 0; }
+.top img { height: 34px; width: auto; }
+.top span { font: 500 13px var(--body); color: rgba(255,255,255,.6); }
+.hero-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: 40px; align-items: center; padding: 48px 0 88px; }
+.hero .eyebrow { color: #C9B2FF; }
+.hero h1 { font-size: clamp(38px, 5.6vw, 64px); font-weight: 800; margin-top: 18px; }
+.hero .sub { margin-top: 22px; font-size: 19px; color: rgba(255,255,255,.78); max-width: 34em; }
+.hero .ctas { margin-top: 32px; display: flex; flex-wrap: wrap; gap: 12px; }
+.hero-art { position: relative; justify-self: center; width: min(100%, 400px); }
+.hero-art img.avatar { width: 100%; border-radius: 28px; box-shadow: 0 30px 80px rgba(148,82,242,.45), 0 0 0 1px rgba(255,255,255,.12); }
+.fee-chip { position: absolute; left: -28px; bottom: -26px; background: #15102A; border: 1px solid rgba(255,255,255,.16);
+  border-radius: 18px; padding: 16px 20px; box-shadow: 0 18px 40px rgba(0,0,0,.45); }
+.fee-chip b { display: block; font: 800 30px var(--display); }
+.fee-chip span { font-size: 13px; color: rgba(255,255,255,.72); }
+
+/* ---------- sections ---------- */
+section { padding: 96px 0; }
+.head { max-width: 46em; }
+.head h2 { font-size: clamp(30px, 3.8vw, 44px); font-weight: 800; margin-top: 14px; }
+.head p { margin-top: 16px; color: var(--ink-2); font-size: 18px; }
+
+/* why now: stat strip */
+.stats { margin-top: 48px; display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--line); }
+.stat { padding: 28px 28px 0 0; }
+.stat + .stat { padding-left: 28px; border-left: 1px solid var(--line); }
+.stat b { font: 800 56px/1 var(--display); letter-spacing: -.03em; }
+.stat p { margin-top: 12px; color: var(--ink-2); font-size: 15.5px; }
+.stat small { display: block; margin-top: 10px; font-size: 12.5px; color: #8A85A0; }
+.stat small a { color: inherit; }
+.quote { margin-top: 56px; padding: 28px 32px; border-left: 4px solid; border-image: var(--grad) 1; background: var(--mist); font: 600 21px/1.45 var(--display); letter-spacing: -.01em; }
+
+/* how it works: stepper */
+.how { background: var(--mist); }
+.steps { margin-top: 56px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; position: relative; }
+.steps::before { content: ""; position: absolute; top: 23px; left: 24px; right: calc(25% - 24px); height: 2px; background: var(--grad); opacity: .5; }
+.step { position: relative; padding-right: 26px; }
+.step i { display: grid; place-items: center; width: 48px; height: 48px; border-radius: 50%; background: #fff; border: 2px solid var(--violet); font: 800 17px var(--display); font-style: normal; color: var(--violet-deep); position: relative; }
+.step:last-child i { background: var(--grad); border: 0; color: #fff; }
+.step h3 { margin-top: 20px; font-size: 19px; }
+.step p { margin-top: 8px; color: var(--ink-2); font-size: 15.5px; }
+.step .who { display: inline-block; margin-top: 12px; font: 600 11.5px var(--display); letter-spacing: .1em; text-transform: uppercase; color: var(--violet-deep); }
+
+/* roles: employee-file style rows */
+.roles { margin-top: 48px; border: 1px solid var(--line); border-radius: 20px; overflow: hidden; }
+.roles .row { display: grid; grid-template-columns: 240px 1fr 180px; gap: 24px; padding: 20px 28px; align-items: center; }
+.roles .row + .row { border-top: 1px solid var(--line); }
+.roles .row.headrow { background: var(--ink); color: rgba(255,255,255,.7); font: 600 12px var(--display); letter-spacing: .12em; text-transform: uppercase; padding-block: 14px; }
+.roles h3 { font-size: 17px; }
+.roles p { color: var(--ink-2); font-size: 15.5px; }
+.roles .cost { font: 700 15px var(--display); text-align: right; }
+.roles .cost span { display: block; font: 500 12.5px var(--body); color: #8A85A0; }
+.promise { margin-top: 40px; display: grid; grid-template-columns: 120px 1fr; gap: 28px; align-items: center; }
+.promise img { width: 120px; }
+.promise h3 { font-size: 22px; }
+.promise p { margin-top: 8px; color: var(--ink-2); }
+.bt { margin-top: 28px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+.bt div { display: grid; grid-template-columns: 64px 1fr; gap: 16px; align-items: center; }
+.bt img { width: 64px; }
+.bt b { font: 700 16px var(--display); display: block; }
+.bt span { font-size: 14.5px; color: var(--ink-2); }
+
+/* money: dark, to-scale bars */
+.money { background: #0B0818; color: #fff; position: relative; overflow: hidden; }
+.money::before { content: ""; position: absolute; right: -260px; top: -200px; width: 700px; height: 700px; border-radius: 50%; background: radial-gradient(closest-side, rgba(148,82,242,.35), transparent 70%); }
+.money .wrap { position: relative; }
+.money .eyebrow { color: #C9B2FF; }
+.money .head p { color: rgba(255,255,255,.72); }
+.deal { margin-top: 48px; display: grid; grid-template-columns: 1fr 1fr; gap: 0; border: 1px solid rgba(255,255,255,.14); border-radius: 22px; overflow: hidden; }
+.deal > div { padding: 34px; }
+.deal > div + div { border-left: 1px solid rgba(255,255,255,.14); }
+.deal b { display: block; font: 800 64px/1 var(--display); letter-spacing: -.03em; }
+.deal h3 { margin-top: 10px; font-size: 20px; }
+.deal p { margin-top: 8px; color: rgba(255,255,255,.7); font-size: 15.5px; }
+.example { margin-top: 56px; }
+.example h3 { font-size: 22px; }
+.example > p { margin-top: 8px; color: rgba(255,255,255,.7); max-width: 46em; }
+.bars { margin-top: 30px; display: grid; gap: 18px; }
+.bar { display: grid; grid-template-columns: 290px 1fr; gap: 20px; align-items: center; }
+.bar .label b { display: block; font: 600 15.5px var(--display); }
+.bar .label span { font-size: 13px; color: rgba(255,255,255,.55); }
+.bar .track { position: relative; height: 44px; }
+.bar .fill { height: 100%; border-radius: 10px; display: flex; align-items: center; justify-content: flex-end; padding-right: 14px; font: 700 15px var(--display); white-space: nowrap; }
+.bar .fill.us { background: var(--grad); }
+.bar .fill.them { background: rgba(255,255,255,.14); }
+.bar .fill.small { justify-content: flex-start; padding: 0; }
+.bar .fill.small em { font-style: normal; position: absolute; left: calc(var(--w) + 12px); }
+.footnote { margin-top: 22px; font-size: 12.5px; color: rgba(255,255,255,.5); max-width: 60em; }
+.footnote a { color: inherit; }
+
+/* why partners */
+.why { display: grid; grid-template-columns: .9fr 1.1fr; gap: 64px; align-items: start; }
+.list { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
+.list li { padding: 22px 0; border-bottom: 1px solid var(--line); display: grid; grid-template-columns: 32px 1fr; gap: 14px; }
+.list li::before { content: ""; width: 22px; height: 22px; margin-top: 3px; border-radius: 50%; background: var(--grad);
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 0a12 12 0 1 0 0 24 12 12 0 0 0 0-24zm-1.6 17.2-5-5 1.7-1.7 3.3 3.3 7-7 1.7 1.7z'/%3E%3C/svg%3E") center/contain no-repeat;
+          mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 0a12 12 0 1 0 0 24 12 12 0 0 0 0-24zm-1.6 17.2-5-5 1.7-1.7 3.3 3.3 7-7 1.7 1.7z'/%3E%3C/svg%3E") center/contain no-repeat; }
+.list b { font: 700 17px var(--display); display: block; }
+.list span { color: var(--ink-2); font-size: 15.5px; }
+
+/* terms */
+.terms { background: var(--mist); }
+.terms dl { margin: 44px 0 0; display: grid; grid-template-columns: 1fr 1fr; gap: 0 56px; }
+.terms dl div { padding: 20px 0; border-top: 1px solid var(--line); }
+.terms dt { font: 700 16px var(--display); }
+.terms dd { margin: 6px 0 0; color: var(--ink-2); font-size: 15.5px; }
+
+/* faq */
+.faq { margin-top: 40px; border-top: 1px solid var(--line); }
+.faq details { border-bottom: 1px solid var(--line); padding: 22px 0; }
+.faq summary { cursor: pointer; list-style: none; font: 700 18px var(--display); display: flex; justify-content: space-between; gap: 20px; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; color: var(--violet-deep); font-weight: 600; }
+.faq details[open] summary::after { content: "–"; }
+.faq p { margin-top: 12px; color: var(--ink-2); max-width: 52em; }
+
+/* cta */
+.cta { background: #0B0818; color: #fff; text-align: center; position: relative; overflow: hidden; }
+.cta::before { content: ""; position: absolute; left: 50%; top: 40%; transform: translate(-50%, -50%); width: 900px; height: 600px; border-radius: 50%; background: radial-gradient(closest-side, rgba(148,82,242,.4), rgba(246,86,99,.15) 60%, transparent 75%); }
+.cta .wrap { position: relative; }
+.cta h2 { font-size: clamp(32px, 4.4vw, 52px); font-weight: 800; max-width: 16em; margin: 0 auto; }
+.cta p { margin: 18px auto 0; max-width: 36em; color: rgba(255,255,255,.75); font-size: 18px; }
+.cta .ctas { margin-top: 32px; display: flex; justify-content: center; flex-wrap: wrap; gap: 12px; }
+.cta small { display: block; margin-top: 40px; color: rgba(255,255,255,.45); font-size: 13px; }
+
+@media (max-width: 860px) {
+  section { padding: 72px 0; }
+  .hero-grid, .why, .deal, .terms dl { grid-template-columns: 1fr; }
+  .hero-art { max-width: 300px; }
+  .top span { display: none; }
+  .fee-chip { left: -10px; }
+  .deal > div + div { border-left: 0; border-top: 1px solid rgba(255,255,255,.14); }
+  .stats { grid-template-columns: 1fr; }
+  .stat + .stat { padding-left: 0; border-left: 0; border-top: 1px solid var(--line); margin-top: 24px; }
+  .steps { grid-template-columns: 1fr 1fr; gap: 36px 0; }
+  .steps::before { display: none; }
+  .roles .row { grid-template-columns: 1fr; gap: 6px; }
+  .roles .row.headrow { display: none; }
+  .roles .cost { text-align: left; }
+  .bt { grid-template-columns: 1fr; }
+  .bar { grid-template-columns: 1fr; gap: 8px; }
+}
+@media print {
+  section, .hero { break-inside: avoid; }
+  .hero::before, .hero::after, .money::before, .cta::before { filter: none; }
+  .fee-chip { backdrop-filter: none; -webkit-backdrop-filter: none; background: #221a3d; }
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="top">
+      <img src="/unhired-logo-ondark.png" alt="Unhired">
+      <span>Partner Program · for staffing, recruiting and VA firms</span>
+    </div>
+    <div class="hero-grid">
+      <div>
+        <p class="eyebrow">Unhired Partner Program</p>
+        <h1>Keep the job orders <span class="grad-text">you can't fill</span>, and get paid every month they stay.</h1>
+        <p class="sub">Some of the roles your clients send you are now done better and cheaper by AI: reception, admin, data entry, bookkeeping. Refer those to us. We build, train and run an AI Employee for your client, and you earn a share of every payment for as long as they stay.</p>
+        <div class="ctas">
+          <a class="btn" href="https://cal.com/brandon-upright/demo-call">Book a partner call</a>
+          <a class="btn ghost" href="#money">See what you earn</a>
+        </div>
+      </div>
+      <div class="hero-art">
+        <img class="avatar" src="/avatars/ai-receptionist.png" alt="An Unhired AI Employee">
+        <div class="fee-chip"><b>20%</b><span>of every monthly payment in year one,<br>10% for as long as they stay</span></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow">Why now</p>
+      <h2>Your clients are already replacing admin roles with AI. The question is who they buy it from.</h2>
+      <p>Office and clerical orders are shrinking, and the roles that remain are hard to fill. When a client asks you about AI, you can either lose the order or hand it to a partner and keep earning on it.</p>
+    </div>
+    <div class="stats">
+      <div class="stat">
+        <b class="grad-text">−9%</b>
+        <p>US office and clerical staffing hours, year over year.</p>
+        <small>Bullhorn Staffing Indicator, week ending Nov 14, 2026 · <a href="https://www.bullhorn.com/resources/staffing-industry-indicator-3/">source</a></small>
+      </div>
+      <div class="stat">
+        <b class="grad-text">14%</b>
+        <p>of large staffing buyers have already replaced temp workers with automation. Administrative work is one of the roles named.</p>
+        <small>Staffing Industry Analysts, 2025 · <a href="https://www.staffingindustry.com/news/global-daily-news/automation-replaces-contingent-workers-at-14-of-firms/">source</a></small>
+      </div>
+      <div class="stat">
+        <b class="grad-text">71%</b>
+        <p>of Canadian employers say they struggle to find the skilled people they need.</p>
+        <small>ManpowerGroup Talent Shortage Survey, Canada 2026 · <a href="https://view.ceros.com/manpowergroup-na/global-talent-shortage-2026-canada">source</a></small>
+      </div>
+    </div>
+    <p class="quote">You don't need to sell AI or understand it. You send us the client, and we do everything after the introduction.</p>
+  </div>
+</section>
+
+<section class="how">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow">How it works</p>
+      <h2>One introduction from you. The rest is on us.</h2>
+    </div>
+    <div class="steps">
+      <div class="step"><i>1</i><h3>Register the client</h3><p>Send us the business name and the role. The client is registered to you for 90 days, so no one else gets credit for them.</p><span class="who">You · 2 minutes</span></div>
+      <div class="step"><i>2</i><h3>Make the intro</h3><p>A short email to the client and us. We run the discovery call and map which parts of the role AI can do. You're welcome to join.</p><span class="who">You · 1 email</span></div>
+      <div class="step"><i>3</i><h3>We build and run it</h3><p>We build the AI Employee, train it on the client's way of working, and maintain it every month. The client pays us directly.</p><span class="who">Unhired</span></div>
+      <div class="step"><i>4</i><h3>You get paid monthly</h3><p>Your share of every payment the client makes: 20% for the first 12 months, then 10% for as long as they stay.</p><span class="who">Unhired pays you</span></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow">What your client gets</p>
+      <h2>An AI Employee for the role they were about to post.</h2>
+      <p>These are the roles we fill. If a role needs a person in the room, we'll say so on the first call, and that client goes back to you for the hire.</p>
+    </div>
+    <div class="roles">
+      <div class="row headrow"><span>Role</span><span>What the AI Employee does</span><span style="text-align:right">Client pays</span></div>
+      <div class="row"><h3>Receptionist</h3><p>Answers every call and chat around the clock, books and reschedules, takes messages and sends follow-ups.</p><p class="cost">At most half<span>the role's salary</span></p></div>
+      <div class="row"><h3>Administrative assistant</h3><p>Works the inbox, keeps calendars, prepares documents and chases paperwork.</p><p class="cost">At most half<span>the role's salary</span></p></div>
+      <div class="row"><h3>Data entry clerk</h3><p>Reads invoices, receipts, orders and forms, enters them into the client's systems and flags anything that doesn't match.</p><p class="cost">At most half<span>the role's salary</span></p></div>
+      <div class="row"><h3>Bookkeeper</h3><p>Matches bank transactions, tracks receivables and prepares month-end for the accountant to review.</p><p class="cost">At most half<span>the role's salary</span></p></div>
+      <div class="row"><h3>Customer service and dispatch</h3><p>Handles common questions by phone, email and chat, logs orders and routes jobs to the right person.</p><p class="cost">At most half<span>the role's salary</span></p></div>
+    </div>
+    <div class="promise">
+      <img src="/guarantee/badge.png" alt="">
+      <div>
+        <h3>The 50% guarantee your client gets</h3>
+        <p>The AI Employee costs your client at most half of the role's salary, billed monthly like a payroll line. Nothing up front.</p>
+      </div>
+    </div>
+    <div class="bt">
+      <div><img src="/guarantee/build.png" alt=""><p><b>We build it</b><span>Connected to the tools the client already uses.</span></p></div>
+      <div><img src="/guarantee/train.png" alt=""><p><b>We train it</b><span>On the client's own scripts, prices and rules.</span></p></div>
+      <div><img src="/guarantee/maintain.png" alt=""><p><b>We maintain it</b><span>Every month, for as long as the client stays.</span></p></div>
+    </div>
+  </div>
+</section>
+
+<section class="money" id="money">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow">What you earn</p>
+      <h2>A share of every month, not a one-time fee.</h2>
+      <p>Your fee follows the client's payments, the way temp margin does, but you carry no payroll or workers' comp, and there's no replacement guarantee to honour.</p>
+    </div>
+    <div class="deal">
+      <div><b class="grad-text">20%</b><h3>Months 1 to 12</h3><p>Of every monthly payment the client makes to us in their first year.</p></div>
+      <div><b>10%</b><h3>Month 13 onward</h3><p>Of every payment after that, for as long as the client stays with us.</p></div>
+    </div>
+
+    <div class="example">
+      <h3>One referral, worked through</h3>
+      <p>A client is about to hire an administrative assistant at $50,000 a year. With the guarantee, their AI Employee costs at most $25,000 a year (about $2,083 a month). Bars are drawn to scale.</p>
+      <div class="bars">
+        <div class="bar">
+          <div class="label"><b>Your partner fee, year one</b><span>20% × $25,000</span></div>
+          <div class="track"><div class="fill us" style="width:50%">$5,000</div></div>
+        </div>
+        <div class="bar">
+          <div class="label"><b>Your partner fee, every year after</b><span>10% × $25,000</span></div>
+          <div class="track"><div class="fill us" style="width:25%">$2,500</div></div>
+        </div>
+        <div class="bar">
+          <div class="label"><b>Your total by month 36</b><span>$5,000 + $2,500 + $2,500</span></div>
+          <div class="track"><div class="fill us" style="width:100%">$10,000</div></div>
+        </div>
+        <div class="bar">
+          <div class="label"><b>Net profit placing a temp for a year</b><span>Same $50,000 role, typical margins</span></div>
+          <div class="track"><div class="fill them" style="width:25%">$2,500</div></div>
+        </div>
+      </div>
+      <p class="footnote">Temp example: $50,000 a year is $24.04 an hour; at the American Staffing Association's worked example (51.5% markup, 3.3% net profit) a full year bills about $75,750 and nets about $2,500 (<a href="https://bendchamber.org/wp-content/uploads/2023/04/Understanding-Staffing-Profit.pdf">ASA, Understanding Staffing Profit</a>). Partner fees are paid on what the client actually pays us, in the client's currency; the example uses the guarantee's maximum price. A permanent placement typically pays a one-time 20% of first-year salary (<a href="https://www.secondtalent.com/resources/direct-hire-placement-fees/">SIA survey, as cited</a>): the partner program is for the orders that never get that far.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap why">
+    <div class="head">
+      <p class="eyebrow">Why firms partner with us</p>
+      <h2>It adds a line of revenue without adding work.</h2>
+      <p>Placing people stays your business. The program covers the orders you'd otherwise turn down, lose to a cheaper option, or never get because the client went looking for AI first.</p>
+    </div>
+    <ul class="list">
+      <li><p><b>We never compete for your placements</b><span>We don't place people. When a client needs a human, for the whole role or the part AI can't do, we send them back to you.</span></p></li>
+      <li><p><b>Your client stays your client</b><span>We don't sell to them around you, and every role they add with us later pays you too.</span></p></li>
+      <li><p><b>Nothing to learn or support</b><span>No software to sell and no support tickets. We run the calls, the build and the monthly upkeep.</span></p></li>
+      <li><p><b>An answer when clients ask about AI</b><span>Instead of "we don't do that", you have a partner who does, with your name on the introduction.</span></p></li>
+      <li><p><b>Income that compounds</b><span>Each referral keeps paying monthly, so a handful of clients becomes a steady line on your P&amp;L.</span></p></li>
+    </ul>
+  </div>
+</section>
+
+<section class="terms">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow">The terms</p>
+      <h2>Simple, and written down.</h2>
+    </div>
+    <dl>
+      <div><dt>Partner fee</dt><dd>20% of the client's monthly payments for their first 12 months, then 10% for as long as they stay. Every new role the client adds with us earns the same.</dd></div>
+      <div><dt>When you're paid</dt><dd>Monthly, on the payments the client has made to us. Payouts start once the client has been with us 90 days, and nothing is ever clawed back.</dd></div>
+      <div><dt>Registration</dt><dd>Register a client before the introduction. They're yours for 90 days; once they sign in that window, they're yours for good.</dd></div>
+      <div><dt>Cost to join</dt><dd>Nothing, and there are no minimums or exclusivity.</dd></div>
+      <div><dt>Who talks to the client</dt><dd>We run every call after the introduction and keep you copied on anything you want to see.</dd></div>
+      <div><dt>Client data</dt><dd>We work through accounts the client owns and can switch off, and their customer data stays in their systems.</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow">Questions</p>
+      <h2>What partners ask first.</h2>
+    </div>
+    <div class="faq">
+      <details><summary>Won't this cut into my own placements?</summary><p>Only for orders AI can fill, and those are the ones already leaving the market. If any part of a role needs a person, the client goes back to you for that hire, and we tell them so on the first call.</p></details>
+      <details><summary>What if the AI Employee can't do the role?</summary><p>We check that before anything is signed. On the discovery call we split the role into its tasks and show the client which ones AI handles. If too much of the job needs a person, we say so and the order is yours.</p></details>
+      <details><summary>How does the client pay?</summary><p>Directly to Unhired, monthly, like a payroll line. You never invoice the client or handle the money.</p></details>
+      <details><summary>Do I need to know anything about AI?</summary><p>No. Knowing which clients are struggling to fill an admin, reception, data entry or bookkeeping role is enough. We do the explaining.</p></details>
+      <details><summary>Can I join if I run a virtual assistant or answering service firm?</summary><p>Yes. Many of your clients need round-the-clock coverage or high-volume work your team can't price well. Refer that part to us and keep the work your people do best.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap">
+    <h2>Talk to us about the orders on your desk right now.</h2>
+    <p>Twenty minutes: how the program works and which of your open orders fit.</p>
+    <div class="ctas">
+      <a class="btn" href="https://cal.com/brandon-upright/demo-call">Book a partner call</a>
+      <a class="btn ghost" href="mailto:hello@unhired.io?subject=Partner%20Program">hello@unhired.io</a>
+    </div>
+    <small>Unhired · Edmonton, Alberta · unhired.io</small>
+  </div>
+</section>
+
+</body>
+</html>

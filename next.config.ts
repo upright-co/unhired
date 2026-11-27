@@ -28,11 +28,18 @@ const nextConfig: NextConfig = {
         source: "/premier-garage",
         headers: [{ key: "X-Robots-Tag", value: "noindex, nofollow" }],
       },
+      {
+        source: "/partners",
+        headers: [{ key: "X-Robots-Tag", value: "noindex, nofollow" }],
+      },
     ];
   },
   // Client proposals are static pages in public/proposals/<client>/, served at a short URL.
   async rewrites() {
-    return [{ source: "/premier-garage", destination: "/proposals/premier-garage/index.html" }];
+    return [
+      { source: "/premier-garage", destination: "/proposals/premier-garage/index.html" },
+      { source: "/partners", destination: "/proposals/partners/index.html" },
+    ];
   },
   // One canonical host for search: www.unhired.io permanently redirects to unhired.io.
   async redirects() {
