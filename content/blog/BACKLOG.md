@@ -52,3 +52,15 @@ Every article must work for small and medium businesses across industries, never
 - [x] How to work out the return on an AI Employee (keyword: AI employee ROI) → ai-employee-roi
 - [x] AI Employees for marketing agencies (keyword: AI for marketing agencies) → ai-for-marketing-agencies
 - [x] AI Employees for veterinary clinics (keyword: AI receptionist for veterinary clinic) → ai-receptionist-for-veterinary-clinic
+
+## Added 2026-11-28 (backlog had run out again)
+- [x] AI Accounts Payable clerk: bills in, coded, approved and paid on time (keyword: AI accounts payable) → ai-accounts-payable
+- [ ] AI Answering Service: after-hours calls, messages and urgent hand-offs (keyword: AI answering service)
+- [ ] AI Collections assistant: overdue accounts, reminders and payment plans (keyword: AI collections)
+- [ ] AI Employees for nonprofits: donors, volunteers and admin (keyword: AI for nonprofits)
+- [ ] AI Employees for logistics and distribution companies (keyword: AI for logistics companies)
+- [ ] AI Employees for consulting firms (keyword: AI for consulting firms)
+- [ ] What tools and access an AI Employee needs on day one (keyword: AI employee tools)
+- [ ] How to tell your team you're bringing in an AI Employee (keyword: introducing AI to employees)
+- [ ] AI Employee contracts: what to check before you sign with a provider (keyword: AI employee contract)
+- [ ] AI Employees and privacy law for small businesses (keyword: AI privacy small business)

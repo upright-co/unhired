@@ -1,0 +1,211 @@
+<!doctype html><html><head><meta charset="utf-8">
+<title>AI Accounts Payable: four checks</title>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&family=DM+Sans:wght@400;500;600&family=JetBrains+Mono:wght@500;600&display=block" rel="stylesheet">
+<!-- Animated LinkedIn post, 1080x1350 (4:5), seamless loop of DURATION seconds.
+     Layout: inbox/queue that empties. Six bills slide off a conveyor into a check card, get four checks,
+     then drop into "Payment batch" or "Held for a person". Background: ink with a big coral/violet duotone circle. -->
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1350px;overflow:hidden;background:#09070F}
+.b{position:relative;width:1080px;height:1350px;overflow:hidden;background:#09070F;color:#fff;font-family:'DM Sans',sans-serif}
+.disc{position:absolute;width:1040px;height:1040px;border-radius:50%;left:420px;top:330px;background:linear-gradient(135deg,#F65663 0%,#C04FB0 45%,#9452F2 100%);opacity:.92}
+.disc2{position:absolute;width:1040px;height:1040px;border-radius:50%;left:420px;top:330px;border:2px solid rgba(255,255,255,.18);transform:scale(1.08)}
+.head{position:absolute;left:44px;right:44px;top:44px;display:flex;align-items:center;justify-content:space-between}
+.head img{height:24px;opacity:.7;display:block}
+.tag{font:600 15px 'JetBrains Mono',monospace;letter-spacing:.16em;color:#FF8A94;border:1.5px solid rgba(246,86,99,.55);border-radius:999px;padding:10px 20px}
+h1{position:absolute;left:44px;right:44px;top:108px;font:700 78px/1.0 'Sora',sans-serif;letter-spacing:-3.2px}
+h1 span{background:linear-gradient(90deg,#FF8A94,#B07CFF);-webkit-background-clip:text;color:transparent}
+.sub{position:absolute;left:44px;width:760px;top:282px;font:400 24px/1.4 'DM Sans';color:rgba(255,255,255,.74)}
+.stage{position:absolute;inset:0}
+
+.qlbl{position:absolute;left:44px;top:388px;font:600 15px 'JetBrains Mono',monospace;letter-spacing:.18em;color:rgba(255,255,255,.6)}
+.qlbl b{color:#fff}
+.queue{position:absolute;left:44px;right:44px;top:420px;height:96px;overflow:hidden}
+.chip{position:absolute;top:0;width:232px;height:96px;border-radius:16px;background:#141020;border:1.5px solid rgba(255,255,255,.14);padding:14px 18px}
+.chip .n{font:600 13px 'JetBrains Mono',monospace;letter-spacing:.12em;color:rgba(255,255,255,.5)}
+.chip .s{margin-top:6px;font:600 19px 'Sora';letter-spacing:-.4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.chip .a{margin-top:2px;font:500 17px 'JetBrains Mono',monospace;color:#FF8A94}
+
+.card{position:absolute;left:44px;right:44px;top:540px;height:350px;border-radius:26px;background:#120E1C;border:1.5px solid rgba(255,255,255,.14);box-shadow:0 30px 80px rgba(0,0,0,.45);overflow:hidden}
+.bill{position:absolute;left:34px;top:30px;width:420px}
+.bill .e{font:600 14px 'JetBrains Mono',monospace;letter-spacing:.16em;color:rgba(255,255,255,.55)}
+.bill .s{margin-top:14px;font:700 36px/1.1 'Sora';letter-spacing:-1.2px}
+.bill .a{margin-top:14px;font:600 48px 'JetBrains Mono',monospace;letter-spacing:-1px;color:#fff}
+.bill .d{margin-top:14px;font:400 21px/1.35 'DM Sans';color:rgba(255,255,255,.72)}
+.checks{position:absolute;left:486px;right:28px;top:26px}
+.ck{height:72px;margin-bottom:4px;display:flex;align-items:center;gap:16px;border-radius:14px;padding:0 16px}
+.ck .dot{width:38px;height:38px;flex:none;border-radius:50%;border:2px solid rgba(255,255,255,.22);display:flex;align-items:center;justify-content:center;font:700 20px 'DM Sans'}
+.ck .l{font:500 21px 'DM Sans';color:rgba(255,255,255,.5)}
+.done{position:absolute;inset:0;padding:44px 40px;opacity:0;background:linear-gradient(135deg,rgba(246,86,99,.12),rgba(148,82,242,.16))}
+.done .e{font:600 15px 'JetBrains Mono',monospace;letter-spacing:.18em;color:#FF8A94}
+.done .s{margin-top:18px;font:700 52px/1.1 'Sora';letter-spacing:-2px}
+.done .s span{background:linear-gradient(90deg,#FF8A94,#B07CFF);-webkit-background-clip:text;color:transparent}
+.done .d{margin-top:22px;font:400 24px 'DM Sans';color:rgba(255,255,255,.78)}
+
+.bins{position:absolute;left:44px;right:44px;top:920px;height:300px;display:flex;gap:20px}
+.bin{position:relative;flex:1;border-radius:24px;background:#120E1C;border:1.5px solid rgba(255,255,255,.14);padding:24px 26px;overflow:hidden}
+.bin .lb{font:600 14px 'JetBrains Mono',monospace;letter-spacing:.16em}
+.bin.pay .lb{color:#C6A2FF}.bin.hold .lb{color:#FF8A94}
+.bin .glow{position:absolute;inset:0;opacity:0}
+.bin.pay .glow{background:linear-gradient(135deg,rgba(148,82,242,.35),rgba(148,82,242,.05))}
+.bin.hold .glow{background:linear-gradient(135deg,rgba(246,86,99,.32),rgba(246,86,99,.04))}
+.big{position:relative;margin-top:14px;font:600 64px/1 'JetBrains Mono',monospace;letter-spacing:-2px}
+.unit{position:relative;margin-top:8px;font:500 20px 'DM Sans';color:rgba(255,255,255,.7)}
+.rel{position:relative;margin-top:18px;font:500 19px/1.35 'DM Sans';color:rgba(255,255,255,.55)}
+.rows{position:relative;margin-top:14px}
+.hr{display:flex;gap:12px;align-items:flex-start;margin-bottom:12px;font:500 19px/1.3 'DM Sans';color:#fff}
+.hr i{flex:none;width:10px;height:10px;border-radius:50%;background:#F65663;margin-top:8px}
+.fly{position:absolute;width:250px;height:64px;border-radius:14px;padding:10px 16px;font:600 17px 'JetBrains Mono',monospace;display:flex;align-items:center;justify-content:center;opacity:0;box-shadow:0 18px 40px rgba(0,0,0,.4)}
+.foot{position:absolute;left:44px;right:44px;bottom:34px;display:flex;justify-content:space-between;align-items:center;font:500 17px 'DM Sans';color:rgba(255,255,255,.6)}
+.foot .mono{font:500 16px 'JetBrains Mono',monospace;letter-spacing:.08em;color:rgba(255,255,255,.7)}
+</style></head><body><div class="b">
+<div class="disc"></div><div class="disc2" id="disc2"></div>
+<div class="head"><img src="../facebook/logo-ondark.png" alt="Unhired"><div class="tag">AI ACCOUNTS PAYABLE</div></div>
+<h1>Every bill gets four checks<br><span>before anyone pays it</span></h1>
+<p class="sub">An AI accounts payable clerk reads, codes and matches each bill. Anything odd is held, and a person releases the money.</p>
+
+<div class="stage" id="stage">
+ <div class="qlbl">PAYABLES INBOX · <b id="qn">6</b> WAITING</div>
+ <div class="queue" id="queue"></div>
+ <div class="card" id="card">
+  <div class="bill" id="bill"><div class="e" id="be"></div><div class="s" id="bs"></div><div class="a" id="ba"></div><div class="d" id="bd"></div></div>
+  <div class="checks" id="checks"></div>
+  <div class="done" id="done"><div class="e">INBOX CLEARED</div><div class="s">6 bills in. 3 ready to pay,<br><span>3 held for a person.</span></div><div class="d">Nothing is paid until a person releases the batch.</div></div>
+ </div>
+ <div class="bins">
+  <div class="bin pay" id="binpay"><div class="glow" id="gpay"></div><div class="lb">THURSDAY PAYMENT BATCH</div>
+   <div class="big" id="ptotal">$0</div><div class="unit" id="pcount">0 bills ready</div>
+   <div class="rel" id="prel">A person reviews the batch and releases it in the bank.</div></div>
+  <div class="bin hold" id="binhold"><div class="glow" id="ghold"></div><div class="lb">HELD FOR A PERSON</div>
+   <div class="rows" id="hrows"></div></div>
+ </div>
+ <div class="fly" id="fly"></div>
+</div>
+<div class="foot"><span>Example bills at an online retailer</span><span class="mono">unhired.io</span></div>
+</div>
+
+<script>
+window.DURATION=21;
+const CHECKS=['Not a duplicate','Coded to the right account','Matches the PO and receipt','Bank details match the file'];
+// fail: index of the check that stops the bill (-1 = passes)
+const BILLS=[
+ {n:'INV 40417',s:'Freight bill',a:1240,d:'Arrived by PDF on Tuesday night',fail:-1},
+ {n:'INV 40417',s:'Freight bill',a:1240,d:'The same invoice, sent again as a link',fail:0,why:'Duplicate freight bill held'},
+ {n:'INV 8821',s:'Packaging supplier',a:3860,d:'PO 1192, 120 cartons received',fail:-1},
+ {n:'INV 5530',s:'Product supplier',a:6400,d:'Billed for 40 cases. Receiving shows 36',fail:2,why:'Short shipment, credit note asked for'},
+ {n:'INV 2207',s:'Software renewal',a:480,d:'Same amount as last month',fail:-1},
+ {n:'INV 7714',s:'Fabric supplier',a:9150,d:'Email says they have changed banks',fail:3,why:'New bank details: call the number on file'},
+];
+const T=window.DURATION, START=1.0, STEP=2.75;
+const IN=.45, CK0=.5, CKS=.34, OUT0=2.0, OUTL=.6;
+const $=id=>document.getElementById(id);
+const money=v=>'$'+Math.round(v).toLocaleString('en-US');
+const clamp=(x,a=0,b=1)=>Math.min(b,Math.max(a,x));
+const ease=x=>x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2;
+const back=x=>{const c=1.7;return 1+(c+1)*Math.pow(x-1,3)+c*Math.pow(x-1,2);};
+
+BILLS.forEach((b,i)=>{const c=document.createElement('div');c.className='chip';c.id='c'+i;
+ c.innerHTML=`<div class="n">${b.n}</div><div class="s">${b.s}</div><div class="a">${money(b.a)}</div>`;$('queue').appendChild(c);});
+CHECKS.forEach((l,j)=>{const r=document.createElement('div');r.className='ck';r.id='k'+j;
+ r.innerHTML=`<div class="dot"></div><div class="l">${l}</div>`;$('checks').appendChild(r);});
+const held=BILLS.filter(b=>b.fail>=0);
+held.forEach((b,i)=>{const r=document.createElement('div');r.className='hr';r.id='h'+i;r.innerHTML=`<i></i><span>${b.why}</span>`;$('hrows').appendChild(r);});
+
+window.render=function(tt){
+ let t=((tt%T)+T)%T, op=1;
+ const fo=T-1.3;
+ if(t>=fo&&t<fo+.5)op=1-ease((t-fo)/.5);
+ if(t>=fo+.5){op=ease(clamp((t-fo-.5)/.5));t=0;}
+ $('stage').style.opacity=op;
+ $('disc2').style.transform=`scale(${1.06+.025*Math.sin(t*1.6)})`;
+
+ // which bill is in the card
+ const k=Math.floor((t-START)/STEP), lt=t-START-k*STEP;
+ const cur=(t>=START&&k<BILLS.length)?k:-1;
+
+ // queue: chips slide left as bills enter
+ let entered=0;
+ BILLS.forEach((b,i)=>{const s=START+i*STEP;entered+=ease(clamp((t-s)/IN));});
+ BILLS.forEach((b,i)=>{const c=$('c'+i);const pos=i-entered;
+  c.style.left=(pos*248)+'px';
+  c.style.opacity=clamp(1+pos/0.5);c.style.transform=`translateY(${clamp(-pos/0.5)*40}px)`;
+  c.style.borderColor=(pos>=0&&pos<1)?'rgba(246,86,99,.6)':'rgba(255,255,255,.14)';});
+ const waiting=BILLS.length-BILLS.filter((b,i)=>t>=START+i*STEP+IN*.5).length;
+ $('qn').textContent=waiting;
+
+ // card
+ const card=$('card');
+ if(cur>=0){
+  const b=BILLS[cur];
+  $('be').textContent=`BILL ${cur+1} OF ${BILLS.length} · ${b.n}`;$('bs').textContent=b.s;$('ba').textContent=money(b.a)+'.00';$('bd').textContent=b.d;
+  const pin=ease(clamp(lt/IN)), pout=ease(clamp((lt-OUT0)/OUTL*1.6));
+  $('bill').style.opacity=pin*(1-pout);
+  $('bill').style.transform=`translateX(${(1-pin)*70}px) translateY(${pout*30}px)`;
+  const stopAt=b.fail>=0?b.fail:CHECKS.length;
+  CHECKS.forEach((l,j)=>{const r=$('k'+j),dot=r.querySelector('.dot'),lab=r.querySelector('.l');
+   const s=CK0+j*CKS,p=clamp((lt-s)/.22),shown=lt>=s&&j<=stopAt;
+   const fail=j===b.fail;
+   r.style.opacity=1-pout*.6;
+   if(shown&&j<stopAt||(shown&&fail)){
+    const sc=back(p);
+    dot.style.transform=`scale(${.4+.6*sc})`;
+    if(fail){dot.textContent='!';dot.style.background='#F65663';dot.style.borderColor='#F65663';dot.style.color='#fff';
+     r.style.background=`rgba(246,86,99,${.16*p})`;lab.style.color='#fff';lab.textContent=l+(p>.5?': held':'');}
+    else{dot.textContent='✓';dot.style.background='#9452F2';dot.style.borderColor='#9452F2';dot.style.color='#fff';
+     r.style.background='transparent';lab.style.color='#fff';lab.textContent=l;}
+   } else {
+    dot.textContent='';dot.style.transform='scale(1)';dot.style.background='transparent';dot.style.color='#fff';
+    dot.style.borderColor=(j>stopAt&&lt>=CK0+stopAt*CKS)?'rgba(255,255,255,.08)':'rgba(255,255,255,.22)';
+    r.style.background='transparent';lab.textContent=l;
+    lab.style.color=(j>stopAt&&lt>=CK0+stopAt*CKS)?'rgba(255,255,255,.22)':'rgba(255,255,255,.5)';
+   }
+  });
+  const decided=lt>=CK0+Math.min(stopAt,CHECKS.length-1)*CKS+.22;
+  card.style.borderColor=decided?(b.fail>=0?'rgba(246,86,99,.75)':'rgba(176,124,255,.75)'):'rgba(255,255,255,.14)';
+  card.style.boxShadow=decided?`0 30px 80px rgba(0,0,0,.45),0 0 50px ${b.fail>=0?'rgba(246,86,99,.3)':'rgba(148,82,242,.35)'}`:'0 30px 80px rgba(0,0,0,.45)';
+  // flying token
+  const fp=clamp((lt-OUT0)/OUTL), fly=$('fly');
+  if(lt>=OUT0&&fp<1){
+   const e=ease(fp), toPay=b.fail<0;
+   const x0=415,y0=700, x1=toPay?160:660, y1=toPay?1010:1060;
+   fly.style.left=(x0+(x1-x0)*e)+'px';fly.style.top=(y0+(y1-y0)*e-90*Math.sin(Math.PI*e))+'px';
+   fly.style.opacity=fp<.85?1:1-(fp-.85)/.15;fly.style.transform=`scale(${1-.35*e})`;
+   fly.textContent=`${b.n} · ${money(b.a)}`;
+   fly.style.background=toPay?'#9452F2':'#F65663';fly.style.color='#fff';
+  } else fly.style.opacity=0;
+ } else {
+  $('bill').style.opacity=0;card.style.borderColor='rgba(255,255,255,.14)';card.style.boxShadow='0 30px 80px rgba(0,0,0,.45)';
+  CHECKS.forEach((l,j)=>{const r=$('k'+j),dot=r.querySelector('.dot'),lab=r.querySelector('.l');dot.textContent='';dot.style.background='transparent';dot.style.borderColor='rgba(255,255,255,.22)';dot.style.transform='scale(1)';r.style.background='transparent';r.style.opacity=t<START?1:.5;lab.textContent=l;lab.style.color='rgba(255,255,255,.5)';});
+  $('fly').style.opacity=0;
+ }
+
+ // bins: count arrivals
+ let total=0,count=0,hn=0;
+ BILLS.forEach((b,i)=>{const arr=START+i*STEP+OUT0+OUTL*.85;
+  const p=ease(clamp((t-arr)/.5));
+  if(b.fail<0){total+=b.a*p;if(t>=arr)count++;}
+  else{const hi=held.indexOf(b);const r=$('h'+hi);r.style.opacity=p;r.style.transform=`translateX(${(1-p)*24}px)`;if(t>=arr)hn++;}
+ });
+ $('ptotal').textContent=money(total);
+ $('pcount').textContent=count+(count===1?' bill':' bills')+' ready';
+ const lastPay=Math.max(...BILLS.map((b,i)=>b.fail<0?START+i*STEP+OUT0+OUTL*.85:0));
+ const lastHold=Math.max(...BILLS.map((b,i)=>b.fail>=0?START+i*STEP+OUT0+OUTL*.85:0));
+ const endT=START+BILLS.length*STEP;
+ const gk=ease(clamp((t-endT)/.6));
+ // short pulse on each arrival
+ let pp=0,ph=0;
+ BILLS.forEach((b,i)=>{const arr=START+i*STEP+OUT0+OUTL*.85,d=t-arr;if(d>=0&&d<.6){const v=1-d/.6;if(b.fail<0)pp=Math.max(pp,v);else ph=Math.max(ph,v);}});
+ $('gpay').style.opacity=Math.max(pp*.8,gk);$('ghold').style.opacity=Math.max(ph*.8,gk*.7);
+ $('binpay').style.borderColor=`rgba(176,124,255,${.2+.6*Math.max(pp,gk)})`;
+ $('binhold').style.borderColor=`rgba(246,86,99,${.2+.6*Math.max(ph,gk*.8)})`;
+ const dk=ease(clamp((t-endT+.1)/.6));
+ $('done').style.opacity=dk;$('done').style.transform=`translateY(${(1-dk)*24}px)`;
+ $('checks').style.opacity=1-dk;
+ $('prel').style.color=gk>0?`rgba(255,255,255,${.55+.4*gk})`:'rgba(255,255,255,.55)';
+};
+
+window.ready=document.fonts.ready.then(()=>Promise.all([...document.images].map(i=>i.complete?1:new Promise(r=>{i.onload=i.onerror=r}))));
+if(!location.search.includes('capture')){const t0=performance.now();window.ready.then(()=>{const loop=()=>{render((performance.now()-t0)/1000);requestAnimationFrame(loop)};loop();});}
+else render(0);
+</script>
+</body></html>

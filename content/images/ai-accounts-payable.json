@@ -1,0 +1,100 @@
+{
+ "images": [
+  {
+   "type": "cover",
+   "name": "cover",
+   "eyebrow": "AI Employee roles · Accounts payable",
+   "title": "The *AI accounts payable* clerk",
+   "sub": "Bills read, coded, matched and approved on time, with a person releasing every payment.",
+   "avatar": "ai-bookkeeper",
+   "series": "The AI Employee · unhired.io"
+  },
+  {
+   "type": "quote",
+   "name": "quote",
+   "text": "A late reminder is embarrassing. *A payment to the wrong account is usually gone.*",
+   "by": "Brandon Upright"
+  },
+  {
+   "type": "breakdown",
+   "name": "duties",
+   "title": "Accounts payable, *duty by duty*",
+   "rows": [
+    ["Getting bills in", "Collects bills from the inbox and supplier portals, reads them in, holds likely duplicates.", "alone"],
+    ["Coding", "Codes from supplier history and the chart of accounts. New or unusual bills go on a list.", "reports"],
+    ["Matching", "Checks the bill against the PO and the receipt. Asks the supplier for a credit on a short shipment.", "alone"],
+    ["Approvals", "Routes each bill by your limits and follows up when one sits too long.", "alone"],
+    ["Supplier questions", "Answers payment status from the records and reconciles statements each month.", "alone"],
+    ["Payment run", "Builds the batch and checks every line. A person releases it in the bank.", "asks"]
+   ]
+  },
+  {
+   "type": "table",
+   "name": "routing",
+   "title": "An example *approval routing*",
+   "head": ["Bill", "Who approves", "Before payment"],
+   "rows": [
+    ["Recurring, under $500, matches last month", "AI Employee", "Queued for the next run"],
+    ["$500 to $5,000", "Department manager", "Reminder after 3 days"],
+    ["Over $5,000", "Owner or controller", "Reminder after 2 days"],
+    ["Doesn't match the PO or receipt", "Held", "Supplier asked for a correction"],
+    ["New supplier or new bank details", "A person, by phone", "Confirmed with a contact on file"]
+   ],
+   "source": "Example. Every business sets its own limits."
+  },
+  {
+   "type": "stats",
+   "name": "fraud",
+   "title": "Why bank changes *stay with a person*",
+   "items": [
+    ["$2.77B", "Reported US losses to business email compromise in 2024"],
+    ["76%", "of US organizations faced attempted or actual payments fraud in 2025"]
+   ],
+   "source": "Sources: FBI IC3 2024 Internet Crime Report; AFP 2026 Payments Fraud and Control Survey"
+  },
+  {
+   "type": "timeline",
+   "name": "wednesday",
+   "title": "A Wednesday at a *30-person online retailer*",
+   "avatar": "ai-bookkeeper",
+   "role": "AI Employee, accounts payable",
+   "roleSub": "Reports to the operations manager",
+   "rows": [
+    ["6:30 am", "Reads 23 overnight bills, codes them and matches 17 to purchase orders."],
+    ["7:10 am", "A freight bill arrived twice, once as a PDF and once as a link. Holds the copy."],
+    ["9:20 am", "A supplier emails new bank details. Holds their bill for a call to the number on file.", "you"],
+    ["11:00 am", "Bill for 40 cases, receiving shows 36. Asks the supplier for a credit note.", "you"],
+    ["1:45 pm", "Reminds the marketing lead about four bills waiting five days for approval."],
+    ["3:30 pm", "Answers two suppliers asking when they'll be paid."],
+    ["4:30 pm", "Sends Thursday's payment batch of 31 bills for review and release.", "you"]
+   ],
+   "source": "Example day"
+  },
+  {
+   "type": "cost",
+   "name": "cost",
+   "eyebrow": "The cost",
+   "title": "What a payables seat *costs*",
+   "suffix": " / yr",
+   "highlight": null,
+   "rows": [
+    ["Bookkeeping and accounting clerks, US median", 50670, "$24.36 an hour, May 2025. Includes accounts payable clerks."],
+    ["Clerk with benefits and payroll taxes", 72400, "Wages are about 70% of compensation."]
+   ],
+   "source": "Source: US Bureau of Labor Statistics, Occupational Outlook Handbook (May 2025) and ECEC"
+  },
+  {
+   "type": "flow",
+   "name": "setup",
+   "title": "How an AI accounts payable clerk *is set up*",
+   "steps": [
+    ["Map where bills come from", "The payables inbox, supplier portals, paper mail and automatic charges."],
+    ["Write the coding rules", "Your chart of accounts, locations or classes, and how billable costs are tagged."],
+    ["Set approval limits", "Who approves what amount, and how long a bill can wait before a reminder."],
+    ["List the odd suppliers", "Statements without invoices, changing amounts, forms they need first."],
+    ["Connect with limited access", "Accounting software, payables inbox, read-only bank feed. No access to move money."],
+    ["Shadow for two or three weeks", "It codes and routes every bill as a draft while a person checks each one."]
+   ]
+  }
+ ]
+}
